@@ -309,54 +309,47 @@ async function init() {
 
 init();
 
-// ===== Фикс клавиатуры: скролл к полю ввода при фокусе =====
 
-// ===== Фикс клавиатуры через visualViewport API =====
+// ===== Фикс клавиатуры =====
 (function keyboardFix() {
-  if (!window.visualViewport) return;
+  const body = document.body;
 
-  const vv = window.visualViewport;
-  const navbar = document.getElementById('navbar');
-  const app = document.querySelector('.app');
-
-  function adjust() {
-    // Высота клавиатуры = разница между window и visualViewport
-    const keyboardHeight = window.innerHeight - vv.height;
-
-    if (keyboardHeight > 100) {
-      // Клавиатура открыта
-      navbar.style.transform = `translateY(-${keyboardHeight}px)`;
-      app.style.paddingBottom = (keyboardHeight + 120) + 'px';
-
-      // Скроллим к активному полю
-      const active = document.activeElement;
-      if (active && active.tagName === 'TEXTAREA') {
-        setTimeout(() => {
-          active.scrollIntoView({ behavior: 'smooth', block: 'center' });
-        }, 50);
-      }
-    } else {
-      // Клавиатура закрыта
-      navbar.style.transform = '';
-      app.style.paddingBottom = '';
-    }
+  function setKeyboardOpen(open) {
+    body.classList.toggle('keyboard-open', open);
   }
 
-  vv.addEventListener('resize', adjust);
-  vv.addEventListener('scroll', adjust);
+  // Через visualViewport (iOS/Android)
+  if (window.visualViewport) {
+    const vv = window.visualViewport;
+    vv.addEventListener('resize', () => {
+      const keyboardHeight = window.innerHeight - vv.height;
+      setKeyboardOpen(keyboardHeight > 100);
+    });
+  }
 
-  // Также по фокусу
+  // Дублируем по фокусу/блюру
   document.addEventListener('focusin', (e) => {
     if (e.target.tagName === 'TEXTAREA' || e.target.tagName === 'INPUT') {
+      setKeyboardOpen(true);
       if (tg && tg.expand) tg.expand();
-      setTimeout(adjust, 300);
       setTimeout(() => {
-        e.target.scrollIntoView({ behavior: 'smooth', block: 'center' });
-      }, 350);
+        e.target.scrollIntoView({ behavior: 'smooth', block: 'start' });
+      }, 100);
     }
   });
 
-  document.addEventListener('focusout', () => {
-    setTimeout(adjust, 100);
+  document.addEventListener('focusout', (e) => {
+    if (e.target.tagName === 'TEXTAREA' || e.target.tagName === 'INPUT') {
+      setTimeout(() => setKeyboardOpen(false), 100);
+    }
   });
+
+  // Кнопка "Готово" — закрывает клавиатуру
+  const btnDone = document.getElementById('btn-done-text');
+  if (btnDone) {
+    btnDone.addEventListener('click', () => {
+      const ta = document.getElementById('opt-text');
+      if (ta) ta.blur();
+    });
+  }
 })();

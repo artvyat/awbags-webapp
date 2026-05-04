@@ -24,7 +24,7 @@
     <div class="catalog-grid" id="catalog-grid"></div>
   </section>
 
-  <!-- ШАГ 1: Сумка (конструктор) -->
+  <!-- ШАГ 1: Сумка -->
   <section class="step hidden" id="step-1">
     <h2 class="step-title">Сумка</h2>
 
@@ -42,9 +42,16 @@
     <div class="options color-options" id="opt-bag-color"></div>
   </section>
 
-  <!-- ШАГ 2: Вышивка -->
+  <!-- ШАГ 2: Вышивка (поле ввода ВВЕРХУ) -->
   <section class="step hidden" id="step-2">
     <h2 class="step-title">Вышивка</h2>
+
+    <h3 class="group-title">Текст вышивки</h3>
+    <textarea id="opt-text" placeholder="Введи текст..." maxlength="100" rows="2"></textarea>
+    <div class="hint" id="text-hint">До 3 строк, по 30 символов</div>
+    <div class="text-actions">
+      <button type="button" id="btn-done-text">Готово</button>
+    </div>
 
     <h3 class="group-title">Расположение</h3>
     <div class="options" id="opt-zone"></div>
@@ -54,10 +61,6 @@
 
     <h3 class="group-title">Цвет ниток</h3>
     <div class="thread-grid" id="opt-thread-color"></div>
-
-    <h3 class="group-title">Текст вышивки</h3>
-    <textarea id="opt-text" placeholder="Введи текст..." maxlength="100" rows="2"></textarea>
-    <div class="hint" id="text-hint">До 3 строк, по 30 символов</div>
   </section>
 
 </main>

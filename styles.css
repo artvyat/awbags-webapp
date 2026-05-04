@@ -27,7 +27,6 @@ html, body {
   -webkit-tap-highlight-color: transparent;
 }
 
-/* ===== Top ===== */
 .topbar {
   text-align: center;
   padding: 14px 16px 4px;
@@ -48,7 +47,6 @@ html, body {
   color: var(--text-soft);
 }
 
-/* ===== App / Step ===== */
 .app {
   padding: 6px 16px 100px;
   max-width: 480px;
@@ -68,7 +66,7 @@ html, body {
   color: var(--heading);
 }
 
-/* ===== Каталог (шаг 0) ===== */
+/* ===== Каталог ===== */
 .catalog-grid {
   display: grid;
   grid-template-columns: 1fr 1fr;
@@ -129,11 +127,10 @@ html, body {
   font-weight: 600;
   font-family: inherit;
   cursor: pointer;
-  transition: transform 0.15s, opacity 0.15s;
 }
 .catalog-btn:active { transform: scale(0.97); opacity: 0.9; }
 
-/* ===== Превью сумки ===== */
+/* ===== Превью ===== */
 .preview-frame {
   background: var(--card);
   border: 1px solid var(--border);
@@ -151,7 +148,7 @@ html, body {
   object-fit: contain;
 }
 
-/* ===== Опции (pill-чипы) ===== */
+/* ===== Чипы ===== */
 .options {
   display: flex;
   flex-wrap: wrap;
@@ -165,7 +162,6 @@ html, body {
   font-size: 13px;
   color: var(--text);
   cursor: pointer;
-  transition: all 0.15s ease;
   user-select: none;
 }
 .chip:active { transform: scale(0.97); }
@@ -197,7 +193,6 @@ html, body {
   padding: 4px;
   cursor: pointer;
   text-align: center;
-  transition: all 0.15s ease;
 }
 .color-tile:active { transform: scale(0.97); }
 .color-tile.active {
@@ -217,7 +212,7 @@ html, body {
   margin-top: 3px;
 }
 
-/* ===== Цвета ниток (плитки в 2 раза меньше) ===== */
+/* ===== Цвета ниток (мелкие) ===== */
 .thread-grid {
   display: grid;
   grid-template-columns: repeat(auto-fill, minmax(40px, 1fr));
@@ -229,12 +224,9 @@ html, body {
   border-radius: 8px;
   padding: 2px;
   text-align: center;
-  transition: all 0.15s ease;
 }
 .thread-tile:active { transform: scale(0.95); }
-.thread-tile.active {
-  border-color: var(--pink-strong);
-}
+.thread-tile.active { border-color: var(--pink-strong); }
 .thread-swatch {
   width: 100%;
   aspect-ratio: 1;
@@ -257,11 +249,10 @@ textarea {
   border-radius: var(--radius-sm);
   padding: 10px;
   font-family: inherit;
-  font-size: 14px;
+  font-size: 16px; /* 16px важно — iOS не зумит */
   color: var(--text);
-  resize: vertical;
+  resize: none;
   outline: none;
-  transition: border-color 0.15s;
 }
 textarea:focus { border-color: var(--pink-strong); }
 .hint {
@@ -283,6 +274,11 @@ textarea:focus { border-color: var(--pink-strong); }
   gap: 8px;
   border-top: 1px solid var(--border);
   z-index: 10;
+  transition: transform 0.2s;
+}
+/* Когда клавиатура открыта — скрываем navbar */
+body.keyboard-open .navbar {
+  transform: translateY(120%);
 }
 .btn {
   border-radius: 999px;
@@ -292,16 +288,12 @@ textarea:focus { border-color: var(--pink-strong); }
   font-family: inherit;
   cursor: pointer;
   border: none;
-  transition: all 0.15s;
 }
 .btn:active { transform: scale(0.97); }
 .btn:disabled { opacity: 0.4; cursor: not-allowed; }
 .btn-primary {
   background: var(--pink);
   color: var(--pink-text);
-}
-.btn-primary:hover:not(:disabled) {
-  background: var(--pink-strong);
 }
 .btn-ghost {
   background: transparent;
@@ -312,3 +304,36 @@ textarea:focus { border-color: var(--pink-strong); }
   color: var(--text-soft);
 }
 
+/* Когда клавиатура открыта — поле ввода становится sticky сверху */
+body.keyboard-open #step-2 textarea {
+  position: sticky;
+  top: 8px;
+  z-index: 50;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+  border-color: var(--pink-strong);
+}
+
+/* Sticky кнопка "Готово" в самом textarea wrapper */
+.text-actions {
+  display: none;
+  position: sticky;
+  top: 80px;
+  z-index: 50;
+  margin-top: 6px;
+  text-align: right;
+}
+body.keyboard-open .text-actions {
+  display: block;
+}
+.text-actions button {
+  background: var(--pink);
+  color: var(--pink-text);
+  border: none;
+  border-radius: 999px;
+  padding: 10px 20px;
+  font-size: 14px;
+  font-weight: 600;
+  font-family: inherit;
+  cursor: pointer;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+}
