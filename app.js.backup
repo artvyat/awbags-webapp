@@ -21,8 +21,6 @@ const CATALOG = [
     name: 'Sstyle Mini Синяя',
     price: 'от 11 900 ₽',
     image: 'images/sstyle_mini__eco_suede_blue_front_pocket.png',
-    preview: 'images/preview/sstyle_mini__eco_suede_blue_front_pocket.jpg',
-    medium: 'images/medium/sstyle_mini__eco_suede_blue_front_pocket.jpg',
     bagColor: 'blue',
     badge: '10+ цветов',
   },
@@ -31,8 +29,6 @@ const CATALOG = [
     name: 'Sstyle Mini Розовая',
     price: 'от 11 900 ₽',
     image: 'images/sstyle_mini__eco_suede_pink_front_pocket.png',
-    preview: 'images/preview/sstyle_mini__eco_suede_pink_front_pocket.jpg',
-    medium: 'images/medium/sstyle_mini__eco_suede_pink_front_pocket.jpg',
     bagColor: 'pink',
     badge: '10+ цветов',
   },
@@ -49,16 +45,12 @@ const BAG_COLORS = [
     id: 'blue',
     name: 'Синяя',
     image: 'images/sstyle_mini__eco_suede_blue_front_pocket.png',
-    preview: 'images/preview/sstyle_mini__eco_suede_blue_front_pocket.jpg',
-    medium: 'images/medium/sstyle_mini__eco_suede_blue_front_pocket.jpg',
     variant_id: 'eco_suede_blue_front_pocket',
   },
   {
     id: 'pink',
     name: 'Розовая',
     image: 'images/sstyle_mini__eco_suede_pink_front_pocket.png',
-    preview: 'images/preview/sstyle_mini__eco_suede_pink_front_pocket.jpg',
-    medium: 'images/medium/sstyle_mini__eco_suede_pink_front_pocket.jpg',
     variant_id: 'eco_suede_pink_front_pocket',
   },
 ];
@@ -106,7 +98,7 @@ function renderCatalog() {
     card.innerHTML = `
       <div class="catalog-photo">
         <span class="catalog-badge">${item.badge}</span>
-        <img src="${item.preview}" alt="${item.name}" loading="lazy" decoding="async">
+        <img src="${item.image}" alt="${item.name}" loading="lazy">
       </div>
       <h3 class="catalog-name">${item.name}</h3>
       <p class="catalog-price">${item.price}</p>
@@ -146,7 +138,7 @@ function renderBagColors() {
     tile.className = 'color-tile';
     if (c.id === state.bagColor) tile.classList.add('active');
     tile.innerHTML = `
-      <img src="${c.preview}" alt="${c.name}" loading="lazy" decoding="async">
+      <img src="${c.image}" alt="${c.name}" loading="lazy">
       <div class="color-tile-name">${c.name}</div>
     `;
     tile.addEventListener('click', () => {
@@ -178,7 +170,7 @@ function renderThreadColors() {
 
 function updatePreview() {
   const c = BAG_COLORS.find(x => x.id === state.bagColor);
-  if (c) el.preview.src = c.medium;
+  if (c) el.preview.src = c.image;
 }
 
 async function loadThreadColors() {
