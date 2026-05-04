@@ -318,7 +318,6 @@ init();
     body.classList.toggle('keyboard-open', open);
   }
 
-  // Через visualViewport (iOS/Android)
   if (window.visualViewport) {
     const vv = window.visualViewport;
     vv.addEventListener('resize', () => {
@@ -327,11 +326,12 @@ init();
     });
   }
 
-  // Дублируем по фокусу/блюру
   document.addEventListener('focusin', (e) => {
     if (e.target.tagName === 'TEXTAREA' || e.target.tagName === 'INPUT') {
       setKeyboardOpen(true);
-      if (tg && tg.expand) tg.expand();
+      if (window.Telegram && window.Telegram.WebApp && window.Telegram.WebApp.expand) {
+        window.Telegram.WebApp.expand();
+      }
       setTimeout(() => {
         e.target.scrollIntoView({ behavior: 'smooth', block: 'start' });
       }, 100);
@@ -344,7 +344,6 @@ init();
     }
   });
 
-  // Кнопка "Готово" — закрывает клавиатуру
   const btnDone = document.getElementById('btn-done-text');
   if (btnDone) {
     btnDone.addEventListener('click', () => {
