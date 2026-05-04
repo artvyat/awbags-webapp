@@ -1,0 +1,125 @@
+:root {
+  --bg: #f3ecdf;
+  --card-border: #f4c8d4;
+  --card-bg: #ffffff;
+  --badge-bg: #fbe2e8;
+  --badge-text: #6b3a3a;
+  --text: #4a2a1a;
+  --hint: #8a6a55;
+  --button: #5a3a28;
+  --button-text: #ffffff;
+}
+
+* { box-sizing: border-box; margin: 0; padding: 0; -webkit-tap-highlight-color: transparent; }
+
+html, body {
+  background: var(--bg);
+  color: var(--text);
+  font-family: "Inter", -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
+  font-size: 15px;
+  line-height: 1.4;
+  min-height: 100vh;
+}
+
+.topbar {
+  padding: 22px 16px 8px;
+  text-align: center;
+}
+.brand {
+  font-size: 26px;
+  font-weight: 600;
+  color: var(--text);
+}
+.brand-script {
+  font-family: "Pacifico", cursive;
+  font-weight: 400;
+}
+.subtitle {
+  margin-top: 6px;
+  color: var(--hint);
+  font-size: 13px;
+}
+
+.grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 12px;
+  padding: 16px 12px 32px;
+  max-width: 520px;
+  margin: 0 auto;
+}
+
+.card {
+  display: flex;
+  flex-direction: column;
+  cursor: pointer;
+  transition: transform 0.12s ease, opacity 0.12s ease;
+}
+.card:active { transform: scale(0.97); opacity: 0.9; }
+
+.card-frame {
+  position: relative;
+  background: var(--card-bg);
+  border: 2px solid var(--card-border);
+  border-radius: 14px;
+  overflow: hidden;
+  aspect-ratio: 1 / 1;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.card-frame img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+}
+
+.badge {
+  position: absolute;
+  top: 8px;
+  left: 8px;
+  background: var(--badge-bg);
+  color: var(--badge-text);
+  font-size: 10px;
+  font-weight: 500;
+  padding: 4px 8px;
+  border-radius: 8px;
+}
+
+.card-title {
+  margin-top: 10px;
+  padding: 0 4px;
+  font-size: 14px;
+  font-weight: 600;
+  color: var(--text);
+  line-height: 1.25;
+  min-height: 34px;
+}
+.card-price {
+  margin-top: 4px;
+  padding: 0 4px;
+  font-size: 14px;
+  font-weight: 600;
+}
+.card-button {
+  margin-top: 10px;
+  background: var(--button);
+  color: var(--button-text);
+  border: none;
+  border-radius: 999px;
+  padding: 12px 14px;
+  font-size: 13px;
+  font-weight: 600;
+  font-family: inherit;
+  cursor: pointer;
+  width: 100%;
+}
+.card-button:active { opacity: 0.85; transform: scale(0.98); }
+
+.empty {
+  padding: 48px 16px;
+  text-align: center;
+  color: var(--hint);
+  grid-column: 1 / -1;
+}
