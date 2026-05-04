@@ -14,29 +14,30 @@
 
 <header class="topbar">
   <div class="brand">Around <span class="brand-script">the World</span></div>
-  <p class="subtitle" id="subtitle">Создай свою сумку</p>
+  <p class="subtitle" id="subtitle">Выберите сумку для именной вышивки</p>
 </header>
 
 <main class="app">
 
-  <!-- ШАГ 1: Сумка -->
-  <section class="step" id="step-1">
+  <!-- ШАГ 0: Каталог -->
+  <section class="step" id="step-0">
+    <div class="catalog-grid" id="catalog-grid"></div>
+  </section>
+
+  <!-- ШАГ 1: Сумка (конструктор) -->
+  <section class="step hidden" id="step-1">
     <h2 class="step-title">Сумка</h2>
 
-    <!-- Превью -->
     <div class="preview-frame">
       <img id="preview-img" src="" alt="Превью сумки">
     </div>
 
-    <!-- Модель -->
     <h3 class="group-title">Модель</h3>
     <div class="options" id="opt-model"></div>
 
-    <!-- Материал -->
     <h3 class="group-title">Материал</h3>
     <div class="options" id="opt-material"></div>
 
-    <!-- Цвет сумки -->
     <h3 class="group-title">Цвет сумки</h3>
     <div class="options color-options" id="opt-bag-color"></div>
   </section>
@@ -45,32 +46,23 @@
   <section class="step hidden" id="step-2">
     <h2 class="step-title">Вышивка</h2>
 
-    <!-- Расположение -->
     <h3 class="group-title">Расположение</h3>
     <div class="options" id="opt-zone"></div>
 
-    <!-- Шрифт -->
     <h3 class="group-title">Шрифт</h3>
     <div class="options" id="opt-font"></div>
 
-    <!-- Цвет ниток -->
     <h3 class="group-title">Цвет ниток</h3>
     <div class="thread-grid" id="opt-thread-color"></div>
 
-    <!-- Текст -->
     <h3 class="group-title">Текст вышивки</h3>
-    <textarea
-      id="opt-text"
-      placeholder="Введи текст..."
-      maxlength="100"
-      rows="3"></textarea>
+    <textarea id="opt-text" placeholder="Введи текст..." maxlength="100" rows="2"></textarea>
     <div class="hint" id="text-hint">До 3 строк, по 30 символов</div>
   </section>
 
 </main>
 
-<!-- Нижняя панель навигации -->
-<footer class="navbar">
+<footer class="navbar hidden" id="navbar">
   <button class="btn btn-ghost" id="btn-back">← Назад</button>
   <div class="progress" id="progress">1 / 2</div>
   <button class="btn btn-primary" id="btn-next">Далее →</button>
