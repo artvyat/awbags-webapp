@@ -311,3 +311,8 @@ textarea:focus { border-color: var(--pink-strong); }
   font-size: 13px;
   color: var(--text-soft);
 }
+
+/* ===== Фикс клавиатуры: запас снизу для скролла ===== */
+.app {
+  padding-bottom: 400px !important;
+}

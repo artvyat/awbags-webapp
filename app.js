@@ -308,3 +308,23 @@ async function init() {
 }
 
 init();
+
+// ===== Фикс клавиатуры: скролл к полю ввода при фокусе =====
+el.text.addEventListener('focus', () => {
+  // Раскрываем WebApp на полную высоту (iOS)
+  if (tg && tg.expand) tg.expand();
+
+  // Ждём появления клавиатуры и скроллим к полю
+  setTimeout(() => {
+    el.text.scrollIntoView({ behavior: 'smooth', block: 'center' });
+  }, 300);
+});
+
+// На случай изменения размера окна (клавиатура появилась/исчезла)
+window.addEventListener('resize', () => {
+  if (document.activeElement === el.text) {
+    setTimeout(() => {
+      el.text.scrollIntoView({ behavior: 'smooth', block: 'center' });
+    }, 100);
+  }
+});
