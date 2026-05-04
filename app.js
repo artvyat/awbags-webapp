@@ -310,21 +310,53 @@ async function init() {
 init();
 
 // ===== Фикс клавиатуры: скролл к полю ввода при фокусе =====
-el.text.addEventListener('focus', () => {
-  // Раскрываем WebApp на полную высоту (iOS)
-  if (tg && tg.expand) tg.expand();
 
-  // Ждём появления клавиатуры и скроллим к полю
-  setTimeout(() => {
-    el.text.scrollIntoView({ behavior: 'smooth', block: 'center' });
-  }, 300);
-});
+// ===== Фикс клавиатуры через visualViewport API =====
+(function keyboardFix() {
+  if (!window.visualViewport) return;
 
-// На случай изменения размера окна (клавиатура появилась/исчезла)
-window.addEventListener('resize', () => {
-  if (document.activeElement === el.text) {
-    setTimeout(() => {
-      el.text.scrollIntoView({ behavior: 'smooth', block: 'center' });
-    }, 100);
+  const vv = window.visualViewport;
+  const navbar = document.getElementById('navbar');
+  const app = document.querySelector('.app');
+
+  function adjust() {
+    // Высота клавиатуры = разница между window и visualViewport
+    const keyboardHeight = window.innerHeight - vv.height;
+
+    if (keyboardHeight > 100) {
+      // Клавиатура открыта
+      navbar.style.transform = `translateY(-${keyboardHeight}px)`;
+      app.style.paddingBottom = (keyboardHeight + 120) + 'px';
+
+      // Скроллим к активному полю
+      const active = document.activeElement;
+      if (active && active.tagName === 'TEXTAREA') {
+        setTimeout(() => {
+          active.scrollIntoView({ behavior: 'smooth', block: 'center' });
+        }, 50);
+      }
+    } else {
+      // Клавиатура закрыта
+      navbar.style.transform = '';
+      app.style.paddingBottom = '';
+    }
   }
-});
+
+  vv.addEventListener('resize', adjust);
+  vv.addEventListener('scroll', adjust);
+
+  // Также по фокусу
+  document.addEventListener('focusin', (e) => {
+    if (e.target.tagName === 'TEXTAREA' || e.target.tagName === 'INPUT') {
+      if (tg && tg.expand) tg.expand();
+      setTimeout(adjust, 300);
+      setTimeout(() => {
+        e.target.scrollIntoView({ behavior: 'smooth', block: 'center' });
+      }, 350);
+    }
+  });
+
+  document.addEventListener('focusout', () => {
+    setTimeout(adjust, 100);
+  });
+})();
