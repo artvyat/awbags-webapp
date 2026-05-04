@@ -1,259 +1,194 @@
-// ===== Telegram WebApp =====
-const tg = window.Telegram?.WebApp;
-if (tg) { tg.ready(); tg.expand(); }
+const tg = window.Telegram.WebApp;
+tg.ready();
+tg.expand();
 
-// ===== Состояние =====
 const state = {
-  step: 1,
-  // Шаг 1
-  model: 'sstyle_mini',
-  material: 'eco_suede',
-  bagColor: 'blue',
-  // Шаг 2
-  zone: 'front_pocket',
-  font: 'cursive',
-  threadColor: '3', // ID из colors.json (по умолчанию синий)
-  text: '',
+  catalog: [],
+  colors: [],
+  selectedBag: null,
+  selectedColorId: null,
+  text: "",
 };
 
-// ===== Конфиг =====
-const MODELS = [
-  { id: 'sstyle_mini', name: 'SStyle Mini', enabled: true },
-];
-const MATERIALS = [
-  { id: 'eco_suede', name: 'Эко-замша', enabled: true },
-];
-const BAG_COLORS = [
-  {
-    id: 'blue',
-    name: 'Синяя',
-    image: 'images/sstyle_mini__eco_suede_blue_front_pocket.png',
-    variant_id: 'eco_suede_blue_front_pocket',
-  },
-  {
-    id: 'pink',
-    name: 'Розовая',
-    image: 'images/sstyle_mini__eco_suede_pink_front_pocket.png',
-    variant_id: 'eco_suede_pink_front_pocket',
-  },
-];
-const ZONES = [
-  { id: 'front_pocket', name: 'Спереди над карманом', enabled: true },
-  { id: 'back',         name: 'Сзади',                enabled: false },
-  { id: 'side_round',   name: 'Сбоку на кругляшке',   enabled: false },
-  { id: 'inside',       name: 'Внутри',               enabled: false },
-];
-const FONTS = [
-  { id: 'cursive',  name: 'Курсив',  enabled: true },
-  { id: 'straight', name: 'Прямой',  enabled: false },
-];
+const $screenCatalog = document.getElementById("screen-catalog");
+const $screenBuilder = document.getElementById("screen-builder");
+const $catalogGrid   = document.getElementById("catalog-grid");
+const $btnBack       = document.getElementById("btn-back");
+const $builderTitle  = document.getElementById("builder-title");
+const $builderSub    = document.getElementById("builder-subtitle");
+const $previewImg    = document.getElementById("preview-img");
+const $textInput     = document.getElementById("text-input");
+const $textError     = document.getElementById("text-error");
+const $textHint      = document.getElementById("text-hint");
+const $colorGrid     = document.getElementById("color-grid");
+const $colorName     = document.getElementById("selected-color-name");
+const $btnSubmit     = document.getElementById("btn-submit");
 
-// Цвета ниток подгружаются с GitHub (один источник истины — colors.json в корне репо).
-// Но Pages не отдаст файл вне webapp/ — поэтому держим локальную копию здесь.
-let THREAD_COLORS = [];
+const MAX_CHARS = 12;
+const ALLOWED_RE = /^[A-Za-zА-Яа-яЁё0-9 .,!?'"\-_:;()]*$/;
 
-// ===== DOM =====
-const el = {
-  step1: document.getElementById('step-1'),
-  step2: document.getElementById('step-2'),
-  preview: document.getElementById('preview-img'),
-  optModel: document.getElementById('opt-model'),
-  optMaterial: document.getElementById('opt-material'),
-  optBagColor: document.getElementById('opt-bag-color'),
-  optZone: document.getElementById('opt-zone'),
-  optFont: document.getElementById('opt-font'),
-  optThread: document.getElementById('opt-thread-color'),
-  text: document.getElementById('opt-text'),
-  hint: document.getElementById('text-hint'),
-  back: document.getElementById('btn-back'),
-  next: document.getElementById('btn-next'),
-  progress: document.getElementById('progress'),
-};
-
-// ===== Утилы рендера =====
-function renderChips(container, items, currentId, onPick) {
-  container.innerHTML = '';
-  items.forEach(it => {
-    const chip = document.createElement('div');
-    chip.className = 'chip';
-    if (!it.enabled) chip.classList.add('disabled');
-    if (it.id === currentId && it.enabled) chip.classList.add('active');
-    chip.innerHTML = it.enabled
-      ? it.name
-      : `${it.name}<span class="soon">скоро</span>`;
-    if (it.enabled) {
-      chip.addEventListener('click', () => onPick(it.id));
-    }
-    container.appendChild(chip);
-  });
+async function loadData() {
+  const [catalogRes, colorsRes] = await Promise.all([
+    fetch("catalog.json?v=5"),
+    fetch("colors.json?v=5"),
+  ]);
+  const catalog = await catalogRes.json();
+  const colors  = await colorsRes.json();
+  state.catalog = catalog.bags || [];
+  state.colors  = Array.isArray(colors) ? colors : (colors.colors || []);
 }
 
-function renderBagColors() {
-  el.optBagColor.innerHTML = '';
-  BAG_COLORS.forEach(c => {
-    const tile = document.createElement('div');
-    tile.className = 'color-tile';
-    if (c.id === state.bagColor) tile.classList.add('active');
-    tile.innerHTML = `
-      <img src="${c.image}" alt="${c.name}" loading="lazy">
-      <div class="color-tile-name">${c.name}</div>
+function formatPrice(n) {
+  return n.toString().replace(/\B(?=(\d{3})+(?!\d))/g, " ");
+}
+
+function renderCatalog() {
+  $catalogGrid.innerHTML = "";
+  state.catalog.forEach(bag => {
+    const card = document.createElement("div");
+    card.className = "catalog-card";
+    card.innerHTML = `
+      <div class="catalog-card-img-wrap">
+        <img src="${bag.image}" alt="${bag.title}">
+      </div>
+      <div class="catalog-card-body">
+        <p class="catalog-card-title">${bag.title}</p>
+        <p class="catalog-card-subtitle">${bag.subtitle}</p>
+        <p class="catalog-card-price">от ${formatPrice(bag.price_from)} ₽</p>
+      </div>
     `;
-    tile.addEventListener('click', () => {
-      state.bagColor = c.id;
-      updatePreview();
-      renderBagColors();
-    });
-    el.optBagColor.appendChild(tile);
+    card.addEventListener("click", () => openBuilder(bag));
+    $catalogGrid.appendChild(card);
   });
 }
 
-function renderThreadColors() {
-  el.optThread.innerHTML = '';
-  THREAD_COLORS.forEach(c => {
-    const tile = document.createElement('div');
-    tile.className = 'thread-tile';
-    if (c.id === state.threadColor) tile.classList.add('active');
-    tile.innerHTML = `
-      <div class="thread-swatch" style="background:${c.hex}"></div>
-      <div class="thread-name">${c.name}</div>
-    `;
-    tile.addEventListener('click', () => {
-      state.threadColor = c.id;
-      renderThreadColors();
-    });
-    el.optThread.appendChild(tile);
+function openBuilder(bag) {
+  state.selectedBag = bag;
+  state.text = "";
+  state.selectedColorId = null;
+
+  $builderTitle.textContent = bag.title;
+  $builderSub.textContent   = bag.subtitle;
+  $previewImg.src = bag.image;
+  $previewImg.alt = bag.title;
+
+  $textInput.value = "";
+  $textError.textContent = "";
+  $textInput.classList.remove("error");
+  $textHint.textContent = `до ${MAX_CHARS} символов`;
+
+  renderColors();
+  updateSubmitState();
+  showScreen("builder");
+  window.scrollTo({ top: 0, behavior: "instant" });
+}
+
+function renderColors() {
+  $colorGrid.innerHTML = "";
+  state.colors.forEach(color => {
+    const sw = document.createElement("div");
+    sw.className = "color-swatch";
+    sw.style.backgroundColor = color.hex;
+    sw.dataset.id = color.id;
+    sw.title = color.name;
+    sw.addEventListener("click", () => selectColor(color.id));
+    $colorGrid.appendChild(sw);
   });
+  $colorName.textContent = "Выбери цвет ниток";
 }
 
-function updatePreview() {
-  const c = BAG_COLORS.find(x => x.id === state.bagColor);
-  if (c) el.preview.src = c.image;
+function selectColor(id) {
+  state.selectedColorId = id;
+  document.querySelectorAll(".color-swatch").forEach(sw => {
+    sw.classList.toggle("selected", sw.dataset.id == id);
+  });
+  const c = state.colors.find(x => x.id == id);
+  $colorName.textContent = c ? c.name : "—";
+  updateSubmitState();
 }
 
-// ===== Загрузка цветов ниток =====
-async function loadThreadColors() {
-  try {
-    const res = await fetch('colors.json?v=' + Date.now());
-    if (!res.ok) throw new Error('HTTP ' + res.status);
-    const data = await res.json();
-    // data — это объект {id: {name, hex, rgb}}, превращаем в массив
-    THREAD_COLORS = Object.entries(data).map(([id, c]) => ({
-      id,
-      name: c.name,
-      hex: c.hex,
-    }));
-  } catch (err) {
-    console.error('Не удалось загрузить colors.json, fallback', err);
-    THREAD_COLORS = [
-      { id: '1', name: 'белый',    hex: '#FFFFFF' },
-      { id: '2', name: 'малиновый', hex: '#E44687' },
-      { id: '3', name: 'синий',    hex: '#2767D6' },
-      { id: '4', name: 'розовый',  hex: '#EA98C4' },
-      { id: '5', name: 'голубой',  hex: '#B9DAE7' },
-    ];
+function validateText(value) {
+  const trimmed = value.trim();
+  if (!trimmed) return { ok: false, msg: "" };
+  if (trimmed.length > MAX_CHARS) {
+    return { ok: false, msg: `Слишком длинно (макс. ${MAX_CHARS} симв.)` };
   }
+  if (!ALLOWED_RE.test(trimmed)) {
+    return { ok: false, msg: "Недопустимые символы" };
+  }
+  return { ok: true, msg: "" };
 }
 
-// ===== Шаги =====
-function showStep(n) {
-  state.step = n;
-  el.step1.classList.toggle('hidden', n !== 1);
-  el.step2.classList.toggle('hidden', n !== 2);
-  el.progress.textContent = `${n} / 2`;
-  el.back.style.visibility = n === 1 ? 'hidden' : 'visible';
-  el.next.textContent = n === 2 ? 'Готово ✓' : 'Далее →';
-  // Скролл вверх
-  window.scrollTo({ top: 0, behavior: 'smooth' });
-}
-
-// ===== Валидация текста =====
-const MAX_LINES = 3;
-const MAX_CHARS = 30;
-
-function validateText(text) {
-  if (!text || !text.trim()) {
-    return { ok: false, msg: 'Текст пустой. Введи что-нибудь.' };
-  }
-  const lines = text.split('\n');
-  if (lines.length > MAX_LINES) {
-    return { ok: false, msg: `Слишком много строк (${lines.length}). Максимум ${MAX_LINES}.` };
-  }
-  for (let i = 0; i < lines.length; i++) {
-    if (lines[i].length > MAX_CHARS) {
-      return { ok: false, msg: `Строка ${i + 1} длиннее ${MAX_CHARS} символов.` };
-    }
-  }
-  return { ok: true };
-}
-
-el.text.addEventListener('input', () => {
-  state.text = el.text.value;
-  const v = validateText(state.text);
-  if (state.text && !v.ok) {
-    el.hint.textContent = v.msg;
-    el.hint.classList.add('error');
+$textInput.addEventListener("input", e => {
+  const v = e.target.value;
+  const res = validateText(v);
+  state.text = v.trim();
+  if (v && !res.ok) {
+    $textError.textContent = res.msg;
+    $textInput.classList.add("error");
   } else {
-    el.hint.textContent = `До ${MAX_LINES} строк, по ${MAX_CHARS} символов`;
-    el.hint.classList.remove('error');
+    $textError.textContent = "";
+    $textInput.classList.remove("error");
   }
+  updateSubmitState();
 });
 
-// ===== Submit =====
-function submit() {
-  const variant = BAG_COLORS.find(c => c.id === state.bagColor);
-  if (!variant) return;
+function updateSubmitState() {
+  const hasText  = state.text.length > 0 && validateText(state.text).ok;
+  const hasColor = state.selectedColorId !== null;
+  $btnSubmit.disabled = !(hasText && hasColor && state.selectedBag);
+}
 
+$btnBack.addEventListener("click", () => showScreen("catalog"));
+
+$btnSubmit.addEventListener("click", () => {
+  if ($btnSubmit.disabled) return;
   const payload = {
-    bag_id: state.model,
-    variant_id: variant.variant_id,
-    text: state.text,
-    color_id: state.threadColor,
+    bag_id:        state.selectedBag.id,
+    bag_model:     state.selectedBag.model,
+    bag_variant:   state.selectedBag.variant,
+    bag_title:     state.selectedBag.title,
+    bag_subtitle:  state.selectedBag.subtitle,
+    text:          state.text,
+    color_id:      state.selectedColorId,
   };
-
-  console.log('Submit:', payload);
-
-  if (tg && tg.sendData) {
+  try {
     tg.sendData(JSON.stringify(payload));
-  } else {
-    alert('payload: ' + JSON.stringify(payload, null, 2));
+    tg.close();
+  } catch (e) {
+    console.error("sendData failed:", e);
+    alert("Не удалось отправить данные. Попробуйте ещё раз.");
+  }
+});
+
+function showScreen(name) {
+  document.querySelectorAll(".screen").forEach(s => s.classList.remove("active"));
+  if (name === "catalog") {
+    $screenCatalog.classList.add("active");
+    tg.BackButton.hide();
+  } else if (name === "builder") {
+    $screenBuilder.classList.add("active");
+    tg.BackButton.show();
   }
 }
 
-// ===== Навигация =====
-el.next.addEventListener('click', () => {
-  if (state.step === 1) {
-    showStep(2);
-    return;
-  }
-  // Шаг 2 → Готово
-  const v = validateText(state.text);
-  if (!v.ok) {
-    el.hint.textContent = v.msg;
-    el.hint.classList.add('error');
-    el.text.focus();
-    return;
-  }
-  submit();
+tg.BackButton.onClick(() => {
+  if ($screenBuilder.classList.contains("active")) showScreen("catalog");
+  else tg.close();
 });
 
-el.back.addEventListener('click', () => {
-  if (state.step === 2) showStep(1);
-});
-
-// ===== Инициализация =====
-async function init() {
-  await loadThreadColors();
-
-  renderChips(el.optModel,    MODELS,    state.model,    id => { state.model = id; renderChips(el.optModel, MODELS, state.model, _=>_); });
-  renderChips(el.optMaterial, MATERIALS, state.material, id => { state.material = id; renderChips(el.optMaterial, MATERIALS, state.material, _=>_); });
-  renderBagColors();
-  updatePreview();
-
-  renderChips(el.optZone, ZONES, state.zone, id => { state.zone = id; renderChips(el.optZone, ZONES, state.zone, _=>_); });
-  renderChips(el.optFont, FONTS, state.font, id => { state.font = id; renderChips(el.optFont, FONTS, state.font, _=>_); });
-  renderThreadColors();
-
-  showStep(1);
-}
-
-init();
+(async function init() {
+  try {
+    await loadData();
+    renderCatalog();
+    showScreen("catalog");
+  } catch (e) {
+    console.error("Init failed:", e);
+    document.body.innerHTML = `
+      <div style="padding: 40px 20px; text-align: center;">
+        <h2>Ошибка загрузки</h2>
+        <p style="color: #888;">${e.message}</p>
+      </div>
+    `;
+  }
+})();
