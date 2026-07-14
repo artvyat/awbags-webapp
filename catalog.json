@@ -1,0 +1,20 @@
+{
+  "items": [
+    {
+      "bag_id": "sstyle_mini",
+      "variant_id": "eco_suede_blue_front_pocket",
+      "title": "Sstyle Mini Синяя",
+      "subtitle": "",
+      "price": "от 11 900 ₽",
+      "image": "images/sstyle_mini__eco_suede_blue_front_pocket.png"
+    },
+    {
+      "bag_id": "sstyle_mini",
+      "variant_id": "eco_suede_pink_front_pocket",
+      "title": "Sstyle Mini Розовая",
+      "subtitle": "",
+      "price": "от 11 900 ₽",
+      "image": "images/sstyle_mini__eco_suede_pink_front_pocket.png"
+    }
+  ]
+}

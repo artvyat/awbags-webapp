@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+<title>Around The World — Конструктор</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Pacifico&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="styles.css">
+<script src="https://telegram.org/js/telegram-web-app.js"></script>
+</head>
+<body>
+
+<header class="topbar">
+  <div class="brand">Around <span class="brand-script">the World</span></div>
+  <p class="subtitle" id="subtitle">Создай свою сумку</p>
+</header>
+
+<main class="app">
+
+  <!-- ШАГ 1: Сумка -->
+  <section class="step" id="step-1">
+    <h2 class="step-title">Сумка</h2>
+
+    <!-- Превью -->
+    <div class="preview-frame">
+      <img id="preview-img" src="" alt="Превью сумки">
+    </div>
+
+    <!-- Модель -->
+    <h3 class="group-title">Модель</h3>
+    <div class="options" id="opt-model"></div>
+
+    <!-- Материал -->
+    <h3 class="group-title">Материал</h3>
+    <div class="options" id="opt-material"></div>
+
+    <!-- Цвет сумки -->
+    <h3 class="group-title">Цвет сумки</h3>
+    <div class="options color-options" id="opt-bag-color"></div>
+  </section>
+
+  <!-- ШАГ 2: Вышивка -->
+  <section class="step hidden" id="step-2">
+    <h2 class="step-title">Вышивка</h2>
+
+    <!-- Расположение -->
+    <h3 class="group-title">Расположение</h3>
+    <div class="options" id="opt-zone"></div>
+
+    <!-- Шрифт -->
+    <h3 class="group-title">Шрифт</h3>
+    <div class="options" id="opt-font"></div>
+
+    <!-- Цвет ниток -->
+    <h3 class="group-title">Цвет ниток</h3>
+    <div class="thread-grid" id="opt-thread-color"></div>
+
+    <!-- Текст -->
+    <h3 class="group-title">Текст вышивки</h3>
+    <textarea
+      id="opt-text"
+      placeholder="Введи текст..."
+      maxlength="100"
+      rows="3"></textarea>
+    <div class="hint" id="text-hint">До 3 строк, по 30 символов</div>
+  </section>
+
+</main>
+
+<!-- Нижняя панель навигации -->
+<footer class="navbar">
+  <button class="btn btn-ghost" id="btn-back">← Назад</button>
+  <div class="progress" id="progress">1 / 2</div>
+  <button class="btn btn-primary" id="btn-next">Далее →</button>
+</footer>
+
+<script src="app.js"></script>
+</body>
+</html>
