@@ -45,7 +45,7 @@ const ZONES = [
 ];
 const FONTS = [
   { id: 'cursive',  name: 'Курсив',  enabled: true },
-  { id: 'straight', name: 'Прямой',  enabled: true },
+  { id: 'straight', name: 'Прямой',  enabled: false },
 ];
 
 // Цвета ниток подгружаются с GitHub (один источник истины — colors.json в корне репо).
@@ -208,7 +208,6 @@ function submit() {
     variant_id: variant.variant_id,
     text: state.text,
     color_id: state.threadColor,
-    font_id: state.font,
   };
 
   console.log('Submit:', payload);
