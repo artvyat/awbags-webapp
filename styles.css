@@ -14,6 +14,7 @@
   --shadow: 0 2px 8px rgba(92, 59, 30, 0.06);
   --radius: 16px;
   --radius-sm: 10px;
+  --brown-btn: #5C3B1E;
 }
 
 * { box-sizing: border-box; }
@@ -250,4 +251,67 @@ textarea:focus { border-color: var(--pink-strong); }
 .progress {
   font-size: 13px;
   color: var(--text-soft);
+}/* ===== Каталог (шаг 0) ===== */
+.catalog-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 12px;
+  margin-top: 8px;
 }
+.catalog-card {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+.catalog-photo {
+  position: relative;
+  background: var(--card);
+  border: 1px solid var(--border);
+  border-radius: var(--radius);
+  aspect-ratio: 1;
+  overflow: hidden;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  box-shadow: var(--shadow);
+}
+.catalog-photo img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+.catalog-badge {
+  position: absolute;
+  top: 8px;
+  left: 8px;
+  background: var(--pink);
+  color: var(--pink-text);
+  font-size: 11px;
+  font-weight: 600;
+  padding: 4px 10px;
+  border-radius: 999px;
+}
+.catalog-name {
+  font-size: 14px;
+  font-weight: 600;
+  color: var(--heading);
+  margin: 0;
+}
+.catalog-price {
+  font-size: 13px;
+  color: var(--text-soft);
+  margin: -4px 0 0;
+}
+.catalog-btn {
+  background: var(--brown-btn);
+  color: #fff;
+  border: none;
+  border-radius: 999px;
+  padding: 11px 12px;
+  font-size: 13px;
+  font-weight: 600;
+  font-family: inherit;
+  cursor: pointer;
+  transition: transform 0.15s, opacity 0.15s;
+}
+.catalog-btn:active { transform: scale(0.97); opacity: 0.9; }
