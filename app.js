@@ -253,6 +253,7 @@ function submit() {
     variant_id: variant.variant_id,
     text: state.text,
     color_id: state.threadColor,
+    font_id: state.font,
   };
   console.log('Submit:', payload);
   if (tg && tg.sendData) {
