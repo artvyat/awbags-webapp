@@ -63,6 +63,7 @@ const ZONES = [
 const FONTS = [
   { id: 'cursive',  name: 'Курсив',  enabled: true },
   { id: 'straight', name: 'Прямой',  enabled: true },
+  { id: 'bubble',   name: 'Бабл',    enabled: true }
 ];
 
 let THREAD_COLORS = [];
