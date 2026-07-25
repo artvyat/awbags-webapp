@@ -183,6 +183,7 @@ async function loadThreadColors() {
       id,
       name: c.name,
       hex: c.hex,
+      img: c.img,
     }));
   } catch (err) {
     console.error('Не удалось загрузить colors.json, fallback', err);
