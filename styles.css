@@ -178,6 +178,9 @@ html, body {
   aspect-ratio: 1;
   border-radius: 8px;
   border: 1px solid var(--border);
+  object-fit: cover;   /* для картинок: обрезает по квадрату */
+  display: block;
+}
 }
 .thread-name {
   font-size: 11px;
