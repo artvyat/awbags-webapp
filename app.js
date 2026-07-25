@@ -53,7 +53,6 @@ const FONTS = [
   { id: 'bubble',   name: 'Бабл',    enabled: true }
 ];
 
-
 let THREAD_COLORS = [];
 
 
@@ -76,8 +75,13 @@ const el = {
   back: document.getElementById('btn-back'),
   next: document.getElementById('btn-next'),
   progress: document.getElementById('progress'),
-  navbar: document.getElementById('navbar'),
+  navbar: document.getElementById('navbar') || document.querySelector('.navbar'),
 };
+
+// Проверка: если какой-то элемент не найден — пишем в консоль, но не ломаемся
+Object.entries(el).forEach(([key, node]) => {
+  if (!node) console.warn(`app.js: элемент "${key}" не найден в index.html — проверь id`);
+});
 
 
 // ===== Загрузка каталога =====
@@ -244,11 +248,14 @@ function showStep(n) {
   el.step0.classList.toggle('hidden', n !== 0);
   el.step1.classList.toggle('hidden', n !== 1);
   el.step2.classList.toggle('hidden', n !== 2);
-  el.navbar.classList.toggle('hidden', n === 0);
+
+  if (el.navbar) {
+    el.navbar.classList.toggle('hidden', n === 0);
+  }
 
   if (n > 0) {
-    el.progress.textContent = `${n} / 2`;
-    el.next.textContent = n === 2 ? 'Готово ✓' : 'Далее →';
+    if (el.progress) el.progress.textContent = `${n} / 2`;
+    if (el.next) el.next.textContent = n === 2 ? 'Готово ✓' : 'Далее →';
   }
   window.scrollTo({ top: 0, behavior: 'smooth' });
 }
@@ -257,7 +264,6 @@ function showStep(n) {
 // ===== Валидация текста =====
 const MAX_LINES = 3;
 const MAX_CHARS = 30;
-
 
 function validateText(text) {
   if (!text || !text.trim()) {
