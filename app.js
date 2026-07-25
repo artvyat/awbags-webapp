@@ -158,7 +158,9 @@ function renderThreadColors() {
     tile.className = 'thread-tile';
     if (c.id === state.threadColor) tile.classList.add('active');
     tile.innerHTML = `
-      <div class="thread-swatch" style="background:${c.hex}"></div>
+      ${c.img
+        ? `<img class="thread-swatch" src="${c.img}" alt="${c.name}" loading="lazy">`
+        : `<div class="thread-swatch" style="background:${c.hex}"></div>`}
       <div class="thread-name">${c.name}</div>
     `;
     tile.addEventListener('click', () => {
