@@ -2,9 +2,11 @@
 const tg = window.Telegram?.WebApp;
 if (tg) { tg.ready(); tg.expand(); }
 
+
 // ===== Состояние =====
 const state = {
   step: 0,
+  category: 'all',
   model: 'sstyle_mini',
   material: 'eco_suede',
   bagColor: 'blue',
@@ -14,25 +16,10 @@ const state = {
   text: '',
 };
 
+
 // ===== Конфиг =====
-const CATALOG = [
-  {
-    id: 'sstyle_mini_blue',
-    name: 'Sstyle Mini Синяя',
-    price: 'от 11 900 ₽',
-    image: 'images/sstyle_mini__eco_suede_blue_front_pocket.png',
-    bagColor: 'blue',
-    badge: '10+ цветов',
-  },
-  {
-    id: 'sstyle_mini_pink',
-    name: 'Sstyle Mini Розовая',
-    price: 'от 11 900 ₽',
-    image: 'images/sstyle_mini__eco_suede_pink_front_pocket.png',
-    bagColor: 'pink',
-    badge: '10+ цветов',
-  },
-];
+let CATALOG = [];       // грузится из catalog.json
+let CATEGORIES = [];    // грузится из catalog.json
 
 const MODELS = [
   { id: 'sstyle_mini', name: 'SStyle Mini', enabled: true },
@@ -66,13 +53,16 @@ const FONTS = [
   { id: 'bubble',   name: 'Бабл',    enabled: true }
 ];
 
+
 let THREAD_COLORS = [];
+
 
 // ===== DOM =====
 const el = {
   step0: document.getElementById('step-0'),
   step1: document.getElementById('step-1'),
   step2: document.getElementById('step-2'),
+  categoryTabs: document.getElementById('category-tabs'),
   catalogGrid: document.getElementById('catalog-grid'),
   preview: document.getElementById('preview-img'),
   optModel: document.getElementById('opt-model'),
@@ -90,23 +80,67 @@ const el = {
   subtitle: document.getElementById('subtitle'),
 };
 
+
+// ===== Загрузка каталога =====
+async function loadCatalog() {
+  try {
+    const res = await fetch('catalog.json?v=' + Date.now());
+    if (!res.ok) throw new Error('HTTP ' + res.status);
+    const data = await res.json();
+    CATEGORIES = data.categories || [{ id: 'all', name: 'Все' }];
+    CATALOG = data.items || [];
+  } catch (err) {
+    console.error('Не удалось загрузить catalog.json', err);
+    CATEGORIES = [{ id: 'all', name: 'Все' }];
+    CATALOG = [];
+  }
+}
+
+
+// ===== Рендер категорий =====
+function renderCategories() {
+  el.categoryTabs.innerHTML = '';
+  CATEGORIES.forEach(cat => {
+    const tab = document.createElement('div');
+    tab.className = 'category-tab';
+    if (cat.id === state.category) tab.classList.add('active');
+    tab.textContent = cat.name;
+    tab.addEventListener('click', () => {
+      state.category = cat.id;
+      renderCategories();
+      renderCatalog();
+    });
+    el.categoryTabs.appendChild(tab);
+  });
+}
+
+
 // ===== Рендер каталога =====
 function renderCatalog() {
   el.catalogGrid.innerHTML = '';
-  CATALOG.forEach(item => {
+
+  const items = state.category === 'all'
+    ? CATALOG
+    : CATALOG.filter(i => i.category === state.category);
+
+  items.forEach(item => {
     const card = document.createElement('div');
     card.className = 'catalog-card';
     card.innerHTML = `
       <div class="catalog-photo">
-        <span class="catalog-badge">${item.badge}</span>
-        <img src="${item.image}" alt="${item.name}" loading="lazy">
+        ${item.badge ? `<span class="catalog-badge">${item.badge}</span>` : ''}
+        <img src="${item.image}" alt="${item.title}" loading="lazy">
       </div>
-      <h3 class="catalog-name">${item.name}</h3>
+      <h3 class="catalog-name">${item.title}</h3>
+      ${item.subtitle ? `<p class="catalog-subtitle">${item.subtitle}</p>` : ''}
       <p class="catalog-price">${item.price}</p>
       <button class="catalog-btn">Собрать сумку</button>
     `;
     card.querySelector('.catalog-btn').addEventListener('click', () => {
-      state.bagColor = item.bagColor;
+      // находим цвет сумки в конструкторе по variant_id из каталога
+      const bagColor = BAG_COLORS.find(c => c.variant_id === item.variant_id);
+      if (bagColor) state.bagColor = bagColor.id;
+      if (item.bag_id) state.model = item.bag_id;
       updatePreview();
       renderBagColors();
       showStep(1);
@@ -114,6 +148,7 @@ function renderCatalog() {
     el.catalogGrid.appendChild(card);
   });
 }
+
 
 function renderChips(container, items, currentId, onPick) {
   container.innerHTML = '';
@@ -131,6 +166,7 @@ function renderChips(container, items, currentId, onPick) {
     container.appendChild(chip);
   });
 }
+
 
 function renderBagColors() {
   el.optBagColor.innerHTML = '';
@@ -150,6 +186,7 @@ function renderBagColors() {
     el.optBagColor.appendChild(tile);
   });
 }
+
 
 function renderThreadColors() {
   el.optThread.innerHTML = '';
@@ -171,10 +208,12 @@ function renderThreadColors() {
   });
 }
 
+
 function updatePreview() {
   const c = BAG_COLORS.find(x => x.id === state.bagColor);
   if (c) el.preview.src = c.image;
 }
+
 
 async function loadThreadColors() {
   try {
@@ -199,6 +238,7 @@ async function loadThreadColors() {
   }
 }
 
+
 // ===== Шаги =====
 function showStep(n) {
   state.step = n;
@@ -217,9 +257,11 @@ function showStep(n) {
   window.scrollTo({ top: 0, behavior: 'smooth' });
 }
 
+
 // ===== Валидация текста =====
 const MAX_LINES = 3;
 const MAX_CHARS = 30;
+
 
 function validateText(text) {
   if (!text || !text.trim()) {
@@ -237,6 +279,7 @@ function validateText(text) {
   return { ok: true };
 }
 
+
 el.text.addEventListener('input', () => {
   state.text = el.text.value;
   const v = validateText(state.text);
@@ -248,6 +291,7 @@ el.text.addEventListener('input', () => {
     el.hint.classList.remove('error');
   }
 });
+
 
 function submit() {
   const variant = BAG_COLORS.find(c => c.id === state.bagColor);
@@ -267,6 +311,7 @@ function submit() {
   }
 }
 
+
 // ===== Навигация =====
 el.next.addEventListener('click', () => {
   if (state.step === 1) {
@@ -285,15 +330,19 @@ el.next.addEventListener('click', () => {
   }
 });
 
+
 el.back.addEventListener('click', () => {
   if (state.step === 2) showStep(1);
   else if (state.step === 1) showStep(0);
 });
 
+
 // ===== Инициализация =====
 async function init() {
   await loadThreadColors();
+  await loadCatalog();
 
+  renderCategories();
   renderCatalog();
 
   renderChips(el.optModel, MODELS, state.model,
@@ -311,5 +360,6 @@ async function init() {
 
   showStep(0);
 }
+
 
 init();
