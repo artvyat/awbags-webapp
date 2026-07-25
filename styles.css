@@ -1,6 +1,6 @@
 /* ===== Базовая палитра aw-go.ru ===== */
 :root {
-  --bg: #F5EDE4;
+  --bg: #FFFFFF;
   --card: #FFFFFF;
   --border: #F4D7D7;
   --border-active: #E8A5A5;
@@ -318,3 +318,38 @@ textarea:focus { border-color: var(--pink-strong); }
   transition: transform 0.15s, opacity 0.15s;
 }
 .catalog-btn:active { transform: scale(0.97); opacity: 0.9; }
+
+/* ===== Заголовок каталога ===== */
+.catalog-title {
+  text-align: center;
+  font-size: 34px;
+  font-weight: 700;
+  letter-spacing: 2px;
+  color: var(--heading);
+  margin: 8px 0 18px;
+}
+
+/* ===== Категории — овальные кнопки ===== */
+.category-tabs {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 10px;
+  margin-bottom: 20px;
+}
+.category-tab {
+  padding: 10px 22px;
+  border: 1.5px solid var(--heading);   /* коричневая обводка */
+  border-radius: 999px;                 /* овал */
+  background: transparent;
+  color: var(--heading);
+  font-size: 14px;
+  font-weight: 500;
+  cursor: pointer;
+  user-select: none;
+  transition: background 0.15s, color 0.15s;
+}
+.category-tab.active {
+  background: var(--heading);           /* активная — залита коричневым */
+  color: #FFFFFF;
+}
