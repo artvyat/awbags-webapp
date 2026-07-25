@@ -77,7 +77,6 @@ const el = {
   next: document.getElementById('btn-next'),
   progress: document.getElementById('progress'),
   navbar: document.getElementById('navbar'),
-  subtitle: document.getElementById('subtitle'),
 };
 
 
@@ -247,10 +246,7 @@ function showStep(n) {
   el.step2.classList.toggle('hidden', n !== 2);
   el.navbar.classList.toggle('hidden', n === 0);
 
-  if (n === 0) {
-    el.subtitle.textContent = 'Выберите сумку для именной вышивки';
-  } else {
-    el.subtitle.textContent = 'Создай свою сумку';
+  if (n > 0) {
     el.progress.textContent = `${n} / 2`;
     el.next.textContent = n === 2 ? 'Готово ✓' : 'Далее →';
   }
