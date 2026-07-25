@@ -1,8 +1,15 @@
 {
+  "categories": [
+    { "id": "all",    "name": "Все" },
+    { "id": "sport",  "name": "Спортивные" },
+    { "id": "casual", "name": "Повседневные" },
+    { "id": "mini",   "name": "Сумки мини" }
+  ],
   "items": [
     {
       "bag_id": "sstyle_mini",
       "variant_id": "eco_suede_blue_front_pocket",
+      "category": "mini",
       "title": "Sstyle Mini Синяя",
       "subtitle": "",
       "price": "от 11 900 ₽",
@@ -11,6 +18,7 @@
     {
       "bag_id": "sstyle_mini",
       "variant_id": "eco_suede_pink_front_pocket",
+      "category": "mini",
       "title": "Sstyle Mini Розовая",
       "subtitle": "",
       "price": "от 11 900 ₽",
