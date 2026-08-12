@@ -2,11 +2,9 @@
 const tg = window.Telegram?.WebApp;
 if (tg) { tg.ready(); tg.expand(); }
 
-
 // ===== Состояние =====
 const state = {
   step: 0,
-  category: 'all',
   model: 'sstyle_mini',
   material: 'eco_suede',
   bagColor: 'blue',
@@ -16,23 +14,66 @@ const state = {
   text: '',
 };
 
-
 // ===== Конфиг =====
-let CATALOG = [];       // грузится из catalog.json
-let CATEGORIES = [];    // грузится из catalog.json (или из DEFAULT_CATEGORIES)
-
-// Полный список категорий — показываются ВСЕГДА, даже если товаров нет
-const DEFAULT_CATEGORIES = [
-  { id: 'all',         name: 'Все' },
-  { id: 'everyday',    name: 'Повседневные' },
-  { id: 'sport',       name: 'Спортивные' },
-  { id: 'travel',      name: 'Дорожные' },
-  { id: 'mini',        name: 'Сумки мини' },
-  { id: 'beauty',      name: 'Косметички' },
-  { id: 'cases',       name: 'Кейсы' },
-  { id: 'accessories', name: 'Аксессуары' },
+const CATALOG = [
+  {
+    id: 'sstyle_mini_blue',
+    name: 'Sstyle Mini Синяя',
+    price: 'от 11 900 ₽',
+    image: 'images/sstyle_mini__eco_suede_blue_front_pocket.png',
+    bagColor: 'blue',
+    badge: '10+ цветов',
+    categories: ['sport', 'travel', 'mini'],
+  },
+  {
+    id: 'sstyle_mini_pink',
+    name: 'Sstyle Mini Розовая',
+    price: 'от 11 900 ₽',
+    image: 'images/sstyle_mini__eco_suede_pink_front_pocket.png',
+    bagColor: 'pink',
+    badge: '10+ цветов',
+    categories: ['sport', 'travel', 'mini'],
+  },
 ];
 
+// ===== Категории (загружаются из categories.json) =====
+let CATEGORIES = [];
+
+let activeCategory = 'all';   // текущий выбранный таб
+
+async function loadCategories() {
+  try {
+    const res = await fetch('categories.json?v=' + Date.now());
+    if (!res.ok) throw new Error('HTTP ' + res.status);
+    const data = await res.json();
+    CATEGORIES = data.categories || [];
+  } catch (err) {
+    console.error('Не удалось загрузить categories.json, fallback', err);
+    CATEGORIES = [
+      { id: 'all',         name: 'Все позиции',   order: 0, virtual: true },
+      { id: 'everyday',    name: 'Повседневная',  order: 1, virtual: false },
+      { id: 'sport',       name: 'Спортивные',    order: 2, virtual: false },
+      { id: 'travel',      name: 'Дорожные',      order: 3, virtual: false },
+      { id: 'mini',        name: 'Сумки мини',    order: 4, virtual: false },
+      { id: 'beauty',      name: 'Косметички',    order: 5, virtual: false },
+      { id: 'cases',       name: 'Кейсы',         order: 6, virtual: false },
+      { id: 'accessories', name: 'Аксессуары',    order: 7, virtual: false },
+    ];
+  }
+}
+
+// Показываем ВСЕ категории всегда (кроме 'accessories' — по твоему списку)
+function visibleCategories() {
+  return CATEGORIES
+    .filter(c => c.id !== 'accessories')   // «Аксессуары» пока не показываем
+    .sort((a, b) => a.order - b.order);
+}
+
+// Фильтр каталога по активному табу
+function filteredCatalog() {
+  if (activeCategory === 'all') return CATALOG;
+  return CATALOG.filter(item => (item.categories || []).includes(activeCategory));
+}
 
 const MODELS = [
   { id: 'sstyle_mini', name: 'SStyle Mini', enabled: true },
@@ -63,12 +104,9 @@ const ZONES = [
 const FONTS = [
   { id: 'cursive',  name: 'Курсив',  enabled: true },
   { id: 'straight', name: 'Прямой',  enabled: true },
-  { id: 'bubble',   name: 'Бабл',    enabled: true }
 ];
 
-
 let THREAD_COLORS = [];
-
 
 // ===== DOM =====
 const el = {
@@ -89,69 +127,37 @@ const el = {
   back: document.getElementById('btn-back'),
   next: document.getElementById('btn-next'),
   progress: document.getElementById('progress'),
-  navbar: document.getElementById('navbar') || document.querySelector('.navbar'),
+  navbar: document.getElementById('navbar'),
+  subtitle: document.getElementById('subtitle'),
 };
 
-
-// Проверка: если какой-то элемент не найден — пишем в консоль, но не ломаемся
-Object.entries(el).forEach(([key, node]) => {
-  if (!node) console.warn(`app.js: элемент "${key}" не найден в index.html — проверь id`);
-});
-
-
-// ===== Загрузка каталога =====
-async function loadCatalog() {
-  try {
-    const res = await fetch('catalog.json?v=' + Date.now());
-    if (!res.ok) throw new Error('HTTP ' + res.status);
-    const data = await res.json();
-    // Категории: приоритет — из catalog.json, но если их нет/пусто — берём полный дефолт
-    CATEGORIES = (Array.isArray(data.categories) && data.categories.length)
-      ? data.categories
-      : DEFAULT_CATEGORIES;
-    CATALOG = data.items || [];
-  } catch (err) {
-    console.error('Не удалось загрузить catalog.json', err);
-    CATEGORIES = DEFAULT_CATEGORIES;
-    CATALOG = [];
-  }
-}
-
-
-// ===== Рендер категорий =====
-function renderCategories() {
+// ===== Рендер табов категорий =====
+function renderCategoryTabs() {
+  if (!el.categoryTabs) return;   // если в HTML нет контейнера — пропускаем
   el.categoryTabs.innerHTML = '';
-  CATEGORIES.forEach(cat => {
+  visibleCategories().forEach(cat => {
     const tab = document.createElement('div');
-    tab.className = 'category-tab';
-    if (cat.id === state.category) tab.classList.add('active');
+    tab.className = 'cat-tab';
+    if (cat.id === activeCategory) tab.classList.add('active');
     tab.textContent = cat.name;
     tab.addEventListener('click', () => {
-      state.category = cat.id;
-      renderCategories();
+      activeCategory = cat.id;
+      renderCategoryTabs();
       renderCatalog();
     });
     el.categoryTabs.appendChild(tab);
   });
 }
 
-
 // ===== Рендер каталога =====
 function renderCatalog() {
   el.catalogGrid.innerHTML = '';
+  const items = filteredCatalog();
 
-  const items = state.category === 'all'
-    ? CATALOG
-    : CATALOG.filter(i => i.category === state.category);
-
-  // Пустая категория — показываем заглушку «скоро появится»
   if (items.length === 0) {
-    const empty = document.createElement('div');
+    const empty = document.createElement('p');
     empty.className = 'catalog-empty';
-    empty.innerHTML = `
-      <div class="catalog-empty-icon">🎒</div>
-      <p class="catalog-empty-text">Изделия этой категории скоро появятся</p>
-    `;
+    empty.textContent = 'В этой категории пока нет позиций';
     el.catalogGrid.appendChild(empty);
     return;
   }
@@ -161,19 +167,15 @@ function renderCatalog() {
     card.className = 'catalog-card';
     card.innerHTML = `
       <div class="catalog-photo">
-        ${item.badge ? `<span class="catalog-badge">${item.badge}</span>` : ''}
-        <img src="${item.image}" alt="${item.title}" loading="lazy">
+        <span class="catalog-badge">${item.badge}</span>
+        <img src="${item.image}" alt="${item.name}" loading="lazy">
       </div>
-      <h3 class="catalog-name">${item.title}</h3>
-      ${item.subtitle ? `<p class="catalog-subtitle">${item.subtitle}</p>` : ''}
+      <h3 class="catalog-name">${item.name}</h3>
       <p class="catalog-price">${item.price}</p>
       <button class="catalog-btn">Собрать сумку</button>
     `;
     card.querySelector('.catalog-btn').addEventListener('click', () => {
-      // находим цвет сумки в конструкторе по variant_id из каталога
-      const bagColor = BAG_COLORS.find(c => c.variant_id === item.variant_id);
-      if (bagColor) state.bagColor = bagColor.id;
-      if (item.bag_id) state.model = item.bag_id;
+      state.bagColor = item.bagColor;
       updatePreview();
       renderBagColors();
       showStep(1);
@@ -181,7 +183,6 @@ function renderCatalog() {
     el.catalogGrid.appendChild(card);
   });
 }
-
 
 function renderChips(container, items, currentId, onPick) {
   container.innerHTML = '';
@@ -199,7 +200,6 @@ function renderChips(container, items, currentId, onPick) {
     container.appendChild(chip);
   });
 }
-
 
 function renderBagColors() {
   el.optBagColor.innerHTML = '';
@@ -220,7 +220,6 @@ function renderBagColors() {
   });
 }
 
-
 function renderThreadColors() {
   el.optThread.innerHTML = '';
   THREAD_COLORS.forEach(c => {
@@ -228,9 +227,7 @@ function renderThreadColors() {
     tile.className = 'thread-tile';
     if (c.id === state.threadColor) tile.classList.add('active');
     tile.innerHTML = `
-      ${c.img
-        ? `<img class="thread-swatch" src="${c.img}" alt="${c.name}" loading="lazy">`
-        : `<div class="thread-swatch" style="background:${c.hex}"></div>`}
+      <div class="thread-swatch" style="background:${c.hex}"></div>
       <div class="thread-name">${c.name}</div>
     `;
     tile.addEventListener('click', () => {
@@ -241,12 +238,10 @@ function renderThreadColors() {
   });
 }
 
-
 function updatePreview() {
   const c = BAG_COLORS.find(x => x.id === state.bagColor);
   if (c) el.preview.src = c.image;
 }
-
 
 async function loadThreadColors() {
   try {
@@ -257,7 +252,6 @@ async function loadThreadColors() {
       id,
       name: c.name,
       hex: c.hex,
-      img: c.img,
     }));
   } catch (err) {
     console.error('Не удалось загрузить colors.json, fallback', err);
@@ -271,25 +265,23 @@ async function loadThreadColors() {
   }
 }
 
-
 // ===== Шаги =====
 function showStep(n) {
   state.step = n;
   el.step0.classList.toggle('hidden', n !== 0);
   el.step1.classList.toggle('hidden', n !== 1);
   el.step2.classList.toggle('hidden', n !== 2);
+  el.navbar.classList.toggle('hidden', n === 0);
 
-  if (el.navbar) {
-    el.navbar.classList.toggle('hidden', n === 0);
-  }
-
-  if (n > 0) {
-    if (el.progress) el.progress.textContent = `${n} / 2`;
-    if (el.next) el.next.textContent = n === 2 ? 'Готово ✓' : 'Далее →';
+  if (n === 0) {
+    el.subtitle.textContent = 'Выберите сумку для именной вышивки';
+  } else {
+    el.subtitle.textContent = 'Создай свою сумку';
+    el.progress.textContent = `${n} / 2`;
+    el.next.textContent = n === 2 ? 'Готово ✓' : 'Далее →';
   }
   window.scrollTo({ top: 0, behavior: 'smooth' });
 }
-
 
 // ===== Валидация текста =====
 const MAX_LINES = 3;
@@ -311,7 +303,6 @@ function validateText(text) {
   return { ok: true };
 }
 
-
 el.text.addEventListener('input', () => {
   state.text = el.text.value;
   const v = validateText(state.text);
@@ -323,7 +314,6 @@ el.text.addEventListener('input', () => {
     el.hint.classList.remove('error');
   }
 });
-
 
 function submit() {
   const variant = BAG_COLORS.find(c => c.id === state.bagColor);
@@ -343,7 +333,6 @@ function submit() {
   }
 }
 
-
 // ===== Навигация =====
 el.next.addEventListener('click', () => {
   if (state.step === 1) {
@@ -362,19 +351,17 @@ el.next.addEventListener('click', () => {
   }
 });
 
-
 el.back.addEventListener('click', () => {
   if (state.step === 2) showStep(1);
   else if (state.step === 1) showStep(0);
 });
 
-
 // ===== Инициализация =====
 async function init() {
   await loadThreadColors();
-  await loadCatalog();
+  await loadCategories();
 
-  renderCategories();
+  renderCategoryTabs();
   renderCatalog();
 
   renderChips(el.optModel, MODELS, state.model,
@@ -392,6 +379,5 @@ async function init() {
 
   showStep(0);
 }
-
 
 init();

@@ -1,6 +1,6 @@
 /* ===== Базовая палитра aw-go.ru ===== */
 :root {
-  --bg: #FFFFFF;
+  --bg: #F5EDE4;
   --card: #FFFFFF;
   --border: #F4D7D7;
   --border-active: #E8A5A5;
@@ -17,7 +17,6 @@
   --brown-btn: #5C3B1E;
 }
 
-
 * { box-sizing: border-box; }
 html, body {
   margin: 0; padding: 0;
@@ -29,23 +28,30 @@ html, body {
   -webkit-tap-highlight-color: transparent;
 }
 
-
-/* ===== Шапка с логотипом ===== */
-.app-header {
-  display: flex;
-  justify-content: center;
-  padding: 10px 0 4px;
+/* ===== Top ===== */
+.topbar {
+  text-align: center;
+  padding: 16px 16px 8px;
 }
-.app-logo {
-  height: 44px;
-  width: auto;
-  object-fit: contain;
+.brand {
+  font-size: 22px;
+  font-weight: 600;
+  color: var(--heading);
+  letter-spacing: 0.5px;
 }
-
+.brand-script {
+  font-family: 'Pacifico', cursive;
+  font-weight: 400;
+}
+.subtitle {
+  margin: 4px 0 0;
+  font-size: 13px;
+  color: var(--text-soft);
+}
 
 /* ===== App / Step ===== */
 .app {
-  padding: 4px 16px 100px;
+  padding: 8px 16px 100px;
   max-width: 480px;
   margin: 0 auto;
 }
@@ -62,7 +68,6 @@ html, body {
   font-weight: 600;
   color: var(--heading);
 }
-
 
 /* ===== Превью сумки ===== */
 .preview-frame {
@@ -81,7 +86,6 @@ html, body {
   max-height: 240px;
   object-fit: contain;
 }
-
 
 /* ===== Опции (pill-чипы) ===== */
 .options {
@@ -119,7 +123,6 @@ html, body {
   margin-left: 4px;
 }
 
-
 /* ===== Цвета сумки (плитки с фото) ===== */
 .color-options {
   gap: 10px;
@@ -152,7 +155,6 @@ html, body {
   margin-top: 4px;
 }
 
-
 /* ===== Цвета ниток (квадратные плитки) ===== */
 .thread-grid {
   display: grid;
@@ -176,8 +178,6 @@ html, body {
   aspect-ratio: 1;
   border-radius: 8px;
   border: 1px solid var(--border);
-  object-fit: cover;
-  display: block;
 }
 .thread-name {
   font-size: 11px;
@@ -185,7 +185,6 @@ html, body {
   margin-top: 3px;
   line-height: 1.2;
 }
-
 
 /* ===== Textarea ===== */
 textarea {
@@ -210,7 +209,6 @@ textarea:focus { border-color: var(--pink-strong); }
 }
 .hint.error { color: #C73E3E; }
 
-
 /* ===== Navbar ===== */
 .navbar {
   position: fixed;
@@ -223,10 +221,6 @@ textarea:focus { border-color: var(--pink-strong); }
   gap: 8px;
   border-top: 1px solid var(--border);
   z-index: 10;
-}
-.navbar.hidden,
-#navbar.hidden {
-  display: none !important;
 }
 .btn {
   border-radius: 999px;
@@ -244,11 +238,11 @@ textarea:focus { border-color: var(--pink-strong); }
   cursor: not-allowed;
 }
 .btn-primary {
-  background: var(--brown-btn);
-  color: #FFFFFF;
+  background: var(--pink);
+  color: var(--pink-text);
 }
 .btn-primary:hover:not(:disabled) {
-  opacity: 0.9;
+  background: var(--pink-strong);
 }
 .btn-ghost {
   background: transparent;
@@ -257,10 +251,7 @@ textarea:focus { border-color: var(--pink-strong); }
 .progress {
   font-size: 13px;
   color: var(--text-soft);
-}
-
-
-/* ===== Каталог (шаг 0) ===== */
+}/* ===== Каталог (шаг 0) ===== */
 .catalog-grid {
   display: grid;
   grid-template-columns: 1fr 1fr;
@@ -306,11 +297,6 @@ textarea:focus { border-color: var(--pink-strong); }
   color: var(--heading);
   margin: 0;
 }
-.catalog-subtitle {
-  font-size: 12px;
-  color: var(--text-soft);
-  margin: -4px 0 0;
-}
 .catalog-price {
   font-size: 13px;
   color: var(--text-soft);
@@ -330,61 +316,36 @@ textarea:focus { border-color: var(--pink-strong); }
 }
 .catalog-btn:active { transform: scale(0.97); opacity: 0.9; }
 
-
-/* ===== Заголовок каталога ===== */
-.catalog-title {
-  text-align: center;
-  font-size: 34px;
-  font-weight: 700;
-  letter-spacing: 2px;
-  color: var(--heading);
-  margin: 4px 0 12px;
-}
-
-
-/* ===== Категории — овальные кнопки ===== */
+/* ===== Табы категорий ===== */
 .category-tabs {
   display: flex;
-  flex-wrap: wrap;
-  justify-content: center;
-  gap: 10px;
-  margin-bottom: 16px;
+  gap: 8px;
+  overflow-x: auto;
+  padding: 8px 12px;
+  -webkit-overflow-scrolling: touch;
+  scrollbar-width: none;
 }
-.category-tab {
-  padding: 10px 22px;
-  border: 1.5px solid var(--heading);
-  border-radius: 999px;
-  background: transparent;
-  color: var(--heading);
+.category-tabs::-webkit-scrollbar { display: none; }
+
+.cat-tab {
+  flex: 0 0 auto;
+  padding: 8px 16px;
+  border-radius: 20px;
+  background: #f0f0f0;
+  color: #333;
   font-size: 14px;
-  font-weight: 500;
+  white-space: nowrap;
   cursor: pointer;
   user-select: none;
-  transition: background 0.15s, color 0.15s;
+  transition: background .15s, color .15s;
 }
-.category-tab.active {
-  background: var(--heading);
-  color: #FFFFFF;
+.cat-tab.active {
+  background: #2767D6;
+  color: #fff;
 }
 
-
-/* Заглушка пустой категории */
 .catalog-empty {
-  grid-column: 1 / -1;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  padding: 48px 16px;
   text-align: center;
-  opacity: 0.7;
-}
-.catalog-empty-icon {
-  font-size: 48px;
-  margin-bottom: 12px;
-}
-.catalog-empty-text {
-  font-size: 15px;
   color: #888;
-  margin: 0;
+  padding: 24px;
 }

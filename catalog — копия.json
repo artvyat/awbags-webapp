@@ -1,13 +1,9 @@
 {
   "categories": [
-    { "id": "all",         "name": "Все" },
-    { "id": "everyday",    "name": "Повседневные" },
-    { "id": "sport",       "name": "Спортивные" },
-    { "id": "travel",      "name": "Дорожные" },
-    { "id": "mini",        "name": "Сумки мини" },
-    { "id": "beauty",      "name": "Косметички" },
-    { "id": "cases",       "name": "Кейсы" },
-    { "id": "accessories", "name": "Аксессуары" }
+    { "id": "all",    "name": "Все" },
+    { "id": "sport",  "name": "Спортивные" },
+    { "id": "casual", "name": "Повседневные" },
+    { "id": "mini",   "name": "Сумки мини" }
   ],
   "items": [
     {

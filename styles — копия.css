@@ -366,25 +366,3 @@ textarea:focus { border-color: var(--pink-strong); }
   background: var(--heading);
   color: #FFFFFF;
 }
-
-
-/* Заглушка пустой категории */
-.catalog-empty {
-  grid-column: 1 / -1;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  padding: 48px 16px;
-  text-align: center;
-  opacity: 0.7;
-}
-.catalog-empty-icon {
-  font-size: 48px;
-  margin-bottom: 12px;
-}
-.catalog-empty-text {
-  font-size: 15px;
-  color: #888;
-  margin: 0;
-}

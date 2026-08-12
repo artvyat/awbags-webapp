@@ -19,20 +19,7 @@ const state = {
 
 // ===== Конфиг =====
 let CATALOG = [];       // грузится из catalog.json
-let CATEGORIES = [];    // грузится из catalog.json (или из DEFAULT_CATEGORIES)
-
-// Полный список категорий — показываются ВСЕГДА, даже если товаров нет
-const DEFAULT_CATEGORIES = [
-  { id: 'all',         name: 'Все' },
-  { id: 'everyday',    name: 'Повседневные' },
-  { id: 'sport',       name: 'Спортивные' },
-  { id: 'travel',      name: 'Дорожные' },
-  { id: 'mini',        name: 'Сумки мини' },
-  { id: 'beauty',      name: 'Косметички' },
-  { id: 'cases',       name: 'Кейсы' },
-  { id: 'accessories', name: 'Аксессуары' },
-];
-
+let CATEGORIES = [];    // грузится из catalog.json
 
 const MODELS = [
   { id: 'sstyle_mini', name: 'SStyle Mini', enabled: true },
@@ -66,7 +53,6 @@ const FONTS = [
   { id: 'bubble',   name: 'Бабл',    enabled: true }
 ];
 
-
 let THREAD_COLORS = [];
 
 
@@ -92,7 +78,6 @@ const el = {
   navbar: document.getElementById('navbar') || document.querySelector('.navbar'),
 };
 
-
 // Проверка: если какой-то элемент не найден — пишем в консоль, но не ломаемся
 Object.entries(el).forEach(([key, node]) => {
   if (!node) console.warn(`app.js: элемент "${key}" не найден в index.html — проверь id`);
@@ -105,14 +90,11 @@ async function loadCatalog() {
     const res = await fetch('catalog.json?v=' + Date.now());
     if (!res.ok) throw new Error('HTTP ' + res.status);
     const data = await res.json();
-    // Категории: приоритет — из catalog.json, но если их нет/пусто — берём полный дефолт
-    CATEGORIES = (Array.isArray(data.categories) && data.categories.length)
-      ? data.categories
-      : DEFAULT_CATEGORIES;
+    CATEGORIES = data.categories || [{ id: 'all', name: 'Все' }];
     CATALOG = data.items || [];
   } catch (err) {
     console.error('Не удалось загрузить catalog.json', err);
-    CATEGORIES = DEFAULT_CATEGORIES;
+    CATEGORIES = [{ id: 'all', name: 'Все' }];
     CATALOG = [];
   }
 }
@@ -143,18 +125,6 @@ function renderCatalog() {
   const items = state.category === 'all'
     ? CATALOG
     : CATALOG.filter(i => i.category === state.category);
-
-  // Пустая категория — показываем заглушку «скоро появится»
-  if (items.length === 0) {
-    const empty = document.createElement('div');
-    empty.className = 'catalog-empty';
-    empty.innerHTML = `
-      <div class="catalog-empty-icon">🎒</div>
-      <p class="catalog-empty-text">Изделия этой категории скоро появятся</p>
-    `;
-    el.catalogGrid.appendChild(empty);
-    return;
-  }
 
   items.forEach(item => {
     const card = document.createElement('div');
