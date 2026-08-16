@@ -142,7 +142,12 @@ function renderCatalog() {
 
   const items = state.category === 'all'
     ? CATALOG
-    : CATALOG.filter(i => i.category === state.category);
+    : CATALOG.filter(i => {
+        // поддержка нового формата (categories: []) и старого (category: "")
+        const cats = Array.isArray(i.categories) ? i.categories
+                   : (i.category ? [i.category] : []);
+        return cats.includes(state.category);
+      });
 
   // Пустая категория — показываем заглушку «скоро появится»
   if (items.length === 0) {

@@ -285,9 +285,10 @@ textarea:focus { border-color: var(--pink-strong); }
   box-shadow: var(--shadow);
 }
 .catalog-photo img {
-  width: 100%;
-  height: 100%;
-  object-fit: cover;
+  width: 120%;
+  height: 120%;
+  object-fit: contain;
+  padding: -15px;
 }
 .catalog-badge {
   position: absolute;
