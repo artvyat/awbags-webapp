@@ -7,9 +7,8 @@ if (tg) { tg.ready(); tg.expand(); }
 const state = {
   step: 0,
   category: 'all',
-  model: 'sstyle_mini',
-  material: 'eco_suede',
-  bagColor: 'blue',
+  item: null,          // текущий выбранный товар из каталога (объект целиком)
+  bagColor: null,      // id выбранного цвета внутри item.colors
   zone: 'front_pocket',
   font: 'cursive',
   threadColor: '3',
@@ -34,26 +33,7 @@ const DEFAULT_CATEGORIES = [
 ];
 
 
-const MODELS = [
-  { id: 'sstyle_mini', name: 'SStyle Mini', enabled: true },
-];
-const MATERIALS = [
-  { id: 'eco_suede', name: 'Эко-замша', enabled: true },
-];
-const BAG_COLORS = [
-  {
-    id: 'blue',
-    name: 'Синяя',
-    image: 'images/sstyle_mini__eco_suede_blue_front_pocket.png',
-    variant_id: 'eco_suede_blue_front_pocket',
-  },
-  {
-    id: 'pink',
-    name: 'Розовая',
-    image: 'images/sstyle_mini__eco_suede_pink_front_pocket.png',
-    variant_id: 'eco_suede_pink_front_pocket',
-  },
-];
+// Ракурсы, шрифты — общие для всех сумок (пока)
 const ZONES = [
   { id: 'front_pocket', name: 'Спереди над карманом', enabled: true },
   { id: 'back',         name: 'Сзади',                enabled: false },
@@ -99,13 +79,37 @@ Object.entries(el).forEach(([key, node]) => {
 });
 
 
+// ===== Хелперы для текущего товара =====
+// Список цветов текущего товара (поддержка нового формата colors[] и старого одиночного варианта)
+function currentColors() {
+  if (!state.item) return [];
+  if (Array.isArray(state.item.colors) && state.item.colors.length) {
+    return state.item.colors;
+  }
+  // fallback: если у товара нет colors[], но есть variant_id/image — делаем 1 цвет
+  if (state.item.variant_id) {
+    return [{
+      id: 'default',
+      name: state.item.title || 'Вариант',
+      variant_id: state.item.variant_id,
+      image: state.item.image,
+    }];
+  }
+  return [];
+}
+
+function currentColor() {
+  const colors = currentColors();
+  return colors.find(c => c.id === state.bagColor) || colors[0] || null;
+}
+
+
 // ===== Загрузка каталога =====
 async function loadCatalog() {
   try {
     const res = await fetch('catalog.json?v=' + Date.now());
     if (!res.ok) throw new Error('HTTP ' + res.status);
     const data = await res.json();
-    // Категории: приоритет — из catalog.json, но если их нет/пусто — берём полный дефолт
     CATEGORIES = (Array.isArray(data.categories) && data.categories.length)
       ? data.categories
       : DEFAULT_CATEGORIES;
@@ -143,13 +147,11 @@ function renderCatalog() {
   const items = state.category === 'all'
     ? CATALOG
     : CATALOG.filter(i => {
-        // поддержка нового формата (categories: []) и старого (category: "")
         const cats = Array.isArray(i.categories) ? i.categories
                    : (i.category ? [i.category] : []);
         return cats.includes(state.category);
       });
 
-  // Пустая категория — показываем заглушку «скоро появится»
   if (items.length === 0) {
     const empty = document.createElement('div');
     empty.className = 'catalog-empty';
@@ -175,16 +177,46 @@ function renderCatalog() {
       <button class="catalog-btn">Собрать сумку</button>
     `;
     card.querySelector('.catalog-btn').addEventListener('click', () => {
-      // находим цвет сумки в конструкторе по variant_id из каталога
-      const bagColor = BAG_COLORS.find(c => c.variant_id === item.variant_id);
-      if (bagColor) state.bagColor = bagColor.id;
-      if (item.bag_id) state.model = item.bag_id;
-      updatePreview();
-      renderBagColors();
-      showStep(1);
+      openConstructor(item);
     });
     el.catalogGrid.appendChild(card);
   });
+}
+
+
+// ===== Открытие конструктора для конкретного товара =====
+function openConstructor(item) {
+  state.item = item;
+  const colors = currentColors();
+  // дефолтный цвет — первый в списке
+  state.bagColor = colors.length ? colors[0].id : null;
+
+  renderModelMaterial();
+  renderBagColors();
+  updatePreview();
+  showStep(1);
+}
+
+
+// ===== Рендер «Модель» и «Материал» (одна активная плитка, из данных товара) =====
+function renderModelMaterial() {
+  // Модель = название товара (без цвета/материала), берём из title или model_name
+  const modelName = state.item?.model_name || 'SStyle Mini';
+  const materialName = state.item?.material_name || '—';
+
+  el.optModel.innerHTML = '';
+  el.optModel.appendChild(makeStaticChip(modelName));
+
+  el.optMaterial.innerHTML = '';
+  el.optMaterial.appendChild(makeStaticChip(materialName));
+}
+
+// статичный чип (активный, некликабельный) — модель/материал определены выбором товара
+function makeStaticChip(text) {
+  const chip = document.createElement('div');
+  chip.className = 'chip active';
+  chip.textContent = text;
+  return chip;
 }
 
 
@@ -206,9 +238,11 @@ function renderChips(container, items, currentId, onPick) {
 }
 
 
+// ===== Цвета корпуса — из данных текущего товара =====
 function renderBagColors() {
   el.optBagColor.innerHTML = '';
-  BAG_COLORS.forEach(c => {
+  const colors = currentColors();
+  colors.forEach(c => {
     const tile = document.createElement('div');
     tile.className = 'color-tile';
     if (c.id === state.bagColor) tile.classList.add('active');
@@ -248,8 +282,10 @@ function renderThreadColors() {
 
 
 function updatePreview() {
-  const c = BAG_COLORS.find(x => x.id === state.bagColor);
-  if (c) el.preview.src = c.image;
+  const c = currentColor();
+  if (!c) return;
+  // большой квадрат: приоритет preview_image (высокое качество), иначе image
+  el.preview.src = c.preview_image || c.image;
 }
 
 
@@ -331,11 +367,11 @@ el.text.addEventListener('input', () => {
 
 
 function submit() {
-  const variant = BAG_COLORS.find(c => c.id === state.bagColor);
-  if (!variant) return;
+  const color = currentColor();
+  if (!state.item || !color) return;
   const payload = {
-    bag_id: state.model,
-    variant_id: variant.variant_id,
+    bag_id: state.item.bag_id,
+    variant_id: color.variant_id,
     text: state.text,
     color_id: state.threadColor,
     font_id: state.font,
@@ -382,13 +418,7 @@ async function init() {
   renderCategories();
   renderCatalog();
 
-  renderChips(el.optModel, MODELS, state.model,
-    id => { state.model = id; renderChips(el.optModel, MODELS, state.model, _=>_); });
-  renderChips(el.optMaterial, MATERIALS, state.material,
-    id => { state.material = id; renderChips(el.optMaterial, MATERIALS, state.material, _=>_); });
-  renderBagColors();
-  updatePreview();
-
+  // step-2 общие опции
   renderChips(el.optZone, ZONES, state.zone,
     id => { state.zone = id; renderChips(el.optZone, ZONES, state.zone, _=>_); });
   renderChips(el.optFont, FONTS, state.font,

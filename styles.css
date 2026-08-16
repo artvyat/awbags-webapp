@@ -17,7 +17,6 @@
   --brown-btn: #5C3B1E;
 }
 
-
 * { box-sizing: border-box; }
 html, body {
   margin: 0; padding: 0;
@@ -64,22 +63,33 @@ html, body {
 }
 
 
-/* ===== Превью сумки ===== */
+/* ============================================================
+   🎛 ПАНЕЛЬ НАСТРОЙКИ №1 — БОЛЬШОЕ ОКНО ПРЕВЬЮ СУМКИ
+   Крути ДВЕ цифры: height (размер окна) и scale (размер сумки)
+   ============================================================ */
 .preview-frame {
   background: var(--card);
   border: 1px solid var(--border);
   border-radius: var(--radius);
-  padding: 12px;
+  box-shadow: var(--shadow);
   display: flex;
   align-items: center;
   justify-content: center;
-  min-height: 220px;
-  box-shadow: var(--shadow);
+
+  height: 380px;         /* 🔧 ВЫСОТА окна (px). Больше = выше рамка. Фикс — окно НЕ прыгает */
+  padding: 0;            /* 🔧 отступ картинки от краёв окна (0 = впритык) */
+  overflow: hidden;      /*    ⬅ обрезает всё, что вылезло за рамку. НЕ трогай */
 }
 .preview-frame img {
-  max-width: 100%;
-  max-height: 240px;
+  width: auto;
+  height: auto;
+  max-width: none;       /*    ⬅ сняты все лимиты — можно раздувать без предела. НЕ трогай */
+  max-height: none;      /*    ⬅ НЕ трогай */
   object-fit: contain;
+
+  transform: scale(0.45); /* 🔧 ГЛАВНАЯ КРУТИЛКА МАСШТАБА СУМКИ:
+                                1.0 = норма, 1.5 = крупнее, 2.5 = очень крупно,
+                                0.6 = мельче. Предела нет — рамка обрежет лишнее */
 }
 
 
@@ -120,31 +130,41 @@ html, body {
 }
 
 
-/* ===== Цвета сумки (плитки с фото) ===== */
+/* ============================================================
+   🎛 ПАНЕЛЬ НАСТРОЙКИ №2 — МАЛЕНЬКИЕ ПЛИТКИ ВЫБОРА ЦВЕТА
+   Крути: width (размер плитки) и scale (размер картинки в ней)
+   ============================================================ */
 .color-options {
   gap: 10px;
 }
 .color-tile {
-  width: 70px;
   background: var(--card);
-  border: 1.5px solid var(--border);
   border-radius: var(--radius-sm);
   padding: 6px;
   cursor: pointer;
   text-align: center;
   transition: all 0.15s ease;
+
+  width: 70px;                       /* 🔧 ШИРИНА плитки (px). Больше = крупнее плитка */
+  border: 2px solid var(--border);   /*    рамка ВСЕГДА видна — плитки НЕ дёргаются при клике */
+  box-sizing: border-box;            /*    НЕ трогай — держит размер постоянным */
+  overflow: hidden;                  /*    ⬅ обрезает раздутую картинку внутри плитки. НЕ трогай */
 }
 .color-tile:active { transform: scale(0.97); }
 .color-tile.active {
-  border-color: var(--pink-strong);
-  box-shadow: 0 0 0 2px var(--pink) inset;
+  border-color: var(--pink-strong);  /* 🔧 ЦВЕТ рамки у ВЫБРАННОЙ плитки */
+  box-shadow: none;                  /*    НЕ трогай */
 }
 .color-tile img {
   width: 100%;
-  aspect-ratio: 1;
-  object-fit: cover;
+  aspect-ratio: 1;         /* 🔧 форма окошка картинки: 1 = квадрат */
+  object-fit: contain;
   border-radius: 6px;
   display: block;
+
+  transform: scale(1.3);   /* 🔧 КРУТИЛКА МАСШТАБА картинки в плитке:
+                                  1.0 = норма, 1.5 = крупнее, 0.7 = мельче.
+                                  Рамка плитки обрежет лишнее */
 }
 .color-tile-name {
   font-size: 11px;
@@ -285,10 +305,11 @@ textarea:focus { border-color: var(--pink-strong); }
   box-shadow: var(--shadow);
 }
 .catalog-photo img {
-  width: 120%;
-  height: 120%;
+  width: 100%;
+  height: 100%;
   object-fit: contain;
-  padding: -15px;
+
+  transform: scale(1.0);   /* 🔧 КРУТИЛКА МАСШТАБА фото товара в каталоге (плитки на стартовом экране) */
 }
 .catalog-badge {
   position: absolute;
