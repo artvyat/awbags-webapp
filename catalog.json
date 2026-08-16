@@ -1,19 +1,48 @@
 {
   "categories": [
-    { "id": "all",         "name": "Все" },
-    { "id": "everyday",    "name": "Повседневные" },
-    { "id": "sport",       "name": "Спортивные" },
-    { "id": "travel",      "name": "Дорожные" },
-    { "id": "mini",        "name": "Сумки мини" },
-    { "id": "beauty",      "name": "Косметички" },
-    { "id": "cases",       "name": "Кейсы" },
-    { "id": "accessories", "name": "Аксессуары" }
+    {
+      "id": "all",
+      "name": "Все"
+    },
+    {
+      "id": "everyday",
+      "name": "Повседневные"
+    },
+    {
+      "id": "sport",
+      "name": "Спортивные"
+    },
+    {
+      "id": "travel",
+      "name": "Дорожные"
+    },
+    {
+      "id": "mini",
+      "name": "Сумки мини"
+    },
+    {
+      "id": "beauty",
+      "name": "Косметички"
+    },
+    {
+      "id": "cases",
+      "name": "Кейсы"
+    },
+    {
+      "id": "accessories",
+      "name": "Аксессуары"
+    }
   ],
   "items": [
     {
       "bag_id": "sstyle_mini",
       "variant_id": "eco_suede_blue_front_pocket",
-      "category": "mini",
+      "categories": [
+        "sport",
+        "travel",
+        "mini",
+        "everyday"
+      ],
       "title": "Sstyle Mini Синяя",
       "subtitle": "",
       "price": "от 11 900 ₽",
@@ -22,11 +51,30 @@
     {
       "bag_id": "sstyle_mini",
       "variant_id": "eco_suede_pink_front_pocket",
-      "category": "mini",
+      "categories": [
+        "sport",
+        "travel",
+        "mini",
+        "everyday"
+      ],
       "title": "Sstyle Mini Розовая",
       "subtitle": "",
       "price": "от 11 900 ₽",
       "image": "images/sstyle_mini__eco_suede_pink_front_pocket.png"
+    },
+    {
+      "bag_id": "sstyle_mini_jeans",
+      "variant_id": "jeans_gray_front",
+      "categories": [
+        "sport",
+        "travel",
+        "mini",
+        "everyday"
+      ],
+      "title": "SStyle Mini Джинса",
+      "subtitle": "",
+      "price": "от 11 900 ₽",
+      "image": "images/sstyle_mini_jeans__jeans_gray_front.jpg"
     }
   ]
 }
