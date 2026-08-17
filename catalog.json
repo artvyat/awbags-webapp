@@ -46,26 +46,137 @@
       "subtitle": "",
       "price": "от 11 900 ₽",
       "material_name": "Эко-замша",
-      "image": "images/sstyle_mini__eco_suede_blue_front_pocket.png",
+      "image": "images/suede/gray.jpg",
       "colors": [
+        {
+          "id": "gray",
+          "name": "Серая",
+          "variant_id": "eco_suede_gray_front_pocket",
+          "image": "images/suede/gray.jpg",
+          "preview_image": "images/suede_big/gray.jpg"
+        },
+        {
+          "id": "graphite",
+          "name": "Графит",
+          "variant_id": "eco_suede_graphite_front_pocket",
+          "image": "images/suede/graphite.jpg",
+          "preview_image": "images/suede_big/graphite.jpg"
+        },
+        {
+          "id": "lavender",
+          "name": "Лавандовая",
+          "variant_id": "eco_suede_lavender_front_pocket",
+          "image": "images/suede/lavender.jpg",
+          "preview_image": "images/suede_big/lavender.jpg"
+        },
+        {
+          "id": "light_blue",
+          "name": "Голубая",
+          "variant_id": "eco_suede_light_blue_front_pocket",
+          "image": "images/suede/light_blue.jpg",
+          "preview_image": "images/suede_big/light_blue.jpg"
+        },
         {
           "id": "blue",
           "name": "Синяя",
           "variant_id": "eco_suede_blue_front_pocket",
-          "image": "images/sstyle_mini__eco_suede_blue_front_pocket.png",
-          "preview_image": "images/sstyle_mini__eco_suede_blue_front_pocket.png"
+          "image": "images/suede/blue.jpg",
+          "preview_image": "images/suede_big/blue.jpg"
+        },
+        {
+          "id": "powder",
+          "name": "Пудровая",
+          "variant_id": "eco_suede_powder_front_pocket",
+          "image": "images/suede/powder.jpg",
+          "preview_image": "images/suede_big/powder.jpg"
         },
         {
           "id": "pink",
           "name": "Розовая",
           "variant_id": "eco_suede_pink_front_pocket",
-          "image": "images/sstyle_mini__eco_suede_pink_front_pocket.png",
-          "preview_image": "images/sstyle_mini__eco_suede_pink_front_pocket.png"
+          "image": "images/suede/pink.jpg",
+          "preview_image": "images/suede_big/pink.jpg"
+        },
+        {
+          "id": "raspberry",
+          "name": "Малиновая",
+          "variant_id": "eco_suede_raspberry_front_pocket",
+          "image": "images/suede/raspberry.jpg",
+          "preview_image": "images/suede_big/raspberry.jpg"
+        },
+        {
+          "id": "beige",
+          "name": "Бежевая",
+          "variant_id": "eco_suede_beige_front_pocket",
+          "image": "images/suede/beige.jpg",
+          "preview_image": "images/suede_big/beige.jpg"
+        },
+        {
+          "id": "sand",
+          "name": "Песочная",
+          "variant_id": "eco_suede_sand_front_pocket",
+          "image": "images/suede/sand.jpg",
+          "preview_image": "images/suede_big/sand.jpg"
+        },
+        {
+          "id": "black",
+          "name": "Черная",
+          "variant_id": "eco_suede_black_front_pocket",
+          "image": "images/suede/black.jpg",
+          "preview_image": "images/suede_big/black.jpg"
+        },
+        {
+          "id": "brown",
+          "name": "Коричневая",
+          "variant_id": "eco_suede_brown_front_pocket",
+          "image": "images/suede/brown.jpg",
+          "preview_image": "images/suede_big/brown.jpg"
+        },
+        {
+          "id": "cappuccino",
+          "name": "Капучино",
+          "variant_id": "eco_suede_cappuccino_front_pocket",
+          "image": "images/suede/cappuccino.jpg",
+          "preview_image": "images/suede_big/cappuccino.jpg"
+        },
+        {
+          "id": "khaki",
+          "name": "Хаки",
+          "variant_id": "eco_suede_khaki_front_pocket",
+          "image": "images/suede/khaki.jpg",
+          "preview_image": "images/suede_big/khaki.jpg"
+        },
+        {
+          "id": "lemon",
+          "name": "Лимонная",
+          "variant_id": "eco_suede_lemon_front_pocket",
+          "image": "images/suede/lemon.jpg",
+          "preview_image": "images/suede_big/lemon.jpg"
+        },
+        {
+          "id": "mint",
+          "name": "Мятная",
+          "variant_id": "eco_suede_mint_front_pocket",
+          "image": "images/suede/mint.jpg",
+          "preview_image": "images/suede_big/mint.jpg"
+        },
+        {
+          "id": "snow_leopard",
+          "name": "Снежный барс",
+          "variant_id": "eco_suede_snow_leopard_front_pocket",
+          "image": "images/suede/snow_leopard.jpg",
+          "preview_image": "images/suede_big/snow_leopard.jpg"
+        },
+        {
+          "id": "pistachio",
+          "name": "Фисташковая",
+          "variant_id": "eco_suede_pistachio_front_pocket",
+          "image": "images/suede/pistachio.jpg",
+          "preview_image": "images/suede_big/pistachio.jpg"
         }
       ]
     },
     {
-
       "bag_id": "sstyle_mini_jeans",
       "categories": [
         "sport",
