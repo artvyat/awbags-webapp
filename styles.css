@@ -58,8 +58,8 @@
   --chip-gap: 8px;         /* между чипами */
 
   /* ---------- ПЛИТКИ ЦВЕТА СУМКИ ---------- */
-  --color-tile-w: 103px;    /* ширина плитки */
-  --color-tile-gap: 10px;
+  --color-tile-min: 72px;   /* мин. ширина плитки (auto-fill), как у ниток */
+  --color-tile-gap: 8px;
   --color-tile-name-size: 11px;
 
   /* ---------- ПЛИТКИ ЦВЕТА НИТОК ---------- */
@@ -184,23 +184,21 @@ html, body {
 }
 
 
-/* ===== ПЛИТКИ ЦВЕТА СУМКИ ===== */
+/* ===== ПЛИТКИ ЦВЕТА СУМКИ (сетка как у ниток) ===== */
 .color-options {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(var(--color-tile-min), 1fr));
   gap: var(--color-tile-gap);
 }
 .color-tile {
-  background: var(--card);
-  border-radius: var(--radius-sm);
-  padding: 6px;
   cursor: pointer;
+  border: 2px solid transparent;
+  border-radius: var(--radius-sm);
+  padding: 4px;
   text-align: center;
   transition: all 0.15s ease;
-  width: var(--color-tile-w);        /* 🔧 крути --color-tile-w */
-  border: 2px solid var(--border);
-  box-sizing: border-box;
-  overflow: hidden;
 }
-.color-tile:active { transform: scale(0.97); }
+.color-tile:active { transform: scale(0.95); }
 .color-tile.active {
   border-color: var(--pink-strong);
   box-shadow: none;
@@ -208,16 +206,16 @@ html, body {
 .color-tile img {
   width: 100%;
   aspect-ratio: 1;
-  object-fit: cover;        /* было contain — ткань заполняет квадрат ровно */
-  border-radius: 6px;
+  border-radius: 8px;
+  border: 1px solid var(--border);
+  object-fit: cover;
   display: block;
-  transform: scale(var(--color-tile-scale));
 }
 .color-tile-name {
   font-size: var(--color-tile-name-size);
   color: var(--text-soft);
-  margin-top: 4px;
-  line-height: 1.15;
+  margin-top: 3px;
+  line-height: 1.2;
   white-space: normal;
   word-break: break-word;
 }
