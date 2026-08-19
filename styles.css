@@ -1,5 +1,10 @@
-/* ===== Базовая палитра aw-go.ru ===== */
+/* ============================================================
+   🎛🎛🎛  ГЛАВНАЯ ПАНЕЛЬ УПРАВЛЕНИЯ ДИЗАЙНОМ  🎛🎛🎛
+   Меняешь цифру здесь → меняется во всём приложении.
+   Все размеры в px. Цвета — hex.
+   ============================================================ */
 :root {
+  /* ---------- ПАЛИТРА ---------- */
   --bg: #FFFFFF;
   --card: #FFFFFF;
   --border: #F4D7D7;
@@ -11,11 +16,68 @@
   --pink-strong: #E8A5A5;
   --pink-text: #6B2C2C;
   --disabled: #E8DDD2;
-  --shadow: 0 2px 8px rgba(92, 59, 30, 0.06);
-  --radius: 16px;
-  --radius-sm: 10px;
   --brown-btn: #5C3B1E;
+  --shadow: 0 2px 8px rgba(92, 59, 30, 0.06);
+
+  /* ---------- ГЛОБАЛЬНОЕ ---------- */
+  --radius: 16px;          /* скругление карточек/окон */
+  --radius-sm: 10px;       /* скругление плиток/полей */
+  --font-base: 15px;       /* базовый шрифт body */
+  --app-maxw: 480px;       /* макс ширина приложения */
+
+  /* ---------- ЛОГОТИП В ШАПКЕ ---------- */
+  --logo-h: 44px;          /* высота логотипа */
+
+  /* ---------- ЗАГОЛОВКИ ---------- */
+  --catalog-title-size: 34px;  /* "СУМКИ" */
+  --step-title-size: 20px;     /* "Сумка" / "Вышивка" */
+  --group-title-size: 14px;    /* "Модель" / "Материал" */
+
+  /* ---------- КАТЕГОРИИ (табы сверху) ---------- */
+  --cat-tab-padv: 10px;    /* вертикальный отступ внутри */
+  --cat-tab-padh: 22px;    /* горизонтальный отступ */
+  --cat-tab-size: 14px;    /* размер текста */
+  --cat-tab-gap: 10px;     /* расстояние между табами */
+
+  /* ---------- КАТАЛОГ (плитки товаров) ---------- */
+  --catalog-cols: 2;       /* колонок в сетке (2 = как сейчас) */
+  --catalog-gap: 12px;     /* расстояние между карточками */
+  --catalog-img-scale: 1.0;/* масштаб фото товара */
+  --catalog-name-size: 14px;
+  --catalog-btn-size: 13px;
+  --catalog-btn-padv: 11px;
+
+  /* ---------- ПРЕВЬЮ СУМКИ (большое окно) ---------- */
+  --preview-h: 400px;      /* высота окна превью */
+  --preview-scale: 0.45;   /* масштаб сумки внутри */
+
+  /* ---------- ЧИПЫ (Модель/Материал/Шрифт/Зона) ---------- */
+  --chip-padv: 8px;        /* верт. отступ */
+  --chip-padh: 14px;       /* гор. отступ */
+  --chip-size: 14px;       /* размер текста */
+  --chip-gap: 8px;         /* между чипами */
+
+  /* ---------- ПЛИТКИ ЦВЕТА СУМКИ ---------- */
+  --color-tile-w: 70px;    /* ширина плитки */
+  --color-tile-scale: 1.3; /* масштаб картинки внутри */
+  --color-tile-gap: 10px;
+  --color-tile-name-size: 11px;
+
+  /* ---------- ПЛИТКИ ЦВЕТА НИТОК ---------- */
+  --thread-min: 72px;      /* мин. ширина плитки (auto-fill) */
+  --thread-gap: 8px;
+  --thread-name-size: 11px;
+
+  /* ---------- ПОЛЕ ТЕКСТА ---------- */
+  --textarea-minh: 80px;
+  --textarea-size: 15px;
+
+  /* ---------- КНОПКИ НАВИГАЦИИ (низ) ---------- */
+  --btn-padv: 12px;        /* высота кнопки */
+  --btn-padh: 22px;        /* ширина кнопки */
+  --btn-size: 15px;        /* размер текста */
 }
+
 
 * { box-sizing: border-box; }
 html, body {
@@ -23,7 +85,7 @@ html, body {
   background: var(--bg);
   color: var(--text);
   font-family: 'Inter', -apple-system, BlinkMacSystemFont, sans-serif;
-  font-size: 15px;
+  font-size: var(--font-base);
   line-height: 1.4;
   -webkit-tap-highlight-color: transparent;
 }
@@ -36,7 +98,7 @@ html, body {
   padding: 10px 0 4px;
 }
 .app-logo {
-  height: 44px;
+  height: var(--logo-h);
   width: auto;
   object-fit: contain;
 }
@@ -45,28 +107,25 @@ html, body {
 /* ===== App / Step ===== */
 .app {
   padding: 4px 16px 100px;
-  max-width: 480px;
+  max-width: var(--app-maxw);
   margin: 0 auto;
 }
 .step.hidden { display: none; }
 .step-title {
   margin: 16px 0 12px;
-  font-size: 20px;
+  font-size: var(--step-title-size);
   font-weight: 700;
   color: var(--heading);
 }
 .group-title {
   margin: 18px 0 8px;
-  font-size: 14px;
+  font-size: var(--group-title-size);
   font-weight: 600;
   color: var(--heading);
 }
 
 
-/* ============================================================
-   🎛 ПАНЕЛЬ НАСТРОЙКИ №1 — БОЛЬШОЕ ОКНО ПРЕВЬЮ СУМКИ
-   Крути ДВЕ цифры: height (размер окна) и scale (размер сумки)
-   ============================================================ */
+/* ===== ПРЕВЬЮ СУМКИ (большое окно) ===== */
 .preview-frame {
   background: var(--card);
   border: 1px solid var(--border);
@@ -75,21 +134,17 @@ html, body {
   display: flex;
   align-items: center;
   justify-content: center;
-
-  height: 200px;         /* 🔧 ВЫСОТА окна (px). Больше = выше рамка. Фикс — окно НЕ прыгает */
-  padding: 0;            /* 🔧 отступ картинки от краёв окна (0 = впритык) */
-  overflow: hidden;      /*    ⬅ обрезает всё, что вылезло за рамку. НЕ трогай */
+  height: var(--preview-h);   /* 🔧 крути --preview-h вверху */
+  padding: 0;
+  overflow: hidden;
 }
 .preview-frame img {
   width: auto;
   height: auto;
-  max-width: none;       /*    ⬅ сняты все лимиты — можно раздувать без предела. НЕ трогай */
-  max-height: none;      /*    ⬅ НЕ трогай */
+  max-width: none;
+  max-height: none;
   object-fit: contain;
-
-  transform: scale(0.45); /* 🔧 ГЛАВНАЯ КРУТИЛКА МАСШТАБА СУМКИ:
-                                1.0 = норма, 1.5 = крупнее, 2.5 = очень крупно,
-                                0.6 = мельче. Предела нет — рамка обрежет лишнее */
+  transform: scale(var(--preview-scale));  /* 🔧 крути --preview-scale */
 }
 
 
@@ -97,14 +152,14 @@ html, body {
 .options {
   display: flex;
   flex-wrap: wrap;
-  gap: 8px;
+  gap: var(--chip-gap);
 }
 .chip {
   background: var(--card);
   border: 1.5px solid var(--border);
   border-radius: 999px;
-  padding: 8px 14px;
-  font-size: 14px;
+  padding: var(--chip-padv) var(--chip-padh);
+  font-size: var(--chip-size);
   color: var(--text);
   cursor: pointer;
   transition: all 0.15s ease;
@@ -130,12 +185,9 @@ html, body {
 }
 
 
-/* ============================================================
-   🎛 ПАНЕЛЬ НАСТРОЙКИ №2 — МАЛЕНЬКИЕ ПЛИТКИ ВЫБОРА ЦВЕТА
-   Крути: width (размер плитки) и scale (размер картинки в ней)
-   ============================================================ */
+/* ===== ПЛИТКИ ЦВЕТА СУМКИ ===== */
 .color-options {
-  gap: 10px;
+  gap: var(--color-tile-gap);
 }
 .color-tile {
   background: var(--card);
@@ -144,40 +196,36 @@ html, body {
   cursor: pointer;
   text-align: center;
   transition: all 0.15s ease;
-
-  width: 70px;                       /* 🔧 ШИРИНА плитки (px). Больше = крупнее плитка */
-  border: 2px solid var(--border);   /*    рамка ВСЕГДА видна — плитки НЕ дёргаются при клике */
-  box-sizing: border-box;            /*    НЕ трогай — держит размер постоянным */
-  overflow: hidden;                  /*    ⬅ обрезает раздутую картинку внутри плитки. НЕ трогай */
+  width: var(--color-tile-w);        /* 🔧 крути --color-tile-w */
+  border: 2px solid var(--border);
+  box-sizing: border-box;
+  overflow: hidden;
 }
 .color-tile:active { transform: scale(0.97); }
 .color-tile.active {
-  border-color: var(--pink-strong);  /* 🔧 ЦВЕТ рамки у ВЫБРАННОЙ плитки */
-  box-shadow: none;                  /*    НЕ трогай */
+  border-color: var(--pink-strong);
+  box-shadow: none;
 }
 .color-tile img {
   width: 100%;
-  aspect-ratio: 1;         /* 🔧 форма окошка картинки: 1 = квадрат */
+  aspect-ratio: 1;
   object-fit: contain;
   border-radius: 6px;
   display: block;
-
-  transform: scale(1.3);   /* 🔧 КРУТИЛКА МАСШТАБА картинки в плитке:
-                                  1.0 = норма, 1.5 = крупнее, 0.7 = мельче.
-                                  Рамка плитки обрежет лишнее */
+  transform: scale(var(--color-tile-scale));  /* 🔧 крути --color-tile-scale */
 }
 .color-tile-name {
-  font-size: 11px;
+  font-size: var(--color-tile-name-size);
   color: var(--text-soft);
   margin-top: 4px;
 }
 
 
-/* ===== Цвета ниток (квадратные плитки) ===== */
+/* ===== Цвета ниток ===== */
 .thread-grid {
   display: grid;
-  grid-template-columns: repeat(auto-fill, minmax(72px, 1fr));
-  gap: 8px;
+  grid-template-columns: repeat(auto-fill, minmax(var(--thread-min), 1fr));
+  gap: var(--thread-gap);
 }
 .thread-tile {
   cursor: pointer;
@@ -200,7 +248,7 @@ html, body {
   display: block;
 }
 .thread-name {
-  font-size: 11px;
+  font-size: var(--thread-name-size);
   color: var(--text-soft);
   margin-top: 3px;
   line-height: 1.2;
@@ -210,13 +258,13 @@ html, body {
 /* ===== Textarea ===== */
 textarea {
   width: 100%;
-  min-height: 80px;
+  min-height: var(--textarea-minh);
   background: var(--card);
   border: 1.5px solid var(--border);
   border-radius: var(--radius-sm);
   padding: 12px;
   font-family: inherit;
-  font-size: 15px;
+  font-size: var(--textarea-size);
   color: var(--text);
   resize: vertical;
   outline: none;
@@ -250,8 +298,8 @@ textarea:focus { border-color: var(--pink-strong); }
 }
 .btn {
   border-radius: 999px;
-  padding: 12px 22px;
-  font-size: 15px;
+  padding: var(--btn-padv) var(--btn-padh);
+  font-size: var(--btn-size);
   font-weight: 600;
   font-family: inherit;
   cursor: pointer;
@@ -283,8 +331,8 @@ textarea:focus { border-color: var(--pink-strong); }
 /* ===== Каталог (шаг 0) ===== */
 .catalog-grid {
   display: grid;
-  grid-template-columns: 1fr 1fr;
-  gap: 12px;
+  grid-template-columns: repeat(var(--catalog-cols), 1fr);  /* 🔧 крути --catalog-cols */
+  gap: var(--catalog-gap);
   margin-top: 8px;
 }
 .catalog-card {
@@ -308,8 +356,7 @@ textarea:focus { border-color: var(--pink-strong); }
   width: 100%;
   height: 100%;
   object-fit: contain;
-
-  transform: scale(1.0);   /* 🔧 КРУТИЛКА МАСШТАБА фото товара в каталоге (плитки на стартовом экране) */
+  transform: scale(var(--catalog-img-scale));  /* 🔧 крути --catalog-img-scale */
 }
 .catalog-badge {
   position: absolute;
@@ -323,7 +370,7 @@ textarea:focus { border-color: var(--pink-strong); }
   border-radius: 999px;
 }
 .catalog-name {
-  font-size: 14px;
+  font-size: var(--catalog-name-size);
   font-weight: 600;
   color: var(--heading);
   margin: 0;
@@ -343,8 +390,8 @@ textarea:focus { border-color: var(--pink-strong); }
   color: #fff;
   border: none;
   border-radius: 999px;
-  padding: 11px 12px;
-  font-size: 13px;
+  padding: var(--catalog-btn-padv) 12px;
+  font-size: var(--catalog-btn-size);
   font-weight: 600;
   font-family: inherit;
   cursor: pointer;
@@ -356,7 +403,7 @@ textarea:focus { border-color: var(--pink-strong); }
 /* ===== Заголовок каталога ===== */
 .catalog-title {
   text-align: center;
-  font-size: 34px;
+  font-size: var(--catalog-title-size);
   font-weight: 700;
   letter-spacing: 2px;
   color: var(--heading);
@@ -369,16 +416,16 @@ textarea:focus { border-color: var(--pink-strong); }
   display: flex;
   flex-wrap: wrap;
   justify-content: center;
-  gap: 10px;
+  gap: var(--cat-tab-gap);
   margin-bottom: 16px;
 }
 .category-tab {
-  padding: 10px 22px;
+  padding: var(--cat-tab-padv) var(--cat-tab-padh);
   border: 1.5px solid var(--heading);
   border-radius: 999px;
   background: transparent;
   color: var(--heading);
-  font-size: 14px;
+  font-size: var(--cat-tab-size);
   font-weight: 500;
   cursor: pointer;
   user-select: none;
@@ -390,7 +437,7 @@ textarea:focus { border-color: var(--pink-strong); }
 }
 
 
-/* Заглушка пустой категории */
+/* ===== Заглушка пустой категории ===== */
 .catalog-empty {
   grid-column: 1 / -1;
   display: flex;
