@@ -198,14 +198,9 @@ function openConstructor(item) {
 }
 
 
-// ===== Рендер «Модель» и «Материал» (одна активная плитка, из данных товара) =====
+// ===== Рендер «Материал» (одна активная плитка, из данных товара) =====
 function renderModelMaterial() {
-  // Модель = название товара (без цвета/материала), берём из title или model_name
-  const modelName = state.item?.model_name || 'SStyle Mini';
   const materialName = state.item?.material_name || '—';
-
-  el.optModel.innerHTML = '';
-  el.optModel.appendChild(makeStaticChip(modelName));
 
   el.optMaterial.innerHTML = '';
   el.optMaterial.appendChild(makeStaticChip(materialName));
