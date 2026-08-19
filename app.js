@@ -240,15 +240,20 @@ function renderBagColors() {
   colors.forEach(c => {
     const tile = document.createElement('div');
     tile.className = 'color-tile';
+    tile.dataset.id = c.id;                 // ← запоминаем id
     if (c.id === state.bagColor) tile.classList.add('active');
     tile.innerHTML = `
       <img src="${c.image}" alt="${c.name}" loading="lazy">
       <div class="color-tile-name">${c.name}</div>
     `;
     tile.addEventListener('click', () => {
+      if (state.bagColor === c.id) return;  // уже выбран — ничего не делаем
       state.bagColor = c.id;
       updatePreview();
-      renderBagColors();
+      // только переключаем active, БЕЗ пересборки:
+      el.optBagColor.querySelectorAll('.color-tile').forEach(t =>
+        t.classList.toggle('active', t.dataset.id === c.id)
+      );
     });
     el.optBagColor.appendChild(tile);
   });
@@ -260,6 +265,7 @@ function renderThreadColors() {
   THREAD_COLORS.forEach(c => {
     const tile = document.createElement('div');
     tile.className = 'thread-tile';
+    tile.dataset.id = c.id;                 // ← запоминаем id
     if (c.id === state.threadColor) tile.classList.add('active');
     tile.innerHTML = `
       ${c.img
@@ -268,8 +274,11 @@ function renderThreadColors() {
       <div class="thread-name">${c.name}</div>
     `;
     tile.addEventListener('click', () => {
+      if (state.threadColor === c.id) return;
       state.threadColor = c.id;
-      renderThreadColors();
+      el.optThread.querySelectorAll('.thread-tile').forEach(t =>
+        t.classList.toggle('active', t.dataset.id === c.id)
+      );
     });
     el.optThread.appendChild(tile);
   });
