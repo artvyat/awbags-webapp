@@ -545,37 +545,27 @@ function showStep(n) {
 }
 
 
-// ===== Валидация текста (Фаза 4 — заменим на построчную по зоне) =====
-const MAX_LINES = 3;
-const MAX_CHARS = 30;
+/* ZL-DELEGATE (Фаза 4) */
+// Старый блок (MAX_LINES=3 / MAX_CHARS=30) отключён.
+// Лимиты теперь построчные и зависят от зоны + регистра — см. блок ФАЗА 4.1 внизу файла.
 
 function validateText(text) {
-  if (!text || !text.trim()) {
-    return { ok: false, msg: 'Текст пустой. Введи что-нибудь.' };
+  if (typeof zlValidate !== 'function') {
+    return (!text || !text.trim())
+      ? { ok: false, msg: 'Текст пустой. Введи что-нибудь.' }
+      : { ok: true };
   }
-  const lines = text.split('\n');
-  if (lines.length > MAX_LINES) {
-    return { ok: false, msg: `Слишком много строк (${lines.length}). Максимум ${MAX_LINES}.` };
-  }
-  for (let i = 0; i < lines.length; i++) {
-    if (lines[i].length > MAX_CHARS) {
-      return { ok: false, msg: `Строка ${i + 1} длиннее ${MAX_CHARS} символов.` };
-    }
-  }
-  return { ok: true };
+  const v = zlValidate(text);
+  return v.ok ? { ok: true } : { ok: false, msg: v.errors[0] };
 }
 
-el.text.addEventListener('input', () => {
-  state.text = el.text.value;
-  const v = validateText(state.text);
-  if (state.text && !v.ok) {
-    el.hint.textContent = v.msg;
-    el.hint.classList.add('error');
-  } else {
-    el.hint.textContent = `До ${MAX_LINES} строк, по ${MAX_CHARS} символов`;
-    el.hint.classList.remove('error');
-  }
-});
+// Ввод обрабатывает zlBind() (обрезка по лимитам + счётчик + подсказка).
+// Здесь только синхронизируем state и прячем старую подсказку.
+if (el.text) {
+  el.text.addEventListener('input', () => { state.text = el.text.value; });
+}
+if (el.hint) { el.hint.textContent = ''; el.hint.style.display = 'none'; }
+/* /ZL-DELEGATE */
 
 
 // ===== Сборка variant_id =====
@@ -666,3 +656,264 @@ async function init() {
 }
 
 init();
+
+/* ═══════════════════════════════════════════════════════════════
+   ФАЗА 4.1 — ЛИМИТЫ СИМВОЛОВ ПО ЗОНАМ (построчно, по регистру)
+   Правило: строка ВСЯ КАПСОМ → caps-лимит, иначе → normal-лимит.
+   Цифры/знаки игнорируются при детекте регистра, но СЧИТАЮТСЯ в длине.
+   ═══════════════════════════════════════════════════════════════ */
+
+const ZL_DEFAULT_LIMITS = {
+  normal: { max_chars_per_line: 11, max_lines: 3 },
+  caps:   { max_chars_per_line: 7,  max_lines: 3 }
+};
+
+const ZL_EMOJI_G = /[\p{Extended_Pictographic}\u200D\uFE0F]/gu;
+const ZL_EMOJI_T = /[\p{Extended_Pictographic}\u200D\uFE0F]/u;
+
+function zlPlural(n, one, few, many) {
+  const m10 = n % 10, m100 = n % 100;
+  if (m10 === 1 && m100 !== 11) return one;
+  if (m10 >= 2 && m10 <= 4 && (m100 < 10 || m100 >= 20)) return few;
+  return many;
+}
+
+function zlTextarea() {
+  return (typeof el === 'object' && el && (el.text || el.textInput || el.textarea))
+      || document.querySelector('#step-2 textarea')
+      || document.querySelector('textarea');
+}
+
+function zlZone() {
+  try {
+    const zones = (typeof currentZones === 'function') ? currentZones() : [];
+    return zones.find(z => z.id === state.zone) || zones[0] || null;
+  } catch (e) { return null; }
+}
+
+function zlLimits() {
+  const z = zlZone();
+  const L = (z && z.limits) ? z.limits : ZL_DEFAULT_LIMITS;
+  return {
+    normal: L.normal || ZL_DEFAULT_LIMITS.normal,
+    caps:   L.caps   || L.normal || ZL_DEFAULT_LIMITS.caps
+  };
+}
+
+function zlMaxLines() {
+  const L = zlLimits();
+  return Math.max(L.normal.max_lines || 1, L.caps.max_lines || 1);
+}
+
+/** режим строки: 'caps' если ВСЕ буквы заглавные (и буквы вообще есть) */
+function zlLineMode(line) {
+  const letters = [...line].filter(ch => ch.toLowerCase() !== ch.toUpperCase());
+  if (!letters.length) return 'normal';
+  return letters.every(ch => ch === ch.toUpperCase()) ? 'caps' : 'normal';
+}
+
+function zlLineLimit(line) {
+  return zlLimits()[zlLineMode(line)].max_chars_per_line;
+}
+
+/** приведение текста к лимитам (для ввода/вставки) */
+function zlSanitize(raw) {
+  let changed = null;
+  let t = String(raw).replace(/\r\n?/g, '\n');
+
+  const noEmoji = t.replace(ZL_EMOJI_G, '');
+  if (noEmoji !== t) { t = noEmoji; changed = 'emoji'; }
+
+  let lines = t.split('\n');
+  const ML = zlMaxLines();
+  if (lines.length > ML) { lines = lines.slice(0, ML); changed = changed || 'lines'; }
+
+  lines = lines.map(l => {
+    const lim = zlLineLimit(l);
+    if (l.length > lim) { changed = changed || 'chars'; return l.slice(0, lim); }
+    return l;
+  });
+
+  return { text: lines.join('\n'), changed };
+}
+
+/** проверка БЕЗ изменения текста (для смены зоны и для submit) */
+function zlValidate(raw) {
+  const t = String(raw || '').replace(/\r\n?/g, '\n');
+  const lines = t.split('\n');
+  const ML = zlMaxLines();
+  const errors = [];
+
+  if (ZL_EMOJI_T.test(t)) errors.push('Эмодзи не поддерживаются');
+  if (lines.length > ML) errors.push(`Максимум ${ML} ${zlPlural(ML,'строка','строки','строк')}`);
+
+  lines.forEach((l, i) => {
+    const lim = zlLineLimit(l);
+    if (l.length > lim) errors.push(`Строка ${i + 1} — ${l.length} симв., максимум ${lim}`);
+  });
+
+  if (t.trim() === '') errors.push('Введите текст');
+  else if (lines.some(l => l.trim() === '')) errors.push('Пустые строки не допускаются');
+
+  return { ok: errors.length === 0, errors, lines };
+}
+
+/* ---------- UI: счётчик + подсказка ---------- */
+
+function zlMeta() {
+  const ta = zlTextarea();
+  if (!ta) return null;
+  let box = document.getElementById('zl-meta');
+  if (!box) {
+    box = document.createElement('div');
+    box.id = 'zl-meta';
+    box.className = 'text-meta';
+    box.innerHTML = '<span class="text-counter" id="zl-counter"></span>' +
+                    '<span class="text-hint" id="zl-hint"></span>';
+    ta.insertAdjacentElement('afterend', box);
+  }
+  return box;
+}
+
+function zlNextBtn() {
+  return document.getElementById('btn-submit')
+      || document.getElementById('btn-generate')
+      || document.querySelector('#step-2 .btn-primary, #step-2 .nav-next, #step-2 .btn-next');
+}
+
+function zlRefresh(flash) {
+  const ta = zlTextarea();
+  if (!ta) return { ok: false, errors: ['Поле ввода не найдено'], lines: [] };
+  zlMeta();
+
+  const counter = document.getElementById('zl-counter');
+  const hint    = document.getElementById('zl-hint');
+  const v = zlValidate(ta.value);
+  const L = zlLimits(), ML = zlMaxLines();
+
+  // строка под кареткой
+  const pos = (ta.selectionStart != null) ? ta.selectionStart : ta.value.length;
+  const idx = Math.max(0, Math.min(ta.value.slice(0, pos).split('\n').length - 1, v.lines.length - 1));
+  const cur = v.lines[idx] || '';
+  const curLim = zlLineLimit(cur);
+
+  if (counter) {
+    counter.textContent = `${cur.length}/${curLim} · ${v.lines.length}/${ML}`;
+    counter.classList.toggle('over', !v.ok);
+  }
+  if (hint) {
+    hint.textContent = v.ok
+      ? `Максимум ${L.normal.max_chars_per_line} симв. в строке (${L.caps.max_chars_per_line} — если ЗАГЛАВНЫМИ) · до ${ML} ${zlPlural(ML,'строки','строк','строк')}`
+      : v.errors[0];
+    hint.classList.toggle('over', !v.ok);
+  }
+
+  ta.classList.toggle('invalid', !v.ok && ta.value.trim() !== '');
+
+  if (flash) { ta.classList.remove('shake'); void ta.offsetWidth; ta.classList.add('shake'); }
+
+  const btn = zlNextBtn();
+  if (btn) { btn.disabled = !v.ok; btn.classList.toggle('disabled', !v.ok); }
+
+  return v;
+}
+
+function zlBind() {
+  const ta = zlTextarea();
+  if (!ta || ta.dataset.zlBound) { zlRefresh(false); return; }
+  ta.dataset.zlBound = '1';
+  ta.removeAttribute('maxlength');           // старый жёсткий лимит больше не нужен
+
+  ta.addEventListener('keydown', (e) => {
+    if (e.key === 'Enter' && !e.shiftKey === false) { /* noop */ }
+    if (e.key === 'Enter') {
+      if (ta.value.split('\n').length >= zlMaxLines()) {
+        e.preventDefault();
+        zlRefresh(true);
+      }
+    }
+  });
+
+  ta.addEventListener('input', () => {
+    const before = ta.value;
+    const pos = ta.selectionStart;
+    const s = zlSanitize(before);
+    if (s.text !== before) {
+      const delta = before.length - s.text.length;
+      ta.value = s.text;
+      const np = Math.max(0, Math.min(s.text.length, pos - delta));
+      try { ta.setSelectionRange(np, np); } catch (e) {}
+      zlRefresh(true);
+    } else {
+      zlRefresh(false);
+    }
+    if (typeof state === 'object' && state) state.text = ta.value;
+  });
+
+  ['click', 'keyup', 'select', 'focus'].forEach(ev =>
+    ta.addEventListener(ev, () => zlRefresh(false))
+  );
+
+  zlRefresh(false);
+}
+
+document.addEventListener('DOMContentLoaded', () => setTimeout(zlBind, 0));
+
+/* ===== ZL-HOOKS (Фаза 4.1) ===== */
+/* Обёртки: не трогают исходные функции, только добавляют поведение. */
+(function () {
+  function wrapAfter(name, fn) {
+    if (typeof window[name] === 'function') {
+      var orig = window[name];
+      window[name] = function () { var r = orig.apply(this, arguments); try { fn(r, arguments); } catch (e) {} return r; };
+      return true;
+    }
+    return false;
+  }
+
+  // 1) смена зоны / материала -> пересчитать лимиты и счётчик
+  try { if (typeof selectZone === 'function') { var _sz = selectZone; selectZone = function () { var r = _sz.apply(this, arguments); zlRefresh(false); return r; }; } } catch (e) {}
+  try { if (typeof selectMaterial === 'function') { var _sm = selectMaterial; selectMaterial = function () { var r = _sm.apply(this, arguments); zlRefresh(false); return r; }; } } catch (e) {}
+  wrapAfter('selectZone', function () { zlRefresh(false); });
+  wrapAfter('selectMaterial', function () { zlRefresh(false); });
+
+  // 2) переход на шаг 2 -> привязать валидатор
+  ['goToStep', 'gotoStep', 'showStep', 'setStep'].forEach(function (n) {
+    try {
+      if (typeof window[n] === 'function') {
+        var o = window[n];
+        window[n] = function () { var r = o.apply(this, arguments); setTimeout(zlBind, 0); return r; };
+      }
+    } catch (e) {}
+  });
+  try {
+    if (typeof goToStep === 'function') { var _gs = goToStep; goToStep = function () { var r = _gs.apply(this, arguments); setTimeout(zlBind, 0); return r; }; }
+  } catch (e) {}
+
+  // 2b) страховка: следим за появлением/показом шага 2
+  try {
+    var s2 = document.getElementById('step-2');
+    if (s2 && window.MutationObserver) {
+      new MutationObserver(function () { zlBind(); }).observe(s2, { attributes: true, attributeFilter: ['class', 'style'] });
+    }
+  } catch (e) {}
+
+  // 3) submit -> запрет отправки при нарушении лимитов
+  try {
+    if (typeof submit === 'function') {
+      var _sub = submit;
+      submit = function () {
+        var v = zlRefresh(false);
+        if (!v.ok) {
+          if (typeof showError === 'function') showError(v.errors[0]); else alert(v.errors[0]);
+          return;
+        }
+        return _sub.apply(this, arguments);
+      };
+    }
+    if (typeof window.submit === 'function' && window.submit.name !== 'submit') { /* noop */ }
+  } catch (e) {}
+
+  setTimeout(zlBind, 0);
+})();
+
