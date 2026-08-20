@@ -8,7 +8,8 @@ const state = {
   step: 0,
   category: 'all',
   item: null,          // текущий выбранный товар из каталога (объект целиком)
-  bagColor: null,      // id выбранного цвета внутри item.colors
+  material: null,      // id выбранного материала внутри item.materials
+  bagColor: null,      // id выбранного цвета внутри material.colors
   zone: 'front_pocket',
   font: 'cursive',
   threadColor: '3',
@@ -58,7 +59,6 @@ const el = {
   categoryTabs: document.getElementById('category-tabs'),
   catalogGrid: document.getElementById('catalog-grid'),
   preview: document.getElementById('preview-img'),
-  optModel: document.getElementById('opt-model'),
   optMaterial: document.getElementById('opt-material'),
   optBagColor: document.getElementById('opt-bag-color'),
   optZone: document.getElementById('opt-zone'),
@@ -80,22 +80,42 @@ Object.entries(el).forEach(([key, node]) => {
 
 
 // ===== Хелперы для текущего товара =====
-// Список цветов текущего товара (поддержка нового формата colors[] и старого одиночного варианта)
-function currentColors() {
+
+// Возвращает materials[] текущего товара.
+// Поддержка старого формата: если materials нет, оборачиваем colors[] в 1 материал.
+function currentMaterials() {
   if (!state.item) return [];
-  if (Array.isArray(state.item.colors) && state.item.colors.length) {
-    return state.item.colors;
+
+  if (Array.isArray(state.item.materials) && state.item.materials.length) {
+    return state.item.materials;
   }
-  // fallback: если у товара нет colors[], но есть variant_id/image — делаем 1 цвет
-  if (state.item.variant_id) {
-    return [{
-      id: 'default',
-      name: state.item.title || 'Вариант',
-      variant_id: state.item.variant_id,
-      image: state.item.image,
-    }];
-  }
-  return [];
+
+  // fallback — старый формат (colors[] на уровне товара)
+  const legacyColors = Array.isArray(state.item.colors) && state.item.colors.length
+    ? state.item.colors
+    : (state.item.variant_id ? [{
+        id: 'default',
+        name: state.item.title || 'Вариант',
+        variant_id: state.item.variant_id,
+        image: state.item.image,
+      }] : []);
+
+  return [{
+    id: 'default',
+    name: state.item.material_name || '—',
+    bag_id: state.item.bag_id,
+    colors: legacyColors,
+  }];
+}
+
+function currentMaterial() {
+  const mats = currentMaterials();
+  return mats.find(m => m.id === state.material) || mats[0] || null;
+}
+
+function currentColors() {
+  const mat = currentMaterial();
+  return (mat && Array.isArray(mat.colors)) ? mat.colors : [];
 }
 
 function currentColor() {
@@ -187,31 +207,58 @@ function renderCatalog() {
 // ===== Открытие конструктора для конкретного товара =====
 function openConstructor(item) {
   state.item = item;
+
+  const mats = currentMaterials();
+  state.material = mats.length ? mats[0].id : null;
+
   const colors = currentColors();
-  // дефолтный цвет — первый в списке
   state.bagColor = colors.length ? colors[0].id : null;
 
-  renderModelMaterial();
+  renderMaterials();
   renderBagColors();
   updatePreview();
   showStep(1);
 }
 
 
-// ===== Рендер «Материал» (одна активная плитка, из данных товара) =====
-function renderModelMaterial() {
-  const materialName = state.item?.material_name || '—';
-
+// ===== Материал — кликабельные чипы =====
+function renderMaterials() {
+  const mats = currentMaterials();
   el.optMaterial.innerHTML = '';
-  el.optMaterial.appendChild(makeStaticChip(materialName));
+
+  // если материал один — чип статичный (некликабельный)
+  const single = mats.length < 2;
+
+  mats.forEach(m => {
+    const chip = document.createElement('div');
+    chip.className = 'chip';
+    chip.dataset.id = m.id;
+    if (m.id === state.material) chip.classList.add('active');
+    chip.textContent = m.name;
+    if (!single) {
+      chip.addEventListener('click', () => selectMaterial(m.id));
+    }
+    el.optMaterial.appendChild(chip);
+  });
 }
 
-// статичный чип (активный, некликабельный) — модель/материал определены выбором товара
-function makeStaticChip(text) {
-  const chip = document.createElement('div');
-  chip.className = 'chip active';
-  chip.textContent = text;
-  return chip;
+function selectMaterial(id) {
+  if (state.material === id) return;
+  state.material = id;
+
+  // пробуем сохранить тот же цвет (gray/black/khaki есть у обоих материалов),
+  // иначе берём первый доступный
+  const colors = currentColors();
+  const keep = colors.find(c => c.id === state.bagColor);
+  state.bagColor = keep ? keep.id : (colors[0]?.id || null);
+
+  // переключаем active у чипов без полной пересборки
+  el.optMaterial.querySelectorAll('.chip').forEach(ch =>
+    ch.classList.toggle('active', ch.dataset.id === id)
+  );
+
+  renderBagColors();   // тут пересборка нужна — набор цветов другой
+  updatePreview();
 }
 
 
@@ -233,14 +280,14 @@ function renderChips(container, items, currentId, onPick) {
 }
 
 
-// ===== Цвета корпуса — из данных текущего товара =====
+// ===== Цвета корпуса — из текущего материала =====
 function renderBagColors() {
   el.optBagColor.innerHTML = '';
   const colors = currentColors();
   colors.forEach(c => {
     const tile = document.createElement('div');
     tile.className = 'color-tile';
-    tile.dataset.id = c.id;                 // ← запоминаем id
+    tile.dataset.id = c.id;
     if (c.id === state.bagColor) tile.classList.add('active');
     tile.innerHTML = `
       <img src="${c.image}" alt="${c.name}" loading="lazy">
@@ -250,7 +297,7 @@ function renderBagColors() {
       if (state.bagColor === c.id) return;  // уже выбран — ничего не делаем
       state.bagColor = c.id;
       updatePreview();
-      // только переключаем active, БЕЗ пересборки:
+      // только переключаем active, БЕЗ пересборки сетки:
       el.optBagColor.querySelectorAll('.color-tile').forEach(t =>
         t.classList.toggle('active', t.dataset.id === c.id)
       );
@@ -265,7 +312,7 @@ function renderThreadColors() {
   THREAD_COLORS.forEach(c => {
     const tile = document.createElement('div');
     tile.className = 'thread-tile';
-    tile.dataset.id = c.id;                 // ← запоминаем id
+    tile.dataset.id = c.id;
     if (c.id === state.threadColor) tile.classList.add('active');
     tile.innerHTML = `
       ${c.img
@@ -307,11 +354,11 @@ async function loadThreadColors() {
   } catch (err) {
     console.error('Не удалось загрузить colors.json, fallback', err);
     THREAD_COLORS = [
-      { id: '1', name: 'белый',    hex: '#FFFFFF' },
+      { id: '1', name: 'белый',     hex: '#FFFFFF' },
       { id: '2', name: 'малиновый', hex: '#E44687' },
-      { id: '3', name: 'синий',    hex: '#2767D6' },
-      { id: '4', name: 'розовый',  hex: '#EA98C4' },
-      { id: '5', name: 'голубой',  hex: '#B9DAE7' },
+      { id: '3', name: 'синий',     hex: '#2767D6' },
+      { id: '4', name: 'розовый',   hex: '#EA98C4' },
+      { id: '5', name: 'голубой',   hex: '#B9DAE7' },
     ];
   }
 }
@@ -371,10 +418,12 @@ el.text.addEventListener('input', () => {
 
 
 function submit() {
+  const mat = currentMaterial();
   const color = currentColor();
-  if (!state.item || !color) return;
+  if (!state.item || !mat || !color) return;
+
   const payload = {
-    bag_id: state.item.bag_id,
+    bag_id: mat.bag_id || state.item.bag_id || state.item.id,
     variant_id: color.variant_id,
     text: state.text,
     color_id: state.threadColor,
