@@ -60,8 +60,7 @@
               "preview_image": "images/suede_big/gray.jpg",
               "previews": {
                 "front_pocket": "images/suede_big/gray.jpg",
-                "back": "images/suede_big/gray_back.jpg",
-                "side_round": "images/suede_big/gray_side.jpg"
+                "back": "images/suede_big/gray_back.jpg"
               }
             },
             {
@@ -72,8 +71,7 @@
               "preview_image": "images/suede_big/graphite.jpg",
               "previews": {
                 "front_pocket": "images/suede_big/graphite.jpg",
-                "back": "images/suede_big/graphite_back.jpg",
-                "side_round": "images/suede_big/graphite_side.jpg"
+                "back": "images/suede_big/graphite_back.jpg"
               }
             },
             {
@@ -84,8 +82,7 @@
               "preview_image": "images/suede_big/lavender.jpg",
               "previews": {
                 "front_pocket": "images/suede_big/lavender.jpg",
-                "back": "images/suede_big/lavender_back.jpg",
-                "side_round": "images/suede_big/lavender_side.jpg"
+                "back": "images/suede_big/lavender_back.jpg"
               }
             },
             {
@@ -96,8 +93,7 @@
               "preview_image": "images/suede_big/light_blue.jpg",
               "previews": {
                 "front_pocket": "images/suede_big/light_blue.jpg",
-                "back": "images/suede_big/light_blue_back.jpg",
-                "side_round": "images/suede_big/light_blue_side.jpg"
+                "back": "images/suede_big/light_blue_back.jpg"
               }
             },
             {
@@ -108,8 +104,7 @@
               "preview_image": "images/suede_big/blue.jpg",
               "previews": {
                 "front_pocket": "images/suede_big/blue.jpg",
-                "back": "images/suede_big/blue_back.jpg",
-                "side_round": "images/suede_big/blue_side.jpg"
+                "back": "images/suede_big/blue_back.jpg"
               }
             },
             {
@@ -120,8 +115,7 @@
               "preview_image": "images/suede_big/powder.jpg",
               "previews": {
                 "front_pocket": "images/suede_big/powder.jpg",
-                "back": "images/suede_big/powder_back.jpg",
-                "side_round": "images/suede_big/powder_side.jpg"
+                "back": "images/suede_big/powder_back.jpg"
               }
             },
             {
@@ -132,8 +126,7 @@
               "preview_image": "images/suede_big/pink.jpg",
               "previews": {
                 "front_pocket": "images/suede_big/pink.jpg",
-                "back": "images/suede_big/pink_back.jpg",
-                "side_round": "images/suede_big/pink_side.jpg"
+                "back": "images/suede_big/pink_back.jpg"
               }
             },
             {
@@ -144,8 +137,7 @@
               "preview_image": "images/suede_big/raspberry.jpg",
               "previews": {
                 "front_pocket": "images/suede_big/raspberry.jpg",
-                "back": "images/suede_big/raspberry_back.jpg",
-                "side_round": "images/suede_big/raspberry_side.jpg"
+                "back": "images/suede_big/raspberry_back.jpg"
               }
             },
             {
@@ -156,8 +148,7 @@
               "preview_image": "images/suede_big/beige.jpg",
               "previews": {
                 "front_pocket": "images/suede_big/beige.jpg",
-                "back": "images/suede_big/beige_back.jpg",
-                "side_round": "images/suede_big/beige_side.jpg"
+                "back": "images/suede_big/beige_back.jpg"
               }
             },
             {
@@ -168,8 +159,7 @@
               "preview_image": "images/suede_big/sand.jpg",
               "previews": {
                 "front_pocket": "images/suede_big/sand.jpg",
-                "back": "images/suede_big/sand_back.jpg",
-                "side_round": "images/suede_big/sand_side.jpg"
+                "back": "images/suede_big/sand_back.jpg"
               }
             },
             {
@@ -180,8 +170,7 @@
               "preview_image": "images/suede_big/black.jpg",
               "previews": {
                 "front_pocket": "images/suede_big/black.jpg",
-                "back": "images/suede_big/black_back.jpg",
-                "side_round": "images/suede_big/black_side.jpg"
+                "back": "images/suede_big/black_back.jpg"
               }
             },
             {
@@ -192,8 +181,7 @@
               "preview_image": "images/suede_big/brown.jpg",
               "previews": {
                 "front_pocket": "images/suede_big/brown.jpg",
-                "back": "images/suede_big/brown_back.jpg",
-                "side_round": "images/suede_big/brown_side.jpg"
+                "back": "images/suede_big/brown_back.jpg"
               }
             },
             {
@@ -204,8 +192,7 @@
               "preview_image": "images/suede_big/cappuccino.jpg",
               "previews": {
                 "front_pocket": "images/suede_big/cappuccino.jpg",
-                "back": "images/suede_big/cappuccino_back.jpg",
-                "side_round": "images/suede_big/cappuccino_side.jpg"
+                "back": "images/suede_big/cappuccino_back.jpg"
               }
             },
             {
@@ -216,8 +203,7 @@
               "preview_image": "images/suede_big/khaki.jpg",
               "previews": {
                 "front_pocket": "images/suede_big/khaki.jpg",
-                "back": "images/suede_big/khaki_back.jpg",
-                "side_round": "images/suede_big/khaki_side.jpg"
+                "back": "images/suede_big/khaki_back.jpg"
               }
             },
             {
@@ -228,8 +214,7 @@
               "preview_image": "images/suede_big/lemon.jpg",
               "previews": {
                 "front_pocket": "images/suede_big/lemon.jpg",
-                "back": "images/suede_big/lemon_back.jpg",
-                "side_round": "images/suede_big/lemon_side.jpg"
+                "back": "images/suede_big/lemon_back.jpg"
               }
             },
             {
@@ -240,8 +225,7 @@
               "preview_image": "images/suede_big/mint.jpg",
               "previews": {
                 "front_pocket": "images/suede_big/mint.jpg",
-                "back": "images/suede_big/mint_back.jpg",
-                "side_round": "images/suede_big/mint_side.jpg"
+                "back": "images/suede_big/mint_back.jpg"
               }
             },
             {
@@ -252,8 +236,7 @@
               "preview_image": "images/suede_big/snow_leopard.jpg",
               "previews": {
                 "front_pocket": "images/suede_big/snow_leopard.jpg",
-                "back": "images/suede_big/snow_leopard_back.jpg",
-                "side_round": "images/suede_big/snow_leopard_side.jpg"
+                "back": "images/suede_big/snow_leopard_back.jpg"
               }
             },
             {
@@ -264,8 +247,7 @@
               "preview_image": "images/suede_big/pistachio.jpg",
               "previews": {
                 "front_pocket": "images/suede_big/pistachio.jpg",
-                "back": "images/suede_big/pistachio_back.jpg",
-                "side_round": "images/suede_big/pistachio_side.jpg"
+                "back": "images/suede_big/pistachio_back.jpg"
               }
             }
           ],
@@ -319,7 +301,7 @@
               "name": "Сбоку на кругляшке",
               "order": 3,
               "enabled": true,
-              "available": true,
+              "available": false,
               "default": false,
               "perspective": true,
               "limits": {
@@ -367,8 +349,7 @@
               "preview_image": "images/jeans_big/gray.jpg",
               "previews": {
                 "front_pocket": "images/jeans_big/gray.jpg",
-                "back": "images/jeans_big/gray_back.jpg",
-                "side_round": "images/jeans_big/gray_side.jpg"
+                "back": "images/jeans_big/gray_back.jpg"
               }
             },
             {
@@ -379,8 +360,7 @@
               "preview_image": "images/jeans_big/chocolate.jpg",
               "previews": {
                 "front_pocket": "images/jeans_big/chocolate.jpg",
-                "back": "images/jeans_big/chocolate_back.jpg",
-                "side_round": "images/jeans_big/chocolate_side.jpg"
+                "back": "images/jeans_big/chocolate_back.jpg"
               }
             },
             {
@@ -391,8 +371,7 @@
               "preview_image": "images/jeans_big/graphite.jpg",
               "previews": {
                 "front_pocket": "images/jeans_big/graphite.jpg",
-                "back": "images/jeans_big/graphite_back.jpg",
-                "side_round": "images/jeans_big/graphite_side.jpg"
+                "back": "images/jeans_big/graphite_back.jpg"
               }
             },
             {
@@ -403,8 +382,7 @@
               "preview_image": "images/jeans_big/black.jpg",
               "previews": {
                 "front_pocket": "images/jeans_big/black.jpg",
-                "back": "images/jeans_big/black_back.jpg",
-                "side_round": "images/jeans_big/black_side.jpg"
+                "back": "images/jeans_big/black_back.jpg"
               }
             },
             {
@@ -415,8 +393,7 @@
               "preview_image": "images/jeans_big/powder.jpg",
               "previews": {
                 "front_pocket": "images/jeans_big/powder.jpg",
-                "back": "images/jeans_big/powder_back.jpg",
-                "side_round": "images/jeans_big/powder_side.jpg"
+                "back": "images/jeans_big/powder_back.jpg"
               }
             },
             {
@@ -427,8 +404,7 @@
               "preview_image": "images/jeans_big/pink.jpg",
               "previews": {
                 "front_pocket": "images/jeans_big/pink.jpg",
-                "back": "images/jeans_big/pink_back.jpg",
-                "side_round": "images/jeans_big/pink_side.jpg"
+                "back": "images/jeans_big/pink_back.jpg"
               }
             },
             {
@@ -439,8 +415,7 @@
               "preview_image": "images/jeans_big/lavender.jpg",
               "previews": {
                 "front_pocket": "images/jeans_big/lavender.jpg",
-                "back": "images/jeans_big/lavender_back.jpg",
-                "side_round": "images/jeans_big/lavender_side.jpg"
+                "back": "images/jeans_big/lavender_back.jpg"
               }
             },
             {
@@ -451,8 +426,7 @@
               "preview_image": "images/jeans_big/peach.jpg",
               "previews": {
                 "front_pocket": "images/jeans_big/peach.jpg",
-                "back": "images/jeans_big/peach_back.jpg",
-                "side_round": "images/jeans_big/peach_side.jpg"
+                "back": "images/jeans_big/peach_back.jpg"
               }
             },
             {
@@ -463,8 +437,7 @@
               "preview_image": "images/jeans_big/sand.jpg",
               "previews": {
                 "front_pocket": "images/jeans_big/sand.jpg",
-                "back": "images/jeans_big/sand_back.jpg",
-                "side_round": "images/jeans_big/sand_side.jpg"
+                "back": "images/jeans_big/sand_back.jpg"
               }
             },
             {
@@ -475,8 +448,7 @@
               "preview_image": "images/jeans_big/khaki.jpg",
               "previews": {
                 "front_pocket": "images/jeans_big/khaki.jpg",
-                "back": "images/jeans_big/khaki_back.jpg",
-                "side_round": "images/jeans_big/khaki_side.jpg"
+                "back": "images/jeans_big/khaki_back.jpg"
               }
             },
             {
@@ -487,8 +459,7 @@
               "preview_image": "images/jeans_big/beige.jpg",
               "previews": {
                 "front_pocket": "images/jeans_big/beige.jpg",
-                "back": "images/jeans_big/beige_back.jpg",
-                "side_round": "images/jeans_big/beige_side.jpg"
+                "back": "images/jeans_big/beige_back.jpg"
               }
             },
             {
@@ -499,8 +470,7 @@
               "preview_image": "images/jeans_big/cappuccino.jpg",
               "previews": {
                 "front_pocket": "images/jeans_big/cappuccino.jpg",
-                "back": "images/jeans_big/cappuccino_back.jpg",
-                "side_round": "images/jeans_big/cappuccino_side.jpg"
+                "back": "images/jeans_big/cappuccino_back.jpg"
               }
             },
             {
@@ -511,8 +481,7 @@
               "preview_image": "images/jeans_big/light_blue.jpg",
               "previews": {
                 "front_pocket": "images/jeans_big/light_blue.jpg",
-                "back": "images/jeans_big/light_blue_back.jpg",
-                "side_round": "images/jeans_big/light_blue_side.jpg"
+                "back": "images/jeans_big/light_blue_back.jpg"
               }
             }
           ],
@@ -566,7 +535,7 @@
               "name": "Сбоку на кругляшке",
               "order": 3,
               "enabled": true,
-              "available": true,
+              "available": false,
               "default": false,
               "perspective": true,
               "limits": {
