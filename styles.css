@@ -50,12 +50,22 @@
   /* ---------- ПРЕВЬЮ СУМКИ (большое окно) ---------- */
   --preview-h: 400px;      /* высота окна превью */
   --preview-scale: 0.45;   /* масштаб сумки внутри */
+  --preview-h-step2: 260px;      /* высота окна превью на шаге 2 */
+  --preview-scale-step2: 0.30;   /* масштаб сумки в нём */
 
   /* ---------- ЧИПЫ (Модель/Материал/Шрифт/Зона) ---------- */
   --chip-padv: 8px;        /* верт. отступ */
   --chip-padh: 14px;       /* гор. отступ */
   --chip-size: 14px;       /* размер текста */
   --chip-gap: 8px;         /* между чипами */
+
+    /* ---------- ЗОНЫ (расположение вышивки) ---------- */
+  --zone-chip-padv: 8px;         /* верт. отступ внутри чипа зоны */
+  --zone-chip-padh: 14px;        /* гор. отступ */
+  --zone-chip-size: 14px;        /* размер текста */
+  --zone-chip-gap: 8px;          /* между чипами зон */
+  --zone-soon-size: 11px;        /* размер бейджа «скоро» */
+  --zone-soon-color: #A8907C;    /* цвет бейджа «скоро» */
 
   /* ---------- ПЛИТКИ ЦВЕТА СУМКИ ---------- */
   --color-tile-min: 72px;   /* мин. ширина плитки (auto-fill), как у ниток */
@@ -79,6 +89,7 @@
 
 
 * { box-sizing: border-box; }
+.hidden { display: none !important; }
 html, body {
   margin: 0; padding: 0;
   background: var(--bg);
@@ -181,6 +192,33 @@ html, body {
   font-size: 11px;
   color: var(--text-soft);
   margin-left: 4px;
+}
+
+
+/* ===== ЗОНЫ (расположение вышивки) ===== */
+#opt-zone {
+  gap: var(--zone-chip-gap);
+}
+.zone-chip {
+  padding: var(--zone-chip-padv) var(--zone-chip-padh);
+  font-size: var(--zone-chip-size);
+}
+.zone-chip .soon {
+  font-size: var(--zone-soon-size);
+  color: var(--zone-soon-color);
+  margin-left: 5px;
+  font-weight: 500;
+  white-space: nowrap;
+}
+.zone-chip.disabled {
+  background: var(--disabled);
+  color: var(--text-soft);
+  border-color: var(--disabled);
+  cursor: not-allowed;
+  opacity: 0.65;
+}
+.zone-chip.disabled:active {
+  transform: none;
 }
 
 
@@ -456,4 +494,13 @@ textarea:focus { border-color: var(--pink-strong); }
   font-size: 15px;
   color: #888;
   margin: 0;
+}
+
+
+/* ===== Превью на шаге 2 (компактнее) ===== */
+#step-2 .preview-frame {
+  height: var(--preview-h-step2);
+}
+#step-2 .preview-frame img {
+  transform: scale(var(--preview-scale-step2));
 }

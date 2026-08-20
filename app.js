@@ -10,7 +10,7 @@ const state = {
   item: null,          // текущий выбранный товар из каталога (объект целиком)
   material: null,      // id выбранного материала внутри item.materials
   bagColor: null,      // id выбранного цвета внутри material.colors
-  zone: 'front_pocket',
+  zone: null,          // id выбранной зоны (из material.zones)
   font: 'cursive',
   threadColor: '3',
   text: '',
@@ -33,20 +33,19 @@ const DEFAULT_CATEGORIES = [
   { id: 'accessories', name: 'Аксессуары' },
 ];
 
-
-// Ракурсы, шрифты — общие для всех сумок (пока)
-const ZONES = [
-  { id: 'front_pocket', name: 'Спереди над карманом', enabled: true },
-  { id: 'back',         name: 'Сзади',                enabled: false },
-  { id: 'side_round',   name: 'Сбоку на кругляшке',   enabled: false },
-  { id: 'inside',       name: 'Внутри',               enabled: false },
+// Фолбэк-зоны — используются, только если у материала НЕТ zones[] в catalog.json
+const DEFAULT_ZONES = [
+  { id: 'front_pocket', name: 'Спереди над карманом', order: 1, enabled: true,  available: true,  default: true },
+  { id: 'back',         name: 'Сзади',                order: 2, enabled: true,  available: false },
+  { id: 'side_round',   name: 'Сбоку на кругляшке',   order: 3, enabled: true,  available: false },
+  { id: 'inside',       name: 'Внутри',               order: 4, enabled: false, available: false },
 ];
+
 const FONTS = [
   { id: 'cursive',  name: 'Курсив',  enabled: true },
   { id: 'straight', name: 'Прямой',  enabled: true },
-  { id: 'bubble',   name: 'Бабл',    enabled: true }
+  { id: 'bubble',   name: 'Бабл',    enabled: true },
 ];
-
 
 let THREAD_COLORS = [];
 
@@ -59,6 +58,7 @@ const el = {
   categoryTabs: document.getElementById('category-tabs'),
   catalogGrid: document.getElementById('catalog-grid'),
   preview: document.getElementById('preview-img'),
+  preview2: document.getElementById('preview-img-2'),
   optMaterial: document.getElementById('opt-material'),
   optBagColor: document.getElementById('opt-bag-color'),
   optZone: document.getElementById('opt-zone'),
@@ -71,7 +71,6 @@ const el = {
   progress: document.getElementById('progress'),
   navbar: document.getElementById('navbar') || document.querySelector('.navbar'),
 };
-
 
 // Проверка: если какой-то элемент не найден — пишем в консоль, но не ломаемся
 Object.entries(el).forEach(([key, node]) => {
@@ -121,6 +120,76 @@ function currentColors() {
 function currentColor() {
   const colors = currentColors();
   return colors.find(c => c.id === state.bagColor) || colors[0] || null;
+}
+
+
+// ===== Хелперы зон =====
+
+// Зоны текущего материала. Если в каталоге их нет — фолбэк на DEFAULT_ZONES.
+function currentZones() {
+  const mat = currentMaterial();
+  const zones = (mat && Array.isArray(mat.zones) && mat.zones.length)
+    ? mat.zones
+    : DEFAULT_ZONES;
+
+  // enabled:false — зону вообще не показываем (например inside)
+  return zones
+    .filter(z => z.enabled !== false)
+    .slice()
+    .sort((a, b) => (a.order ?? 99) - (b.order ?? 99));
+}
+
+// Зона доступна, если:
+//  1) не помечена available:false (фото ракурса ещё не сняты)
+//  2) у выбранного цвета есть превью этой зоны (если previews вообще задан)
+function isZoneAvailable(zone, color) {
+  if (!zone) return false;
+  if (zone.enabled === false) return false;
+  if (zone.available === false) return false;
+
+  const c = color || currentColor();
+  if (c && c.previews && !c.previews[zone.id]) return false;
+
+  return true;
+}
+
+// Дефолтная зона: помеченная default:true среди доступных,
+// иначе первая доступная, иначе первая вообще.
+function defaultZoneId() {
+  const zones = currentZones();
+  const color = currentColor();
+  const avail = zones.filter(z => isZoneAvailable(z, color));
+  const def = avail.find(z => z.default === true);
+  return (def || avail[0] || zones[0])?.id || null;
+}
+
+function currentZone() {
+  const zones = currentZones();
+  return zones.find(z => z.id === state.zone) || null;
+}
+
+// Тихий откат на дефолтную зону, если текущая недоступна (вариант A).
+// Возвращает true, если зона изменилась.
+function ensureValidZone() {
+  const z = currentZone();
+  if (z && isZoneAvailable(z)) return false;
+  const fallback = defaultZoneId();
+  if (state.zone === fallback) return false;
+  state.zone = fallback;
+  return true;
+}
+
+// Путь к превью для зоны: previews[zone] → preview_image → image
+function previewSrcForZone(zoneId) {
+  const c = currentColor();
+  if (!c) return '';
+  return (c.previews && c.previews[zoneId]) || c.preview_image || c.image || '';
+}
+
+// Лимиты текущей зоны (пригодятся в Фазе 4)
+function currentZoneLimits() {
+  const z = currentZone();
+  return z && z.limits ? z.limits : null;
 }
 
 
@@ -214,9 +283,13 @@ function openConstructor(item) {
   const colors = currentColors();
   state.bagColor = colors.length ? colors[0].id : null;
 
+  state.zone = defaultZoneId();
+
   renderMaterials();
   renderBagColors();
+  renderZones();
   updatePreview();
+  preloadZonePreviews();
   showStep(1);
 }
 
@@ -257,16 +330,22 @@ function selectMaterial(id) {
     ch.classList.toggle('active', ch.dataset.id === id)
   );
 
+  ensureValidZone();   // тихий откат зоны, если у нового материала её нет
+
   renderBagColors();   // тут пересборка нужна — набор цветов другой
+  renderZones();       // набор зон у другого материала может отличаться
   updatePreview();
+  preloadZonePreviews();
 }
 
 
+// ===== Универсальные чипы (шрифт) =====
 function renderChips(container, items, currentId, onPick) {
   container.innerHTML = '';
   items.forEach(it => {
     const chip = document.createElement('div');
     chip.className = 'chip';
+    chip.dataset.id = it.id;
     if (!it.enabled) chip.classList.add('disabled');
     if (it.id === currentId && it.enabled) chip.classList.add('active');
     chip.innerHTML = it.enabled
@@ -277,6 +356,53 @@ function renderChips(container, items, currentId, onPick) {
     }
     container.appendChild(chip);
   });
+}
+
+
+// ===== Зоны (расположение вышивки) =====
+function renderZones() {
+  if (!el.optZone) return;
+
+  const zones = currentZones();
+  const color = currentColor();
+  el.optZone.innerHTML = '';
+
+  // если зон нет вообще — прячем блок и его заголовок
+  const wrapHidden = zones.length === 0;
+  el.optZone.classList.toggle('hidden', wrapHidden);
+  const title = el.optZone.previousElementSibling;
+  if (title && title.classList.contains('group-title')) {
+    title.classList.toggle('hidden', wrapHidden);
+  }
+  if (wrapHidden) return;
+
+  zones.forEach(z => {
+    const ok = isZoneAvailable(z, color);
+    const chip = document.createElement('div');
+    chip.className = 'chip zone-chip';
+    chip.dataset.id = z.id;
+    if (!ok) chip.classList.add('disabled');
+    if (ok && z.id === state.zone) chip.classList.add('active');
+    chip.innerHTML = ok
+      ? z.name
+      : `${z.name}<span class="soon">скоро</span>`;
+    if (ok) {
+      chip.addEventListener('click', () => selectZone(z.id));
+    }
+    el.optZone.appendChild(chip);
+  });
+}
+
+function selectZone(id) {
+  if (state.zone === id) return;   // уже выбрана — ничего не делаем
+  state.zone = id;
+
+  // только переключаем active, БЕЗ пересборки сетки
+  el.optZone.querySelectorAll('.zone-chip').forEach(ch =>
+    ch.classList.toggle('active', ch.dataset.id === id)
+  );
+
+  updatePreview();
 }
 
 
@@ -296,17 +422,38 @@ function renderBagColors() {
     tile.addEventListener('click', () => {
       if (state.bagColor === c.id) return;  // уже выбран — ничего не делаем
       state.bagColor = c.id;
-      updatePreview();
+
       // только переключаем active, БЕЗ пересборки сетки:
       el.optBagColor.querySelectorAll('.color-tile').forEach(t =>
         t.classList.toggle('active', t.dataset.id === c.id)
       );
+
+      // у нового цвета может не быть текущей зоны → тихий откат
+      if (ensureValidZone()) renderZones();
+      else refreshZoneAvailability();
+
+      updatePreview();
+      preloadZonePreviews();
     });
     el.optBagColor.appendChild(tile);
   });
 }
 
+// Обновляет доступность чипов зон без полной пересборки
+function refreshZoneAvailability() {
+  if (!el.optZone) return;
+  const zones = currentZones();
+  const color = currentColor();
+  el.optZone.querySelectorAll('.zone-chip').forEach(ch => {
+    const z = zones.find(x => x.id === ch.dataset.id);
+    const ok = isZoneAvailable(z, color);
+    ch.classList.toggle('disabled', !ok);
+    ch.classList.toggle('active', ok && ch.dataset.id === state.zone);
+  });
+}
 
+
+// ===== Цвета ниток =====
 function renderThreadColors() {
   el.optThread.innerHTML = '';
   THREAD_COLORS.forEach(c => {
@@ -332,14 +479,27 @@ function renderThreadColors() {
 }
 
 
+// ===== Превью (оба окна: шаг 1 и шаг 2) =====
 function updatePreview() {
-  const c = currentColor();
-  if (!c) return;
-  // большой квадрат: приоритет preview_image (высокое качество), иначе image
-  el.preview.src = c.preview_image || c.image;
+  const src = previewSrcForZone(state.zone);
+  if (!src) return;
+  if (el.preview  && el.preview.getAttribute('src')  !== src) el.preview.src  = src;
+  if (el.preview2 && el.preview2.getAttribute('src') !== src) el.preview2.src = src;
+}
+
+// Фоновая предзагрузка превью соседних зон — переключение без задержки
+function preloadZonePreviews() {
+  const color = currentColor();
+  currentZones().forEach(z => {
+    if (z.id === state.zone) return;
+    if (!isZoneAvailable(z, color)) return;
+    const src = previewSrcForZone(z.id);
+    if (src) { const img = new Image(); img.src = src; }
+  });
 }
 
 
+// ===== Цвета ниток: загрузка =====
 async function loadThreadColors() {
   try {
     const res = await fetch('colors.json?v=' + Date.now());
@@ -375,6 +535,8 @@ function showStep(n) {
     el.navbar.classList.toggle('hidden', n === 0);
   }
 
+  if (n === 2) updatePreview();   // синхронизируем второе окно
+
   if (n > 0) {
     if (el.progress) el.progress.textContent = `${n} / 2`;
     if (el.next) el.next.textContent = n === 2 ? 'Готово ✓' : 'Далее →';
@@ -383,7 +545,7 @@ function showStep(n) {
 }
 
 
-// ===== Валидация текста =====
+// ===== Валидация текста (Фаза 4 — заменим на построчную по зоне) =====
 const MAX_LINES = 3;
 const MAX_CHARS = 30;
 
@@ -403,7 +565,6 @@ function validateText(text) {
   return { ok: true };
 }
 
-
 el.text.addEventListener('input', () => {
   state.text = el.text.value;
   const v = validateText(state.text);
@@ -417,14 +578,36 @@ el.text.addEventListener('input', () => {
 });
 
 
+// ===== Сборка variant_id =====
+// ВАЖНО: суффикс зоны берём из zone_suffix (у замши "front_pocket", у джинсы "front")
+function computeVariantId() {
+  const mat = currentMaterial();
+  const color = currentColor();
+  if (!mat || !color) return null;
+
+  const suffix = mat.zone_suffix && state.zone ? mat.zone_suffix[state.zone] : null;
+  if (mat.variant_prefix && suffix) {
+    return `${mat.variant_prefix}_${color.id}_${suffix}`;
+  }
+  // фолбэк — старый формат (variant_id прописан у цвета)
+  return color.variant_id || null;
+}
+
+
 function submit() {
   const mat = currentMaterial();
   const color = currentColor();
   if (!state.item || !mat || !color) return;
 
+  const variantId = computeVariantId();
+  if (!variantId) {
+    console.error('Не удалось вычислить variant_id', { mat, color, zone: state.zone });
+    return;
+  }
+
   const payload = {
     bag_id: mat.bag_id || state.item.bag_id || state.item.id,
-    variant_id: color.variant_id,
+    variant_id: variantId,
     text: state.text,
     color_id: state.threadColor,
     font_id: state.font,
@@ -456,7 +639,6 @@ el.next.addEventListener('click', () => {
   }
 });
 
-
 el.back.addEventListener('click', () => {
   if (state.step === 2) showStep(1);
   else if (state.step === 1) showStep(0);
@@ -472,14 +654,15 @@ async function init() {
   renderCatalog();
 
   // step-2 общие опции
-  renderChips(el.optZone, ZONES, state.zone,
-    id => { state.zone = id; renderChips(el.optZone, ZONES, state.zone, _=>_); });
-  renderChips(el.optFont, FONTS, state.font,
-    id => { state.font = id; renderChips(el.optFont, FONTS, state.font, _=>_); });
+  renderChips(el.optFont, FONTS, state.font, id => {
+    state.font = id;
+    el.optFont.querySelectorAll('.chip').forEach(ch =>
+      ch.classList.toggle('active', ch.dataset.id === id)
+    );
+  });
   renderThreadColors();
 
   showStep(0);
 }
-
 
 init();
