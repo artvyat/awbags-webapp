@@ -57,7 +57,9 @@
   --preview-h: 400px;      /* высота окна превью */
   --preview-scale: 0.45;   /* масштаб сумки внутри */
   --preview-h-step2: 260px;      /* высота окна превью на шаге 2 */
-  --preview-scale-step2: 0.30;   /* масштаб сумки в нём */
+  --preview-scale-step2: 0.30;
+  --preview-tx-step2: 0px;
+  --preview-ty-step2: 0px;   /* масштаб сумки в нём */
 
   /* ---------- ЧИПЫ (Модель/Материал/Шрифт/Зона) ---------- */
   --chip-padv: 8px;        /* верт. отступ */
@@ -514,8 +516,61 @@ textarea:focus { border-color: var(--pink-strong); }
   height: var(--preview-h-step2);
 }
 #step-2 .preview-frame img {
-  transform: scale(var(--preview-scale-step2));
+  transform: translate(var(--preview-tx-step2), var(--preview-ty-step2))
+             scale(var(--preview-scale-step2));
 }
+
+/* ===== ZONE-PREVIEW-POS — 🔧 подгонка превью по зонам ===== */
+#step-2 .preview-frame[data-zone="back"] img {
+  --preview-scale-step2: 0.40;
+  --preview-tx-step2: 0px;
+  --preview-ty-step2: 0px;
+}
+#step-2 .preview-frame[data-zone="side_round"] img {
+  --preview-scale-step2: 0.40;
+  --preview-tx-step2: 0px;
+  --preview-ty-step2: 0px;
+}
+
+/* ===== ZONE-PREVIEW-POS-MAT — точечно: материал + зона ===== */
+#step-2 .preview-frame[data-material="eco_suede"][data-zone="back"] img {
+  --preview-scale-step2: 0.40;
+  --preview-tx-step2: -10px;
+  --preview-ty-step2: 2px;
+}
+#step-2 .preview-frame[data-material="jeans"][data-zone="back"] img {
+  --preview-scale-step2: 0.40;
+  --preview-tx-step2: 0px;
+  --preview-ty-step2: 5px;
+}
+
+/* --- Спереди над карманом --- */
+#step-2 .preview-frame[data-material="eco_suede"][data-zone="front_pocket"] img {
+  --preview-scale-step2: 0.40;
+  --preview-tx-step2: 0px;
+  --preview-ty-step2: 0px;
+}
+#step-2 .preview-frame[data-material="jeans"][data-zone="front_pocket"] img {
+  --preview-scale-step2: 0.40;
+  --preview-tx-step2: 0px;
+  --preview-ty-step2: 0px;
+}
+
+/* --- Сбоку на кругляшке --- */
+#step-2 .preview-frame[data-material="eco_suede"][data-zone="side_round"] img {
+  --preview-scale-step2: 0.40;
+  --preview-tx-step2: 0px;
+  --preview-ty-step2: 0px;
+}
+#step-2 .preview-frame[data-material="jeans"][data-zone="side_round"] img {
+  --preview-scale-step2: 0.40;
+  --preview-tx-step2: 0px;
+  --preview-ty-step2: 0px;
+}
+
+/* ===== /ZONE-PREVIEW-POS-MAT ===== */
+
+/* ===== /ZONE-PREVIEW-POS ===== */
 
 /* ===== ZL-STYLES (Фаза 4.1) ===== */
 .text-meta{
