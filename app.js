@@ -485,6 +485,10 @@ function updatePreview() {
   if (!src) return;
   if (el.preview  && el.preview.getAttribute('src')  !== src) el.preview.src  = src;
   if (el.preview2 && el.preview2.getAttribute('src') !== src) el.preview2.src = src;
+  const _z = state.zone || '';
+  const _m = state.material || '';
+  el.preview  && el.preview.closest('.preview-frame')  && (el.preview.closest('.preview-frame').setAttribute('data-zone', _z), el.preview.closest('.preview-frame').setAttribute('data-material', _m));
+  el.preview2 && el.preview2.closest('.preview-frame') && (el.preview2.closest('.preview-frame').setAttribute('data-zone', _z), el.preview2.closest('.preview-frame').setAttribute('data-material', _m));
 }
 
 // Фоновая предзагрузка превью соседних зон — переключение без задержки
