@@ -8,6 +8,7 @@ const state = {
   step: 0,
   category: 'all',
   item: null,          // текущий выбранный товар из каталога (объект целиком)
+  size: null,          // id размера (sizes[]), null если размеров нет
   material: null,      // id выбранного материала внутри item.materials
   bagColor: null,      // id выбранного цвета внутри material.colors
   zone: null,          // id выбранной зоны (из material.zones)
@@ -59,6 +60,7 @@ const el = {
   catalogGrid: document.getElementById('catalog-grid'),
   preview: document.getElementById('preview-img'),
   preview2: document.getElementById('preview-img-2'),
+  optSize:     document.getElementById('opt-size'),
   optMaterial: document.getElementById('opt-material'),
   optBagColor: document.getElementById('opt-bag-color'),
   optZone: document.getElementById('opt-zone'),
@@ -84,6 +86,12 @@ Object.entries(el).forEach(([key, node]) => {
 // Поддержка старого формата: если materials нет, оборачиваем colors[] в 1 материал.
 function currentMaterials() {
   if (!state.item) return [];
+
+  // товар с размерами: сначала выбираем размер, потом его материалы
+  if (Array.isArray(state.item.sizes) && state.item.sizes.length) {
+    const sz = state.item.sizes.find(s => s.id === state.size) || state.item.sizes[0];
+    return Array.isArray(sz.materials) ? sz.materials : [];
+  }
 
   if (Array.isArray(state.item.materials) && state.item.materials.length) {
     return state.item.materials;
@@ -277,6 +285,12 @@ function renderCatalog() {
 function openConstructor(item) {
   state.item = item;
 
+  if (Array.isArray(item.sizes) && item.sizes.length) {
+    state.size = (item.sizes.find(s => s.default) || item.sizes[0]).id;
+  } else {
+    state.size = null;
+  }
+
   const mats = currentMaterials();
   state.material = mats.length ? mats[0].id : null;
 
@@ -285,6 +299,7 @@ function openConstructor(item) {
 
   state.zone = defaultZoneId();
 
+  renderSizes();
   renderMaterials();
   renderBagColors();
   renderZones();
@@ -293,6 +308,37 @@ function openConstructor(item) {
   showStep(1);
 }
 
+
+// ===== Размер — чипы над материалом =====
+function renderSizes() {
+  if (!el.optSize) return;
+  el.optSize.innerHTML = '';
+  const box = document.getElementById('size-block') || el.optSize;
+  const sizes = (state.item && Array.isArray(state.item.sizes)) ? state.item.sizes : [];
+  if (sizes.length < 2) { box.style.display = 'none'; return; }
+  box.style.display = '';
+  sizes.forEach(sz => {
+    const chip = document.createElement('div');
+    chip.className = 'chip';
+    chip.dataset.id = sz.id;
+    if (sz.id === state.size) chip.classList.add('active');
+    chip.textContent = sz.name;
+    chip.addEventListener('click', () => selectSize(sz.id));
+    el.optSize.appendChild(chip);
+  });
+}
+
+function selectSize(id) {
+  if (state.size === id) return;
+  state.size = id;
+  const mats = currentMaterials();
+  state.material = mats.length ? mats[0].id : null;
+  const colors = currentColors();
+  state.bagColor = colors.length ? colors[0].id : null;
+  state.zone = defaultZoneId();
+  renderSizes(); renderMaterials(); renderBagColors(); renderZones();
+  updatePreview(); preloadZonePreviews();
+}
 
 // ===== Материал — кликабельные чипы =====
 function renderMaterials() {
@@ -707,6 +753,10 @@ function zlLimits() {
 function zlMaxLines() {
   const L = zlLimits();
   return Math.max(L.normal.max_lines || 1, L.caps.max_lines || 1);
+}
+
+function zlMaxLinesCaps() {
+  return zlLimits().caps.max_lines || 1;
 }
 
 /** режим строки: 'caps' если ВСЕ буквы заглавные (и буквы вообще есть) */
