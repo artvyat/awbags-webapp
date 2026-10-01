@@ -910,6 +910,313 @@
               ]
             }
           ]
+        },
+        {
+          "id": "l",
+          "name": "L",
+          "default": false,
+          "materials": [
+            {
+              "id": "eco_suede",
+              "name": "Эко-замша",
+              "bag_id": "travel_bag_l",
+              "variant_prefix": "eco_suede",
+              "zone_suffix": {
+                "front_pocket": "front_pocket",
+                "trolley": "trolley"
+              },
+              "zones": [
+                {
+                  "id": "front_pocket",
+                  "name": "Спереди на кармане",
+                  "order": 1,
+                  "enabled": true,
+                  "available": true,
+                  "default": true
+                },
+                {
+                  "id": "trolley",
+                  "name": "Крепление для чемодана",
+                  "order": 2,
+                  "enabled": true,
+                  "available": true,
+                  "default": false
+                }
+              ],
+              "colors": [
+                {
+                  "id": "001",
+                  "name": "Молочный",
+                  "previews": {
+                    "front_pocket": "images/travel/suede_big_l/001.jpg",
+                    "trolley": "images/travel/suede_big_l/001_trolley.jpg"
+                  },
+                  "image": "images/travel/suede_big_l/001.jpg",
+                  "preview_image": "images/travel/suede_big_l/001.jpg"
+                },
+                {
+                  "id": "002",
+                  "name": "Серый",
+                  "previews": {
+                    "front_pocket": "images/travel/suede_big_l/002.jpg",
+                    "trolley": "images/travel/suede_big_l/002_trolley.jpg"
+                  },
+                  "image": "images/travel/suede_big_l/002.jpg",
+                  "preview_image": "images/travel/suede_big_l/002.jpg"
+                },
+                {
+                  "id": "003",
+                  "name": "Графитовый",
+                  "previews": {
+                    "front_pocket": "images/travel/suede_big_l/003.jpg",
+                    "trolley": "images/travel/suede_big_l/003_trolley.jpg"
+                  },
+                  "image": "images/travel/suede_big_l/003.jpg",
+                  "preview_image": "images/travel/suede_big_l/003.jpg"
+                },
+                {
+                  "id": "004",
+                  "name": "Лавандовый",
+                  "previews": {
+                    "front_pocket": "images/travel/suede_big_l/004.jpg",
+                    "trolley": "images/travel/suede_big_l/004_trolley.jpg"
+                  },
+                  "image": "images/travel/suede_big_l/004.jpg",
+                  "preview_image": "images/travel/suede_big_l/004.jpg"
+                },
+                {
+                  "id": "005",
+                  "name": "Голубой",
+                  "previews": {
+                    "front_pocket": "images/travel/suede_big_l/005.jpg",
+                    "trolley": "images/travel/suede_big_l/005_trolley.jpg"
+                  },
+                  "image": "images/travel/suede_big_l/005.jpg",
+                  "preview_image": "images/travel/suede_big_l/005.jpg"
+                },
+                {
+                  "id": "006",
+                  "name": "Синий",
+                  "previews": {
+                    "front_pocket": "images/travel/suede_big_l/006.jpg",
+                    "trolley": "images/travel/suede_big_l/006_trolley.jpg"
+                  },
+                  "image": "images/travel/suede_big_l/006.jpg",
+                  "preview_image": "images/travel/suede_big_l/006.jpg"
+                },
+                {
+                  "id": "007",
+                  "name": "Пудра",
+                  "previews": {
+                    "front_pocket": "images/travel/suede_big_l/007.jpg",
+                    "trolley": "images/travel/suede_big_l/007_trolley.jpg"
+                  },
+                  "image": "images/travel/suede_big_l/007.jpg",
+                  "preview_image": "images/travel/suede_big_l/007.jpg"
+                },
+                {
+                  "id": "008",
+                  "name": "Розовый",
+                  "previews": {
+                    "front_pocket": "images/travel/suede_big_l/008.jpg",
+                    "trolley": "images/travel/suede_big_l/008_trolley.jpg"
+                  },
+                  "image": "images/travel/suede_big_l/008.jpg",
+                  "preview_image": "images/travel/suede_big_l/008.jpg"
+                },
+                {
+                  "id": "009",
+                  "name": "Малиновый",
+                  "previews": {
+                    "front_pocket": "images/travel/suede_big_l/009.jpg",
+                    "trolley": "images/travel/suede_big_l/009_trolley.jpg"
+                  },
+                  "image": "images/travel/suede_big_l/009.jpg",
+                  "preview_image": "images/travel/suede_big_l/009.jpg"
+                },
+                {
+                  "id": "010",
+                  "name": "Бежевый",
+                  "previews": {
+                    "front_pocket": "images/travel/suede_big_l/010.jpg",
+                    "trolley": "images/travel/suede_big_l/010_trolley.jpg"
+                  },
+                  "image": "images/travel/suede_big_l/010.jpg",
+                  "preview_image": "images/travel/suede_big_l/010.jpg"
+                },
+                {
+                  "id": "011",
+                  "name": "Песочный",
+                  "previews": {
+                    "front_pocket": "images/travel/suede_big_l/011.jpg",
+                    "trolley": "images/travel/suede_big_l/011_trolley.jpg"
+                  },
+                  "image": "images/travel/suede_big_l/011.jpg",
+                  "preview_image": "images/travel/suede_big_l/011.jpg"
+                },
+                {
+                  "id": "012",
+                  "name": "Черный",
+                  "previews": {
+                    "front_pocket": "images/travel/suede_big_l/012.jpg",
+                    "trolley": "images/travel/suede_big_l/012_trolley.jpg"
+                  },
+                  "image": "images/travel/suede_big_l/012.jpg",
+                  "preview_image": "images/travel/suede_big_l/012.jpg"
+                },
+                {
+                  "id": "013",
+                  "name": "Коричневый",
+                  "previews": {
+                    "front_pocket": "images/travel/suede_big_l/013.jpg",
+                    "trolley": "images/travel/suede_big_l/013_trolley.jpg"
+                  },
+                  "image": "images/travel/suede_big_l/013.jpg",
+                  "preview_image": "images/travel/suede_big_l/013.jpg"
+                },
+                {
+                  "id": "014",
+                  "name": "Капучино",
+                  "previews": {
+                    "front_pocket": "images/travel/suede_big_l/014.jpg",
+                    "trolley": "images/travel/suede_big_l/014_trolley.jpg"
+                  },
+                  "image": "images/travel/suede_big_l/014.jpg",
+                  "preview_image": "images/travel/suede_big_l/014.jpg"
+                },
+                {
+                  "id": "015",
+                  "name": "Хаки",
+                  "previews": {
+                    "front_pocket": "images/travel/suede_big_l/015.jpg",
+                    "trolley": "images/travel/suede_big_l/015_trolley.jpg"
+                  },
+                  "image": "images/travel/suede_big_l/015.jpg",
+                  "preview_image": "images/travel/suede_big_l/015.jpg"
+                },
+                {
+                  "id": "016",
+                  "name": "Лимонный",
+                  "previews": {
+                    "front_pocket": "images/travel/suede_big_l/016.jpg",
+                    "trolley": "images/travel/suede_big_l/016_trolley.jpg"
+                  },
+                  "image": "images/travel/suede_big_l/016.jpg",
+                  "preview_image": "images/travel/suede_big_l/016.jpg"
+                },
+                {
+                  "id": "018",
+                  "name": "Красный",
+                  "previews": {
+                    "front_pocket": "images/travel/suede_big_l/018.jpg",
+                    "trolley": "images/travel/suede_big_l/018_trolley.jpg"
+                  },
+                  "image": "images/travel/suede_big_l/018.jpg",
+                  "preview_image": "images/travel/suede_big_l/018.jpg"
+                },
+                {
+                  "id": "019",
+                  "name": "Коричневый лео",
+                  "previews": {
+                    "front_pocket": "images/travel/suede_big_l/019.jpg",
+                    "trolley": "images/travel/suede_big_l/019_trolley.jpg"
+                  },
+                  "image": "images/travel/suede_big_l/019.jpg",
+                  "preview_image": "images/travel/suede_big_l/019.jpg"
+                },
+                {
+                  "id": "020",
+                  "name": "Снежный барс",
+                  "previews": {
+                    "front_pocket": "images/travel/suede_big_l/020.jpg",
+                    "trolley": "images/travel/suede_big_l/020_trolley.jpg"
+                  },
+                  "image": "images/travel/suede_big_l/020.jpg",
+                  "preview_image": "images/travel/suede_big_l/020.jpg"
+                },
+                {
+                  "id": "021",
+                  "name": "Охра",
+                  "previews": {
+                    "front_pocket": "images/travel/suede_big_l/021.jpg",
+                    "trolley": "images/travel/suede_big_l/021_trolley.jpg"
+                  },
+                  "image": "images/travel/suede_big_l/021.jpg",
+                  "preview_image": "images/travel/suede_big_l/021.jpg"
+                },
+                {
+                  "id": "022",
+                  "name": "Фисташка",
+                  "previews": {
+                    "front_pocket": "images/travel/suede_big_l/022.jpg",
+                    "trolley": "images/travel/suede_big_l/022_trolley.jpg"
+                  },
+                  "image": "images/travel/suede_big_l/022.jpg",
+                  "preview_image": "images/travel/suede_big_l/022.jpg"
+                },
+                {
+                  "id": "023",
+                  "name": "Гранат",
+                  "previews": {
+                    "front_pocket": "images/travel/suede_big_l/023.jpg",
+                    "trolley": "images/travel/suede_big_l/023_trolley.jpg"
+                  },
+                  "image": "images/travel/suede_big_l/023.jpg",
+                  "preview_image": "images/travel/suede_big_l/023.jpg"
+                },
+                {
+                  "id": "024",
+                  "name": "Небесно-голубой",
+                  "previews": {
+                    "front_pocket": "images/travel/suede_big_l/024.jpg",
+                    "trolley": "images/travel/suede_big_l/024_trolley.jpg"
+                  },
+                  "image": "images/travel/suede_big_l/024.jpg",
+                  "preview_image": "images/travel/suede_big_l/024.jpg"
+                },
+                {
+                  "id": "025",
+                  "name": "Жемчуг",
+                  "previews": {
+                    "front_pocket": "images/travel/suede_big_l/025.jpg",
+                    "trolley": "images/travel/suede_big_l/025_trolley.jpg"
+                  },
+                  "image": "images/travel/suede_big_l/025.jpg",
+                  "preview_image": "images/travel/suede_big_l/025.jpg"
+                },
+                {
+                  "id": "026",
+                  "name": "Шоколад",
+                  "previews": {
+                    "front_pocket": "images/travel/suede_big_l/026.jpg",
+                    "trolley": "images/travel/suede_big_l/026_trolley.jpg"
+                  },
+                  "image": "images/travel/suede_big_l/026.jpg",
+                  "preview_image": "images/travel/suede_big_l/026.jpg"
+                },
+                {
+                  "id": "027",
+                  "name": "Платина",
+                  "previews": {
+                    "front_pocket": "images/travel/suede_big_l/027.jpg",
+                    "trolley": "images/travel/suede_big_l/027_trolley.jpg"
+                  },
+                  "image": "images/travel/suede_big_l/027.jpg",
+                  "preview_image": "images/travel/suede_big_l/027.jpg"
+                },
+                {
+                  "id": "028",
+                  "name": "Пепельно-коричневый",
+                  "previews": {
+                    "front_pocket": "images/travel/suede_big_l/028.jpg",
+                    "trolley": "images/travel/suede_big_l/028_trolley.jpg"
+                  },
+                  "image": "images/travel/suede_big_l/028.jpg",
+                  "preview_image": "images/travel/suede_big_l/028.jpg"
+                }
+              ]
+            }
+          ]
         }
       ]
     }
