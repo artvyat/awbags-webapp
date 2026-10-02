@@ -576,7 +576,7 @@
                 },
                 "caps": {
                   "max_chars_per_line": 7,
-                  "max_lines": 4
+                  "max_lines": 3
                 }
               }
             },
