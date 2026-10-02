@@ -329,7 +329,7 @@
                 },
                 "caps": {
                   "max_chars_per_line": 7,
-                  "max_lines": 4
+                  "max_lines": 3
                 }
               }
             },
@@ -635,7 +635,17 @@
                   "order": 1,
                   "enabled": true,
                   "available": true,
-                  "default": true
+                  "default": true,
+                  "limits": {
+                    "normal": {
+                      "max_chars_per_line": 12,
+                      "max_lines": 4
+                    },
+                    "caps": {
+                      "max_chars_per_line": 8,
+                      "max_lines": 3
+                    }
+                  }
                 },
                 {
                   "id": "trolley",
@@ -643,7 +653,17 @@
                   "order": 2,
                   "enabled": true,
                   "available": true,
-                  "default": false
+                  "default": false,
+                  "limits": {
+                    "normal": {
+                      "max_chars_per_line": 12,
+                      "max_lines": 3
+                    },
+                    "caps": {
+                      "max_chars_per_line": 8,
+                      "max_lines": 3
+                    }
+                  }
                 }
               ],
               "colors": [
@@ -932,7 +952,17 @@
                   "order": 1,
                   "enabled": true,
                   "available": true,
-                  "default": true
+                  "default": true,
+                  "limits": {
+                    "normal": {
+                      "max_chars_per_line": 14,
+                      "max_lines": 5
+                    },
+                    "caps": {
+                      "max_chars_per_line": 10,
+                      "max_lines": 5
+                    }
+                  }
                 },
                 {
                   "id": "trolley",
@@ -940,7 +970,17 @@
                   "order": 2,
                   "enabled": true,
                   "available": true,
-                  "default": false
+                  "default": false,
+                  "limits": {
+                    "normal": {
+                      "max_chars_per_line": 14,
+                      "max_lines": 5
+                    },
+                    "caps": {
+                      "max_chars_per_line": 10,
+                      "max_lines": 5
+                    }
+                  }
                 }
               ],
               "colors": [
