@@ -10,6 +10,7 @@
   --hint-size: 12px;
   --counter-ok: #8a8a8a;
   --counter-over: #d63a3a;
+  --info-size: 13px;   /* шрифт инфо-блоков = .progress */
   /* ---------- ПАЛИТРА ---------- */
   --bg: #FFFFFF;
   --card: #FFFFFF;
@@ -623,3 +624,13 @@ textarea.invalid{ border-color:var(--counter-over) !important; }
 }
 .shake{ animation: zl-shake .18s ease-in-out 2; }
 /* ===== /ZL-STYLES ===== */
+
+/* ===== Информационные блоки (дисклеймеры) ===== */
+.info-note {
+  margin-top: 18px;
+  font-size: var(--info-size, 13px);
+  line-height: 1.5;
+  color: var(--text-soft);
+}
+.info-note p { margin: 0 0 10px; }
+.info-note p:last-child { margin-bottom: 0; }
