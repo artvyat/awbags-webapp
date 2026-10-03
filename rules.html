@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>Правила бренда — Around The World</title>
+<style>
+  :root {
+    --accent: #E8A5A5;
+    --bg:   var(--tg-theme-bg-color, #ffffff);
+    --text: var(--tg-theme-text-color, #1b1b1b);
+    --soft: var(--tg-theme-hint-color, #8a8a8a);
+    --card: var(--tg-theme-secondary-bg-color, #f6f5f7);
+    --line: var(--tg-theme-section-separator-color, #e6e4e8);
+  }
+  * { box-sizing: border-box; }
+  html, body { margin: 0; padding: 0; }
+  body {
+    background: var(--bg); color: var(--text);
+    font: 15px/1.55 -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
+    padding: 18px 16px calc(18px + env(safe-area-inset-bottom));
+    -webkit-text-size-adjust: 100%;
+  }
+  .wrap { max-width: 640px; margin: 0 auto; }
+  h1 { font-size: 20px; line-height: 1.3; margin: 0 0 4px; }
+  .sub { color: var(--soft); font-size: 13px; margin: 0 0 18px; }
+  section {
+    background: var(--card); border: 1px solid var(--line);
+    border-radius: 14px; padding: 14px 16px; margin: 0 0 12px;
+  }
+  section h2 { font-size: 15px; margin: 0 0 8px; color: var(--accent); }
+  section p { margin: 0 0 8px; }
+  section p:last-child { margin-bottom: 0; }
+  .placeholder { color: var(--soft); font-style: italic; }
+  .actions { margin-top: 18px; text-align: center; }
+  button {
+    font: inherit; font-weight: 600; color: #fff; background: var(--accent);
+    border: 0; border-radius: 12px; padding: 12px 22px; cursor: pointer;
+  }
+  button:active { transform: scale(0.97); }
+</style>
+</head>
+<body>
+<div class="wrap">
+  <h1>📋 Правила бренда</h1>
+  <p class="sub">Around The World · именная вышивка</p>
+
+  <!-- НАЧАЛО ТЕКСТА ПРАВИЛ — заменить на финальный текст -->
+  <section>
+    <h2>Текст правил</h2>
+    <p class="placeholder">Здесь будет текст правил бренда.</p>
+  </section>
+  <!-- КОНЕЦ ТЕКСТА ПРАВИЛ -->
+
+  <div class="actions">
+    <button id="closeBtn" hidden>Закрыть</button>
+  </div>
+</div>
+
+<script src="https://telegram.org/js/telegram-web-app.js"></script>
+<script>
+  var tg = window.Telegram && window.Telegram.WebApp;
+  if (tg) {
+    tg.ready();
+    tg.expand();
+    var b = document.getElementById('closeBtn');
+    b.hidden = false;
+    b.addEventListener('click', function () { tg.close(); });
+  }
+</script>
+</body>
+</html>
