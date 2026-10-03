@@ -612,7 +612,7 @@
       "title": "Travel Bag",
       "subtitle": "",
       "price": "от 7 500 ₽",
-      "image": "images/travel/suede_big/001.jpg",
+      "image": "images/fabric/travel/001.jpg",
       "sizes": [
         {
           "id": "m",
@@ -674,7 +674,7 @@
                     "front_pocket": "images/travel/suede_big/001.jpg",
                     "trolley": "images/travel/suede_big/001_trolley.jpg"
                   },
-                  "image": "images/travel/suede_big/001.jpg",
+                  "image": "images/fabric/travel/001.jpg",
                   "preview_image": "images/travel/suede_big/001.jpg"
                 },
                 {
@@ -684,7 +684,7 @@
                     "front_pocket": "images/travel/suede_big/002.jpg",
                     "trolley": "images/travel/suede_big/002_trolley.jpg"
                   },
-                  "image": "images/travel/suede_big/002.jpg",
+                  "image": "images/fabric/travel/002.jpg",
                   "preview_image": "images/travel/suede_big/002.jpg"
                 },
                 {
@@ -694,7 +694,7 @@
                     "front_pocket": "images/travel/suede_big/003.jpg",
                     "trolley": "images/travel/suede_big/003_trolley.jpg"
                   },
-                  "image": "images/travel/suede_big/003.jpg",
+                  "image": "images/fabric/travel/003.jpg",
                   "preview_image": "images/travel/suede_big/003.jpg"
                 },
                 {
@@ -704,7 +704,7 @@
                     "front_pocket": "images/travel/suede_big/004.jpg",
                     "trolley": "images/travel/suede_big/004_trolley.jpg"
                   },
-                  "image": "images/travel/suede_big/004.jpg",
+                  "image": "images/fabric/travel/004.jpg",
                   "preview_image": "images/travel/suede_big/004.jpg"
                 },
                 {
@@ -714,7 +714,7 @@
                     "front_pocket": "images/travel/suede_big/005.jpg",
                     "trolley": "images/travel/suede_big/005_trolley.jpg"
                   },
-                  "image": "images/travel/suede_big/005.jpg",
+                  "image": "images/fabric/travel/005.jpg",
                   "preview_image": "images/travel/suede_big/005.jpg"
                 },
                 {
@@ -724,7 +724,7 @@
                     "front_pocket": "images/travel/suede_big/006.jpg",
                     "trolley": "images/travel/suede_big/006_trolley.jpg"
                   },
-                  "image": "images/travel/suede_big/006.jpg",
+                  "image": "images/fabric/travel/006.jpg",
                   "preview_image": "images/travel/suede_big/006.jpg"
                 },
                 {
@@ -734,7 +734,7 @@
                     "front_pocket": "images/travel/suede_big/007.jpg",
                     "trolley": "images/travel/suede_big/007_trolley.jpg"
                   },
-                  "image": "images/travel/suede_big/007.jpg",
+                  "image": "images/fabric/travel/007.jpg",
                   "preview_image": "images/travel/suede_big/007.jpg"
                 },
                 {
@@ -744,7 +744,7 @@
                     "front_pocket": "images/travel/suede_big/008.jpg",
                     "trolley": "images/travel/suede_big/008_trolley.jpg"
                   },
-                  "image": "images/travel/suede_big/008.jpg",
+                  "image": "images/fabric/travel/008.jpg",
                   "preview_image": "images/travel/suede_big/008.jpg"
                 },
                 {
@@ -754,7 +754,7 @@
                     "front_pocket": "images/travel/suede_big/009.jpg",
                     "trolley": "images/travel/suede_big/009_trolley.jpg"
                   },
-                  "image": "images/travel/suede_big/009.jpg",
+                  "image": "images/fabric/travel/009.jpg",
                   "preview_image": "images/travel/suede_big/009.jpg"
                 },
                 {
@@ -764,7 +764,7 @@
                     "front_pocket": "images/travel/suede_big/010.jpg",
                     "trolley": "images/travel/suede_big/010_trolley.jpg"
                   },
-                  "image": "images/travel/suede_big/010.jpg",
+                  "image": "images/fabric/travel/010.jpg",
                   "preview_image": "images/travel/suede_big/010.jpg"
                 },
                 {
@@ -774,7 +774,7 @@
                     "front_pocket": "images/travel/suede_big/011.jpg",
                     "trolley": "images/travel/suede_big/011_trolley.jpg"
                   },
-                  "image": "images/travel/suede_big/011.jpg",
+                  "image": "images/fabric/travel/011.jpg",
                   "preview_image": "images/travel/suede_big/011.jpg"
                 },
                 {
@@ -784,7 +784,7 @@
                     "front_pocket": "images/travel/suede_big/012.jpg",
                     "trolley": "images/travel/suede_big/012_trolley.jpg"
                   },
-                  "image": "images/travel/suede_big/012.jpg",
+                  "image": "images/fabric/travel/012.jpg",
                   "preview_image": "images/travel/suede_big/012.jpg"
                 },
                 {
@@ -794,7 +794,7 @@
                     "front_pocket": "images/travel/suede_big/013.jpg",
                     "trolley": "images/travel/suede_big/013_trolley.jpg"
                   },
-                  "image": "images/travel/suede_big/013.jpg",
+                  "image": "images/fabric/travel/013.jpg",
                   "preview_image": "images/travel/suede_big/013.jpg"
                 },
                 {
@@ -804,7 +804,7 @@
                     "front_pocket": "images/travel/suede_big/014.jpg",
                     "trolley": "images/travel/suede_big/014_trolley.jpg"
                   },
-                  "image": "images/travel/suede_big/014.jpg",
+                  "image": "images/fabric/travel/014.jpg",
                   "preview_image": "images/travel/suede_big/014.jpg"
                 },
                 {
@@ -814,7 +814,7 @@
                     "front_pocket": "images/travel/suede_big/015.jpg",
                     "trolley": "images/travel/suede_big/015_trolley.jpg"
                   },
-                  "image": "images/travel/suede_big/015.jpg",
+                  "image": "images/fabric/travel/015.jpg",
                   "preview_image": "images/travel/suede_big/015.jpg"
                 },
                 {
@@ -824,7 +824,7 @@
                     "front_pocket": "images/travel/suede_big/016.jpg",
                     "trolley": "images/travel/suede_big/016_trolley.jpg"
                   },
-                  "image": "images/travel/suede_big/016.jpg",
+                  "image": "images/fabric/travel/016.jpg",
                   "preview_image": "images/travel/suede_big/016.jpg"
                 },
                 {
@@ -834,7 +834,7 @@
                     "front_pocket": "images/travel/suede_big/017.jpg",
                     "trolley": "images/travel/suede_big/017_trolley.jpg"
                   },
-                  "image": "images/travel/suede_big/017.jpg",
+                  "image": "images/fabric/travel/017.jpg",
                   "preview_image": "images/travel/suede_big/017.jpg"
                 },
                 {
@@ -844,7 +844,7 @@
                     "front_pocket": "images/travel/suede_big/018.jpg",
                     "trolley": "images/travel/suede_big/018_trolley.jpg"
                   },
-                  "image": "images/travel/suede_big/018.jpg",
+                  "image": "images/fabric/travel/018.jpg",
                   "preview_image": "images/travel/suede_big/018.jpg"
                 },
                 {
@@ -854,7 +854,7 @@
                     "front_pocket": "images/travel/suede_big/019.jpg",
                     "trolley": "images/travel/suede_big/019_trolley.jpg"
                   },
-                  "image": "images/travel/suede_big/019.jpg",
+                  "image": "images/fabric/travel/019.jpg",
                   "preview_image": "images/travel/suede_big/019.jpg"
                 },
                 {
@@ -864,7 +864,7 @@
                     "front_pocket": "images/travel/suede_big/020.jpg",
                     "trolley": "images/travel/suede_big/020_trolley.jpg"
                   },
-                  "image": "images/travel/suede_big/020.jpg",
+                  "image": "images/fabric/travel/020.jpg",
                   "preview_image": "images/travel/suede_big/020.jpg"
                 },
                 {
@@ -874,7 +874,7 @@
                     "front_pocket": "images/travel/suede_big/022.jpg",
                     "trolley": "images/travel/suede_big/022_trolley.jpg"
                   },
-                  "image": "images/travel/suede_big/022.jpg",
+                  "image": "images/fabric/travel/022.jpg",
                   "preview_image": "images/travel/suede_big/022.jpg"
                 },
                 {
@@ -884,7 +884,7 @@
                     "front_pocket": "images/travel/suede_big/024.jpg",
                     "trolley": "images/travel/suede_big/024_trolley.jpg"
                   },
-                  "image": "images/travel/suede_big/024.jpg",
+                  "image": "images/fabric/travel/024.jpg",
                   "preview_image": "images/travel/suede_big/024.jpg"
                 },
                 {
@@ -894,7 +894,7 @@
                     "front_pocket": "images/travel/suede_big/025.jpg",
                     "trolley": "images/travel/suede_big/025_trolley.jpg"
                   },
-                  "image": "images/travel/suede_big/025.jpg",
+                  "image": "images/fabric/travel/025.jpg",
                   "preview_image": "images/travel/suede_big/025.jpg"
                 },
                 {
@@ -904,7 +904,7 @@
                     "front_pocket": "images/travel/suede_big/026.jpg",
                     "trolley": "images/travel/suede_big/026_trolley.jpg"
                   },
-                  "image": "images/travel/suede_big/026.jpg",
+                  "image": "images/fabric/travel/026.jpg",
                   "preview_image": "images/travel/suede_big/026.jpg"
                 },
                 {
@@ -914,7 +914,7 @@
                     "front_pocket": "images/travel/suede_big/027.jpg",
                     "trolley": "images/travel/suede_big/027_trolley.jpg"
                   },
-                  "image": "images/travel/suede_big/027.jpg",
+                  "image": "images/fabric/travel/027.jpg",
                   "preview_image": "images/travel/suede_big/027.jpg"
                 },
                 {
@@ -924,7 +924,7 @@
                     "front_pocket": "images/travel/suede_big/028.jpg",
                     "trolley": "images/travel/suede_big/028_trolley.jpg"
                   },
-                  "image": "images/travel/suede_big/028.jpg",
+                  "image": "images/fabric/travel/028.jpg",
                   "preview_image": "images/travel/suede_big/028.jpg"
                 }
               ]
@@ -991,7 +991,7 @@
                     "front_pocket": "images/travel/suede_big_l/001.jpg",
                     "trolley": "images/travel/suede_big_l/001_trolley.jpg"
                   },
-                  "image": "images/travel/suede_big_l/001.jpg",
+                  "image": "images/fabric/travel/001.jpg",
                   "preview_image": "images/travel/suede_big_l/001.jpg"
                 },
                 {
@@ -1001,7 +1001,7 @@
                     "front_pocket": "images/travel/suede_big_l/002.jpg",
                     "trolley": "images/travel/suede_big_l/002_trolley.jpg"
                   },
-                  "image": "images/travel/suede_big_l/002.jpg",
+                  "image": "images/fabric/travel/002.jpg",
                   "preview_image": "images/travel/suede_big_l/002.jpg"
                 },
                 {
@@ -1011,7 +1011,7 @@
                     "front_pocket": "images/travel/suede_big_l/003.jpg",
                     "trolley": "images/travel/suede_big_l/003_trolley.jpg"
                   },
-                  "image": "images/travel/suede_big_l/003.jpg",
+                  "image": "images/fabric/travel/003.jpg",
                   "preview_image": "images/travel/suede_big_l/003.jpg"
                 },
                 {
@@ -1021,7 +1021,7 @@
                     "front_pocket": "images/travel/suede_big_l/004.jpg",
                     "trolley": "images/travel/suede_big_l/004_trolley.jpg"
                   },
-                  "image": "images/travel/suede_big_l/004.jpg",
+                  "image": "images/fabric/travel/004.jpg",
                   "preview_image": "images/travel/suede_big_l/004.jpg"
                 },
                 {
@@ -1031,7 +1031,7 @@
                     "front_pocket": "images/travel/suede_big_l/005.jpg",
                     "trolley": "images/travel/suede_big_l/005_trolley.jpg"
                   },
-                  "image": "images/travel/suede_big_l/005.jpg",
+                  "image": "images/fabric/travel/005.jpg",
                   "preview_image": "images/travel/suede_big_l/005.jpg"
                 },
                 {
@@ -1041,7 +1041,7 @@
                     "front_pocket": "images/travel/suede_big_l/006.jpg",
                     "trolley": "images/travel/suede_big_l/006_trolley.jpg"
                   },
-                  "image": "images/travel/suede_big_l/006.jpg",
+                  "image": "images/fabric/travel/006.jpg",
                   "preview_image": "images/travel/suede_big_l/006.jpg"
                 },
                 {
@@ -1051,7 +1051,7 @@
                     "front_pocket": "images/travel/suede_big_l/007.jpg",
                     "trolley": "images/travel/suede_big_l/007_trolley.jpg"
                   },
-                  "image": "images/travel/suede_big_l/007.jpg",
+                  "image": "images/fabric/travel/007.jpg",
                   "preview_image": "images/travel/suede_big_l/007.jpg"
                 },
                 {
@@ -1061,7 +1061,7 @@
                     "front_pocket": "images/travel/suede_big_l/008.jpg",
                     "trolley": "images/travel/suede_big_l/008_trolley.jpg"
                   },
-                  "image": "images/travel/suede_big_l/008.jpg",
+                  "image": "images/fabric/travel/008.jpg",
                   "preview_image": "images/travel/suede_big_l/008.jpg"
                 },
                 {
@@ -1071,7 +1071,7 @@
                     "front_pocket": "images/travel/suede_big_l/009.jpg",
                     "trolley": "images/travel/suede_big_l/009_trolley.jpg"
                   },
-                  "image": "images/travel/suede_big_l/009.jpg",
+                  "image": "images/fabric/travel/009.jpg",
                   "preview_image": "images/travel/suede_big_l/009.jpg"
                 },
                 {
@@ -1081,7 +1081,7 @@
                     "front_pocket": "images/travel/suede_big_l/010.jpg",
                     "trolley": "images/travel/suede_big_l/010_trolley.jpg"
                   },
-                  "image": "images/travel/suede_big_l/010.jpg",
+                  "image": "images/fabric/travel/010.jpg",
                   "preview_image": "images/travel/suede_big_l/010.jpg"
                 },
                 {
@@ -1091,7 +1091,7 @@
                     "front_pocket": "images/travel/suede_big_l/011.jpg",
                     "trolley": "images/travel/suede_big_l/011_trolley.jpg"
                   },
-                  "image": "images/travel/suede_big_l/011.jpg",
+                  "image": "images/fabric/travel/011.jpg",
                   "preview_image": "images/travel/suede_big_l/011.jpg"
                 },
                 {
@@ -1101,7 +1101,7 @@
                     "front_pocket": "images/travel/suede_big_l/012.jpg",
                     "trolley": "images/travel/suede_big_l/012_trolley.jpg"
                   },
-                  "image": "images/travel/suede_big_l/012.jpg",
+                  "image": "images/fabric/travel/012.jpg",
                   "preview_image": "images/travel/suede_big_l/012.jpg"
                 },
                 {
@@ -1111,7 +1111,7 @@
                     "front_pocket": "images/travel/suede_big_l/013.jpg",
                     "trolley": "images/travel/suede_big_l/013_trolley.jpg"
                   },
-                  "image": "images/travel/suede_big_l/013.jpg",
+                  "image": "images/fabric/travel/013.jpg",
                   "preview_image": "images/travel/suede_big_l/013.jpg"
                 },
                 {
@@ -1121,7 +1121,7 @@
                     "front_pocket": "images/travel/suede_big_l/014.jpg",
                     "trolley": "images/travel/suede_big_l/014_trolley.jpg"
                   },
-                  "image": "images/travel/suede_big_l/014.jpg",
+                  "image": "images/fabric/travel/014.jpg",
                   "preview_image": "images/travel/suede_big_l/014.jpg"
                 },
                 {
@@ -1131,7 +1131,7 @@
                     "front_pocket": "images/travel/suede_big_l/015.jpg",
                     "trolley": "images/travel/suede_big_l/015_trolley.jpg"
                   },
-                  "image": "images/travel/suede_big_l/015.jpg",
+                  "image": "images/fabric/travel/015.jpg",
                   "preview_image": "images/travel/suede_big_l/015.jpg"
                 },
                 {
@@ -1141,7 +1141,7 @@
                     "front_pocket": "images/travel/suede_big_l/016.jpg",
                     "trolley": "images/travel/suede_big_l/016_trolley.jpg"
                   },
-                  "image": "images/travel/suede_big_l/016.jpg",
+                  "image": "images/fabric/travel/016.jpg",
                   "preview_image": "images/travel/suede_big_l/016.jpg"
                 },
                 {
@@ -1151,7 +1151,7 @@
                     "front_pocket": "images/travel/suede_big_l/018.jpg",
                     "trolley": "images/travel/suede_big_l/018_trolley.jpg"
                   },
-                  "image": "images/travel/suede_big_l/018.jpg",
+                  "image": "images/fabric/travel/018.jpg",
                   "preview_image": "images/travel/suede_big_l/018.jpg"
                 },
                 {
@@ -1161,7 +1161,7 @@
                     "front_pocket": "images/travel/suede_big_l/019.jpg",
                     "trolley": "images/travel/suede_big_l/019_trolley.jpg"
                   },
-                  "image": "images/travel/suede_big_l/019.jpg",
+                  "image": "images/fabric/travel/019.jpg",
                   "preview_image": "images/travel/suede_big_l/019.jpg"
                 },
                 {
@@ -1171,7 +1171,7 @@
                     "front_pocket": "images/travel/suede_big_l/020.jpg",
                     "trolley": "images/travel/suede_big_l/020_trolley.jpg"
                   },
-                  "image": "images/travel/suede_big_l/020.jpg",
+                  "image": "images/fabric/travel/020.jpg",
                   "preview_image": "images/travel/suede_big_l/020.jpg"
                 },
                 {
@@ -1181,7 +1181,7 @@
                     "front_pocket": "images/travel/suede_big_l/021.jpg",
                     "trolley": "images/travel/suede_big_l/021_trolley.jpg"
                   },
-                  "image": "images/travel/suede_big_l/021.jpg",
+                  "image": "images/fabric/travel/021.jpg",
                   "preview_image": "images/travel/suede_big_l/021.jpg"
                 },
                 {
@@ -1191,7 +1191,7 @@
                     "front_pocket": "images/travel/suede_big_l/022.jpg",
                     "trolley": "images/travel/suede_big_l/022_trolley.jpg"
                   },
-                  "image": "images/travel/suede_big_l/022.jpg",
+                  "image": "images/fabric/travel/022.jpg",
                   "preview_image": "images/travel/suede_big_l/022.jpg"
                 },
                 {
@@ -1201,7 +1201,7 @@
                     "front_pocket": "images/travel/suede_big_l/023.jpg",
                     "trolley": "images/travel/suede_big_l/023_trolley.jpg"
                   },
-                  "image": "images/travel/suede_big_l/023.jpg",
+                  "image": "images/fabric/travel/023.jpg",
                   "preview_image": "images/travel/suede_big_l/023.jpg"
                 },
                 {
@@ -1211,7 +1211,7 @@
                     "front_pocket": "images/travel/suede_big_l/024.jpg",
                     "trolley": "images/travel/suede_big_l/024_trolley.jpg"
                   },
-                  "image": "images/travel/suede_big_l/024.jpg",
+                  "image": "images/fabric/travel/024.jpg",
                   "preview_image": "images/travel/suede_big_l/024.jpg"
                 },
                 {
@@ -1221,7 +1221,7 @@
                     "front_pocket": "images/travel/suede_big_l/025.jpg",
                     "trolley": "images/travel/suede_big_l/025_trolley.jpg"
                   },
-                  "image": "images/travel/suede_big_l/025.jpg",
+                  "image": "images/fabric/travel/025.jpg",
                   "preview_image": "images/travel/suede_big_l/025.jpg"
                 },
                 {
@@ -1231,7 +1231,7 @@
                     "front_pocket": "images/travel/suede_big_l/026.jpg",
                     "trolley": "images/travel/suede_big_l/026_trolley.jpg"
                   },
-                  "image": "images/travel/suede_big_l/026.jpg",
+                  "image": "images/fabric/travel/026.jpg",
                   "preview_image": "images/travel/suede_big_l/026.jpg"
                 },
                 {
@@ -1241,7 +1241,7 @@
                     "front_pocket": "images/travel/suede_big_l/027.jpg",
                     "trolley": "images/travel/suede_big_l/027_trolley.jpg"
                   },
-                  "image": "images/travel/suede_big_l/027.jpg",
+                  "image": "images/fabric/travel/027.jpg",
                   "preview_image": "images/travel/suede_big_l/027.jpg"
                 },
                 {
@@ -1251,7 +1251,7 @@
                     "front_pocket": "images/travel/suede_big_l/028.jpg",
                     "trolley": "images/travel/suede_big_l/028_trolley.jpg"
                   },
-                  "image": "images/travel/suede_big_l/028.jpg",
+                  "image": "images/fabric/travel/028.jpg",
                   "preview_image": "images/travel/suede_big_l/028.jpg"
                 }
               ]
