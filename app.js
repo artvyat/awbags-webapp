@@ -1034,7 +1034,7 @@ document.addEventListener('DOMContentLoaded', () => setTimeout(zlBind, 0));
     }
 
     if (Math.abs(delta) > 2) {
-      window.scrollBy({ top: delta, left: 0, behavior: 'instant' });
+      window.scrollBy({ top: delta, left: 0, behavior: 'smooth' });
     }
   }
 
