@@ -971,3 +971,103 @@ document.addEventListener('DOMContentLoaded', () => setTimeout(zlBind, 0));
   setTimeout(zlBind, 0);
 })();
 
+
+/* ===== AWBAGS-KEYBOARD-V1 ===== */
+(function () {
+  const field = document.getElementById('opt-text');
+  const navbar = document.getElementById('navbar');
+  const step = document.getElementById('step-2');
+  if (!field || !step) return;
+
+  const viewport = window.visualViewport;
+  let timers = [];
+  let resizeTimer = 0;
+
+  function active() {
+    return document.activeElement === field &&
+           field.getClientRects().length > 0;
+  }
+
+  function revealField() {
+    if (!active()) return;
+
+    const gap = parseFloat(getComputedStyle(document.documentElement)
+      .getPropertyValue('--keyboard-field-gap')) || 12;
+
+    // getBoundingClientRect and visualViewport.offsetTop use
+    // the layout viewport coordinate system.
+    const visibleTop = viewport ? viewport.offsetTop : 0;
+    const height = viewport ? viewport.height : window.innerHeight;
+    if (height <= 0) return;
+
+    let bottom = visibleTop + height;
+
+    // Exclude the fixed navigation bar only when it is visible here.
+    if (navbar && navbar.getClientRects().length) {
+      const nav = navbar.getBoundingClientRect();
+      if (nav.bottom > visibleTop && nav.top < bottom) {
+        bottom = Math.max(visibleTop, nav.top);
+      }
+    }
+
+    const top = visibleTop + gap;
+    bottom -= gap;
+    if (bottom <= top) return;
+
+    const rect = field.getBoundingClientRect();
+    const meta = document.getElementById('zl-meta');
+    let targetBottom = rect.bottom;
+
+    // Keep the counter visible too, if it fits with the field.
+    if (meta && meta.getClientRects().length) {
+      const metaBottom = meta.getBoundingClientRect().bottom;
+      if (metaBottom - rect.top <= bottom - top) {
+        targetBottom = Math.max(targetBottom, metaBottom);
+      }
+    }
+
+    let delta = 0;
+    if (rect.height > bottom - top || rect.top < top) {
+      delta = rect.top - top;
+    } else if (targetBottom > bottom) {
+      delta = Math.min(targetBottom - bottom, rect.top - top);
+    }
+
+    if (Math.abs(delta) > 2) {
+      window.scrollBy({ top: delta, left: 0, behavior: 'instant' });
+    }
+  }
+
+  function cancelPending() {
+    timers.forEach(clearTimeout);
+    timers = [];
+    clearTimeout(resizeTimer);
+  }
+
+  function onFocus() {
+    cancelPending();
+    // iOS opens the keyboard asynchronously; recheck after animation.
+    timers = [0, 180, 400, 750].map(
+      delay => setTimeout(revealField, delay)
+    );
+  }
+
+  function onResize() {
+    if (!active()) return;
+    clearTimeout(resizeTimer);
+    resizeTimer = setTimeout(revealField, 80);
+  }
+
+  field.addEventListener('focus', onFocus);
+  field.addEventListener('blur', cancelPending);
+  window.addEventListener('resize', onResize, { passive: true });
+  if (viewport) {
+    viewport.addEventListener('resize', onResize, { passive: true });
+  }
+
+  const telegram = window.Telegram && window.Telegram.WebApp;
+  if (telegram && typeof telegram.onEvent === 'function') {
+    telegram.onEvent('viewportChanged', onResize);
+  }
+})();
+/* ===== /AWBAGS-KEYBOARD-V1 ===== */
