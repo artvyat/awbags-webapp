@@ -527,14 +527,6 @@ function renderThreadColors() {
 
 // ===== Превью (оба окна: шаг 1 и шаг 2) =====
 function updatePreview() {
-  // STANDARD-JEANS-PREVIEW-FIT: distinguish Standard from Mini.
-  const previewMaterial = currentMaterial();
-  const previewBagId = previewMaterial && previewMaterial.bag_id || '';
-  for (const previewImage of [el.preview, el.preview2]) {
-    const previewFrame = previewImage && previewImage.closest('.preview-frame');
-    if (previewFrame) previewFrame.dataset.bagId = previewBagId;
-  }
-
   const src = previewSrcForZone(state.zone);
   if (!src) return;
   if (el.preview  && el.preview.getAttribute('src')  !== src) el.preview.src  = src;
