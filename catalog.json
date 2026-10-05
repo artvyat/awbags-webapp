@@ -783,10 +783,10 @@
                   "name": "Малиновый",
                   "variant_id": "eco_suede_raspberry_front_pocket",
                   "image": "images/fabric/suede/raspberry.jpg",
-                  "preview_image": "images/style/standard/raspberry_back.jpg",
+                  "preview_image": "images/style/standard/raspberry.jpg?v=raspberry-swap-20261005",
                   "previews": {
-                    "front_pocket": "images/style/standard/raspberry_back.jpg",
-                    "back": "images/style/standard/raspberry.jpg",
+                    "front_pocket": "images/style/standard/raspberry.jpg?v=raspberry-swap-20261005",
+                    "back": "images/style/standard/raspberry_back.jpg?v=raspberry-swap-20261005",
                     "side_round": "images/style/standard/raspberry_side.jpg"
                   }
                 },
