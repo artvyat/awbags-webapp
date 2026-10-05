@@ -899,6 +899,204 @@
                   }
                 }
               ]
+            },
+            {
+              "id": "jeans",
+              "name": "Джинса",
+              "bag_id": "sstyle_standard_jeans",
+              "variant_prefix": "jeans",
+              "zone_suffix": {
+                "front_pocket": "front_pocket",
+                "back": "back",
+                "side_round": "side_round"
+              },
+              "zones": [
+                {
+                  "id": "front_pocket",
+                  "name": "Спереди над карманом",
+                  "order": 1,
+                  "enabled": true,
+                  "available": true,
+                  "default": true,
+                  "perspective": false
+                },
+                {
+                  "id": "back",
+                  "name": "Сзади",
+                  "order": 2,
+                  "enabled": true,
+                  "available": true,
+                  "default": false,
+                  "perspective": false
+                },
+                {
+                  "id": "side_round",
+                  "name": "Сбоку на кругляшке",
+                  "order": 3,
+                  "enabled": true,
+                  "available": true,
+                  "default": false,
+                  "perspective": false
+                }
+              ],
+              "colors": [
+                {
+                  "id": "beige",
+                  "name": "Бежевый",
+                  "variant_id": "jeans_beige_front_pocket",
+                  "image": "images/fabric/jeans/beige.jpg",
+                  "preview_image": "images/style/standard_jeans/jeans_beige_front_pocket.jpg",
+                  "previews": {
+                    "front_pocket": "images/style/standard_jeans/jeans_beige_front_pocket.jpg",
+                    "back": "images/style/standard_jeans/jeans_beige_back.jpg",
+                    "side_round": "images/style/standard_jeans/jeans_beige_side_round.jpg"
+                  }
+                },
+                {
+                  "id": "graphite",
+                  "name": "Графит",
+                  "variant_id": "jeans_graphite_front_pocket",
+                  "image": "images/jeans/graphite.jpg",
+                  "preview_image": "images/style/standard_jeans/jeans_graphite_front_pocket.jpg",
+                  "previews": {
+                    "front_pocket": "images/style/standard_jeans/jeans_graphite_front_pocket.jpg",
+                    "back": "images/style/standard_jeans/jeans_graphite_back.jpg",
+                    "side_round": "images/style/standard_jeans/jeans_graphite_side_round.jpg"
+                  }
+                },
+                {
+                  "id": "light_blue",
+                  "name": "Голубой",
+                  "variant_id": "jeans_light_blue_front_pocket",
+                  "image": "images/fabric/jeans/light_blue.jpg",
+                  "preview_image": "images/style/standard_jeans/jeans_light_blue_front_pocket.jpg",
+                  "previews": {
+                    "front_pocket": "images/style/standard_jeans/jeans_light_blue_front_pocket.jpg",
+                    "back": "images/style/standard_jeans/jeans_light_blue_back.jpg",
+                    "side_round": "images/style/standard_jeans/jeans_light_blue_side_round.jpg"
+                  }
+                },
+                {
+                  "id": "cappuccino",
+                  "name": "Капучино",
+                  "variant_id": "jeans_cappuccino_front_pocket",
+                  "image": "images/jeans/cappuccino.jpg",
+                  "preview_image": "images/style/standard_jeans/jeans_cappuccino_front_pocket.jpg",
+                  "previews": {
+                    "front_pocket": "images/style/standard_jeans/jeans_cappuccino_front_pocket.jpg",
+                    "back": "images/style/standard_jeans/jeans_cappuccino_back.jpg",
+                    "side_round": "images/style/standard_jeans/jeans_cappuccino_side_round.jpg"
+                  }
+                },
+                {
+                  "id": "lavender",
+                  "name": "Лавандовый",
+                  "variant_id": "jeans_lavender_front_pocket",
+                  "image": "images/fabric/jeans/lavender.jpg",
+                  "preview_image": "images/style/standard_jeans/jeans_lavender_front_pocket.jpg",
+                  "previews": {
+                    "front_pocket": "images/style/standard_jeans/jeans_lavender_front_pocket.jpg",
+                    "back": "images/style/standard_jeans/jeans_lavender_back.jpg",
+                    "side_round": "images/style/standard_jeans/jeans_lavender_side_round.jpg"
+                  }
+                },
+                {
+                  "id": "peach",
+                  "name": "Персиковый",
+                  "variant_id": "jeans_peach_front_pocket",
+                  "image": "images/fabric/jeans/peach.jpg",
+                  "preview_image": "images/style/standard_jeans/jeans_peach_front_pocket.jpg",
+                  "previews": {
+                    "front_pocket": "images/style/standard_jeans/jeans_peach_front_pocket.jpg",
+                    "back": "images/style/standard_jeans/jeans_peach_back.jpg",
+                    "side_round": "images/style/standard_jeans/jeans_peach_side_round.jpg"
+                  }
+                },
+                {
+                  "id": "sand",
+                  "name": "Песочный",
+                  "variant_id": "jeans_sand_front_pocket",
+                  "image": "images/fabric/jeans/sand.jpg",
+                  "preview_image": "images/style/standard_jeans/jeans_sand_front_pocket.jpg",
+                  "previews": {
+                    "front_pocket": "images/style/standard_jeans/jeans_sand_front_pocket.jpg",
+                    "back": "images/style/standard_jeans/jeans_sand_back.jpg",
+                    "side_round": "images/style/standard_jeans/jeans_sand_side_round.jpg"
+                  }
+                },
+                {
+                  "id": "powder",
+                  "name": "Пудровый",
+                  "variant_id": "jeans_powder_front_pocket",
+                  "image": "images/fabric/jeans/powder.jpg",
+                  "preview_image": "images/style/standard_jeans/jeans_powder_front_pocket.jpg",
+                  "previews": {
+                    "front_pocket": "images/style/standard_jeans/jeans_powder_front_pocket.jpg",
+                    "back": "images/style/standard_jeans/jeans_powder_back.jpg",
+                    "side_round": "images/style/standard_jeans/jeans_powder_side_round.jpg"
+                  }
+                },
+                {
+                  "id": "pink",
+                  "name": "Розовый",
+                  "variant_id": "jeans_pink_front_pocket",
+                  "image": "images/fabric/jeans/pink.jpg",
+                  "preview_image": "images/style/standard_jeans/jeans_pink_front_pocket.jpg",
+                  "previews": {
+                    "front_pocket": "images/style/standard_jeans/jeans_pink_front_pocket.jpg",
+                    "back": "images/style/standard_jeans/jeans_pink_back.jpg",
+                    "side_round": "images/style/standard_jeans/jeans_pink_side_round.jpg"
+                  }
+                },
+                {
+                  "id": "gray",
+                  "name": "Серый",
+                  "variant_id": "jeans_gray_front_pocket",
+                  "image": "images/jeans/gray.jpg",
+                  "preview_image": "images/style/standard_jeans/jeans_gray_front_pocket.jpg",
+                  "previews": {
+                    "front_pocket": "images/style/standard_jeans/jeans_gray_front_pocket.jpg",
+                    "back": "images/style/standard_jeans/jeans_gray_back.jpg",
+                    "side_round": "images/style/standard_jeans/jeans_gray_side_round.jpg"
+                  }
+                },
+                {
+                  "id": "khaki",
+                  "name": "Хаки",
+                  "variant_id": "jeans_khaki_front_pocket",
+                  "image": "images/fabric/jeans/khaki.jpg",
+                  "preview_image": "images/style/standard_jeans/jeans_khaki_front_pocket.jpg",
+                  "previews": {
+                    "front_pocket": "images/style/standard_jeans/jeans_khaki_front_pocket.jpg",
+                    "back": "images/style/standard_jeans/jeans_khaki_back.jpg",
+                    "side_round": "images/style/standard_jeans/jeans_khaki_side_round.jpg"
+                  }
+                },
+                {
+                  "id": "black",
+                  "name": "Чёрный",
+                  "variant_id": "jeans_black_front_pocket",
+                  "image": "images/fabric/jeans/black.jpg",
+                  "preview_image": "images/style/standard_jeans/jeans_black_front_pocket.jpg",
+                  "previews": {
+                    "front_pocket": "images/style/standard_jeans/jeans_black_front_pocket.jpg",
+                    "back": "images/style/standard_jeans/jeans_black_back.jpg",
+                    "side_round": "images/style/standard_jeans/jeans_black_side_round.jpg"
+                  }
+                },
+                {
+                  "id": "chocolate",
+                  "name": "Шоколадный",
+                  "variant_id": "jeans_chocolate_front_pocket",
+                  "image": "images/fabric/jeans/chocolate.jpg",
+                  "preview_image": "images/style/standard_jeans/jeans_chocolate_front_pocket.jpg",
+                  "previews": {
+                    "front_pocket": "images/style/standard_jeans/jeans_chocolate_front_pocket.jpg",
+                    "back": "images/style/standard_jeans/jeans_chocolate_back.jpg",
+                    "side_round": "images/style/standard_jeans/jeans_chocolate_side_round.jpg"
+                  }
+                }
+              ]
             }
           ]
         }
