@@ -529,7 +529,12 @@ function renderThreadColors() {
 function updatePreview() {
   const src = previewSrcForZone(state.zone);
   if (!src) return;
-  if (el.preview  && el.preview.getAttribute('src')  !== src) el.preview.src  = src;
+  // Отдельный общий ракурс на шаге выбора сумки включается только явно.
+  const color = currentColor();
+  const bagSrc = state.item?.separate_step_preview
+    ? (color?.preview_image || src)
+    : src;
+  if (el.preview  && el.preview.getAttribute('src')  !== bagSrc) el.preview.src  = bagSrc;
   if (el.preview2 && el.preview2.getAttribute('src') !== src) el.preview2.src = src;
   const _z = state.zone || '';
   const _m = state.material || '';
@@ -746,12 +751,20 @@ function zlLimits() {
   const L = (z && z.limits) ? z.limits : ZL_DEFAULT_LIMITS;
   return {
     normal: L.normal || ZL_DEFAULT_LIMITS.normal,
-    caps:   L.caps   || L.normal || ZL_DEFAULT_LIMITS.caps
+    caps:   L.caps   || L.normal || ZL_DEFAULT_LIMITS.caps,
+    line_limit_policy: L.line_limit_policy
   };
 }
 
-function zlMaxLines() {
+function zlMaxLines(raw) {
   const L = zlLimits();
+  if (L.line_limit_policy === 'strict_modes' && raw != null) {
+    const modes = [...new Set(String(raw).replace(/\r\n?/g, '\n')
+      .split('\n').filter(line => line.trim() !== '').map(zlLineMode))];
+    if (modes.length) {
+      return Math.min(...modes.map(mode => L[mode].max_lines || 1));
+    }
+  }
   return Math.max(L.normal.max_lines || 1, L.caps.max_lines || 1);
 }
 
@@ -779,7 +792,7 @@ function zlSanitize(raw) {
   if (noEmoji !== t) { t = noEmoji; changed = 'emoji'; }
 
   let lines = t.split('\n');
-  const ML = zlMaxLines();
+  const ML = zlMaxLines(t);
   if (lines.length > ML) { lines = lines.slice(0, ML); changed = changed || 'lines'; }
 
   lines = lines.map(l => {
@@ -795,7 +808,7 @@ function zlSanitize(raw) {
 function zlValidate(raw) {
   const t = String(raw || '').replace(/\r\n?/g, '\n');
   const lines = t.split('\n');
-  const ML = zlMaxLines();
+  const ML = zlMaxLines(t);
   const errors = [];
 
   if (ZL_EMOJI_T.test(t)) errors.push('Эмодзи не поддерживаются');
@@ -843,7 +856,7 @@ function zlRefresh(flash) {
   const counter = document.getElementById('zl-counter');
   const hint    = document.getElementById('zl-hint');
   const v = zlValidate(ta.value);
-  const L = zlLimits(), ML = zlMaxLines();
+  const L = zlLimits(), ML = zlMaxLines(ta.value);
 
   // строка под кареткой
   const pos = (ta.selectionStart != null) ? ta.selectionStart : ta.value.length;
@@ -856,8 +869,11 @@ function zlRefresh(flash) {
     counter.classList.toggle('over', !v.ok);
   }
   if (hint) {
+    const lineHint = L.line_limit_policy === 'strict_modes'
+      ? `обычный текст — до ${L.normal.max_lines || 1} стр., ЗАГЛАВНЫМИ — до ${L.caps.max_lines || 1} стр.; смешанные строки — меньший предел`
+      : `до ${ML} ${zlPlural(ML,'строки','строк','строк')}`;
     hint.textContent = v.ok
-      ? `Максимум ${L.normal.max_chars_per_line} симв. в строке (${L.caps.max_chars_per_line} — если ЗАГЛАВНЫМИ) · до ${ML} ${zlPlural(ML,'строки','строк','строк')}`
+      ? `Максимум ${L.normal.max_chars_per_line} симв. в строке (${L.caps.max_chars_per_line} — если ЗАГЛАВНЫМИ) · ${lineHint}`
       : v.errors[0];
     hint.classList.toggle('over', !v.ok);
   }
@@ -881,7 +897,7 @@ function zlBind() {
   ta.addEventListener('keydown', (e) => {
     if (e.key === 'Enter' && !e.shiftKey === false) { /* noop */ }
     if (e.key === 'Enter') {
-      if (ta.value.split('\n').length >= zlMaxLines()) {
+      if (ta.value.split('\n').length >= zlMaxLines(ta.value)) {
         e.preventDefault();
         zlRefresh(true);
       }

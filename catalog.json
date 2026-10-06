@@ -1758,6 +1758,3360 @@
           ]
         }
       ]
+    },
+    {
+      "id": "backpack",
+      "title": "Рюкзак",
+      "subtitle": "",
+      "price": "от 12 900 ₽",
+      "categories": [
+        "everyday",
+        "travel"
+      ],
+      "materials": [
+        {
+          "id": "jeans",
+          "name": "Джинса",
+          "bag_id": "backpack_jeans",
+          "variant_prefix": "jeans",
+          "zone_suffix": {
+            "front_pocket": "front_pocket",
+            "strap_top": "strap_top",
+            "back": "back",
+            "strap_bottom": "strap_bottom"
+          },
+          "zones": [
+            {
+              "name": "Спереди над карманом",
+              "order": 1,
+              "enabled": true,
+              "available": true,
+              "default": true,
+              "perspective": false,
+              "limits": {
+                "normal": {
+                  "max_chars_per_line": 14,
+                  "max_lines": 4
+                },
+                "caps": {
+                  "max_chars_per_line": 10,
+                  "max_lines": 5
+                },
+                "line_limit_policy": "strict_modes"
+              },
+              "id": "front_pocket"
+            },
+            {
+              "name": "На лямке сверху",
+              "order": 2,
+              "enabled": true,
+              "available": true,
+              "default": false,
+              "perspective": false,
+              "limits": {
+                "normal": {
+                  "max_chars_per_line": 14,
+                  "max_lines": 1
+                },
+                "caps": {
+                  "max_chars_per_line": 10,
+                  "max_lines": 1
+                },
+                "line_limit_policy": "strict_modes"
+              },
+              "id": "strap_top"
+            },
+            {
+              "name": "Сзади под карманом",
+              "order": 3,
+              "enabled": true,
+              "available": true,
+              "default": false,
+              "perspective": false,
+              "limits": {
+                "normal": {
+                  "max_chars_per_line": 14,
+                  "max_lines": 4
+                },
+                "caps": {
+                  "max_chars_per_line": 10,
+                  "max_lines": 5
+                },
+                "line_limit_policy": "strict_modes"
+              },
+              "id": "back"
+            },
+            {
+              "name": "На лямке снизу",
+              "order": 4,
+              "enabled": true,
+              "available": true,
+              "default": false,
+              "perspective": false,
+              "limits": {
+                "normal": {
+                  "max_chars_per_line": 14,
+                  "max_lines": 1
+                },
+                "caps": {
+                  "max_chars_per_line": 10,
+                  "max_lines": 1
+                },
+                "line_limit_policy": "strict_modes"
+              },
+              "id": "strap_bottom"
+            }
+          ],
+          "colors": [
+            {
+              "id": "001",
+              "name": "Серый",
+              "image": "images/fabric/new_models_20261006/jeans/001.jpg",
+              "preview_image": "images/backpack/jeans/001_front_pocket.jpg",
+              "previews": {
+                "front_pocket": "images/backpack/jeans/001_front_pocket.jpg",
+                "strap_top": "images/backpack/jeans/001_strap_top.jpg",
+                "back": "images/backpack/jeans/001_back.jpg",
+                "strap_bottom": "images/backpack/jeans/001_strap_bottom.jpg"
+              }
+            },
+            {
+              "id": "002",
+              "name": "Синий",
+              "image": "images/fabric/new_models_20261006/jeans/002.jpg",
+              "preview_image": "images/backpack/jeans/002_front_pocket.jpg",
+              "previews": {
+                "front_pocket": "images/backpack/jeans/002_front_pocket.jpg",
+                "strap_top": "images/backpack/jeans/002_strap_top.jpg",
+                "back": "images/backpack/jeans/002_back.jpg",
+                "strap_bottom": "images/backpack/jeans/002_strap_bottom.jpg"
+              }
+            },
+            {
+              "id": "003",
+              "name": "Шоколадный",
+              "image": "images/fabric/new_models_20261006/jeans/003.jpg",
+              "preview_image": "images/backpack/jeans/003_front_pocket.jpg",
+              "previews": {
+                "front_pocket": "images/backpack/jeans/003_front_pocket.jpg",
+                "strap_top": "images/backpack/jeans/003_strap_top.jpg",
+                "back": "images/backpack/jeans/003_back.jpg",
+                "strap_bottom": "images/backpack/jeans/003_strap_bottom.jpg"
+              }
+            },
+            {
+              "id": "004",
+              "name": "Графитовый",
+              "image": "images/fabric/new_models_20261006/jeans/004.jpg",
+              "preview_image": "images/backpack/jeans/004_front_pocket.jpg",
+              "previews": {
+                "front_pocket": "images/backpack/jeans/004_front_pocket.jpg",
+                "strap_top": "images/backpack/jeans/004_strap_top.jpg",
+                "back": "images/backpack/jeans/004_back.jpg",
+                "strap_bottom": "images/backpack/jeans/004_strap_bottom.jpg"
+              }
+            },
+            {
+              "id": "005",
+              "name": "Черный",
+              "image": "images/fabric/new_models_20261006/jeans/005.jpg",
+              "preview_image": "images/backpack/jeans/005_front_pocket.jpg",
+              "previews": {
+                "front_pocket": "images/backpack/jeans/005_front_pocket.jpg",
+                "strap_top": "images/backpack/jeans/005_strap_top.jpg",
+                "back": "images/backpack/jeans/005_back.jpg",
+                "strap_bottom": "images/backpack/jeans/005_strap_bottom.jpg"
+              }
+            },
+            {
+              "id": "006",
+              "name": "Пудровый",
+              "image": "images/fabric/new_models_20261006/jeans/006.jpg",
+              "preview_image": "images/backpack/jeans/006_front_pocket.jpg",
+              "previews": {
+                "front_pocket": "images/backpack/jeans/006_front_pocket.jpg",
+                "strap_top": "images/backpack/jeans/006_strap_top.jpg",
+                "back": "images/backpack/jeans/006_back.jpg",
+                "strap_bottom": "images/backpack/jeans/006_strap_bottom.jpg"
+              }
+            },
+            {
+              "id": "007",
+              "name": "Розовый",
+              "image": "images/fabric/new_models_20261006/jeans/007.jpg",
+              "preview_image": "images/backpack/jeans/007_front_pocket.jpg",
+              "previews": {
+                "front_pocket": "images/backpack/jeans/007_front_pocket.jpg",
+                "strap_top": "images/backpack/jeans/007_strap_top.jpg",
+                "back": "images/backpack/jeans/007_back.jpg",
+                "strap_bottom": "images/backpack/jeans/007_strap_bottom.jpg"
+              }
+            },
+            {
+              "id": "008",
+              "name": "Лавандовый",
+              "image": "images/fabric/new_models_20261006/jeans/008.jpg",
+              "preview_image": "images/backpack/jeans/008_front_pocket.jpg",
+              "previews": {
+                "front_pocket": "images/backpack/jeans/008_front_pocket.jpg",
+                "strap_top": "images/backpack/jeans/008_strap_top.jpg",
+                "back": "images/backpack/jeans/008_back.jpg",
+                "strap_bottom": "images/backpack/jeans/008_strap_bottom.jpg"
+              }
+            },
+            {
+              "id": "009",
+              "name": "Персиковый",
+              "image": "images/fabric/new_models_20261006/jeans/009.jpg",
+              "preview_image": "images/backpack/jeans/009_front_pocket.jpg",
+              "previews": {
+                "front_pocket": "images/backpack/jeans/009_front_pocket.jpg",
+                "strap_top": "images/backpack/jeans/009_strap_top.jpg",
+                "back": "images/backpack/jeans/009_back.jpg",
+                "strap_bottom": "images/backpack/jeans/009_strap_bottom.jpg"
+              }
+            },
+            {
+              "id": "010",
+              "name": "Песочный",
+              "image": "images/fabric/new_models_20261006/jeans/010.jpg",
+              "preview_image": "images/backpack/jeans/010_front_pocket.jpg",
+              "previews": {
+                "front_pocket": "images/backpack/jeans/010_front_pocket.jpg",
+                "strap_top": "images/backpack/jeans/010_strap_top.jpg",
+                "back": "images/backpack/jeans/010_back.jpg",
+                "strap_bottom": "images/backpack/jeans/010_strap_bottom.jpg"
+              }
+            },
+            {
+              "id": "011",
+              "name": "Хаки",
+              "image": "images/fabric/new_models_20261006/jeans/011.jpg",
+              "preview_image": "images/backpack/jeans/011_front_pocket.jpg",
+              "previews": {
+                "front_pocket": "images/backpack/jeans/011_front_pocket.jpg",
+                "strap_top": "images/backpack/jeans/011_strap_top.jpg",
+                "back": "images/backpack/jeans/011_back.jpg",
+                "strap_bottom": "images/backpack/jeans/011_strap_bottom.jpg"
+              }
+            },
+            {
+              "id": "012",
+              "name": "Бежевый",
+              "image": "images/fabric/new_models_20261006/jeans/012.jpg",
+              "preview_image": "images/backpack/jeans/012_front_pocket.jpg",
+              "previews": {
+                "front_pocket": "images/backpack/jeans/012_front_pocket.jpg",
+                "strap_top": "images/backpack/jeans/012_strap_top.jpg",
+                "back": "images/backpack/jeans/012_back.jpg",
+                "strap_bottom": "images/backpack/jeans/012_strap_bottom.jpg"
+              }
+            },
+            {
+              "id": "013",
+              "name": "Капучино",
+              "image": "images/fabric/new_models_20261006/jeans/013.jpg",
+              "preview_image": "images/backpack/jeans/013_front_pocket.jpg",
+              "previews": {
+                "front_pocket": "images/backpack/jeans/013_front_pocket.jpg",
+                "strap_top": "images/backpack/jeans/013_strap_top.jpg",
+                "back": "images/backpack/jeans/013_back.jpg",
+                "strap_bottom": "images/backpack/jeans/013_strap_bottom.jpg"
+              }
+            },
+            {
+              "id": "014",
+              "name": "Голубой",
+              "image": "images/fabric/new_models_20261006/jeans/014.jpg",
+              "preview_image": "images/backpack/jeans/014_front_pocket.jpg",
+              "previews": {
+                "front_pocket": "images/backpack/jeans/014_front_pocket.jpg",
+                "strap_top": "images/backpack/jeans/014_strap_top.jpg",
+                "back": "images/backpack/jeans/014_back.jpg",
+                "strap_bottom": "images/backpack/jeans/014_strap_bottom.jpg"
+              }
+            },
+            {
+              "id": "015",
+              "name": "Кремовый",
+              "image": "images/fabric/new_models_20261006/jeans/015.jpg",
+              "preview_image": "images/backpack/jeans/015_front_pocket.jpg",
+              "previews": {
+                "front_pocket": "images/backpack/jeans/015_front_pocket.jpg",
+                "strap_top": "images/backpack/jeans/015_strap_top.jpg",
+                "back": "images/backpack/jeans/015_back.jpg",
+                "strap_bottom": "images/backpack/jeans/015_strap_bottom.jpg"
+              }
+            }
+          ]
+        },
+        {
+          "id": "eco_suede",
+          "name": "Эко-замша",
+          "bag_id": "backpack_suede",
+          "variant_prefix": "eco_suede",
+          "zone_suffix": {
+            "front_pocket": "front_pocket",
+            "strap_top": "strap_top",
+            "back": "back",
+            "strap_bottom": "strap_bottom"
+          },
+          "zones": [
+            {
+              "name": "Спереди над карманом",
+              "order": 1,
+              "enabled": true,
+              "available": true,
+              "default": true,
+              "perspective": false,
+              "limits": {
+                "normal": {
+                  "max_chars_per_line": 14,
+                  "max_lines": 4
+                },
+                "caps": {
+                  "max_chars_per_line": 10,
+                  "max_lines": 5
+                },
+                "line_limit_policy": "strict_modes"
+              },
+              "id": "front_pocket"
+            },
+            {
+              "name": "На лямке сверху",
+              "order": 2,
+              "enabled": true,
+              "available": true,
+              "default": false,
+              "perspective": false,
+              "limits": {
+                "normal": {
+                  "max_chars_per_line": 14,
+                  "max_lines": 1
+                },
+                "caps": {
+                  "max_chars_per_line": 10,
+                  "max_lines": 1
+                },
+                "line_limit_policy": "strict_modes"
+              },
+              "id": "strap_top"
+            },
+            {
+              "name": "Сзади под карманом",
+              "order": 3,
+              "enabled": true,
+              "available": true,
+              "default": false,
+              "perspective": false,
+              "limits": {
+                "normal": {
+                  "max_chars_per_line": 14,
+                  "max_lines": 4
+                },
+                "caps": {
+                  "max_chars_per_line": 10,
+                  "max_lines": 5
+                },
+                "line_limit_policy": "strict_modes"
+              },
+              "id": "back"
+            },
+            {
+              "name": "На лямке снизу",
+              "order": 4,
+              "enabled": true,
+              "available": true,
+              "default": false,
+              "perspective": false,
+              "limits": {
+                "normal": {
+                  "max_chars_per_line": 14,
+                  "max_lines": 1
+                },
+                "caps": {
+                  "max_chars_per_line": 10,
+                  "max_lines": 1
+                },
+                "line_limit_policy": "strict_modes"
+              },
+              "id": "strap_bottom"
+            }
+          ],
+          "colors": [
+            {
+              "id": "001",
+              "name": "Молочный",
+              "image": "images/fabric/new_models_20261006/eco_suede/001.jpg",
+              "preview_image": "images/backpack/eco_suede/001_front_pocket.jpg",
+              "previews": {
+                "front_pocket": "images/backpack/eco_suede/001_front_pocket.jpg",
+                "strap_top": "images/backpack/eco_suede/001_strap_top.jpg",
+                "back": "images/backpack/eco_suede/001_back.jpg",
+                "strap_bottom": "images/backpack/eco_suede/001_strap_bottom.jpg"
+              }
+            },
+            {
+              "id": "002",
+              "name": "Серый",
+              "image": "images/fabric/new_models_20261006/eco_suede/002.jpg",
+              "preview_image": "images/backpack/eco_suede/002_front_pocket.jpg",
+              "previews": {
+                "front_pocket": "images/backpack/eco_suede/002_front_pocket.jpg",
+                "strap_top": "images/backpack/eco_suede/002_strap_top.jpg",
+                "back": "images/backpack/eco_suede/002_back.jpg",
+                "strap_bottom": "images/backpack/eco_suede/002_strap_bottom.jpg"
+              }
+            },
+            {
+              "id": "003",
+              "name": "Графитовый",
+              "image": "images/fabric/new_models_20261006/eco_suede/003.jpg",
+              "preview_image": "images/backpack/eco_suede/003_front_pocket.jpg",
+              "previews": {
+                "front_pocket": "images/backpack/eco_suede/003_front_pocket.jpg",
+                "strap_top": "images/backpack/eco_suede/003_strap_top.jpg",
+                "back": "images/backpack/eco_suede/003_back.jpg",
+                "strap_bottom": "images/backpack/eco_suede/003_strap_bottom.jpg"
+              }
+            },
+            {
+              "id": "004",
+              "name": "Лавандовый",
+              "image": "images/fabric/new_models_20261006/eco_suede/004.jpg",
+              "preview_image": "images/backpack/eco_suede/004_front_pocket.jpg",
+              "previews": {
+                "front_pocket": "images/backpack/eco_suede/004_front_pocket.jpg",
+                "strap_top": "images/backpack/eco_suede/004_strap_top.jpg",
+                "back": "images/backpack/eco_suede/004_back.jpg",
+                "strap_bottom": "images/backpack/eco_suede/004_strap_bottom.jpg"
+              }
+            },
+            {
+              "id": "005",
+              "name": "Голубой",
+              "image": "images/fabric/new_models_20261006/eco_suede/005.jpg",
+              "preview_image": "images/backpack/eco_suede/005_front_pocket.jpg",
+              "previews": {
+                "front_pocket": "images/backpack/eco_suede/005_front_pocket.jpg",
+                "strap_top": "images/backpack/eco_suede/005_strap_top.jpg",
+                "back": "images/backpack/eco_suede/005_back.jpg",
+                "strap_bottom": "images/backpack/eco_suede/005_strap_bottom.jpg"
+              }
+            },
+            {
+              "id": "006",
+              "name": "Синий",
+              "image": "images/fabric/new_models_20261006/eco_suede/006.jpg",
+              "preview_image": "images/backpack/eco_suede/006_front_pocket.jpg",
+              "previews": {
+                "front_pocket": "images/backpack/eco_suede/006_front_pocket.jpg",
+                "strap_top": "images/backpack/eco_suede/006_strap_top.jpg",
+                "back": "images/backpack/eco_suede/006_back.jpg",
+                "strap_bottom": "images/backpack/eco_suede/006_strap_bottom.jpg"
+              }
+            },
+            {
+              "id": "007",
+              "name": "Пудровый",
+              "image": "images/fabric/new_models_20261006/eco_suede/007.jpg",
+              "preview_image": "images/backpack/eco_suede/007_front_pocket.jpg",
+              "previews": {
+                "front_pocket": "images/backpack/eco_suede/007_front_pocket.jpg",
+                "strap_top": "images/backpack/eco_suede/007_strap_top.jpg",
+                "back": "images/backpack/eco_suede/007_back.jpg",
+                "strap_bottom": "images/backpack/eco_suede/007_strap_bottom.jpg"
+              }
+            },
+            {
+              "id": "008",
+              "name": "Розовый",
+              "image": "images/fabric/new_models_20261006/eco_suede/008.jpg",
+              "preview_image": "images/backpack/eco_suede/008_front_pocket.jpg",
+              "previews": {
+                "front_pocket": "images/backpack/eco_suede/008_front_pocket.jpg",
+                "strap_top": "images/backpack/eco_suede/008_strap_top.jpg",
+                "back": "images/backpack/eco_suede/008_back.jpg",
+                "strap_bottom": "images/backpack/eco_suede/008_strap_bottom.jpg"
+              }
+            },
+            {
+              "id": "009",
+              "name": "Малиновый",
+              "image": "images/fabric/new_models_20261006/eco_suede/009.jpg",
+              "preview_image": "images/backpack/eco_suede/009_front_pocket.jpg",
+              "previews": {
+                "front_pocket": "images/backpack/eco_suede/009_front_pocket.jpg",
+                "strap_top": "images/backpack/eco_suede/009_strap_top.jpg",
+                "back": "images/backpack/eco_suede/009_back.jpg",
+                "strap_bottom": "images/backpack/eco_suede/009_strap_bottom.jpg"
+              }
+            },
+            {
+              "id": "010",
+              "name": "Бежевый",
+              "image": "images/fabric/new_models_20261006/eco_suede/010.jpg",
+              "preview_image": "images/backpack/eco_suede/010_front_pocket.jpg",
+              "previews": {
+                "front_pocket": "images/backpack/eco_suede/010_front_pocket.jpg",
+                "strap_top": "images/backpack/eco_suede/010_strap_top.jpg",
+                "back": "images/backpack/eco_suede/010_back.jpg",
+                "strap_bottom": "images/backpack/eco_suede/010_strap_bottom.jpg"
+              }
+            },
+            {
+              "id": "011",
+              "name": "Песочный",
+              "image": "images/fabric/new_models_20261006/eco_suede/011.jpg",
+              "preview_image": "images/backpack/eco_suede/011_front_pocket.jpg",
+              "previews": {
+                "front_pocket": "images/backpack/eco_suede/011_front_pocket.jpg",
+                "strap_top": "images/backpack/eco_suede/011_strap_top.jpg",
+                "back": "images/backpack/eco_suede/011_back.jpg",
+                "strap_bottom": "images/backpack/eco_suede/011_strap_bottom.jpg"
+              }
+            },
+            {
+              "id": "012",
+              "name": "Черный",
+              "image": "images/fabric/new_models_20261006/eco_suede/012.jpg",
+              "preview_image": "images/backpack/eco_suede/012_front_pocket.jpg",
+              "previews": {
+                "front_pocket": "images/backpack/eco_suede/012_front_pocket.jpg",
+                "strap_top": "images/backpack/eco_suede/012_strap_top.jpg",
+                "back": "images/backpack/eco_suede/012_back.jpg",
+                "strap_bottom": "images/backpack/eco_suede/012_strap_bottom.jpg"
+              }
+            },
+            {
+              "id": "013",
+              "name": "Коричневый",
+              "image": "images/fabric/new_models_20261006/eco_suede/013.jpg",
+              "preview_image": "images/backpack/eco_suede/013_front_pocket.jpg",
+              "previews": {
+                "front_pocket": "images/backpack/eco_suede/013_front_pocket.jpg",
+                "strap_top": "images/backpack/eco_suede/013_strap_top.jpg",
+                "back": "images/backpack/eco_suede/013_back.jpg",
+                "strap_bottom": "images/backpack/eco_suede/013_strap_bottom.jpg"
+              }
+            },
+            {
+              "id": "014",
+              "name": "Капучино",
+              "image": "images/fabric/new_models_20261006/eco_suede/014.jpg",
+              "preview_image": "images/backpack/eco_suede/014_front_pocket.jpg",
+              "previews": {
+                "front_pocket": "images/backpack/eco_suede/014_front_pocket.jpg",
+                "strap_top": "images/backpack/eco_suede/014_strap_top.jpg",
+                "back": "images/backpack/eco_suede/014_back.jpg",
+                "strap_bottom": "images/backpack/eco_suede/014_strap_bottom.jpg"
+              }
+            },
+            {
+              "id": "015",
+              "name": "Хаки",
+              "image": "images/fabric/new_models_20261006/eco_suede/015.jpg",
+              "preview_image": "images/backpack/eco_suede/015_front_pocket.jpg",
+              "previews": {
+                "front_pocket": "images/backpack/eco_suede/015_front_pocket.jpg",
+                "strap_top": "images/backpack/eco_suede/015_strap_top.jpg",
+                "back": "images/backpack/eco_suede/015_back.jpg",
+                "strap_bottom": "images/backpack/eco_suede/015_strap_bottom.jpg"
+              }
+            },
+            {
+              "id": "016",
+              "name": "Лимонный",
+              "image": "images/fabric/new_models_20261006/eco_suede/016.jpg",
+              "preview_image": "images/backpack/eco_suede/016_front_pocket.jpg",
+              "previews": {
+                "front_pocket": "images/backpack/eco_suede/016_front_pocket.jpg",
+                "strap_top": "images/backpack/eco_suede/016_strap_top.jpg",
+                "back": "images/backpack/eco_suede/016_back.jpg",
+                "strap_bottom": "images/backpack/eco_suede/016_strap_bottom.jpg"
+              }
+            },
+            {
+              "id": "017",
+              "name": "Мятный",
+              "image": "images/fabric/new_models_20261006/eco_suede/017.jpg",
+              "preview_image": "images/backpack/eco_suede/017_front_pocket.jpg",
+              "previews": {
+                "front_pocket": "images/backpack/eco_suede/017_front_pocket.jpg",
+                "strap_top": "images/backpack/eco_suede/017_strap_top.jpg",
+                "back": "images/backpack/eco_suede/017_back.jpg",
+                "strap_bottom": "images/backpack/eco_suede/017_strap_bottom.jpg"
+              }
+            },
+            {
+              "id": "020",
+              "name": "Снежный барс",
+              "image": "images/fabric/new_models_20261006/eco_suede/020.jpg",
+              "preview_image": "images/backpack/eco_suede/020_front_pocket.jpg",
+              "previews": {
+                "front_pocket": "images/backpack/eco_suede/020_front_pocket.jpg",
+                "strap_top": "images/backpack/eco_suede/020_strap_top.jpg",
+                "back": "images/backpack/eco_suede/020_back.jpg",
+                "strap_bottom": "images/backpack/eco_suede/020_strap_bottom.jpg"
+              }
+            },
+            {
+              "id": "022",
+              "name": "Фисташка",
+              "image": "images/fabric/new_models_20261006/eco_suede/022.jpg",
+              "preview_image": "images/backpack/eco_suede/022_front_pocket.jpg",
+              "previews": {
+                "front_pocket": "images/backpack/eco_suede/022_front_pocket.jpg",
+                "strap_top": "images/backpack/eco_suede/022_strap_top.jpg",
+                "back": "images/backpack/eco_suede/022_back.jpg",
+                "strap_bottom": "images/backpack/eco_suede/022_strap_bottom.jpg"
+              }
+            }
+          ]
+        }
+      ],
+      "image": "images/backpack/jeans/001_front_pocket.jpg"
+    },
+    {
+      "id": "moon_bag",
+      "title": "Moon bag",
+      "subtitle": "",
+      "price": "от 6 900 ₽",
+      "categories": [
+        "everyday",
+        "mini"
+      ],
+      "materials": [
+        {
+          "id": "jeans",
+          "name": "Джинса",
+          "bag_id": "moon_bag_jeans",
+          "variant_prefix": "jeans",
+          "zone_suffix": {
+            "handle": "handle"
+          },
+          "zones": [
+            {
+              "name": "На ручке",
+              "order": 1,
+              "enabled": true,
+              "available": true,
+              "default": true,
+              "perspective": false,
+              "limits": {
+                "normal": {
+                  "max_chars_per_line": 14,
+                  "max_lines": 2
+                },
+                "caps": {
+                  "max_chars_per_line": 10,
+                  "max_lines": 1
+                },
+                "line_limit_policy": "strict_modes"
+              },
+              "id": "handle"
+            }
+          ],
+          "colors": [
+            {
+              "id": "001",
+              "name": "Серый",
+              "image": "images/fabric/new_models_20261006/jeans/001.jpg",
+              "preview_image": "images/moon_bag/jeans/001_overview.jpg",
+              "previews": {
+                "handle": "images/moon_bag/jeans/001_handle.jpg"
+              }
+            },
+            {
+              "id": "002",
+              "name": "Синий",
+              "image": "images/fabric/new_models_20261006/jeans/002.jpg",
+              "preview_image": "images/moon_bag/jeans/002_overview.jpg",
+              "previews": {
+                "handle": "images/moon_bag/jeans/002_handle.jpg"
+              }
+            },
+            {
+              "id": "003",
+              "name": "Шоколад",
+              "image": "images/fabric/new_models_20261006/jeans/003.jpg",
+              "preview_image": "images/moon_bag/jeans/003_overview.jpg",
+              "previews": {
+                "handle": "images/moon_bag/jeans/003_handle.jpg"
+              }
+            },
+            {
+              "id": "004",
+              "name": "Графит",
+              "image": "images/fabric/new_models_20261006/jeans/004.jpg",
+              "preview_image": "images/moon_bag/jeans/004_overview.jpg",
+              "previews": {
+                "handle": "images/moon_bag/jeans/004_handle.jpg"
+              }
+            },
+            {
+              "id": "005",
+              "name": "Черный",
+              "image": "images/fabric/new_models_20261006/jeans/005.jpg",
+              "preview_image": "images/moon_bag/jeans/005_overview.jpg",
+              "previews": {
+                "handle": "images/moon_bag/jeans/005_handle.jpg"
+              }
+            },
+            {
+              "id": "006",
+              "name": "Пудровый",
+              "image": "images/fabric/new_models_20261006/jeans/006.jpg",
+              "preview_image": "images/moon_bag/jeans/006_overview.jpg",
+              "previews": {
+                "handle": "images/moon_bag/jeans/006_handle.jpg"
+              }
+            },
+            {
+              "id": "007",
+              "name": "Розовый",
+              "image": "images/fabric/new_models_20261006/jeans/007.jpg",
+              "preview_image": "images/moon_bag/jeans/007_overview.jpg",
+              "previews": {
+                "handle": "images/moon_bag/jeans/007_handle.jpg"
+              }
+            },
+            {
+              "id": "008",
+              "name": "Лаванда",
+              "image": "images/fabric/new_models_20261006/jeans/008.jpg",
+              "preview_image": "images/moon_bag/jeans/008_overview.jpg",
+              "previews": {
+                "handle": "images/moon_bag/jeans/008_handle.jpg"
+              }
+            },
+            {
+              "id": "009",
+              "name": "Персиковый",
+              "image": "images/fabric/new_models_20261006/jeans/009.jpg",
+              "preview_image": "images/moon_bag/jeans/009_overview.jpg",
+              "previews": {
+                "handle": "images/moon_bag/jeans/009_handle.jpg"
+              }
+            },
+            {
+              "id": "010",
+              "name": "Песочный",
+              "image": "images/fabric/new_models_20261006/jeans/010.jpg",
+              "preview_image": "images/moon_bag/jeans/010_overview.jpg",
+              "previews": {
+                "handle": "images/moon_bag/jeans/010_handle.jpg"
+              }
+            },
+            {
+              "id": "011",
+              "name": "Хаки",
+              "image": "images/fabric/new_models_20261006/jeans/011.jpg",
+              "preview_image": "images/moon_bag/jeans/011_overview.jpg",
+              "previews": {
+                "handle": "images/moon_bag/jeans/011_handle.jpg"
+              }
+            },
+            {
+              "id": "012",
+              "name": "Бежевый",
+              "image": "images/fabric/new_models_20261006/jeans/012.jpg",
+              "preview_image": "images/moon_bag/jeans/012_overview.jpg",
+              "previews": {
+                "handle": "images/moon_bag/jeans/012_handle.jpg"
+              }
+            },
+            {
+              "id": "013",
+              "name": "Капучино",
+              "image": "images/fabric/new_models_20261006/jeans/013.jpg",
+              "preview_image": "images/moon_bag/jeans/013_overview.jpg",
+              "previews": {
+                "handle": "images/moon_bag/jeans/013_handle.jpg"
+              }
+            },
+            {
+              "id": "014",
+              "name": "Голубой",
+              "image": "images/fabric/new_models_20261006/jeans/014.jpg",
+              "preview_image": "images/moon_bag/jeans/014_overview.jpg",
+              "previews": {
+                "handle": "images/moon_bag/jeans/014_handle.jpg"
+              }
+            },
+            {
+              "id": "015",
+              "name": "Кремовый",
+              "image": "images/fabric/new_models_20261006/jeans/015.jpg",
+              "preview_image": "images/moon_bag/jeans/015_overview.jpg",
+              "previews": {
+                "handle": "images/moon_bag/jeans/015_handle.jpg"
+              }
+            },
+            {
+              "id": "016",
+              "name": "Лимон",
+              "image": "images/fabric/new_models_20261006/jeans/016.jpg",
+              "preview_image": "images/moon_bag/jeans/016_overview.jpg",
+              "previews": {
+                "handle": "images/moon_bag/jeans/016_handle.jpg"
+              }
+            }
+          ]
+        }
+      ],
+      "separate_step_preview": true,
+      "image": "images/moon_bag/jeans/009_overview.jpg"
+    },
+    {
+      "id": "beauty_shell",
+      "title": "Косметичка Ракушка",
+      "subtitle": "",
+      "price": "от 4 300 ₽",
+      "categories": [
+        "beauty"
+      ],
+      "materials": [
+        {
+          "id": "jeans",
+          "name": "Джинса",
+          "bag_id": "beauty_shell_jeans",
+          "variant_prefix": "jeans",
+          "zone_suffix": {
+            "back": "back",
+            "inside": "inside"
+          },
+          "zones": [
+            {
+              "name": "Сзади",
+              "order": 1,
+              "enabled": true,
+              "available": true,
+              "default": true,
+              "perspective": false,
+              "limits": {
+                "normal": {
+                  "max_chars_per_line": 10,
+                  "max_lines": 4
+                },
+                "caps": {
+                  "max_chars_per_line": 7,
+                  "max_lines": 4
+                },
+                "line_limit_policy": "strict_modes"
+              },
+              "id": "back"
+            },
+            {
+              "name": "Внутри",
+              "order": 2,
+              "enabled": true,
+              "available": true,
+              "default": false,
+              "perspective": false,
+              "limits": {
+                "normal": {
+                  "max_chars_per_line": 9,
+                  "max_lines": 2
+                },
+                "caps": {
+                  "max_chars_per_line": 6,
+                  "max_lines": 2
+                },
+                "line_limit_policy": "strict_modes"
+              },
+              "id": "inside"
+            }
+          ],
+          "colors": [
+            {
+              "id": "001",
+              "name": "Серая",
+              "image": "images/fabric/new_models_20261006/jeans/001.jpg",
+              "preview_image": "images/beauty_shell/jeans/001_back.jpg",
+              "previews": {
+                "back": "images/beauty_shell/jeans/001_back.jpg",
+                "inside": "images/beauty_shell/jeans/001_inside.jpg"
+              }
+            },
+            {
+              "id": "002",
+              "name": "Синий",
+              "image": "images/fabric/new_models_20261006/jeans/002.jpg",
+              "preview_image": "images/beauty_shell/jeans/002_back.jpg",
+              "previews": {
+                "back": "images/beauty_shell/jeans/002_back.jpg",
+                "inside": "images/beauty_shell/jeans/002_inside.jpg"
+              }
+            },
+            {
+              "id": "003",
+              "name": "Шоколадная",
+              "image": "images/fabric/new_models_20261006/jeans/003.jpg",
+              "preview_image": "images/beauty_shell/jeans/003_back.jpg",
+              "previews": {
+                "back": "images/beauty_shell/jeans/003_back.jpg",
+                "inside": "images/beauty_shell/jeans/003_inside.jpg"
+              }
+            },
+            {
+              "id": "005",
+              "name": "Черная",
+              "image": "images/fabric/new_models_20261006/jeans/005.jpg",
+              "preview_image": "images/beauty_shell/jeans/005_back.jpg",
+              "previews": {
+                "back": "images/beauty_shell/jeans/005_back.jpg",
+                "inside": "images/beauty_shell/jeans/005_inside.jpg"
+              }
+            },
+            {
+              "id": "006",
+              "name": "Пудровый",
+              "image": "images/fabric/new_models_20261006/jeans/006.jpg",
+              "preview_image": "images/beauty_shell/jeans/006_back.jpg",
+              "previews": {
+                "back": "images/beauty_shell/jeans/006_back.jpg",
+                "inside": "images/beauty_shell/jeans/006_inside.jpg"
+              }
+            },
+            {
+              "id": "007",
+              "name": "Розовая",
+              "image": "images/fabric/new_models_20261006/jeans/007.jpg",
+              "preview_image": "images/beauty_shell/jeans/007_back.jpg",
+              "previews": {
+                "back": "images/beauty_shell/jeans/007_back.jpg",
+                "inside": "images/beauty_shell/jeans/007_inside.jpg"
+              }
+            },
+            {
+              "id": "008",
+              "name": "Лавандовая",
+              "image": "images/fabric/new_models_20261006/jeans/008.jpg",
+              "preview_image": "images/beauty_shell/jeans/008_back.jpg",
+              "previews": {
+                "back": "images/beauty_shell/jeans/008_back.jpg",
+                "inside": "images/beauty_shell/jeans/008_inside.jpg"
+              }
+            },
+            {
+              "id": "009",
+              "name": "Персиковая",
+              "image": "images/fabric/new_models_20261006/jeans/009.jpg",
+              "preview_image": "images/beauty_shell/jeans/009_back.jpg",
+              "previews": {
+                "back": "images/beauty_shell/jeans/009_back.jpg",
+                "inside": "images/beauty_shell/jeans/009_inside.jpg"
+              }
+            },
+            {
+              "id": "010",
+              "name": "Песочная",
+              "image": "images/fabric/new_models_20261006/jeans/010.jpg",
+              "preview_image": "images/beauty_shell/jeans/010_back.jpg",
+              "previews": {
+                "back": "images/beauty_shell/jeans/010_back.jpg",
+                "inside": "images/beauty_shell/jeans/010_inside.jpg"
+              }
+            },
+            {
+              "id": "011",
+              "name": "Хаки",
+              "image": "images/fabric/new_models_20261006/jeans/011.jpg",
+              "preview_image": "images/beauty_shell/jeans/011_back.jpg",
+              "previews": {
+                "back": "images/beauty_shell/jeans/011_back.jpg",
+                "inside": "images/beauty_shell/jeans/011_inside.jpg"
+              }
+            },
+            {
+              "id": "012",
+              "name": "Бежевая",
+              "image": "images/fabric/new_models_20261006/jeans/012.jpg",
+              "preview_image": "images/beauty_shell/jeans/012_back.jpg",
+              "previews": {
+                "back": "images/beauty_shell/jeans/012_back.jpg",
+                "inside": "images/beauty_shell/jeans/012_inside.jpg"
+              }
+            },
+            {
+              "id": "013",
+              "name": "Капучино",
+              "image": "images/fabric/new_models_20261006/jeans/013.jpg",
+              "preview_image": "images/beauty_shell/jeans/013_back.jpg",
+              "previews": {
+                "back": "images/beauty_shell/jeans/013_back.jpg",
+                "inside": "images/beauty_shell/jeans/013_inside.jpg"
+              }
+            },
+            {
+              "id": "014",
+              "name": "Голубая",
+              "image": "images/fabric/new_models_20261006/jeans/014.jpg",
+              "preview_image": "images/beauty_shell/jeans/014_back.jpg",
+              "previews": {
+                "back": "images/beauty_shell/jeans/014_back.jpg",
+                "inside": "images/beauty_shell/jeans/014_inside.jpg"
+              }
+            },
+            {
+              "id": "015",
+              "name": "Кремовая",
+              "image": "images/fabric/new_models_20261006/jeans/015.jpg",
+              "preview_image": "images/beauty_shell/jeans/015_back.jpg",
+              "previews": {
+                "back": "images/beauty_shell/jeans/015_back.jpg",
+                "inside": "images/beauty_shell/jeans/015_inside.jpg"
+              }
+            }
+          ]
+        },
+        {
+          "id": "eco_suede",
+          "name": "Эко-замша",
+          "bag_id": "beauty_shell_suede",
+          "variant_prefix": "eco_suede",
+          "zone_suffix": {
+            "back": "back",
+            "inside": "inside"
+          },
+          "zones": [
+            {
+              "name": "Сзади",
+              "order": 1,
+              "enabled": true,
+              "available": true,
+              "default": true,
+              "perspective": false,
+              "limits": {
+                "normal": {
+                  "max_chars_per_line": 10,
+                  "max_lines": 4
+                },
+                "caps": {
+                  "max_chars_per_line": 7,
+                  "max_lines": 4
+                },
+                "line_limit_policy": "strict_modes"
+              },
+              "id": "back"
+            },
+            {
+              "name": "Внутри",
+              "order": 2,
+              "enabled": true,
+              "available": true,
+              "default": false,
+              "perspective": false,
+              "limits": {
+                "normal": {
+                  "max_chars_per_line": 9,
+                  "max_lines": 2
+                },
+                "caps": {
+                  "max_chars_per_line": 6,
+                  "max_lines": 2
+                },
+                "line_limit_policy": "strict_modes"
+              },
+              "id": "inside"
+            }
+          ],
+          "colors": [
+            {
+              "id": "003",
+              "name": "Графит",
+              "image": "images/fabric/new_models_20261006/eco_suede/003.jpg",
+              "preview_image": "images/beauty_shell/eco_suede/003_back.jpg",
+              "previews": {
+                "back": "images/beauty_shell/eco_suede/003_back.jpg",
+                "inside": "images/beauty_shell/eco_suede/003_inside.jpg"
+              }
+            },
+            {
+              "id": "004",
+              "name": "Лавандовый",
+              "image": "images/fabric/new_models_20261006/eco_suede/004.jpg",
+              "preview_image": "images/beauty_shell/eco_suede/004_back.jpg",
+              "previews": {
+                "back": "images/beauty_shell/eco_suede/004_back.jpg",
+                "inside": "images/beauty_shell/eco_suede/004_inside.jpg"
+              }
+            },
+            {
+              "id": "005",
+              "name": "Голубой",
+              "image": "images/fabric/new_models_20261006/eco_suede/005.jpg",
+              "preview_image": "images/beauty_shell/eco_suede/005_back.jpg",
+              "previews": {
+                "back": "images/beauty_shell/eco_suede/005_back.jpg",
+                "inside": "images/beauty_shell/eco_suede/005_inside.jpg"
+              }
+            },
+            {
+              "id": "006",
+              "name": "Синий",
+              "image": "images/fabric/new_models_20261006/eco_suede/006.jpg",
+              "preview_image": "images/beauty_shell/eco_suede/006_back.jpg",
+              "previews": {
+                "back": "images/beauty_shell/eco_suede/006_back.jpg",
+                "inside": "images/beauty_shell/eco_suede/006_inside.jpg"
+              }
+            },
+            {
+              "id": "007",
+              "name": "Пудровый",
+              "image": "images/fabric/new_models_20261006/eco_suede/007.jpg",
+              "preview_image": "images/beauty_shell/eco_suede/007_back.jpg",
+              "previews": {
+                "back": "images/beauty_shell/eco_suede/007_back.jpg",
+                "inside": "images/beauty_shell/eco_suede/007_inside.jpg"
+              }
+            },
+            {
+              "id": "008",
+              "name": "Розовый",
+              "image": "images/fabric/new_models_20261006/eco_suede/008.jpg",
+              "preview_image": "images/beauty_shell/eco_suede/008_back.jpg",
+              "previews": {
+                "back": "images/beauty_shell/eco_suede/008_back.jpg",
+                "inside": "images/beauty_shell/eco_suede/008_inside.jpg"
+              }
+            },
+            {
+              "id": "010",
+              "name": "Бежевый",
+              "image": "images/fabric/new_models_20261006/eco_suede/010.jpg",
+              "preview_image": "images/beauty_shell/eco_suede/010_back.jpg",
+              "previews": {
+                "back": "images/beauty_shell/eco_suede/010_back.jpg",
+                "inside": "images/beauty_shell/eco_suede/010_inside.jpg"
+              }
+            },
+            {
+              "id": "011",
+              "name": "Песочный",
+              "image": "images/fabric/new_models_20261006/eco_suede/011.jpg",
+              "preview_image": "images/beauty_shell/eco_suede/011_back.jpg",
+              "previews": {
+                "back": "images/beauty_shell/eco_suede/011_back.jpg",
+                "inside": "images/beauty_shell/eco_suede/011_inside.jpg"
+              }
+            },
+            {
+              "id": "012",
+              "name": "Черный",
+              "image": "images/fabric/new_models_20261006/eco_suede/012.jpg",
+              "preview_image": "images/beauty_shell/eco_suede/012_back.jpg",
+              "previews": {
+                "back": "images/beauty_shell/eco_suede/012_back.jpg",
+                "inside": "images/beauty_shell/eco_suede/012_inside.jpg"
+              }
+            },
+            {
+              "id": "016",
+              "name": "Лимонный",
+              "image": "images/fabric/new_models_20261006/eco_suede/016.jpg",
+              "preview_image": "images/beauty_shell/eco_suede/016_back.jpg",
+              "previews": {
+                "back": "images/beauty_shell/eco_suede/016_back.jpg",
+                "inside": "images/beauty_shell/eco_suede/016_inside.jpg"
+              }
+            },
+            {
+              "id": "020",
+              "name": "Снежный барс",
+              "image": "images/fabric/new_models_20261006/eco_suede/020.jpg",
+              "preview_image": "images/beauty_shell/eco_suede/020_back.jpg",
+              "previews": {
+                "back": "images/beauty_shell/eco_suede/020_back.jpg",
+                "inside": "images/beauty_shell/eco_suede/020_inside.jpg"
+              }
+            },
+            {
+              "id": "022",
+              "name": "Фисташковый",
+              "image": "images/fabric/new_models_20261006/eco_suede/022.jpg",
+              "preview_image": "images/beauty_shell/eco_suede/022_back.jpg",
+              "previews": {
+                "back": "images/beauty_shell/eco_suede/022_back.jpg",
+                "inside": "images/beauty_shell/eco_suede/022_inside.jpg"
+              }
+            }
+          ]
+        }
+      ],
+      "image": "images/beauty_shell/jeans/001_back.jpg"
+    },
+    {
+      "id": "big_beauty_bag",
+      "title": "Big Beauty Bag",
+      "subtitle": "",
+      "price": "от 4 900 ₽",
+      "categories": [
+        "beauty"
+      ],
+      "materials": [
+        {
+          "id": "jeans",
+          "name": "Джинса",
+          "bag_id": "big_beauty_bag_jeans",
+          "variant_prefix": "jeans",
+          "zone_suffix": {
+            "front_label": "front_label",
+            "back": "back"
+          },
+          "zones": [
+            {
+              "name": "Спереди над лейблом",
+              "order": 1,
+              "enabled": true,
+              "available": true,
+              "default": true,
+              "perspective": false,
+              "limits": {
+                "normal": {
+                  "max_chars_per_line": 10,
+                  "max_lines": 1
+                },
+                "caps": {
+                  "max_chars_per_line": 6,
+                  "max_lines": 1
+                },
+                "line_limit_policy": "strict_modes"
+              },
+              "id": "front_label"
+            },
+            {
+              "name": "Сзади посередине",
+              "order": 2,
+              "enabled": true,
+              "available": true,
+              "default": false,
+              "perspective": false,
+              "limits": {
+                "normal": {
+                  "max_chars_per_line": 11,
+                  "max_lines": 4
+                },
+                "caps": {
+                  "max_chars_per_line": 7,
+                  "max_lines": 4
+                },
+                "line_limit_policy": "strict_modes"
+              },
+              "id": "back"
+            }
+          ],
+          "colors": [
+            {
+              "id": "001",
+              "name": "Серая",
+              "image": "images/fabric/new_models_20261006/jeans/001.jpg",
+              "preview_image": "images/big_beauty_bag/jeans/001_overview.jpg",
+              "previews": {
+                "front_label": "images/big_beauty_bag/jeans/001_front_label.jpg",
+                "back": "images/big_beauty_bag/jeans/001_back.jpg"
+              }
+            },
+            {
+              "id": "003",
+              "name": "Шоколадная",
+              "image": "images/fabric/new_models_20261006/jeans/003.jpg",
+              "preview_image": "images/big_beauty_bag/jeans/003_overview.jpg",
+              "previews": {
+                "front_label": "images/big_beauty_bag/jeans/003_front_label.jpg",
+                "back": "images/big_beauty_bag/jeans/003_back.jpg"
+              }
+            },
+            {
+              "id": "004",
+              "name": "Графитовая",
+              "image": "images/fabric/new_models_20261006/jeans/004.jpg",
+              "preview_image": "images/big_beauty_bag/jeans/004_overview.jpg",
+              "previews": {
+                "front_label": "images/big_beauty_bag/jeans/004_front_label.jpg",
+                "back": "images/big_beauty_bag/jeans/004_back.jpg"
+              }
+            },
+            {
+              "id": "005",
+              "name": "Черная",
+              "image": "images/fabric/new_models_20261006/jeans/005.jpg",
+              "preview_image": "images/big_beauty_bag/jeans/005_overview.jpg",
+              "previews": {
+                "front_label": "images/big_beauty_bag/jeans/005_front_label.jpg",
+                "back": "images/big_beauty_bag/jeans/005_back.jpg"
+              }
+            },
+            {
+              "id": "006",
+              "name": "Пудровая",
+              "image": "images/fabric/new_models_20261006/jeans/006.jpg",
+              "preview_image": "images/big_beauty_bag/jeans/006_overview.jpg",
+              "previews": {
+                "front_label": "images/big_beauty_bag/jeans/006_front_label.jpg",
+                "back": "images/big_beauty_bag/jeans/006_back.jpg"
+              }
+            },
+            {
+              "id": "007",
+              "name": "Розовая",
+              "image": "images/fabric/new_models_20261006/jeans/007.jpg",
+              "preview_image": "images/big_beauty_bag/jeans/007_overview.jpg",
+              "previews": {
+                "front_label": "images/big_beauty_bag/jeans/007_front_label.jpg",
+                "back": "images/big_beauty_bag/jeans/007_back.jpg"
+              }
+            },
+            {
+              "id": "008",
+              "name": "Лавандовая",
+              "image": "images/fabric/new_models_20261006/jeans/008.jpg",
+              "preview_image": "images/big_beauty_bag/jeans/008_overview.jpg",
+              "previews": {
+                "front_label": "images/big_beauty_bag/jeans/008_front_label.jpg",
+                "back": "images/big_beauty_bag/jeans/008_back.jpg"
+              }
+            },
+            {
+              "id": "009",
+              "name": "Персиковая",
+              "image": "images/fabric/new_models_20261006/jeans/009.jpg",
+              "preview_image": "images/big_beauty_bag/jeans/009_overview.jpg",
+              "previews": {
+                "front_label": "images/big_beauty_bag/jeans/009_front_label.jpg",
+                "back": "images/big_beauty_bag/jeans/009_back.jpg"
+              }
+            },
+            {
+              "id": "010",
+              "name": "Песочная",
+              "image": "images/fabric/new_models_20261006/jeans/010.jpg",
+              "preview_image": "images/big_beauty_bag/jeans/010_overview.jpg",
+              "previews": {
+                "front_label": "images/big_beauty_bag/jeans/010_front_label.jpg",
+                "back": "images/big_beauty_bag/jeans/010_back.jpg"
+              }
+            },
+            {
+              "id": "011",
+              "name": "Хаки",
+              "image": "images/fabric/new_models_20261006/jeans/011.jpg",
+              "preview_image": "images/big_beauty_bag/jeans/011_overview.jpg",
+              "previews": {
+                "front_label": "images/big_beauty_bag/jeans/011_front_label.jpg",
+                "back": "images/big_beauty_bag/jeans/011_back.jpg"
+              }
+            },
+            {
+              "id": "012",
+              "name": "Бежевая",
+              "image": "images/fabric/new_models_20261006/jeans/012.jpg",
+              "preview_image": "images/big_beauty_bag/jeans/012_overview.jpg",
+              "previews": {
+                "front_label": "images/big_beauty_bag/jeans/012_front_label.jpg",
+                "back": "images/big_beauty_bag/jeans/012_back.jpg"
+              }
+            },
+            {
+              "id": "013",
+              "name": "Капучино",
+              "image": "images/fabric/new_models_20261006/jeans/013.jpg",
+              "preview_image": "images/big_beauty_bag/jeans/013_overview.jpg",
+              "previews": {
+                "front_label": "images/big_beauty_bag/jeans/013_front_label.jpg",
+                "back": "images/big_beauty_bag/jeans/013_back.jpg"
+              }
+            }
+          ]
+        },
+        {
+          "id": "eco_suede",
+          "name": "Эко-замша",
+          "bag_id": "big_beauty_bag_suede",
+          "variant_prefix": "eco_suede",
+          "zone_suffix": {
+            "front_label": "front_label",
+            "back": "back"
+          },
+          "zones": [
+            {
+              "name": "Спереди над лейблом",
+              "order": 1,
+              "enabled": true,
+              "available": true,
+              "default": true,
+              "perspective": false,
+              "limits": {
+                "normal": {
+                  "max_chars_per_line": 10,
+                  "max_lines": 1
+                },
+                "caps": {
+                  "max_chars_per_line": 6,
+                  "max_lines": 1
+                },
+                "line_limit_policy": "strict_modes"
+              },
+              "id": "front_label"
+            },
+            {
+              "name": "Сзади посередине",
+              "order": 2,
+              "enabled": true,
+              "available": true,
+              "default": false,
+              "perspective": false,
+              "limits": {
+                "normal": {
+                  "max_chars_per_line": 11,
+                  "max_lines": 4
+                },
+                "caps": {
+                  "max_chars_per_line": 7,
+                  "max_lines": 4
+                },
+                "line_limit_policy": "strict_modes"
+              },
+              "id": "back"
+            }
+          ],
+          "colors": [
+            {
+              "id": "001",
+              "name": "Молочная",
+              "image": "images/fabric/new_models_20261006/eco_suede/001.jpg",
+              "preview_image": "images/big_beauty_bag/eco_suede/001_overview.jpg",
+              "previews": {
+                "front_label": "images/big_beauty_bag/eco_suede/001_front_label.jpg",
+                "back": "images/big_beauty_bag/eco_suede/001_back.jpg"
+              }
+            },
+            {
+              "id": "002",
+              "name": "Серая",
+              "image": "images/fabric/new_models_20261006/eco_suede/002.jpg",
+              "preview_image": "images/big_beauty_bag/eco_suede/002_overview.jpg",
+              "previews": {
+                "front_label": "images/big_beauty_bag/eco_suede/002_front_label.jpg",
+                "back": "images/big_beauty_bag/eco_suede/002_back.jpg"
+              }
+            },
+            {
+              "id": "003",
+              "name": "Графит",
+              "image": "images/fabric/new_models_20261006/eco_suede/003.jpg",
+              "preview_image": "images/big_beauty_bag/eco_suede/003_overview.jpg",
+              "previews": {
+                "front_label": "images/big_beauty_bag/eco_suede/003_front_label.jpg",
+                "back": "images/big_beauty_bag/eco_suede/003_back.jpg"
+              }
+            },
+            {
+              "id": "004",
+              "name": "Лавандовая",
+              "image": "images/fabric/new_models_20261006/eco_suede/004.jpg",
+              "preview_image": "images/big_beauty_bag/eco_suede/004_overview.jpg",
+              "previews": {
+                "front_label": "images/big_beauty_bag/eco_suede/004_front_label.jpg",
+                "back": "images/big_beauty_bag/eco_suede/004_back.jpg"
+              }
+            },
+            {
+              "id": "005",
+              "name": "Голубая",
+              "image": "images/fabric/new_models_20261006/eco_suede/005.jpg",
+              "preview_image": "images/big_beauty_bag/eco_suede/005_overview.jpg",
+              "previews": {
+                "front_label": "images/big_beauty_bag/eco_suede/005_front_label.jpg",
+                "back": "images/big_beauty_bag/eco_suede/005_back.jpg"
+              }
+            },
+            {
+              "id": "006",
+              "name": "Синяя",
+              "image": "images/fabric/new_models_20261006/eco_suede/006.jpg",
+              "preview_image": "images/big_beauty_bag/eco_suede/006_overview.jpg",
+              "previews": {
+                "front_label": "images/big_beauty_bag/eco_suede/006_front_label.jpg",
+                "back": "images/big_beauty_bag/eco_suede/006_back.jpg"
+              }
+            },
+            {
+              "id": "007",
+              "name": "Пудровая",
+              "image": "images/fabric/new_models_20261006/eco_suede/007.jpg",
+              "preview_image": "images/big_beauty_bag/eco_suede/007_overview.jpg",
+              "previews": {
+                "front_label": "images/big_beauty_bag/eco_suede/007_front_label.jpg",
+                "back": "images/big_beauty_bag/eco_suede/007_back.jpg"
+              }
+            },
+            {
+              "id": "008",
+              "name": "Розовая",
+              "image": "images/fabric/new_models_20261006/eco_suede/008.jpg",
+              "preview_image": "images/big_beauty_bag/eco_suede/008_overview.jpg",
+              "previews": {
+                "front_label": "images/big_beauty_bag/eco_suede/008_front_label.jpg",
+                "back": "images/big_beauty_bag/eco_suede/008_back.jpg"
+              }
+            },
+            {
+              "id": "010",
+              "name": "Бежевая",
+              "image": "images/fabric/new_models_20261006/eco_suede/010.jpg",
+              "preview_image": "images/big_beauty_bag/eco_suede/010_overview.jpg",
+              "previews": {
+                "front_label": "images/big_beauty_bag/eco_suede/010_front_label.jpg",
+                "back": "images/big_beauty_bag/eco_suede/010_back.jpg"
+              }
+            },
+            {
+              "id": "011",
+              "name": "Песочная",
+              "image": "images/fabric/new_models_20261006/eco_suede/011.jpg",
+              "preview_image": "images/big_beauty_bag/eco_suede/011_overview.jpg",
+              "previews": {
+                "front_label": "images/big_beauty_bag/eco_suede/011_front_label.jpg",
+                "back": "images/big_beauty_bag/eco_suede/011_back.jpg"
+              }
+            },
+            {
+              "id": "012",
+              "name": "Черная",
+              "image": "images/fabric/new_models_20261006/eco_suede/012.jpg",
+              "preview_image": "images/big_beauty_bag/eco_suede/012_overview.jpg",
+              "previews": {
+                "front_label": "images/big_beauty_bag/eco_suede/012_front_label.jpg",
+                "back": "images/big_beauty_bag/eco_suede/012_back.jpg"
+              }
+            },
+            {
+              "id": "013",
+              "name": "Коричневая",
+              "image": "images/fabric/new_models_20261006/eco_suede/013.jpg",
+              "preview_image": "images/big_beauty_bag/eco_suede/013_overview.jpg",
+              "previews": {
+                "front_label": "images/big_beauty_bag/eco_suede/013_front_label.jpg",
+                "back": "images/big_beauty_bag/eco_suede/013_back.jpg"
+              }
+            },
+            {
+              "id": "014",
+              "name": "Капучино",
+              "image": "images/fabric/new_models_20261006/eco_suede/014.jpg",
+              "preview_image": "images/big_beauty_bag/eco_suede/014_overview.jpg",
+              "previews": {
+                "front_label": "images/big_beauty_bag/eco_suede/014_front_label.jpg",
+                "back": "images/big_beauty_bag/eco_suede/014_back.jpg"
+              }
+            },
+            {
+              "id": "015",
+              "name": "Хаки",
+              "image": "images/fabric/new_models_20261006/eco_suede/015.jpg",
+              "preview_image": "images/big_beauty_bag/eco_suede/015_overview.jpg",
+              "previews": {
+                "front_label": "images/big_beauty_bag/eco_suede/015_front_label.jpg",
+                "back": "images/big_beauty_bag/eco_suede/015_back.jpg"
+              }
+            },
+            {
+              "id": "016",
+              "name": "Лимонная",
+              "image": "images/fabric/new_models_20261006/eco_suede/016.jpg",
+              "preview_image": "images/big_beauty_bag/eco_suede/016_overview.jpg",
+              "previews": {
+                "front_label": "images/big_beauty_bag/eco_suede/016_front_label.jpg",
+                "back": "images/big_beauty_bag/eco_suede/016_back.jpg"
+              }
+            },
+            {
+              "id": "017",
+              "name": "Мятная",
+              "image": "images/fabric/new_models_20261006/eco_suede/017.jpg",
+              "preview_image": "images/big_beauty_bag/eco_suede/017_overview.jpg",
+              "previews": {
+                "front_label": "images/big_beauty_bag/eco_suede/017_front_label.jpg",
+                "back": "images/big_beauty_bag/eco_suede/017_back.jpg"
+              }
+            },
+            {
+              "id": "018",
+              "name": "Красная",
+              "image": "images/fabric/new_models_20261006/eco_suede/018.jpg",
+              "preview_image": "images/big_beauty_bag/eco_suede/018_overview.jpg",
+              "previews": {
+                "front_label": "images/big_beauty_bag/eco_suede/018_front_label.jpg",
+                "back": "images/big_beauty_bag/eco_suede/018_back.jpg"
+              }
+            }
+          ]
+        }
+      ],
+      "image": "images/big_beauty_bag/jeans/001_overview.jpg"
+    },
+    {
+      "id": "beauty_dyson",
+      "title": "Косметичка for Dyson",
+      "subtitle": "",
+      "price": "от 5 600 ₽",
+      "categories": [
+        "beauty"
+      ],
+      "materials": [
+        {
+          "id": "jeans",
+          "name": "Джинса",
+          "bag_id": "beauty_dyson_jeans",
+          "variant_prefix": "jeans",
+          "zone_suffix": {
+            "front": "front"
+          },
+          "zones": [
+            {
+              "name": "Спереди",
+              "order": 1,
+              "enabled": true,
+              "available": true,
+              "default": true,
+              "perspective": false,
+              "limits": {
+                "normal": {
+                  "max_chars_per_line": 14,
+                  "max_lines": 4
+                },
+                "caps": {
+                  "max_chars_per_line": 10,
+                  "max_lines": 4
+                },
+                "line_limit_policy": "strict_modes"
+              },
+              "id": "front"
+            }
+          ],
+          "colors": [
+            {
+              "id": "001",
+              "name": "Серая",
+              "image": "images/fabric/new_models_20261006/jeans/001.jpg",
+              "preview_image": "images/beauty_dyson/jeans/001_front.jpg",
+              "previews": {
+                "front": "images/beauty_dyson/jeans/001_front.jpg"
+              }
+            },
+            {
+              "id": "003",
+              "name": "Шоколадная",
+              "image": "images/fabric/new_models_20261006/jeans/003.jpg",
+              "preview_image": "images/beauty_dyson/jeans/003_front.jpg",
+              "previews": {
+                "front": "images/beauty_dyson/jeans/003_front.jpg"
+              }
+            },
+            {
+              "id": "004",
+              "name": "Графитовая",
+              "image": "images/fabric/new_models_20261006/jeans/004.jpg",
+              "preview_image": "images/beauty_dyson/jeans/004_front.jpg",
+              "previews": {
+                "front": "images/beauty_dyson/jeans/004_front.jpg"
+              }
+            },
+            {
+              "id": "005",
+              "name": "Черная",
+              "image": "images/fabric/new_models_20261006/jeans/005.jpg",
+              "preview_image": "images/beauty_dyson/jeans/005_front.jpg",
+              "previews": {
+                "front": "images/beauty_dyson/jeans/005_front.jpg"
+              }
+            },
+            {
+              "id": "006",
+              "name": "Пудровая",
+              "image": "images/fabric/new_models_20261006/jeans/006.jpg",
+              "preview_image": "images/beauty_dyson/jeans/006_front.jpg",
+              "previews": {
+                "front": "images/beauty_dyson/jeans/006_front.jpg"
+              }
+            },
+            {
+              "id": "007",
+              "name": "Розовая",
+              "image": "images/fabric/new_models_20261006/jeans/007.jpg",
+              "preview_image": "images/beauty_dyson/jeans/007_front.jpg",
+              "previews": {
+                "front": "images/beauty_dyson/jeans/007_front.jpg"
+              }
+            },
+            {
+              "id": "008",
+              "name": "Лавандовая",
+              "image": "images/fabric/new_models_20261006/jeans/008.jpg",
+              "preview_image": "images/beauty_dyson/jeans/008_front.jpg",
+              "previews": {
+                "front": "images/beauty_dyson/jeans/008_front.jpg"
+              }
+            },
+            {
+              "id": "009",
+              "name": "Персиковая",
+              "image": "images/fabric/new_models_20261006/jeans/009.jpg",
+              "preview_image": "images/beauty_dyson/jeans/009_front.jpg",
+              "previews": {
+                "front": "images/beauty_dyson/jeans/009_front.jpg"
+              }
+            },
+            {
+              "id": "012",
+              "name": "Бежевая",
+              "image": "images/fabric/new_models_20261006/jeans/012.jpg",
+              "preview_image": "images/beauty_dyson/jeans/012_front.jpg",
+              "previews": {
+                "front": "images/beauty_dyson/jeans/012_front.jpg"
+              }
+            },
+            {
+              "id": "013",
+              "name": "Капучино",
+              "image": "images/fabric/new_models_20261006/jeans/013.jpg",
+              "preview_image": "images/beauty_dyson/jeans/013_front.jpg",
+              "previews": {
+                "front": "images/beauty_dyson/jeans/013_front.jpg"
+              }
+            }
+          ]
+        },
+        {
+          "id": "eco_suede",
+          "name": "Эко-замша",
+          "bag_id": "beauty_dyson_suede",
+          "variant_prefix": "eco_suede",
+          "zone_suffix": {
+            "front": "front"
+          },
+          "zones": [
+            {
+              "name": "Спереди",
+              "order": 1,
+              "enabled": true,
+              "available": true,
+              "default": true,
+              "perspective": false,
+              "limits": {
+                "normal": {
+                  "max_chars_per_line": 14,
+                  "max_lines": 4
+                },
+                "caps": {
+                  "max_chars_per_line": 10,
+                  "max_lines": 4
+                },
+                "line_limit_policy": "strict_modes"
+              },
+              "id": "front"
+            }
+          ],
+          "colors": [
+            {
+              "id": "001",
+              "name": "Молочная",
+              "image": "images/fabric/new_models_20261006/eco_suede/001.jpg",
+              "preview_image": "images/beauty_dyson/eco_suede/001_front.jpg",
+              "previews": {
+                "front": "images/beauty_dyson/eco_suede/001_front.jpg"
+              }
+            },
+            {
+              "id": "002",
+              "name": "Серая",
+              "image": "images/fabric/new_models_20261006/eco_suede/002.jpg",
+              "preview_image": "images/beauty_dyson/eco_suede/002_front.jpg",
+              "previews": {
+                "front": "images/beauty_dyson/eco_suede/002_front.jpg"
+              }
+            },
+            {
+              "id": "003",
+              "name": "Графит",
+              "image": "images/fabric/new_models_20261006/eco_suede/003.jpg",
+              "preview_image": "images/beauty_dyson/eco_suede/003_front.jpg",
+              "previews": {
+                "front": "images/beauty_dyson/eco_suede/003_front.jpg"
+              }
+            },
+            {
+              "id": "004",
+              "name": "Лавандовая",
+              "image": "images/fabric/new_models_20261006/eco_suede/004.jpg",
+              "preview_image": "images/beauty_dyson/eco_suede/004_front.jpg",
+              "previews": {
+                "front": "images/beauty_dyson/eco_suede/004_front.jpg"
+              }
+            },
+            {
+              "id": "005",
+              "name": "Голубая",
+              "image": "images/fabric/new_models_20261006/eco_suede/005.jpg",
+              "preview_image": "images/beauty_dyson/eco_suede/005_front.jpg",
+              "previews": {
+                "front": "images/beauty_dyson/eco_suede/005_front.jpg"
+              }
+            },
+            {
+              "id": "006",
+              "name": "Синяя",
+              "image": "images/fabric/new_models_20261006/eco_suede/006.jpg",
+              "preview_image": "images/beauty_dyson/eco_suede/006_front.jpg",
+              "previews": {
+                "front": "images/beauty_dyson/eco_suede/006_front.jpg"
+              }
+            },
+            {
+              "id": "007",
+              "name": "Пудровая",
+              "image": "images/fabric/new_models_20261006/eco_suede/007.jpg",
+              "preview_image": "images/beauty_dyson/eco_suede/007_front.jpg",
+              "previews": {
+                "front": "images/beauty_dyson/eco_suede/007_front.jpg"
+              }
+            },
+            {
+              "id": "008",
+              "name": "Розовая",
+              "image": "images/fabric/new_models_20261006/eco_suede/008.jpg",
+              "preview_image": "images/beauty_dyson/eco_suede/008_front.jpg",
+              "previews": {
+                "front": "images/beauty_dyson/eco_suede/008_front.jpg"
+              }
+            },
+            {
+              "id": "009",
+              "name": "Малиновая",
+              "image": "images/fabric/new_models_20261006/eco_suede/009.jpg",
+              "preview_image": "images/beauty_dyson/eco_suede/009_front.jpg",
+              "previews": {
+                "front": "images/beauty_dyson/eco_suede/009_front.jpg"
+              }
+            },
+            {
+              "id": "010",
+              "name": "Бежевая",
+              "image": "images/fabric/new_models_20261006/eco_suede/010.jpg",
+              "preview_image": "images/beauty_dyson/eco_suede/010_front.jpg",
+              "previews": {
+                "front": "images/beauty_dyson/eco_suede/010_front.jpg"
+              }
+            },
+            {
+              "id": "012",
+              "name": "Черная",
+              "image": "images/fabric/new_models_20261006/eco_suede/012.jpg",
+              "preview_image": "images/beauty_dyson/eco_suede/012_front.jpg",
+              "previews": {
+                "front": "images/beauty_dyson/eco_suede/012_front.jpg"
+              }
+            },
+            {
+              "id": "013",
+              "name": "Коричневая",
+              "image": "images/fabric/new_models_20261006/eco_suede/013.jpg",
+              "preview_image": "images/beauty_dyson/eco_suede/013_front.jpg",
+              "previews": {
+                "front": "images/beauty_dyson/eco_suede/013_front.jpg"
+              }
+            },
+            {
+              "id": "014",
+              "name": "Капучино",
+              "image": "images/fabric/new_models_20261006/eco_suede/014.jpg",
+              "preview_image": "images/beauty_dyson/eco_suede/014_front.jpg",
+              "previews": {
+                "front": "images/beauty_dyson/eco_suede/014_front.jpg"
+              }
+            },
+            {
+              "id": "015",
+              "name": "Хаки",
+              "image": "images/fabric/new_models_20261006/eco_suede/015.jpg",
+              "preview_image": "images/beauty_dyson/eco_suede/015_front.jpg",
+              "previews": {
+                "front": "images/beauty_dyson/eco_suede/015_front.jpg"
+              }
+            },
+            {
+              "id": "016",
+              "name": "Лимонная",
+              "image": "images/fabric/new_models_20261006/eco_suede/016.jpg",
+              "preview_image": "images/beauty_dyson/eco_suede/016_front.jpg",
+              "previews": {
+                "front": "images/beauty_dyson/eco_suede/016_front.jpg"
+              }
+            },
+            {
+              "id": "017",
+              "name": "Мятная",
+              "image": "images/fabric/new_models_20261006/eco_suede/017.jpg",
+              "preview_image": "images/beauty_dyson/eco_suede/017_front.jpg",
+              "previews": {
+                "front": "images/beauty_dyson/eco_suede/017_front.jpg"
+              }
+            },
+            {
+              "id": "020",
+              "name": "Снежный барс",
+              "image": "images/fabric/new_models_20261006/eco_suede/020.jpg",
+              "preview_image": "images/beauty_dyson/eco_suede/020_front.jpg",
+              "previews": {
+                "front": "images/beauty_dyson/eco_suede/020_front.jpg"
+              }
+            },
+            {
+              "id": "022",
+              "name": "Фисташка",
+              "image": "images/fabric/new_models_20261006/eco_suede/022.jpg",
+              "preview_image": "images/beauty_dyson/eco_suede/022_front.jpg",
+              "previews": {
+                "front": "images/beauty_dyson/eco_suede/022_front.jpg"
+              }
+            }
+          ]
+        }
+      ],
+      "image": "images/beauty_dyson/jeans/001_front.jpg"
+    },
+    {
+      "id": "phone_case",
+      "title": "Кейс для телефона",
+      "subtitle": "",
+      "price": "от 4 400 ₽",
+      "categories": [
+        "mini",
+        "cases"
+      ],
+      "materials": [
+        {
+          "id": "jeans",
+          "name": "Джинса",
+          "bag_id": "phone_case_jeans",
+          "variant_prefix": "jeans",
+          "zone_suffix": {
+            "under_flap": "under_flap",
+            "inside_flap": "inside_flap",
+            "on_flap": "on_flap",
+            "back": "back"
+          },
+          "zones": [
+            {
+              "name": "Спереди под крышкой",
+              "order": 1,
+              "enabled": true,
+              "available": true,
+              "default": true,
+              "perspective": false,
+              "limits": {
+                "normal": {
+                  "max_chars_per_line": 6,
+                  "max_lines": 2
+                },
+                "caps": {
+                  "max_chars_per_line": 4,
+                  "max_lines": 2
+                },
+                "line_limit_policy": "strict_modes"
+              },
+              "id": "under_flap"
+            },
+            {
+              "name": "Внутри на крышке",
+              "order": 2,
+              "enabled": true,
+              "available": true,
+              "default": false,
+              "perspective": false,
+              "limits": {
+                "normal": {
+                  "max_chars_per_line": 6,
+                  "max_lines": 2
+                },
+                "caps": {
+                  "max_chars_per_line": 4,
+                  "max_lines": 2
+                },
+                "line_limit_policy": "strict_modes"
+              },
+              "id": "inside_flap"
+            },
+            {
+              "name": "Спереди на крышке",
+              "order": 3,
+              "enabled": true,
+              "available": true,
+              "default": false,
+              "perspective": false,
+              "limits": {
+                "normal": {
+                  "max_chars_per_line": 6,
+                  "max_lines": 1
+                },
+                "caps": {
+                  "max_chars_per_line": 4,
+                  "max_lines": 1
+                },
+                "line_limit_policy": "strict_modes"
+              },
+              "id": "on_flap"
+            },
+            {
+              "name": "Сзади под лейблом",
+              "order": 4,
+              "enabled": true,
+              "available": true,
+              "default": false,
+              "perspective": false,
+              "limits": {
+                "normal": {
+                  "max_chars_per_line": 6,
+                  "max_lines": 2
+                },
+                "caps": {
+                  "max_chars_per_line": 4,
+                  "max_lines": 2
+                },
+                "line_limit_policy": "strict_modes"
+              },
+              "id": "back"
+            }
+          ],
+          "colors": [
+            {
+              "id": "001",
+              "name": "Серая",
+              "image": "images/fabric/new_models_20261006/jeans/001.jpg",
+              "preview_image": "images/phone_case/jeans/001_under_flap.jpg",
+              "previews": {
+                "under_flap": "images/phone_case/jeans/001_under_flap.jpg",
+                "inside_flap": "images/phone_case/jeans/001_inside_flap.jpg",
+                "on_flap": "images/phone_case/jeans/001_on_flap.jpg",
+                "back": "images/phone_case/jeans/001_back.jpg"
+              }
+            },
+            {
+              "id": "002",
+              "name": "Синяя",
+              "image": "images/fabric/new_models_20261006/jeans/002.jpg",
+              "preview_image": "images/phone_case/jeans/002_under_flap.jpg",
+              "previews": {
+                "under_flap": "images/phone_case/jeans/002_under_flap.jpg",
+                "inside_flap": "images/phone_case/jeans/002_inside_flap.jpg",
+                "on_flap": "images/phone_case/jeans/002_on_flap.jpg",
+                "back": "images/phone_case/jeans/002_back.jpg"
+              }
+            },
+            {
+              "id": "005",
+              "name": "Черная",
+              "image": "images/fabric/new_models_20261006/jeans/005.jpg",
+              "preview_image": "images/phone_case/jeans/005_under_flap.jpg",
+              "previews": {
+                "under_flap": "images/phone_case/jeans/005_under_flap.jpg",
+                "inside_flap": "images/phone_case/jeans/005_inside_flap.jpg",
+                "on_flap": "images/phone_case/jeans/005_on_flap.jpg",
+                "back": "images/phone_case/jeans/005_back.jpg"
+              }
+            },
+            {
+              "id": "006",
+              "name": "Пудровая",
+              "image": "images/fabric/new_models_20261006/jeans/006.jpg",
+              "preview_image": "images/phone_case/jeans/006_under_flap.jpg",
+              "previews": {
+                "under_flap": "images/phone_case/jeans/006_under_flap.jpg",
+                "inside_flap": "images/phone_case/jeans/006_inside_flap.jpg",
+                "on_flap": "images/phone_case/jeans/006_on_flap.jpg",
+                "back": "images/phone_case/jeans/006_back.jpg"
+              }
+            },
+            {
+              "id": "007",
+              "name": "Розовая",
+              "image": "images/fabric/new_models_20261006/jeans/007.jpg",
+              "preview_image": "images/phone_case/jeans/007_under_flap.jpg",
+              "previews": {
+                "under_flap": "images/phone_case/jeans/007_under_flap.jpg",
+                "inside_flap": "images/phone_case/jeans/007_inside_flap.jpg",
+                "on_flap": "images/phone_case/jeans/007_on_flap.jpg",
+                "back": "images/phone_case/jeans/007_back.jpg"
+              }
+            },
+            {
+              "id": "008",
+              "name": "Лавандовая",
+              "image": "images/fabric/new_models_20261006/jeans/008.jpg",
+              "preview_image": "images/phone_case/jeans/008_under_flap.jpg",
+              "previews": {
+                "under_flap": "images/phone_case/jeans/008_under_flap.jpg",
+                "inside_flap": "images/phone_case/jeans/008_inside_flap.jpg",
+                "on_flap": "images/phone_case/jeans/008_on_flap.jpg",
+                "back": "images/phone_case/jeans/008_back.jpg"
+              }
+            },
+            {
+              "id": "009",
+              "name": "Персиковая",
+              "image": "images/fabric/new_models_20261006/jeans/009.jpg",
+              "preview_image": "images/phone_case/jeans/009_under_flap.jpg",
+              "previews": {
+                "under_flap": "images/phone_case/jeans/009_under_flap.jpg",
+                "inside_flap": "images/phone_case/jeans/009_inside_flap.jpg",
+                "on_flap": "images/phone_case/jeans/009_on_flap.jpg",
+                "back": "images/phone_case/jeans/009_back.jpg"
+              }
+            },
+            {
+              "id": "010",
+              "name": "Песочная",
+              "image": "images/fabric/new_models_20261006/jeans/010.jpg",
+              "preview_image": "images/phone_case/jeans/010_under_flap.jpg",
+              "previews": {
+                "under_flap": "images/phone_case/jeans/010_under_flap.jpg",
+                "inside_flap": "images/phone_case/jeans/010_inside_flap.jpg",
+                "on_flap": "images/phone_case/jeans/010_on_flap.jpg",
+                "back": "images/phone_case/jeans/010_back.jpg"
+              }
+            },
+            {
+              "id": "012",
+              "name": "Бежевая",
+              "image": "images/fabric/new_models_20261006/jeans/012.jpg",
+              "preview_image": "images/phone_case/jeans/012_under_flap.jpg",
+              "previews": {
+                "under_flap": "images/phone_case/jeans/012_under_flap.jpg",
+                "inside_flap": "images/phone_case/jeans/012_inside_flap.jpg",
+                "on_flap": "images/phone_case/jeans/012_on_flap.jpg",
+                "back": "images/phone_case/jeans/012_back.jpg"
+              }
+            },
+            {
+              "id": "013",
+              "name": "Капучино",
+              "image": "images/fabric/new_models_20261006/jeans/013.jpg",
+              "preview_image": "images/phone_case/jeans/013_under_flap.jpg",
+              "previews": {
+                "under_flap": "images/phone_case/jeans/013_under_flap.jpg",
+                "inside_flap": "images/phone_case/jeans/013_inside_flap.jpg",
+                "on_flap": "images/phone_case/jeans/013_on_flap.jpg",
+                "back": "images/phone_case/jeans/013_back.jpg"
+              }
+            }
+          ]
+        },
+        {
+          "id": "eco_suede",
+          "name": "Эко-замша",
+          "bag_id": "phone_case_suede",
+          "variant_prefix": "eco_suede",
+          "zone_suffix": {
+            "under_flap": "under_flap",
+            "inside_flap": "inside_flap",
+            "on_flap": "on_flap",
+            "back": "back"
+          },
+          "zones": [
+            {
+              "name": "Спереди под крышкой",
+              "order": 1,
+              "enabled": true,
+              "available": true,
+              "default": true,
+              "perspective": false,
+              "limits": {
+                "normal": {
+                  "max_chars_per_line": 6,
+                  "max_lines": 2
+                },
+                "caps": {
+                  "max_chars_per_line": 4,
+                  "max_lines": 2
+                },
+                "line_limit_policy": "strict_modes"
+              },
+              "id": "under_flap"
+            },
+            {
+              "name": "Внутри на крышке",
+              "order": 2,
+              "enabled": true,
+              "available": true,
+              "default": false,
+              "perspective": false,
+              "limits": {
+                "normal": {
+                  "max_chars_per_line": 6,
+                  "max_lines": 2
+                },
+                "caps": {
+                  "max_chars_per_line": 4,
+                  "max_lines": 2
+                },
+                "line_limit_policy": "strict_modes"
+              },
+              "id": "inside_flap"
+            },
+            {
+              "name": "Спереди на крышке",
+              "order": 3,
+              "enabled": true,
+              "available": true,
+              "default": false,
+              "perspective": false,
+              "limits": {
+                "normal": {
+                  "max_chars_per_line": 6,
+                  "max_lines": 1
+                },
+                "caps": {
+                  "max_chars_per_line": 4,
+                  "max_lines": 1
+                },
+                "line_limit_policy": "strict_modes"
+              },
+              "id": "on_flap"
+            },
+            {
+              "name": "Сзади под лейблом",
+              "order": 4,
+              "enabled": true,
+              "available": true,
+              "default": false,
+              "perspective": false,
+              "limits": {
+                "normal": {
+                  "max_chars_per_line": 6,
+                  "max_lines": 2
+                },
+                "caps": {
+                  "max_chars_per_line": 4,
+                  "max_lines": 2
+                },
+                "line_limit_policy": "strict_modes"
+              },
+              "id": "back"
+            }
+          ],
+          "colors": [
+            {
+              "id": "001",
+              "name": "Молочный",
+              "image": "images/fabric/new_models_20261006/eco_suede/001.jpg",
+              "preview_image": "images/phone_case/eco_suede/001_under_flap.jpg",
+              "previews": {
+                "under_flap": "images/phone_case/eco_suede/001_under_flap.jpg",
+                "inside_flap": "images/phone_case/eco_suede/001_inside_flap.jpg",
+                "on_flap": "images/phone_case/eco_suede/001_on_flap.jpg",
+                "back": "images/phone_case/eco_suede/001_back.jpg"
+              }
+            },
+            {
+              "id": "002",
+              "name": "Серый",
+              "image": "images/fabric/new_models_20261006/eco_suede/002.jpg",
+              "preview_image": "images/phone_case/eco_suede/002_under_flap.jpg",
+              "previews": {
+                "under_flap": "images/phone_case/eco_suede/002_under_flap.jpg",
+                "inside_flap": "images/phone_case/eco_suede/002_inside_flap.jpg",
+                "on_flap": "images/phone_case/eco_suede/002_on_flap.jpg",
+                "back": "images/phone_case/eco_suede/002_back.jpg"
+              }
+            },
+            {
+              "id": "003",
+              "name": "Графит",
+              "image": "images/fabric/new_models_20261006/eco_suede/003.jpg",
+              "preview_image": "images/phone_case/eco_suede/003_under_flap.jpg",
+              "previews": {
+                "under_flap": "images/phone_case/eco_suede/003_under_flap.jpg",
+                "inside_flap": "images/phone_case/eco_suede/003_inside_flap.jpg",
+                "on_flap": "images/phone_case/eco_suede/003_on_flap.jpg",
+                "back": "images/phone_case/eco_suede/003_back.jpg"
+              }
+            },
+            {
+              "id": "004",
+              "name": "Лавандовый",
+              "image": "images/fabric/new_models_20261006/eco_suede/004.jpg",
+              "preview_image": "images/phone_case/eco_suede/004_under_flap.jpg",
+              "previews": {
+                "under_flap": "images/phone_case/eco_suede/004_under_flap.jpg",
+                "inside_flap": "images/phone_case/eco_suede/004_inside_flap.jpg",
+                "on_flap": "images/phone_case/eco_suede/004_on_flap.jpg",
+                "back": "images/phone_case/eco_suede/004_back.jpg"
+              }
+            },
+            {
+              "id": "005",
+              "name": "Голубой",
+              "image": "images/fabric/new_models_20261006/eco_suede/005.jpg",
+              "preview_image": "images/phone_case/eco_suede/005_under_flap.jpg",
+              "previews": {
+                "under_flap": "images/phone_case/eco_suede/005_under_flap.jpg",
+                "inside_flap": "images/phone_case/eco_suede/005_inside_flap.jpg",
+                "on_flap": "images/phone_case/eco_suede/005_on_flap.jpg",
+                "back": "images/phone_case/eco_suede/005_back.jpg"
+              }
+            },
+            {
+              "id": "006",
+              "name": "Синий",
+              "image": "images/fabric/new_models_20261006/eco_suede/006.jpg",
+              "preview_image": "images/phone_case/eco_suede/006_under_flap.jpg",
+              "previews": {
+                "under_flap": "images/phone_case/eco_suede/006_under_flap.jpg",
+                "inside_flap": "images/phone_case/eco_suede/006_inside_flap.jpg",
+                "on_flap": "images/phone_case/eco_suede/006_on_flap.jpg",
+                "back": "images/phone_case/eco_suede/006_back.jpg"
+              }
+            },
+            {
+              "id": "007",
+              "name": "Пудровый",
+              "image": "images/fabric/new_models_20261006/eco_suede/007.jpg",
+              "preview_image": "images/phone_case/eco_suede/007_under_flap.jpg",
+              "previews": {
+                "under_flap": "images/phone_case/eco_suede/007_under_flap.jpg",
+                "inside_flap": "images/phone_case/eco_suede/007_inside_flap.jpg",
+                "on_flap": "images/phone_case/eco_suede/007_on_flap.jpg",
+                "back": "images/phone_case/eco_suede/007_back.jpg"
+              }
+            },
+            {
+              "id": "008",
+              "name": "Розовый",
+              "image": "images/fabric/new_models_20261006/eco_suede/008.jpg",
+              "preview_image": "images/phone_case/eco_suede/008_under_flap.jpg",
+              "previews": {
+                "under_flap": "images/phone_case/eco_suede/008_under_flap.jpg",
+                "inside_flap": "images/phone_case/eco_suede/008_inside_flap.jpg",
+                "on_flap": "images/phone_case/eco_suede/008_on_flap.jpg",
+                "back": "images/phone_case/eco_suede/008_back.jpg"
+              }
+            },
+            {
+              "id": "009",
+              "name": "Малиновый",
+              "image": "images/fabric/new_models_20261006/eco_suede/009.jpg",
+              "preview_image": "images/phone_case/eco_suede/009_under_flap.jpg",
+              "previews": {
+                "under_flap": "images/phone_case/eco_suede/009_under_flap.jpg",
+                "inside_flap": "images/phone_case/eco_suede/009_inside_flap.jpg",
+                "on_flap": "images/phone_case/eco_suede/009_on_flap.jpg",
+                "back": "images/phone_case/eco_suede/009_back.jpg"
+              }
+            },
+            {
+              "id": "010",
+              "name": "Бежевый",
+              "image": "images/fabric/new_models_20261006/eco_suede/010.jpg",
+              "preview_image": "images/phone_case/eco_suede/010_under_flap.jpg",
+              "previews": {
+                "under_flap": "images/phone_case/eco_suede/010_under_flap.jpg",
+                "inside_flap": "images/phone_case/eco_suede/010_inside_flap.jpg",
+                "on_flap": "images/phone_case/eco_suede/010_on_flap.jpg",
+                "back": "images/phone_case/eco_suede/010_back.jpg"
+              }
+            },
+            {
+              "id": "011",
+              "name": "Песочный",
+              "image": "images/fabric/new_models_20261006/eco_suede/011.jpg",
+              "preview_image": "images/phone_case/eco_suede/011_under_flap.jpg",
+              "previews": {
+                "under_flap": "images/phone_case/eco_suede/011_under_flap.jpg",
+                "inside_flap": "images/phone_case/eco_suede/011_inside_flap.jpg",
+                "on_flap": "images/phone_case/eco_suede/011_on_flap.jpg",
+                "back": "images/phone_case/eco_suede/011_back.jpg"
+              }
+            },
+            {
+              "id": "012",
+              "name": "Черный",
+              "image": "images/fabric/new_models_20261006/eco_suede/012.jpg",
+              "preview_image": "images/phone_case/eco_suede/012_under_flap.jpg",
+              "previews": {
+                "under_flap": "images/phone_case/eco_suede/012_under_flap.jpg",
+                "inside_flap": "images/phone_case/eco_suede/012_inside_flap.jpg",
+                "on_flap": "images/phone_case/eco_suede/012_on_flap.jpg",
+                "back": "images/phone_case/eco_suede/012_back.jpg"
+              }
+            },
+            {
+              "id": "013",
+              "name": "Коричневый",
+              "image": "images/fabric/new_models_20261006/eco_suede/013.jpg",
+              "preview_image": "images/phone_case/eco_suede/013_under_flap.jpg",
+              "previews": {
+                "under_flap": "images/phone_case/eco_suede/013_under_flap.jpg",
+                "inside_flap": "images/phone_case/eco_suede/013_inside_flap.jpg",
+                "on_flap": "images/phone_case/eco_suede/013_on_flap.jpg",
+                "back": "images/phone_case/eco_suede/013_back.jpg"
+              }
+            },
+            {
+              "id": "014",
+              "name": "Капучино",
+              "image": "images/fabric/new_models_20261006/eco_suede/014.jpg",
+              "preview_image": "images/phone_case/eco_suede/014_under_flap.jpg",
+              "previews": {
+                "under_flap": "images/phone_case/eco_suede/014_under_flap.jpg",
+                "inside_flap": "images/phone_case/eco_suede/014_inside_flap.jpg",
+                "on_flap": "images/phone_case/eco_suede/014_on_flap.jpg",
+                "back": "images/phone_case/eco_suede/014_back.jpg"
+              }
+            },
+            {
+              "id": "015",
+              "name": "Хаки",
+              "image": "images/fabric/new_models_20261006/eco_suede/015.jpg",
+              "preview_image": "images/phone_case/eco_suede/015_under_flap.jpg",
+              "previews": {
+                "under_flap": "images/phone_case/eco_suede/015_under_flap.jpg",
+                "inside_flap": "images/phone_case/eco_suede/015_inside_flap.jpg",
+                "on_flap": "images/phone_case/eco_suede/015_on_flap.jpg",
+                "back": "images/phone_case/eco_suede/015_back.jpg"
+              }
+            },
+            {
+              "id": "016",
+              "name": "Лимонный",
+              "image": "images/fabric/new_models_20261006/eco_suede/016.jpg",
+              "preview_image": "images/phone_case/eco_suede/016_under_flap.jpg",
+              "previews": {
+                "under_flap": "images/phone_case/eco_suede/016_under_flap.jpg",
+                "inside_flap": "images/phone_case/eco_suede/016_inside_flap.jpg",
+                "on_flap": "images/phone_case/eco_suede/016_on_flap.jpg",
+                "back": "images/phone_case/eco_suede/016_back.jpg"
+              }
+            },
+            {
+              "id": "017",
+              "name": "Мятный",
+              "image": "images/fabric/new_models_20261006/eco_suede/017.jpg",
+              "preview_image": "images/phone_case/eco_suede/017_under_flap.jpg",
+              "previews": {
+                "under_flap": "images/phone_case/eco_suede/017_under_flap.jpg",
+                "inside_flap": "images/phone_case/eco_suede/017_inside_flap.jpg",
+                "on_flap": "images/phone_case/eco_suede/017_on_flap.jpg",
+                "back": "images/phone_case/eco_suede/017_back.jpg"
+              }
+            },
+            {
+              "id": "018",
+              "name": "Красный",
+              "image": "images/fabric/new_models_20261006/eco_suede/018.jpg",
+              "preview_image": "images/phone_case/eco_suede/018_under_flap.jpg",
+              "previews": {
+                "under_flap": "images/phone_case/eco_suede/018_under_flap.jpg",
+                "inside_flap": "images/phone_case/eco_suede/018_inside_flap.jpg",
+                "on_flap": "images/phone_case/eco_suede/018_on_flap.jpg",
+                "back": "images/phone_case/eco_suede/018_back.jpg"
+              }
+            },
+            {
+              "id": "020",
+              "name": "Снежный барс",
+              "image": "images/fabric/new_models_20261006/eco_suede/020.jpg",
+              "preview_image": "images/phone_case/eco_suede/020_under_flap.jpg",
+              "previews": {
+                "under_flap": "images/phone_case/eco_suede/020_under_flap.jpg",
+                "inside_flap": "images/phone_case/eco_suede/020_inside_flap.jpg",
+                "on_flap": "images/phone_case/eco_suede/020_on_flap.jpg",
+                "back": "images/phone_case/eco_suede/020_back.jpg"
+              }
+            },
+            {
+              "id": "022",
+              "name": "Фисташковый",
+              "image": "images/fabric/new_models_20261006/eco_suede/022.jpg",
+              "preview_image": "images/phone_case/eco_suede/022_under_flap.jpg",
+              "previews": {
+                "under_flap": "images/phone_case/eco_suede/022_under_flap.jpg",
+                "inside_flap": "images/phone_case/eco_suede/022_inside_flap.jpg",
+                "on_flap": "images/phone_case/eco_suede/022_on_flap.jpg",
+                "back": "images/phone_case/eco_suede/022_back.jpg"
+              }
+            }
+          ]
+        }
+      ],
+      "image": "images/phone_case/jeans/001_under_flap.jpg"
+    },
+    {
+      "id": "laptop_case_xs",
+      "title": "Кейс для ноутбука XS",
+      "subtitle": "",
+      "price": "от 6 400 ₽",
+      "categories": [
+        "mini",
+        "cases"
+      ],
+      "materials": [
+        {
+          "id": "jeans",
+          "name": "Джинса",
+          "bag_id": "laptop_case_xs_jeans",
+          "variant_prefix": "jeans",
+          "zone_suffix": {
+            "front_strip": "front_strip",
+            "back": "back",
+            "inside": "inside",
+            "under_flap": "under_flap"
+          },
+          "zones": [
+            {
+              "name": "Спереди на полоске",
+              "order": 1,
+              "enabled": true,
+              "available": true,
+              "default": true,
+              "perspective": false,
+              "limits": {
+                "normal": {
+                  "max_chars_per_line": 14,
+                  "max_lines": 1
+                },
+                "caps": {
+                  "max_chars_per_line": 10,
+                  "max_lines": 1
+                },
+                "line_limit_policy": "strict_modes"
+              },
+              "id": "front_strip"
+            },
+            {
+              "name": "Сзади",
+              "order": 2,
+              "enabled": true,
+              "available": true,
+              "default": false,
+              "perspective": false,
+              "limits": {
+                "normal": {
+                  "max_chars_per_line": 14,
+                  "max_lines": 4
+                },
+                "caps": {
+                  "max_chars_per_line": 10,
+                  "max_lines": 5
+                },
+                "line_limit_policy": "strict_modes"
+              },
+              "id": "back"
+            },
+            {
+              "name": "Внутри на подкладе",
+              "order": 3,
+              "enabled": true,
+              "available": true,
+              "default": false,
+              "perspective": false,
+              "limits": {
+                "normal": {
+                  "max_chars_per_line": 14,
+                  "max_lines": 4
+                },
+                "caps": {
+                  "max_chars_per_line": 10,
+                  "max_lines": 5
+                },
+                "line_limit_policy": "strict_modes"
+              },
+              "id": "inside"
+            },
+            {
+              "name": "Спереди под крышкой",
+              "order": 4,
+              "enabled": true,
+              "available": true,
+              "default": false,
+              "perspective": false,
+              "limits": {
+                "normal": {
+                  "max_chars_per_line": 14,
+                  "max_lines": 2
+                },
+                "caps": {
+                  "max_chars_per_line": 10,
+                  "max_lines": 2
+                },
+                "line_limit_policy": "strict_modes"
+              },
+              "id": "under_flap"
+            }
+          ],
+          "colors": [
+            {
+              "id": "002",
+              "name": "Синяя",
+              "image": "images/fabric/new_models_20261006/jeans/002.jpg",
+              "preview_image": "images/laptop_case_xs/jeans/002_front_strip.jpg",
+              "previews": {
+                "front_strip": "images/laptop_case_xs/jeans/002_front_strip.jpg",
+                "back": "images/laptop_case_xs/jeans/002_back.jpg",
+                "inside": "images/laptop_case_xs/jeans/002_inside.jpg",
+                "under_flap": "images/laptop_case_xs/jeans/002_under_flap.jpg"
+              }
+            },
+            {
+              "id": "003",
+              "name": "Шоколадная",
+              "image": "images/fabric/new_models_20261006/jeans/003.jpg",
+              "preview_image": "images/laptop_case_xs/jeans/003_front_strip.jpg",
+              "previews": {
+                "front_strip": "images/laptop_case_xs/jeans/003_front_strip.jpg",
+                "back": "images/laptop_case_xs/jeans/003_back.jpg",
+                "inside": "images/laptop_case_xs/jeans/003_inside.jpg",
+                "under_flap": "images/laptop_case_xs/jeans/003_under_flap.jpg"
+              }
+            },
+            {
+              "id": "004",
+              "name": "Графитовая",
+              "image": "images/fabric/new_models_20261006/jeans/004.jpg",
+              "preview_image": "images/laptop_case_xs/jeans/004_front_strip.jpg",
+              "previews": {
+                "front_strip": "images/laptop_case_xs/jeans/004_front_strip.jpg",
+                "back": "images/laptop_case_xs/jeans/004_back.jpg",
+                "inside": "images/laptop_case_xs/jeans/004_inside.jpg",
+                "under_flap": "images/laptop_case_xs/jeans/004_under_flap.jpg"
+              }
+            },
+            {
+              "id": "005",
+              "name": "Черная",
+              "image": "images/fabric/new_models_20261006/jeans/005.jpg",
+              "preview_image": "images/laptop_case_xs/jeans/005_front_strip.jpg",
+              "previews": {
+                "front_strip": "images/laptop_case_xs/jeans/005_front_strip.jpg",
+                "back": "images/laptop_case_xs/jeans/005_back.jpg",
+                "inside": "images/laptop_case_xs/jeans/005_inside.jpg",
+                "under_flap": "images/laptop_case_xs/jeans/005_under_flap.jpg"
+              }
+            },
+            {
+              "id": "006",
+              "name": "Пудровый",
+              "image": "images/fabric/new_models_20261006/jeans/006.jpg",
+              "preview_image": "images/laptop_case_xs/jeans/006_front_strip.jpg",
+              "previews": {
+                "front_strip": "images/laptop_case_xs/jeans/006_front_strip.jpg",
+                "back": "images/laptop_case_xs/jeans/006_back.jpg",
+                "inside": "images/laptop_case_xs/jeans/006_inside.jpg",
+                "under_flap": "images/laptop_case_xs/jeans/006_under_flap.jpg"
+              }
+            },
+            {
+              "id": "007",
+              "name": "Розовая",
+              "image": "images/fabric/new_models_20261006/jeans/007.jpg",
+              "preview_image": "images/laptop_case_xs/jeans/007_front_strip.jpg",
+              "previews": {
+                "front_strip": "images/laptop_case_xs/jeans/007_front_strip.jpg",
+                "back": "images/laptop_case_xs/jeans/007_back.jpg",
+                "inside": "images/laptop_case_xs/jeans/007_inside.jpg",
+                "under_flap": "images/laptop_case_xs/jeans/007_under_flap.jpg"
+              }
+            },
+            {
+              "id": "008",
+              "name": "Лавандовая",
+              "image": "images/fabric/new_models_20261006/jeans/008.jpg",
+              "preview_image": "images/laptop_case_xs/jeans/008_front_strip.jpg",
+              "previews": {
+                "front_strip": "images/laptop_case_xs/jeans/008_front_strip.jpg",
+                "back": "images/laptop_case_xs/jeans/008_back.jpg",
+                "inside": "images/laptop_case_xs/jeans/008_inside.jpg",
+                "under_flap": "images/laptop_case_xs/jeans/008_under_flap.jpg"
+              }
+            },
+            {
+              "id": "010",
+              "name": "Песочная",
+              "image": "images/fabric/new_models_20261006/jeans/010.jpg",
+              "preview_image": "images/laptop_case_xs/jeans/010_front_strip.jpg",
+              "previews": {
+                "front_strip": "images/laptop_case_xs/jeans/010_front_strip.jpg",
+                "back": "images/laptop_case_xs/jeans/010_back.jpg",
+                "inside": "images/laptop_case_xs/jeans/010_inside.jpg",
+                "under_flap": "images/laptop_case_xs/jeans/010_under_flap.jpg"
+              }
+            },
+            {
+              "id": "011",
+              "name": "Хаки",
+              "image": "images/fabric/new_models_20261006/jeans/011.jpg",
+              "preview_image": "images/laptop_case_xs/jeans/011_front_strip.jpg",
+              "previews": {
+                "front_strip": "images/laptop_case_xs/jeans/011_front_strip.jpg",
+                "back": "images/laptop_case_xs/jeans/011_back.jpg",
+                "inside": "images/laptop_case_xs/jeans/011_inside.jpg",
+                "under_flap": "images/laptop_case_xs/jeans/011_under_flap.jpg"
+              }
+            },
+            {
+              "id": "012",
+              "name": "Бежевая",
+              "image": "images/fabric/new_models_20261006/jeans/012.jpg",
+              "preview_image": "images/laptop_case_xs/jeans/012_front_strip.jpg",
+              "previews": {
+                "front_strip": "images/laptop_case_xs/jeans/012_front_strip.jpg",
+                "back": "images/laptop_case_xs/jeans/012_back.jpg",
+                "inside": "images/laptop_case_xs/jeans/012_inside.jpg",
+                "under_flap": "images/laptop_case_xs/jeans/012_under_flap.jpg"
+              }
+            },
+            {
+              "id": "013",
+              "name": "Капучино",
+              "image": "images/fabric/new_models_20261006/jeans/013.jpg",
+              "preview_image": "images/laptop_case_xs/jeans/013_front_strip.jpg",
+              "previews": {
+                "front_strip": "images/laptop_case_xs/jeans/013_front_strip.jpg",
+                "back": "images/laptop_case_xs/jeans/013_back.jpg",
+                "inside": "images/laptop_case_xs/jeans/013_inside.jpg",
+                "under_flap": "images/laptop_case_xs/jeans/013_under_flap.jpg"
+              }
+            },
+            {
+              "id": "015",
+              "name": "Кремовая",
+              "image": "images/fabric/new_models_20261006/jeans/015.jpg",
+              "preview_image": "images/laptop_case_xs/jeans/015_front_strip.jpg",
+              "previews": {
+                "front_strip": "images/laptop_case_xs/jeans/015_front_strip.jpg",
+                "back": "images/laptop_case_xs/jeans/015_back.jpg",
+                "inside": "images/laptop_case_xs/jeans/015_inside.jpg",
+                "under_flap": "images/laptop_case_xs/jeans/015_under_flap.jpg"
+              }
+            }
+          ]
+        }
+      ],
+      "image": "images/laptop_case_xs/jeans/002_front_strip.jpg"
+    },
+    {
+      "id": "laptop_case",
+      "title": "Кейс для ноутбука",
+      "subtitle": "",
+      "price": "от 6 400 ₽",
+      "categories": [
+        "cases"
+      ],
+      "materials": [
+        {
+          "id": "jeans",
+          "name": "Джинса",
+          "bag_id": "laptop_case_jeans",
+          "variant_prefix": "jeans",
+          "zone_suffix": {
+            "front_strip": "front_strip",
+            "back": "back",
+            "inside": "inside",
+            "under_flap": "under_flap"
+          },
+          "zones": [
+            {
+              "name": "Спереди на полоске",
+              "order": 1,
+              "enabled": true,
+              "available": true,
+              "default": true,
+              "perspective": false,
+              "limits": {
+                "normal": {
+                  "max_chars_per_line": 14,
+                  "max_lines": 1
+                },
+                "caps": {
+                  "max_chars_per_line": 10,
+                  "max_lines": 1
+                },
+                "line_limit_policy": "strict_modes"
+              },
+              "id": "front_strip"
+            },
+            {
+              "name": "Сзади",
+              "order": 2,
+              "enabled": true,
+              "available": true,
+              "default": false,
+              "perspective": false,
+              "limits": {
+                "normal": {
+                  "max_chars_per_line": 14,
+                  "max_lines": 4
+                },
+                "caps": {
+                  "max_chars_per_line": 10,
+                  "max_lines": 5
+                },
+                "line_limit_policy": "strict_modes"
+              },
+              "id": "back"
+            },
+            {
+              "name": "Внутри на подкладе",
+              "order": 3,
+              "enabled": true,
+              "available": true,
+              "default": false,
+              "perspective": false,
+              "limits": {
+                "normal": {
+                  "max_chars_per_line": 14,
+                  "max_lines": 4
+                },
+                "caps": {
+                  "max_chars_per_line": 10,
+                  "max_lines": 5
+                },
+                "line_limit_policy": "strict_modes"
+              },
+              "id": "inside"
+            },
+            {
+              "name": "Спереди под крышкой",
+              "order": 4,
+              "enabled": true,
+              "available": true,
+              "default": false,
+              "perspective": false,
+              "limits": {
+                "normal": {
+                  "max_chars_per_line": 14,
+                  "max_lines": 2
+                },
+                "caps": {
+                  "max_chars_per_line": 10,
+                  "max_lines": 2
+                },
+                "line_limit_policy": "strict_modes"
+              },
+              "id": "under_flap"
+            }
+          ],
+          "colors": [
+            {
+              "id": "001",
+              "name": "Серая",
+              "image": "images/fabric/new_models_20261006/jeans/001.jpg",
+              "preview_image": "images/laptop_case/jeans/001_front_strip.jpg",
+              "previews": {
+                "front_strip": "images/laptop_case/jeans/001_front_strip.jpg",
+                "back": "images/laptop_case/jeans/001_back.jpg",
+                "inside": "images/laptop_case/jeans/001_inside.jpg",
+                "under_flap": "images/laptop_case/jeans/001_under_flap.jpg"
+              }
+            },
+            {
+              "id": "002",
+              "name": "Синяя",
+              "image": "images/fabric/new_models_20261006/jeans/002.jpg",
+              "preview_image": "images/laptop_case/jeans/002_front_strip.jpg",
+              "previews": {
+                "front_strip": "images/laptop_case/jeans/002_front_strip.jpg",
+                "back": "images/laptop_case/jeans/002_back.jpg",
+                "inside": "images/laptop_case/jeans/002_inside.jpg",
+                "under_flap": "images/laptop_case/jeans/002_under_flap.jpg"
+              }
+            },
+            {
+              "id": "003",
+              "name": "Шоколадная",
+              "image": "images/fabric/new_models_20261006/jeans/003.jpg",
+              "preview_image": "images/laptop_case/jeans/003_front_strip.jpg",
+              "previews": {
+                "front_strip": "images/laptop_case/jeans/003_front_strip.jpg",
+                "back": "images/laptop_case/jeans/003_back.jpg",
+                "inside": "images/laptop_case/jeans/003_inside.jpg",
+                "under_flap": "images/laptop_case/jeans/003_under_flap.jpg"
+              }
+            },
+            {
+              "id": "004",
+              "name": "Графитовая",
+              "image": "images/fabric/new_models_20261006/jeans/004.jpg",
+              "preview_image": "images/laptop_case/jeans/004_front_strip.jpg",
+              "previews": {
+                "front_strip": "images/laptop_case/jeans/004_front_strip.jpg",
+                "back": "images/laptop_case/jeans/004_back.jpg",
+                "inside": "images/laptop_case/jeans/004_inside.jpg",
+                "under_flap": "images/laptop_case/jeans/004_under_flap.jpg"
+              }
+            },
+            {
+              "id": "005",
+              "name": "Черная",
+              "image": "images/fabric/new_models_20261006/jeans/005.jpg",
+              "preview_image": "images/laptop_case/jeans/005_front_strip.jpg",
+              "previews": {
+                "front_strip": "images/laptop_case/jeans/005_front_strip.jpg",
+                "back": "images/laptop_case/jeans/005_back.jpg",
+                "inside": "images/laptop_case/jeans/005_inside.jpg",
+                "under_flap": "images/laptop_case/jeans/005_under_flap.jpg"
+              }
+            },
+            {
+              "id": "006",
+              "name": "Пудровый",
+              "image": "images/fabric/new_models_20261006/jeans/006.jpg",
+              "preview_image": "images/laptop_case/jeans/006_front_strip.jpg",
+              "previews": {
+                "front_strip": "images/laptop_case/jeans/006_front_strip.jpg",
+                "back": "images/laptop_case/jeans/006_back.jpg",
+                "inside": "images/laptop_case/jeans/006_inside.jpg",
+                "under_flap": "images/laptop_case/jeans/006_under_flap.jpg"
+              }
+            },
+            {
+              "id": "007",
+              "name": "Розовая",
+              "image": "images/fabric/new_models_20261006/jeans/007.jpg",
+              "preview_image": "images/laptop_case/jeans/007_front_strip.jpg",
+              "previews": {
+                "front_strip": "images/laptop_case/jeans/007_front_strip.jpg",
+                "back": "images/laptop_case/jeans/007_back.jpg",
+                "inside": "images/laptop_case/jeans/007_inside.jpg",
+                "under_flap": "images/laptop_case/jeans/007_under_flap.jpg"
+              }
+            },
+            {
+              "id": "008",
+              "name": "Лавандовая",
+              "image": "images/fabric/new_models_20261006/jeans/008.jpg",
+              "preview_image": "images/laptop_case/jeans/008_front_strip.jpg",
+              "previews": {
+                "front_strip": "images/laptop_case/jeans/008_front_strip.jpg",
+                "back": "images/laptop_case/jeans/008_back.jpg",
+                "inside": "images/laptop_case/jeans/008_inside.jpg",
+                "under_flap": "images/laptop_case/jeans/008_under_flap.jpg"
+              }
+            },
+            {
+              "id": "009",
+              "name": "Персиковая",
+              "image": "images/fabric/new_models_20261006/jeans/009.jpg",
+              "preview_image": "images/laptop_case/jeans/009_front_strip.jpg",
+              "previews": {
+                "front_strip": "images/laptop_case/jeans/009_front_strip.jpg",
+                "back": "images/laptop_case/jeans/009_back.jpg",
+                "inside": "images/laptop_case/jeans/009_inside.jpg",
+                "under_flap": "images/laptop_case/jeans/009_under_flap.jpg"
+              }
+            },
+            {
+              "id": "010",
+              "name": "Песочная",
+              "image": "images/fabric/new_models_20261006/jeans/010.jpg",
+              "preview_image": "images/laptop_case/jeans/010_front_strip.jpg",
+              "previews": {
+                "front_strip": "images/laptop_case/jeans/010_front_strip.jpg",
+                "back": "images/laptop_case/jeans/010_back.jpg",
+                "inside": "images/laptop_case/jeans/010_inside.jpg",
+                "under_flap": "images/laptop_case/jeans/010_under_flap.jpg"
+              }
+            },
+            {
+              "id": "011",
+              "name": "Хаки",
+              "image": "images/fabric/new_models_20261006/jeans/011.jpg",
+              "preview_image": "images/laptop_case/jeans/011_front_strip.jpg",
+              "previews": {
+                "front_strip": "images/laptop_case/jeans/011_front_strip.jpg",
+                "back": "images/laptop_case/jeans/011_back.jpg",
+                "inside": "images/laptop_case/jeans/011_inside.jpg",
+                "under_flap": "images/laptop_case/jeans/011_under_flap.jpg"
+              }
+            },
+            {
+              "id": "012",
+              "name": "Бежевая",
+              "image": "images/fabric/new_models_20261006/jeans/012.jpg",
+              "preview_image": "images/laptop_case/jeans/012_front_strip.jpg",
+              "previews": {
+                "front_strip": "images/laptop_case/jeans/012_front_strip.jpg",
+                "back": "images/laptop_case/jeans/012_back.jpg",
+                "inside": "images/laptop_case/jeans/012_inside.jpg",
+                "under_flap": "images/laptop_case/jeans/012_under_flap.jpg"
+              }
+            },
+            {
+              "id": "013",
+              "name": "Капучино",
+              "image": "images/fabric/new_models_20261006/jeans/013.jpg",
+              "preview_image": "images/laptop_case/jeans/013_front_strip.jpg",
+              "previews": {
+                "front_strip": "images/laptop_case/jeans/013_front_strip.jpg",
+                "back": "images/laptop_case/jeans/013_back.jpg",
+                "inside": "images/laptop_case/jeans/013_inside.jpg",
+                "under_flap": "images/laptop_case/jeans/013_under_flap.jpg"
+              }
+            },
+            {
+              "id": "014",
+              "name": "Голубая",
+              "image": "images/fabric/new_models_20261006/jeans/014.jpg",
+              "preview_image": "images/laptop_case/jeans/014_front_strip.jpg",
+              "previews": {
+                "front_strip": "images/laptop_case/jeans/014_front_strip.jpg",
+                "back": "images/laptop_case/jeans/014_back.jpg",
+                "inside": "images/laptop_case/jeans/014_inside.jpg",
+                "under_flap": "images/laptop_case/jeans/014_under_flap.jpg"
+              }
+            }
+          ]
+        },
+        {
+          "id": "eco_suede",
+          "name": "Эко-замша",
+          "bag_id": "laptop_case_suede",
+          "variant_prefix": "eco_suede",
+          "zone_suffix": {
+            "front_strip": "front_strip",
+            "back": "back",
+            "inside": "inside",
+            "under_flap": "under_flap"
+          },
+          "zones": [
+            {
+              "name": "Спереди на полоске",
+              "order": 1,
+              "enabled": true,
+              "available": true,
+              "default": true,
+              "perspective": false,
+              "limits": {
+                "normal": {
+                  "max_chars_per_line": 14,
+                  "max_lines": 1
+                },
+                "caps": {
+                  "max_chars_per_line": 10,
+                  "max_lines": 1
+                },
+                "line_limit_policy": "strict_modes"
+              },
+              "id": "front_strip"
+            },
+            {
+              "name": "Сзади",
+              "order": 2,
+              "enabled": true,
+              "available": true,
+              "default": false,
+              "perspective": false,
+              "limits": {
+                "normal": {
+                  "max_chars_per_line": 14,
+                  "max_lines": 4
+                },
+                "caps": {
+                  "max_chars_per_line": 10,
+                  "max_lines": 5
+                },
+                "line_limit_policy": "strict_modes"
+              },
+              "id": "back"
+            },
+            {
+              "name": "Внутри на подкладе",
+              "order": 3,
+              "enabled": true,
+              "available": true,
+              "default": false,
+              "perspective": false,
+              "limits": {
+                "normal": {
+                  "max_chars_per_line": 14,
+                  "max_lines": 4
+                },
+                "caps": {
+                  "max_chars_per_line": 10,
+                  "max_lines": 5
+                },
+                "line_limit_policy": "strict_modes"
+              },
+              "id": "inside"
+            },
+            {
+              "name": "Спереди под крышкой",
+              "order": 4,
+              "enabled": true,
+              "available": true,
+              "default": false,
+              "perspective": false,
+              "limits": {
+                "normal": {
+                  "max_chars_per_line": 14,
+                  "max_lines": 2
+                },
+                "caps": {
+                  "max_chars_per_line": 10,
+                  "max_lines": 2
+                },
+                "line_limit_policy": "strict_modes"
+              },
+              "id": "under_flap"
+            }
+          ],
+          "colors": [
+            {
+              "id": "001",
+              "name": "Молочная",
+              "image": "images/fabric/new_models_20261006/eco_suede/001.jpg",
+              "preview_image": "images/laptop_case/eco_suede/001_front_strip.jpg",
+              "previews": {
+                "front_strip": "images/laptop_case/eco_suede/001_front_strip.jpg",
+                "back": "images/laptop_case/eco_suede/001_back.jpg",
+                "inside": "images/laptop_case/eco_suede/001_inside.jpg",
+                "under_flap": "images/laptop_case/eco_suede/001_under_flap.jpg"
+              }
+            },
+            {
+              "id": "002",
+              "name": "Серая",
+              "image": "images/fabric/new_models_20261006/eco_suede/002.jpg",
+              "preview_image": "images/laptop_case/eco_suede/002_front_strip.jpg",
+              "previews": {
+                "front_strip": "images/laptop_case/eco_suede/002_front_strip.jpg",
+                "back": "images/laptop_case/eco_suede/002_back.jpg",
+                "inside": "images/laptop_case/eco_suede/002_inside.jpg",
+                "under_flap": "images/laptop_case/eco_suede/002_under_flap.jpg"
+              }
+            },
+            {
+              "id": "003",
+              "name": "Графит",
+              "image": "images/fabric/new_models_20261006/eco_suede/003.jpg",
+              "preview_image": "images/laptop_case/eco_suede/003_front_strip.jpg",
+              "previews": {
+                "front_strip": "images/laptop_case/eco_suede/003_front_strip.jpg",
+                "back": "images/laptop_case/eco_suede/003_back.jpg",
+                "inside": "images/laptop_case/eco_suede/003_inside.jpg",
+                "under_flap": "images/laptop_case/eco_suede/003_under_flap.jpg"
+              }
+            },
+            {
+              "id": "004",
+              "name": "Лавандовая",
+              "image": "images/fabric/new_models_20261006/eco_suede/004.jpg",
+              "preview_image": "images/laptop_case/eco_suede/004_front_strip.jpg",
+              "previews": {
+                "front_strip": "images/laptop_case/eco_suede/004_front_strip.jpg",
+                "back": "images/laptop_case/eco_suede/004_back.jpg",
+                "inside": "images/laptop_case/eco_suede/004_inside.jpg",
+                "under_flap": "images/laptop_case/eco_suede/004_under_flap.jpg"
+              }
+            },
+            {
+              "id": "005",
+              "name": "Голубая",
+              "image": "images/fabric/new_models_20261006/eco_suede/005.jpg",
+              "preview_image": "images/laptop_case/eco_suede/005_front_strip.jpg",
+              "previews": {
+                "front_strip": "images/laptop_case/eco_suede/005_front_strip.jpg",
+                "back": "images/laptop_case/eco_suede/005_back.jpg",
+                "inside": "images/laptop_case/eco_suede/005_inside.jpg",
+                "under_flap": "images/laptop_case/eco_suede/005_under_flap.jpg"
+              }
+            },
+            {
+              "id": "006",
+              "name": "Синяя",
+              "image": "images/fabric/new_models_20261006/eco_suede/006.jpg",
+              "preview_image": "images/laptop_case/eco_suede/006_front_strip.jpg",
+              "previews": {
+                "front_strip": "images/laptop_case/eco_suede/006_front_strip.jpg",
+                "back": "images/laptop_case/eco_suede/006_back.jpg",
+                "inside": "images/laptop_case/eco_suede/006_inside.jpg",
+                "under_flap": "images/laptop_case/eco_suede/006_under_flap.jpg"
+              }
+            },
+            {
+              "id": "007",
+              "name": "Пудровая",
+              "image": "images/fabric/new_models_20261006/eco_suede/007.jpg",
+              "preview_image": "images/laptop_case/eco_suede/007_front_strip.jpg",
+              "previews": {
+                "front_strip": "images/laptop_case/eco_suede/007_front_strip.jpg",
+                "back": "images/laptop_case/eco_suede/007_back.jpg",
+                "inside": "images/laptop_case/eco_suede/007_inside.jpg",
+                "under_flap": "images/laptop_case/eco_suede/007_under_flap.jpg"
+              }
+            },
+            {
+              "id": "008",
+              "name": "Розовая",
+              "image": "images/fabric/new_models_20261006/eco_suede/008.jpg",
+              "preview_image": "images/laptop_case/eco_suede/008_front_strip.jpg",
+              "previews": {
+                "front_strip": "images/laptop_case/eco_suede/008_front_strip.jpg",
+                "back": "images/laptop_case/eco_suede/008_back.jpg",
+                "inside": "images/laptop_case/eco_suede/008_inside.jpg",
+                "under_flap": "images/laptop_case/eco_suede/008_under_flap.jpg"
+              }
+            },
+            {
+              "id": "009",
+              "name": "Малиновая",
+              "image": "images/fabric/new_models_20261006/eco_suede/009.jpg",
+              "preview_image": "images/laptop_case/eco_suede/009_front_strip.jpg",
+              "previews": {
+                "front_strip": "images/laptop_case/eco_suede/009_front_strip.jpg",
+                "back": "images/laptop_case/eco_suede/009_back.jpg",
+                "inside": "images/laptop_case/eco_suede/009_inside.jpg",
+                "under_flap": "images/laptop_case/eco_suede/009_under_flap.jpg"
+              }
+            },
+            {
+              "id": "010",
+              "name": "Бежевая",
+              "image": "images/fabric/new_models_20261006/eco_suede/010.jpg",
+              "preview_image": "images/laptop_case/eco_suede/010_front_strip.jpg",
+              "previews": {
+                "front_strip": "images/laptop_case/eco_suede/010_front_strip.jpg",
+                "back": "images/laptop_case/eco_suede/010_back.jpg",
+                "inside": "images/laptop_case/eco_suede/010_inside.jpg",
+                "under_flap": "images/laptop_case/eco_suede/010_under_flap.jpg"
+              }
+            },
+            {
+              "id": "011",
+              "name": "Песочная",
+              "image": "images/fabric/new_models_20261006/eco_suede/011.jpg",
+              "preview_image": "images/laptop_case/eco_suede/011_front_strip.jpg",
+              "previews": {
+                "front_strip": "images/laptop_case/eco_suede/011_front_strip.jpg",
+                "back": "images/laptop_case/eco_suede/011_back.jpg",
+                "inside": "images/laptop_case/eco_suede/011_inside.jpg",
+                "under_flap": "images/laptop_case/eco_suede/011_under_flap.jpg"
+              }
+            },
+            {
+              "id": "012",
+              "name": "Черная",
+              "image": "images/fabric/new_models_20261006/eco_suede/012.jpg",
+              "preview_image": "images/laptop_case/eco_suede/012_front_strip.jpg",
+              "previews": {
+                "front_strip": "images/laptop_case/eco_suede/012_front_strip.jpg",
+                "back": "images/laptop_case/eco_suede/012_back.jpg",
+                "inside": "images/laptop_case/eco_suede/012_inside.jpg",
+                "under_flap": "images/laptop_case/eco_suede/012_under_flap.jpg"
+              }
+            },
+            {
+              "id": "013",
+              "name": "Коричневая",
+              "image": "images/fabric/new_models_20261006/eco_suede/013.jpg",
+              "preview_image": "images/laptop_case/eco_suede/013_front_strip.jpg",
+              "previews": {
+                "front_strip": "images/laptop_case/eco_suede/013_front_strip.jpg",
+                "back": "images/laptop_case/eco_suede/013_back.jpg",
+                "inside": "images/laptop_case/eco_suede/013_inside.jpg",
+                "under_flap": "images/laptop_case/eco_suede/013_under_flap.jpg"
+              }
+            },
+            {
+              "id": "014",
+              "name": "Капучино",
+              "image": "images/fabric/new_models_20261006/eco_suede/014.jpg",
+              "preview_image": "images/laptop_case/eco_suede/014_front_strip.jpg",
+              "previews": {
+                "front_strip": "images/laptop_case/eco_suede/014_front_strip.jpg",
+                "back": "images/laptop_case/eco_suede/014_back.jpg",
+                "inside": "images/laptop_case/eco_suede/014_inside.jpg",
+                "under_flap": "images/laptop_case/eco_suede/014_under_flap.jpg"
+              }
+            },
+            {
+              "id": "015",
+              "name": "Хаки",
+              "image": "images/fabric/new_models_20261006/eco_suede/015.jpg",
+              "preview_image": "images/laptop_case/eco_suede/015_front_strip.jpg",
+              "previews": {
+                "front_strip": "images/laptop_case/eco_suede/015_front_strip.jpg",
+                "back": "images/laptop_case/eco_suede/015_back.jpg",
+                "inside": "images/laptop_case/eco_suede/015_inside.jpg",
+                "under_flap": "images/laptop_case/eco_suede/015_under_flap.jpg"
+              }
+            },
+            {
+              "id": "016",
+              "name": "Лимонная",
+              "image": "images/fabric/new_models_20261006/eco_suede/016.jpg",
+              "preview_image": "images/laptop_case/eco_suede/016_front_strip.jpg",
+              "previews": {
+                "front_strip": "images/laptop_case/eco_suede/016_front_strip.jpg",
+                "back": "images/laptop_case/eco_suede/016_back.jpg",
+                "inside": "images/laptop_case/eco_suede/016_inside.jpg",
+                "under_flap": "images/laptop_case/eco_suede/016_under_flap.jpg"
+              }
+            },
+            {
+              "id": "017",
+              "name": "Мятная",
+              "image": "images/fabric/new_models_20261006/eco_suede/017.jpg",
+              "preview_image": "images/laptop_case/eco_suede/017_front_strip.jpg",
+              "previews": {
+                "front_strip": "images/laptop_case/eco_suede/017_front_strip.jpg",
+                "back": "images/laptop_case/eco_suede/017_back.jpg",
+                "inside": "images/laptop_case/eco_suede/017_inside.jpg",
+                "under_flap": "images/laptop_case/eco_suede/017_under_flap.jpg"
+              }
+            },
+            {
+              "id": "018",
+              "name": "Красный",
+              "image": "images/fabric/new_models_20261006/eco_suede/018.jpg",
+              "preview_image": "images/laptop_case/eco_suede/018_front_strip.jpg",
+              "previews": {
+                "front_strip": "images/laptop_case/eco_suede/018_front_strip.jpg",
+                "back": "images/laptop_case/eco_suede/018_back.jpg",
+                "inside": "images/laptop_case/eco_suede/018_inside.jpg",
+                "under_flap": "images/laptop_case/eco_suede/018_under_flap.jpg"
+              }
+            },
+            {
+              "id": "020",
+              "name": "Снежный барс",
+              "image": "images/fabric/new_models_20261006/eco_suede/020.jpg",
+              "preview_image": "images/laptop_case/eco_suede/020_front_strip.jpg",
+              "previews": {
+                "front_strip": "images/laptop_case/eco_suede/020_front_strip.jpg",
+                "back": "images/laptop_case/eco_suede/020_back.jpg",
+                "inside": "images/laptop_case/eco_suede/020_inside.jpg",
+                "under_flap": "images/laptop_case/eco_suede/020_under_flap.jpg"
+              }
+            },
+            {
+              "id": "022",
+              "name": "Фисташка",
+              "image": "images/fabric/new_models_20261006/eco_suede/022.jpg",
+              "preview_image": "images/laptop_case/eco_suede/022_front_strip.jpg",
+              "previews": {
+                "front_strip": "images/laptop_case/eco_suede/022_front_strip.jpg",
+                "back": "images/laptop_case/eco_suede/022_back.jpg",
+                "inside": "images/laptop_case/eco_suede/022_inside.jpg",
+                "under_flap": "images/laptop_case/eco_suede/022_under_flap.jpg"
+              }
+            }
+          ]
+        }
+      ],
+      "image": "images/laptop_case/jeans/001_front_strip.jpg"
     }
   ]
 }
