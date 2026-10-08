@@ -106,7 +106,7 @@
   <button class="btn btn-primary" id="btn-next">Далее →</button>
 </footer>
 
-<!-- Динамическая загрузка styles.css и app.js с обходом кэша -->
+<!-- Динамическая загрузка стилей и скриптов с обходом кэша -->
 <script>
   var V = Date.now();
 
@@ -115,9 +115,20 @@
   css.href = 'styles.css?v=keyboard_20261005_064039_406697_' + V;
   document.head.appendChild(css);
 
-  var js = document.createElement('script');
-  js.src = 'app.js?v=bags_20261006_preview_' + V;
-  document.body.appendChild(js);
+  function loadApp() {
+    var js = document.createElement('script');
+    js.src = 'app.js?v=image_layout_20261008_' + V;
+    document.body.appendChild(js);
+  }
+
+  var layoutScript = document.createElement('script');
+  layoutScript.src = 'image-layout.js?v=image_layout_20261008_' + V;
+  layoutScript.onload = loadApp;
+  layoutScript.onerror = function () {
+    console.warn('Механизм настройки фотографий не загружен; используются прежние стили');
+    loadApp();
+  };
+  document.body.appendChild(layoutScript);
 </script>
 
 </body>

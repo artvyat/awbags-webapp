@@ -239,6 +239,10 @@ function renderCategories() {
 
 // ===== Рендер каталога =====
 function renderCatalog() {
+  // Освобождаем наблюдатели рамок перед сменой категории каталога.
+  el.catalogGrid.querySelectorAll('.catalog-photo img').forEach(img => {
+    window.AWBagsImageLayout?.reset(img);
+  });
   el.catalogGrid.innerHTML = '';
 
   const items = state.category === 'all'
@@ -277,6 +281,11 @@ function renderCatalog() {
       openConstructor(item);
     });
     el.catalogGrid.appendChild(card);
+    const photo = card.querySelector('.catalog-photo');
+    window.AWBagsImageLayout?.apply(photo.querySelector('img'), photo, {
+      model: item.id,
+      stage: 'catalog',
+    });
   });
 }
 
@@ -540,6 +549,25 @@ function updatePreview() {
   const _m = state.material || '';
   el.preview  && el.preview.closest('.preview-frame')  && (el.preview.closest('.preview-frame').setAttribute('data-zone', _z), el.preview.closest('.preview-frame').setAttribute('data-material', _m));
   el.preview2 && el.preview2.closest('.preview-frame') && (el.preview2.closest('.preview-frame').setAttribute('data-zone', _z), el.preview2.closest('.preview-frame').setAttribute('data-material', _m));
+  // Цвет намеренно не передаётся: правила общие для всех цветов модели.
+  const imageContext = {
+    model: state.item.id,
+    size: state.size,
+    material: state.material,
+  };
+  if (el.preview && el.preview.closest('.preview-frame')) {
+    window.AWBagsImageLayout?.apply(el.preview, el.preview.closest('.preview-frame'), {
+      ...imageContext,
+      stage: 'bag',
+    });
+  }
+  if (el.preview2 && el.preview2.closest('.preview-frame')) {
+    window.AWBagsImageLayout?.apply(el.preview2, el.preview2.closest('.preview-frame'), {
+      ...imageContext,
+      stage: 'embroidery',
+      zone: state.zone,
+    });
+  }
 }
 
 // Фоновая предзагрузка превью соседних зон — переключение без задержки
@@ -694,6 +722,14 @@ el.back.addEventListener('click', () => {
 async function init() {
   await loadThreadColors();
   await loadCatalog();
+  // Если механизм или JSON недоступен, оставляем прежние стили витрины.
+  if (window.AWBagsImageLayout) {
+    try {
+      await window.AWBagsImageLayout.load('image-layout.json?v=' + Date.now());
+    } catch (err) {
+      console.warn('Настройки фотографий не загружены; используются прежние стили', err);
+    }
+  }
 
   renderCategories();
   renderCatalog();
