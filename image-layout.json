@@ -13,7 +13,7 @@
     { "model": "beauty_shell", "stage": "bag", "placement": { "scale": 1.84, "x": 0, "y": -7.788944723618091, "rotation": 0 } },
     { "model": "big_beauty_bag", "stage": "bag", "placement": { "scale": 1.65, "x": -0.8968609865470853, "y": -24.87437185929648, "rotation": 0 } },
     { "model": "beauty_dyson", "stage": "bag", "placement": { "scale": 1.78, "x": -0.8968609865470852, "y": -1.507537688442211, "rotation": 0 } },
-    { "model": "phone_case", "stage": "bag", "placement": { "scale": 1.71, "x": 0, "y": 0, "rotation": 180 } },
+    { "model": "phone_case", "stage": "bag", "placement": { "scale": 1.71, "x": 0, "y": 0, "rotation": 0 } },
     { "model": "laptop_case_xs", "stage": "bag", "placement": { "scale": 1.62, "x": 0.22421524663677128, "y": -16.08040201005025, "rotation": 0 } },
     { "model": "laptop_case", "stage": "bag", "placement": { "scale": 1.53, "x": 1.1210762331838566, "y": -6.28140703517588, "rotation": 0 } },
     { "model": "laptop_case", "stage": "bag", "material": "eco_suede", "placement": { "scale": 1.53, "x": 1.1210762331838566, "y": -6.28140703517588, "rotation": 0 } },
