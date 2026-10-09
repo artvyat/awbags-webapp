@@ -6,49 +6,95 @@
 <title>Правила бренда — Around The World</title>
 <style>
   :root {
-    --accent: #E8A5A5;
-    --bg:   var(--tg-theme-bg-color, #ffffff);
-    --text: var(--tg-theme-text-color, #1b1b1b);
-    --soft: var(--tg-theme-hint-color, #8a8a8a);
-    --card: var(--tg-theme-secondary-bg-color, #f6f5f7);
-    --line: var(--tg-theme-section-separator-color, #e6e4e8);
+    --bg: #FFFFFF;
+    --text-soft: #8B6F5C;
+    --heading: #5C3B1E;
+    --info-size: 13px;
+    --title-size: 20px;
+    --section-title-size: 14px;
+    --app-maxw: 480px;
+    --page-padding: 16px;
+    --section-gap: 24px;
+    --paragraph-gap: 10px;
+    --btn-size: 15px;
+    --btn-padv: 12px;
+    --btn-padh: 22px;
   }
   * { box-sizing: border-box; }
   html, body { margin: 0; padding: 0; }
   body {
-    background: var(--bg); color: var(--text);
-    font: 15px/1.55 -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
-    padding: 18px 16px calc(18px + env(safe-area-inset-bottom));
+    background: var(--bg); color: var(--text-soft);
+    font-family: 'Inter', -apple-system, BlinkMacSystemFont, sans-serif;
+    font-size: var(--info-size);
+    line-height: 1.5;
+    padding: var(--page-padding) var(--page-padding) calc(var(--section-gap) + env(safe-area-inset-bottom));
     -webkit-text-size-adjust: 100%;
   }
-  .wrap { max-width: 640px; margin: 0 auto; }
-  h1 { font-size: 20px; line-height: 1.3; margin: 0 0 4px; }
-  .sub { color: var(--soft); font-size: 13px; margin: 0 0 18px; }
-  section {
-    background: var(--card); border: 1px solid var(--line);
-    border-radius: 14px; padding: 14px 16px; margin: 0 0 12px;
-  }
-  section h2 { font-size: 15px; margin: 0 0 8px; color: var(--accent); }
-  section p { margin: 0 0 8px; }
+  .wrap { max-width: var(--app-maxw); margin: 0 auto; }
+  h1 { font-size: var(--title-size); line-height: 1.3; margin: 0 0 4px; color: var(--heading); }
+  .sub { margin: 0 0 var(--section-gap); }
+  section { margin: 0 0 var(--section-gap); }
+  section h2 { font-size: var(--section-title-size); font-weight: 600; margin: 0 0 8px; color: var(--heading); }
+  section p { margin: 0 0 var(--paragraph-gap); }
   section p:last-child { margin-bottom: 0; }
-  .placeholder { color: var(--soft); font-style: italic; }
-  .actions { margin-top: 18px; text-align: center; }
+  .actions { margin-top: var(--section-gap); text-align: center; }
   button {
-    font: inherit; font-weight: 600; color: #fff; background: var(--accent);
-    border: 0; border-radius: 12px; padding: 12px 22px; cursor: pointer;
+    font: inherit; font-size: var(--btn-size); font-weight: 600; color: #fff; background: var(--heading);
+    border: 0; border-radius: 999px; padding: var(--btn-padv) var(--btn-padh); cursor: pointer;
   }
   button:active { transform: scale(0.97); }
 </style>
 </head>
 <body>
 <div class="wrap">
-  <h1>📋 Правила бренда</h1>
+  <h1>Правила бренда</h1>
   <p class="sub">Around The World · именная вышивка</p>
 
-  <!-- НАЧАЛО ТЕКСТА ПРАВИЛ — заменить на финальный текст -->
+  <!-- НАЧАЛО ТЕКСТА ПРАВИЛ -->
   <section>
-    <h2>Текст правил</h2>
-    <p class="placeholder">Здесь будет текст правил бренда.</p>
+    <h2>Ткань</h2>
+    <p>В зависимости от поставки ткани, цвет может отличаться на 1-2 тона.</p>
+    <p>Мы всегда стараемся предупреждать вас об этом, но просим всегда иметь это в виду.</p>
+    <p>Также просим обратить внимание, что цвет на картинке и в жизни тоже может незначительно отличаться из-за разницы в цветопередаче на фото.</p>
+  </section>
+
+  <section>
+    <h2>Погрешность пошива до 1 см</h2>
+    <p>По нормам пошива возможна погрешность до 1 см.</p>
+    <p>Так как каждая ткань после влажно-тепловой обработки ведет себя по-разному, ткань может дать усадку.</p>
+    <p>Это допустимая норма погрешности, которая никак не влияет на качество или удобство использования изделия.</p>
+  </section>
+
+  <section>
+    <h2>Вышивка</h2>
+    <p>Вышивки делаются по стандартным регламентам бренда Around the World.</p>
+    <p>Если вы хотите сделать вышивку определенного размера и параметров, пожалуйста, укажите высоту и ширину вышивки в сантиметрах перед оформлением заказа.</p>
+    <p>Менеджер по макетам оставляет за собой право перенести надпись вышивки в несколько строк, если она получается не читаемая (меньше 1,5 см в высоту).</p>
+  </section>
+
+  <section>
+    <h2>Перед оформлением заказа</h2>
+    <p>Пожалуйста, проверяйте заказ перед оформлением. Сразу после оформления и оплаты заказа, он передается в пошив.</p>
+    <p>Изделия изготавливаются по индивидуальным заказам, поэтому обмену и возврату не подлежат.</p>
+    <p>Надеемся на ваше понимание!</p>
+  </section>
+
+  <section>
+    <h2>Окрашивание</h2>
+    <p>При тестировании ткани на производстве не было выявлено заметного окрашивания, но есть вероятность, что некоторые оттенки ткани могут незначительно окрашивать светлые вещи *</p>
+  </section>
+
+  <section>
+    <h2>Цвет ткани</h2>
+    <p>Ткань из разных партий может отличаться на 1 тон (быть более темной или наоборот более светлой).</p>
+    <p>Цвета уточняйте у менеджеров при оформлении заказа.</p>
+  </section>
+
+  <section>
+    <h2>Изменения в заказе</h2>
+    <p>Изменения в заказ можно внести только один раз в течение 5 календарных дней с даты оформления заказа.*</p>
+    <p>* В случае, если заказ не находится на таком этапе пошива, после которого изменения внести невозможно.</p>
+    <p>Надеемся на ваше понимание!</p>
   </section>
   <!-- КОНЕЦ ТЕКСТА ПРАВИЛ -->
 
