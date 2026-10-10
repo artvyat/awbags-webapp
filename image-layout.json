@@ -44,6 +44,10 @@
     { "model": "laptop_case", "stage": "embroidery", "material": "eco_suede", "zone": "front_strip", "placement": { "scale": 1.49, "x": 0.2242152466367714, "y": -7.751937984496123, "rotation": 0 } },
     { "model": "laptop_case", "stage": "embroidery", "material": "eco_suede", "zone": "back", "placement": { "scale": 1.56, "x": 0.44843049327354256, "y": -5.03875968992248, "rotation": 0 } },
     { "model": "laptop_case", "stage": "embroidery", "material": "eco_suede", "zone": "inside", "placement": { "scale": 1.59, "x": -0.672645739910314, "y": 3.10077519379845, "rotation": 90 } },
-    { "model": "laptop_case", "stage": "embroidery", "material": "eco_suede", "zone": "under_flap", "placement": { "scale": 1.03, "x": 0, "y": 12.790697674418604, "rotation": 0 } }
+    { "model": "laptop_case", "stage": "embroidery", "material": "eco_suede", "zone": "under_flap", "placement": { "scale": 1.03, "x": 0, "y": 12.790697674418604, "rotation": 0 } },
+    { "model": "style", "stage": "bag", "size": "standard", "placement": { "scale": 1.62, "x": -0.2808988764044944, "y": 1.256281407035176, "rotation": 0 } },
+    { "model": "style", "stage": "embroidery", "size": "standard", "zone": "front_pocket", "placement": { "scale": 1.59, "x": -0.8426966292134831, "y": 2.3255813953488373, "rotation": 0 } },
+    { "model": "style", "stage": "embroidery", "size": "standard", "zone": "back", "placement": { "scale": 1.59, "x": 0.8426966292134838, "y": 2.3255813953488373, "rotation": 0 } },
+    { "model": "style", "stage": "embroidery", "size": "standard", "zone": "side_round", "placement": { "scale": 1.46, "x": 2.247191011235955, "y": 1.1627906976744187, "rotation": 0 } }
   ]
 }

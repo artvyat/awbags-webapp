@@ -633,12 +633,12 @@
                   "perspective": false,
                   "limits": {
                     "normal": {
-                      "max_chars_per_line": 11,
-                      "max_lines": 3
+                      "max_chars_per_line": 13,
+                      "max_lines": 4
                     },
                     "caps": {
-                      "max_chars_per_line": 7,
-                      "max_lines": 3
+                      "max_chars_per_line": 9,
+                      "max_lines": 5
                     }
                   }
                 },
@@ -652,12 +652,12 @@
                   "perspective": false,
                   "limits": {
                     "normal": {
-                      "max_chars_per_line": 11,
-                      "max_lines": 3
+                      "max_chars_per_line": 13,
+                      "max_lines": 4
                     },
                     "caps": {
-                      "max_chars_per_line": 7,
-                      "max_lines": 3
+                      "max_chars_per_line": 9,
+                      "max_lines": 5
                     }
                   }
                 },
@@ -671,12 +671,12 @@
                   "perspective": true,
                   "limits": {
                     "normal": {
-                      "max_chars_per_line": 10,
+                      "max_chars_per_line": 13,
                       "max_lines": 4
                     },
                     "caps": {
-                      "max_chars_per_line": 7,
-                      "max_lines": 3
+                      "max_chars_per_line": 9,
+                      "max_lines": 5
                     }
                   }
                 }
@@ -897,6 +897,66 @@
                     "back": "images/style/standard/black_back.jpg",
                     "side_round": "images/style/standard/black_side.jpg"
                   }
+                },
+                {
+                  "id": "mint",
+                  "name": "Мятный",
+                  "variant_id": "eco_suede_mint_front_pocket",
+                  "image": "images/suede/mint.jpg",
+                  "preview_image": "images/style/standard_added_20261010/eco_suede_mint_front_pocket.jpg",
+                  "previews": {
+                    "front_pocket": "images/style/standard_added_20261010/eco_suede_mint_front_pocket.jpg",
+                    "back": "images/style/standard_added_20261010/eco_suede_mint_back.jpg",
+                    "side_round": "images/style/standard_added_20261010/eco_suede_mint_side_round.jpg"
+                  }
+                },
+                {
+                  "id": "brown_leopard",
+                  "name": "Коричневый леопард",
+                  "variant_id": "eco_suede_brown_leopard_front_pocket",
+                  "image": "images/style/standard_added_20261010/eco_suede_brown_leopard_front_pocket.jpg",
+                  "preview_image": "images/style/standard_added_20261010/eco_suede_brown_leopard_front_pocket.jpg",
+                  "previews": {
+                    "front_pocket": "images/style/standard_added_20261010/eco_suede_brown_leopard_front_pocket.jpg",
+                    "back": "images/style/standard_added_20261010/eco_suede_brown_leopard_back.jpg",
+                    "side_round": "images/style/standard_added_20261010/eco_suede_brown_leopard_side_round.jpg"
+                  }
+                },
+                {
+                  "id": "snow_leopard",
+                  "name": "Снежный барс",
+                  "variant_id": "eco_suede_snow_leopard_front_pocket",
+                  "image": "images/fabric/suede/snow_leopard.jpg",
+                  "preview_image": "images/style/standard_added_20261010/eco_suede_snow_leopard_front_pocket.jpg",
+                  "previews": {
+                    "front_pocket": "images/style/standard_added_20261010/eco_suede_snow_leopard_front_pocket.jpg",
+                    "back": "images/style/standard_added_20261010/eco_suede_snow_leopard_back.jpg",
+                    "side_round": "images/style/standard_added_20261010/eco_suede_snow_leopard_side_round.jpg"
+                  }
+                },
+                {
+                  "id": "garnet",
+                  "name": "Гранат",
+                  "variant_id": "eco_suede_garnet_front_pocket",
+                  "image": "images/style/standard_added_20261010/eco_suede_garnet_front_pocket.jpg",
+                  "preview_image": "images/style/standard_added_20261010/eco_suede_garnet_front_pocket.jpg",
+                  "previews": {
+                    "front_pocket": "images/style/standard_added_20261010/eco_suede_garnet_front_pocket.jpg",
+                    "back": "images/style/standard_added_20261010/eco_suede_garnet_back.jpg",
+                    "side_round": "images/style/standard_added_20261010/eco_suede_garnet_side_round.jpg"
+                  }
+                },
+                {
+                  "id": "sky_blue",
+                  "name": "Небесно-голубой",
+                  "variant_id": "eco_suede_sky_blue_front_pocket",
+                  "image": "images/style/standard_added_20261010/eco_suede_sky_blue_front_pocket.jpg",
+                  "preview_image": "images/style/standard_added_20261010/eco_suede_sky_blue_front_pocket.jpg",
+                  "previews": {
+                    "front_pocket": "images/style/standard_added_20261010/eco_suede_sky_blue_front_pocket.jpg",
+                    "back": "images/style/standard_added_20261010/eco_suede_sky_blue_back.jpg",
+                    "side_round": "images/style/standard_added_20261010/eco_suede_sky_blue_side_round.jpg"
+                  }
                 }
               ]
             },
@@ -918,7 +978,11 @@
                   "enabled": true,
                   "available": true,
                   "default": true,
-                  "perspective": false
+                  "perspective": false,
+                  "limits": {
+                    "normal": {"max_chars_per_line": 13, "max_lines": 4},
+                    "caps": {"max_chars_per_line": 9, "max_lines": 5}
+                  }
                 },
                 {
                   "id": "back",
@@ -927,7 +991,11 @@
                   "enabled": true,
                   "available": true,
                   "default": false,
-                  "perspective": false
+                  "perspective": false,
+                  "limits": {
+                    "normal": {"max_chars_per_line": 13, "max_lines": 4},
+                    "caps": {"max_chars_per_line": 9, "max_lines": 5}
+                  }
                 },
                 {
                   "id": "side_round",
@@ -936,7 +1004,11 @@
                   "enabled": true,
                   "available": true,
                   "default": false,
-                  "perspective": false
+                  "perspective": false,
+                  "limits": {
+                    "normal": {"max_chars_per_line": 13, "max_lines": 4},
+                    "caps": {"max_chars_per_line": 9, "max_lines": 5}
+                  }
                 }
               ],
               "colors": [
@@ -1094,6 +1166,30 @@
                     "front_pocket": "images/style/standard_jeans_suede_size/jeans_chocolate_front_pocket.jpg",
                     "back": "images/style/standard_jeans_suede_size/jeans_chocolate_back.jpg",
                     "side_round": "images/style/standard_jeans_suede_size/jeans_chocolate_side_round.jpg"
+                  }
+                },
+                {
+                  "id": "denim",
+                  "name": "Джинса",
+                  "variant_id": "jeans_denim_front_pocket",
+                  "image": "images/style/standard_added_20261010/jeans_denim_front_pocket.jpg",
+                  "preview_image": "images/style/standard_added_20261010/jeans_denim_front_pocket.jpg",
+                  "previews": {
+                    "front_pocket": "images/style/standard_added_20261010/jeans_denim_front_pocket.jpg",
+                    "back": "images/style/standard_added_20261010/jeans_denim_back.jpg",
+                    "side_round": "images/style/standard_added_20261010/jeans_denim_side_round.jpg"
+                  }
+                },
+                {
+                  "id": "leopard",
+                  "name": "Леопард",
+                  "variant_id": "jeans_leopard_front_pocket",
+                  "image": "images/style/standard_added_20261010/jeans_leopard_front_pocket.jpg",
+                  "preview_image": "images/style/standard_added_20261010/jeans_leopard_front_pocket.jpg",
+                  "previews": {
+                    "front_pocket": "images/style/standard_added_20261010/jeans_leopard_front_pocket.jpg",
+                    "back": "images/style/standard_added_20261010/jeans_leopard_back.jpg",
+                    "side_round": "images/style/standard_added_20261010/jeans_leopard_side_round.jpg"
                   }
                 }
               ]
