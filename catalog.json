@@ -94,6 +94,7 @@
                 },
                 {
                   "id": "light_blue",
+                  "available": false,
                   "name": "Голубая",
                   "variant_id": "eco_suede_light_blue_front_pocket",
                   "image": "images/fabric/suede/light_blue.jpg",
@@ -238,6 +239,7 @@
                 },
                 {
                   "id": "mint",
+                  "available": false,
                   "name": "Мятная",
                   "variant_id": "eco_suede_mint_front_pocket",
                   "image": "images/suede/mint.jpg",
@@ -365,6 +367,7 @@
               "colors": [
                 {
                   "id": "gray",
+                  "available": false,
                   "name": "Серый",
                   "variant_id": "jeans_gray_front",
                   "image": "images/jeans/gray.jpg",
@@ -389,6 +392,7 @@
                 },
                 {
                   "id": "graphite",
+                  "available": false,
                   "name": "Графит",
                   "variant_id": "jeans_graphite_front",
                   "image": "images/jeans/graphite.jpg",
@@ -437,6 +441,7 @@
                 },
                 {
                   "id": "lavender",
+                  "available": false,
                   "name": "Лавандовый",
                   "variant_id": "jeans_lavender_front",
                   "image": "images/fabric/jeans/lavender.jpg",
@@ -497,6 +502,7 @@
                 },
                 {
                   "id": "cappuccino",
+                  "available": false,
                   "name": "Капучино",
                   "variant_id": "jeans_cappuccino_front",
                   "image": "images/jeans/cappuccino.jpg",
@@ -696,6 +702,7 @@
                 },
                 {
                   "id": "light_blue",
+                  "available": false,
                   "name": "Голубой",
                   "variant_id": "eco_suede_light_blue_front_pocket",
                   "image": "images/fabric/suede/light_blue.jpg",
@@ -792,6 +799,7 @@
                 },
                 {
                   "id": "milk",
+                  "available": false,
                   "name": "Молочный",
                   "variant_id": "eco_suede_milk_front_pocket",
                   "image": "images/fabric/travel/001.jpg",
@@ -900,6 +908,7 @@
                 },
                 {
                   "id": "mint",
+                  "available": false,
                   "name": "Мятный",
                   "variant_id": "eco_suede_mint_front_pocket",
                   "image": "images/suede/mint.jpg",
@@ -1026,6 +1035,7 @@
                 },
                 {
                   "id": "graphite",
+                  "available": false,
                   "name": "Графит",
                   "variant_id": "jeans_graphite_front_pocket",
                   "image": "images/jeans/graphite.jpg",
@@ -1050,6 +1060,7 @@
                 },
                 {
                   "id": "cappuccino",
+                  "available": false,
                   "name": "Капучино",
                   "variant_id": "jeans_cappuccino_front_pocket",
                   "image": "images/jeans/cappuccino.jpg",
@@ -1062,6 +1073,7 @@
                 },
                 {
                   "id": "lavender",
+                  "available": false,
                   "name": "Лавандовый",
                   "variant_id": "jeans_lavender_front_pocket",
                   "image": "images/fabric/jeans/lavender.jpg",
@@ -1122,6 +1134,7 @@
                 },
                 {
                   "id": "gray",
+                  "available": false,
                   "name": "Серый",
                   "variant_id": "jeans_gray_front_pocket",
                   "image": "images/jeans/gray.jpg",
@@ -1182,6 +1195,7 @@
                 },
                 {
                   "id": "leopard",
+                  "available": false,
                   "name": "Леопард",
                   "variant_id": "jeans_leopard_front_pocket",
                   "image": "images/style/standard_added_20261010/jeans_leopard_front_pocket.jpg",
@@ -1264,6 +1278,7 @@
               "colors": [
                 {
                   "id": "001",
+                  "available": false,
                   "name": "Молочный",
                   "previews": {
                     "front_pocket": "images/travel/suede_big/001.jpg",
@@ -1304,6 +1319,7 @@
                 },
                 {
                   "id": "005",
+                  "available": false,
                   "name": "Голубой",
                   "previews": {
                     "front_pocket": "images/travel/suede_big/005.jpg",
@@ -1424,6 +1440,7 @@
                 },
                 {
                   "id": "017",
+                  "available": false,
                   "name": "Мятный",
                   "previews": {
                     "front_pocket": "images/travel/suede_big/017.jpg",
@@ -1581,6 +1598,7 @@
               "colors": [
                 {
                   "id": "001",
+                  "available": false,
                   "name": "Молочный",
                   "previews": {
                     "front_pocket": "images/travel/suede_big_l/001.jpg",
@@ -1621,6 +1639,7 @@
                 },
                 {
                   "id": "005",
+                  "available": false,
                   "name": "Голубой",
                   "previews": {
                     "front_pocket": "images/travel/suede_big_l/005.jpg",
@@ -1961,6 +1980,7 @@
           "colors": [
             {
               "id": "001",
+              "available": false,
               "name": "Серый",
               "image": "images/fabric/new_models_20261006/jeans/001.jpg",
               "preview_image": "images/backpack/jeans/001_front_pocket.jpg",
@@ -1997,6 +2017,7 @@
             },
             {
               "id": "004",
+              "available": false,
               "name": "Графитовый",
               "image": "images/fabric/new_models_20261006/jeans/004.jpg",
               "preview_image": "images/backpack/jeans/004_front_pocket.jpg",
@@ -2045,6 +2066,7 @@
             },
             {
               "id": "008",
+              "available": false,
               "name": "Лавандовый",
               "image": "images/fabric/new_models_20261006/jeans/008.jpg",
               "preview_image": "images/backpack/jeans/008_front_pocket.jpg",
@@ -2105,6 +2127,7 @@
             },
             {
               "id": "013",
+              "available": false,
               "name": "Капучино",
               "image": "images/fabric/new_models_20261006/jeans/013.jpg",
               "preview_image": "images/backpack/jeans/013_front_pocket.jpg",
@@ -2237,6 +2260,7 @@
           "colors": [
             {
               "id": "001",
+              "available": false,
               "name": "Молочный",
               "image": "images/fabric/new_models_20261006/eco_suede/001.jpg",
               "preview_image": "images/backpack/eco_suede/001_front_pocket.jpg",
@@ -2285,6 +2309,7 @@
             },
             {
               "id": "005",
+              "available": false,
               "name": "Голубой",
               "image": "images/fabric/new_models_20261006/eco_suede/005.jpg",
               "preview_image": "images/backpack/eco_suede/005_front_pocket.jpg",
@@ -2429,6 +2454,7 @@
             },
             {
               "id": "017",
+              "available": false,
               "name": "Мятный",
               "image": "images/fabric/new_models_20261006/eco_suede/017.jpg",
               "preview_image": "images/backpack/eco_suede/017_front_pocket.jpg",
@@ -2511,6 +2537,7 @@
           "colors": [
             {
               "id": "001",
+              "available": false,
               "name": "Серый",
               "image": "images/fabric/new_models_20261006/jeans/001.jpg",
               "preview_image": "images/moon_bag/jeans/001_overview.jpg",
@@ -2538,6 +2565,7 @@
             },
             {
               "id": "004",
+              "available": false,
               "name": "Графит",
               "image": "images/fabric/new_models_20261006/jeans/004.jpg",
               "preview_image": "images/moon_bag/jeans/004_overview.jpg",
@@ -2574,6 +2602,7 @@
             },
             {
               "id": "008",
+              "available": false,
               "name": "Лаванда",
               "image": "images/fabric/new_models_20261006/jeans/008.jpg",
               "preview_image": "images/moon_bag/jeans/008_overview.jpg",
@@ -2619,6 +2648,7 @@
             },
             {
               "id": "013",
+              "available": false,
               "name": "Капучино",
               "image": "images/fabric/new_models_20261006/jeans/013.jpg",
               "preview_image": "images/moon_bag/jeans/013_overview.jpg",
@@ -2722,6 +2752,7 @@
           "colors": [
             {
               "id": "001",
+              "available": false,
               "name": "Серая",
               "image": "images/fabric/new_models_20261006/jeans/001.jpg",
               "preview_image": "images/beauty_shell/jeans/001_back.jpg",
@@ -2782,6 +2813,7 @@
             },
             {
               "id": "008",
+              "available": false,
               "name": "Лавандовая",
               "image": "images/fabric/new_models_20261006/jeans/008.jpg",
               "preview_image": "images/beauty_shell/jeans/008_back.jpg",
@@ -2832,6 +2864,7 @@
             },
             {
               "id": "013",
+              "available": false,
               "name": "Капучино",
               "image": "images/fabric/new_models_20261006/jeans/013.jpg",
               "preview_image": "images/beauty_shell/jeans/013_back.jpg",
@@ -2936,6 +2969,7 @@
             },
             {
               "id": "005",
+              "available": false,
               "name": "Голубой",
               "image": "images/fabric/new_models_20261006/eco_suede/005.jpg",
               "preview_image": "images/beauty_shell/eco_suede/005_back.jpg",
@@ -3102,6 +3136,7 @@
           "colors": [
             {
               "id": "001",
+              "available": false,
               "name": "Серая",
               "image": "images/fabric/new_models_20261006/jeans/001.jpg",
               "preview_image": "images/big_beauty_bag/jeans/001_overview.jpg",
@@ -3122,6 +3157,7 @@
             },
             {
               "id": "004",
+              "available": false,
               "name": "Графитовая",
               "image": "images/fabric/new_models_20261006/jeans/004.jpg",
               "preview_image": "images/big_beauty_bag/jeans/004_overview.jpg",
@@ -3162,6 +3198,7 @@
             },
             {
               "id": "008",
+              "available": false,
               "name": "Лавандовая",
               "image": "images/fabric/new_models_20261006/jeans/008.jpg",
               "preview_image": "images/big_beauty_bag/jeans/008_overview.jpg",
@@ -3212,6 +3249,7 @@
             },
             {
               "id": "013",
+              "available": false,
               "name": "Капучино",
               "image": "images/fabric/new_models_20261006/jeans/013.jpg",
               "preview_image": "images/big_beauty_bag/jeans/013_overview.jpg",
@@ -3276,6 +3314,7 @@
           "colors": [
             {
               "id": "001",
+              "available": false,
               "name": "Молочная",
               "image": "images/fabric/new_models_20261006/eco_suede/001.jpg",
               "preview_image": "images/big_beauty_bag/eco_suede/001_overview.jpg",
@@ -3316,6 +3355,7 @@
             },
             {
               "id": "005",
+              "available": false,
               "name": "Голубая",
               "image": "images/fabric/new_models_20261006/eco_suede/005.jpg",
               "preview_image": "images/big_beauty_bag/eco_suede/005_overview.jpg",
@@ -3426,6 +3466,7 @@
             },
             {
               "id": "017",
+              "available": false,
               "name": "Мятная",
               "image": "images/fabric/new_models_20261006/eco_suede/017.jpg",
               "preview_image": "images/big_beauty_bag/eco_suede/017_overview.jpg",
@@ -3491,6 +3532,7 @@
           "colors": [
             {
               "id": "001",
+              "available": false,
               "name": "Серая",
               "image": "images/fabric/new_models_20261006/jeans/001.jpg",
               "preview_image": "images/beauty_dyson/jeans/001_front.jpg",
@@ -3509,6 +3551,7 @@
             },
             {
               "id": "004",
+              "available": false,
               "name": "Графитовая",
               "image": "images/fabric/new_models_20261006/jeans/004.jpg",
               "preview_image": "images/beauty_dyson/jeans/004_front.jpg",
@@ -3545,6 +3588,7 @@
             },
             {
               "id": "008",
+              "available": false,
               "name": "Лавандовая",
               "image": "images/fabric/new_models_20261006/jeans/008.jpg",
               "preview_image": "images/beauty_dyson/jeans/008_front.jpg",
@@ -3572,6 +3616,7 @@
             },
             {
               "id": "013",
+              "available": false,
               "name": "Капучино",
               "image": "images/fabric/new_models_20261006/jeans/013.jpg",
               "preview_image": "images/beauty_dyson/jeans/013_front.jpg",
@@ -3614,6 +3659,7 @@
           "colors": [
             {
               "id": "001",
+              "available": false,
               "name": "Молочная",
               "image": "images/fabric/new_models_20261006/eco_suede/001.jpg",
               "preview_image": "images/beauty_dyson/eco_suede/001_front.jpg",
@@ -3650,6 +3696,7 @@
             },
             {
               "id": "005",
+              "available": false,
               "name": "Голубая",
               "image": "images/fabric/new_models_20261006/eco_suede/005.jpg",
               "preview_image": "images/beauty_dyson/eco_suede/005_front.jpg",
@@ -3749,6 +3796,7 @@
             },
             {
               "id": "017",
+              "available": false,
               "name": "Мятная",
               "image": "images/fabric/new_models_20261006/eco_suede/017.jpg",
               "preview_image": "images/beauty_dyson/eco_suede/017_front.jpg",
@@ -3885,6 +3933,7 @@
           "colors": [
             {
               "id": "001",
+              "available": false,
               "name": "Серая",
               "image": "images/fabric/new_models_20261006/jeans/001.jpg",
               "preview_image": "images/phone_case/jeans/001_under_flap.jpg",
@@ -3945,6 +3994,7 @@
             },
             {
               "id": "008",
+              "available": false,
               "name": "Лавандовая",
               "image": "images/fabric/new_models_20261006/jeans/008.jpg",
               "preview_image": "images/phone_case/jeans/008_under_flap.jpg",
@@ -3993,6 +4043,7 @@
             },
             {
               "id": "013",
+              "available": false,
               "name": "Капучино",
               "image": "images/fabric/new_models_20261006/jeans/013.jpg",
               "preview_image": "images/phone_case/jeans/013_under_flap.jpg",
@@ -4101,6 +4152,7 @@
           "colors": [
             {
               "id": "001",
+              "available": false,
               "name": "Молочный",
               "image": "images/fabric/new_models_20261006/eco_suede/001.jpg",
               "preview_image": "images/phone_case/eco_suede/001_under_flap.jpg",
@@ -4149,6 +4201,7 @@
             },
             {
               "id": "005",
+              "available": false,
               "name": "Голубой",
               "image": "images/fabric/new_models_20261006/eco_suede/005.jpg",
               "preview_image": "images/phone_case/eco_suede/005_under_flap.jpg",
@@ -4293,6 +4346,7 @@
             },
             {
               "id": "017",
+              "available": false,
               "name": "Мятный",
               "image": "images/fabric/new_models_20261006/eco_suede/017.jpg",
               "preview_image": "images/phone_case/eco_suede/017_under_flap.jpg",
@@ -4474,6 +4528,7 @@
             },
             {
               "id": "004",
+              "available": false,
               "name": "Графитовая",
               "image": "images/fabric/new_models_20261006/jeans/004.jpg",
               "preview_image": "images/laptop_case_xs/jeans/004_front_strip.jpg",
@@ -4522,6 +4577,7 @@
             },
             {
               "id": "008",
+              "available": false,
               "name": "Лавандовая",
               "image": "images/fabric/new_models_20261006/jeans/008.jpg",
               "preview_image": "images/laptop_case_xs/jeans/008_front_strip.jpg",
@@ -4570,6 +4626,7 @@
             },
             {
               "id": "013",
+              "available": false,
               "name": "Капучино",
               "image": "images/fabric/new_models_20261006/jeans/013.jpg",
               "preview_image": "images/laptop_case_xs/jeans/013_front_strip.jpg",
@@ -4702,6 +4759,7 @@
           "colors": [
             {
               "id": "001",
+              "available": false,
               "name": "Серая",
               "image": "images/fabric/new_models_20261006/jeans/001.jpg",
               "preview_image": "images/laptop_case/jeans/001_front_strip.jpg",
@@ -4738,6 +4796,7 @@
             },
             {
               "id": "004",
+              "available": false,
               "name": "Графитовая",
               "image": "images/fabric/new_models_20261006/jeans/004.jpg",
               "preview_image": "images/laptop_case/jeans/004_front_strip.jpg",
@@ -4786,6 +4845,7 @@
             },
             {
               "id": "008",
+              "available": false,
               "name": "Лавандовая",
               "image": "images/fabric/new_models_20261006/jeans/008.jpg",
               "preview_image": "images/laptop_case/jeans/008_front_strip.jpg",
@@ -4846,6 +4906,7 @@
             },
             {
               "id": "013",
+              "available": false,
               "name": "Капучино",
               "image": "images/fabric/new_models_20261006/jeans/013.jpg",
               "preview_image": "images/laptop_case/jeans/013_front_strip.jpg",
@@ -4966,6 +5027,7 @@
           "colors": [
             {
               "id": "001",
+              "available": false,
               "name": "Молочная",
               "image": "images/fabric/new_models_20261006/eco_suede/001.jpg",
               "preview_image": "images/laptop_case/eco_suede/001_front_strip.jpg",
@@ -5014,6 +5076,7 @@
             },
             {
               "id": "005",
+              "available": false,
               "name": "Голубая",
               "image": "images/fabric/new_models_20261006/eco_suede/005.jpg",
               "preview_image": "images/laptop_case/eco_suede/005_front_strip.jpg",
@@ -5158,6 +5221,7 @@
             },
             {
               "id": "017",
+              "available": false,
               "name": "Мятная",
               "image": "images/fabric/new_models_20261006/eco_suede/017.jpg",
               "preview_image": "images/laptop_case/eco_suede/017_front_strip.jpg",

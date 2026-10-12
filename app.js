@@ -122,7 +122,8 @@ function currentMaterial() {
 
 function currentColors() {
   const mat = currentMaterial();
-  return (mat && Array.isArray(mat.colors)) ? mat.colors : [];
+  const colors = (mat && Array.isArray(mat.colors)) ? mat.colors : [];
+  return colors.filter(c => c.available !== false);
 }
 
 function currentColor() {
