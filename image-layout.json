@@ -54,6 +54,8 @@
     { "model": "phone_case", "stage": "catalog", "placement": { "scale": 1.09, "x": 0, "y": 0, "rotation": 0 } },
     { "model": "phone_case", "stage": "bag", "placement": { "scale": 1.06, "x": 0, "y": 0, "rotation": 0 } },
     { "model": "phone_case", "stage": "embroidery", "zone": "under_flap", "placement": { "scale": 1.18, "x": 0, "y": 0, "rotation": 0 } },
-    { "model": "laptop_case_xs", "stage": "bag", "placement": { "scale": 1.37, "x": 0.22421524663677128, "y": -16.08040201005025, "rotation": 0 } }
+    { "model": "laptop_case_xs", "stage": "bag", "placement": { "scale": 1.37, "x": 0.22421524663677128, "y": -16.08040201005025, "rotation": 0 } },
+    { "model": "travel_bag", "stage": "embroidery", "size": "m", "zone": "trolley", "placement": { "scale": 1.46, "x": -1.1235955056179776, "y": -0.3875968992248062, "rotation": 0 } },
+    { "model": "travel_bag", "stage": "embroidery", "size": "l", "zone": "trolley", "placement": { "scale": 1.4, "x": -0.5617977528089888, "y": -10.465116279069766, "rotation": 0 } }
   ]
 }
