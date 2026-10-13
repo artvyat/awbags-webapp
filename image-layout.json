@@ -1,6 +1,17 @@
 {
   "version": 1,
   "entries": [
+    { "model": "style", "stage": "catalog", "placement": { "scale": 1.5, "x": 0, "y": 0, "rotation": 0 } },
+    { "model": "moon_bag", "stage": "catalog", "placement": { "scale": 1.5, "x": 0, "y": 0, "rotation": 0 } },
+    { "model": "travel_bag", "stage": "catalog", "placement": { "scale": 1.5, "x": 0, "y": 0, "rotation": 0 } },
+    { "model": "style", "stage": "bag", "size": "mini", "placement": { "scale": 1.62, "x": 0, "y": 0, "rotation": 0 } },
+    { "model": "travel_bag", "stage": "bag", "placement": { "scale": 1.5, "x": 0, "y": 0, "rotation": 0 } },
+    { "model": "style", "stage": "embroidery", "size": "mini", "zone": "front_pocket", "placement": { "scale": 1.59, "x": 0, "y": 0, "rotation": 0 } },
+    { "model": "style", "stage": "embroidery", "size": "mini", "zone": "back", "placement": { "scale": 1.59, "x": 0, "y": 0, "rotation": 0 } },
+    { "model": "style", "stage": "embroidery", "size": "mini", "zone": "side_round", "placement": { "scale": 1.46, "x": 0, "y": 0, "rotation": 0 } },
+    { "model": "style", "stage": "embroidery", "size": "mini", "zone": "inside", "placement": { "scale": 1.4, "x": 0, "y": 0, "rotation": 0 } },
+    { "model": "travel_bag", "stage": "embroidery", "zone": "front_pocket", "placement": { "scale": 1.5, "x": 0, "y": 0, "rotation": 0 } },
+    { "model": "travel_bag", "stage": "embroidery", "zone": "trolley", "placement": { "scale": 1.5, "x": 0, "y": 0, "rotation": 0 } },
     { "model": "backpack", "stage": "catalog", "placement": { "scale": 1.99, "x": 2.5584795321637426, "y": -8.187134502923977, "rotation": 0 } },
     { "model": "beauty_shell", "stage": "catalog", "placement": { "scale": 2.18, "x": 1.851851851851852, "y": -7.87037037037037, "rotation": 0 } },
     { "model": "big_beauty_bag", "stage": "catalog", "placement": { "scale": 1.65, "x": 0.9259259259259258, "y": -10.648148148148149, "rotation": 0 } },
