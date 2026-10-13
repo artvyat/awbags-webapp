@@ -266,7 +266,7 @@
                   "id": "pistachio",
                   "name": "Фисташковая",
                   "variant_id": "eco_suede_pistachio_front_pocket",
-                  "image": "images/suede/pistachio.jpg",
+                  "image": "images/fabric/suede/pistachio.jpg",
                   "preview_image": "images/suede_big/pistachio.jpg",
                   "previews": {
                     "front_pocket": "images/suede_big/pistachio.jpg",
@@ -1486,7 +1486,7 @@
                     "front_pocket": "images/travel/suede_big/022.jpg",
                     "trolley": "images/travel/suede_big/022_trolley.jpg"
                   },
-                  "image": "images/fabric/travel/022.jpg",
+                  "image": "images/fabric/suede/pistachio.jpg",
                   "preview_image": "images/travel/suede_big/022.jpg"
                 },
                 {
@@ -1805,7 +1805,7 @@
                     "front_pocket": "images/travel/suede_big_l/022.jpg",
                     "trolley": "images/travel/suede_big_l/022_trolley.jpg"
                   },
-                  "image": "images/fabric/travel/022.jpg",
+                  "image": "images/fabric/suede/pistachio.jpg",
                   "preview_image": "images/travel/suede_big_l/022.jpg"
                 },
                 {
@@ -2480,7 +2480,7 @@
             {
               "id": "022",
               "name": "Фисташка",
-              "image": "images/fabric/new_models_20261006/eco_suede/022.jpg",
+              "image": "images/fabric/suede/pistachio.jpg",
               "preview_image": "images/backpack/eco_suede/022_front_pocket.jpg",
               "previews": {
                 "front_pocket": "images/backpack/eco_suede/022_front_pocket.jpg",
@@ -3061,7 +3061,7 @@
             {
               "id": "022",
               "name": "Фисташковый",
-              "image": "images/fabric/new_models_20261006/eco_suede/022.jpg",
+              "image": "images/fabric/suede/pistachio.jpg",
               "preview_image": "images/beauty_shell/eco_suede/022_back.jpg",
               "previews": {
                 "back": "images/beauty_shell/eco_suede/022_back.jpg",
@@ -3816,7 +3816,7 @@
             {
               "id": "022",
               "name": "Фисташка",
-              "image": "images/fabric/new_models_20261006/eco_suede/022.jpg",
+              "image": "images/fabric/suede/pistachio.jpg",
               "preview_image": "images/beauty_dyson/eco_suede/022_front.jpg",
               "previews": {
                 "front": "images/beauty_dyson/eco_suede/022_front.jpg"
@@ -4384,7 +4384,7 @@
             {
               "id": "022",
               "name": "Фисташковый",
-              "image": "images/fabric/new_models_20261006/eco_suede/022.jpg",
+              "image": "images/fabric/suede/pistachio.jpg",
               "preview_image": "images/phone_case/eco_suede/022_under_flap.jpg",
               "previews": {
                 "under_flap": "images/phone_case/eco_suede/022_under_flap.jpg",
@@ -5259,7 +5259,7 @@
             {
               "id": "022",
               "name": "Фисташка",
-              "image": "images/fabric/new_models_20261006/eco_suede/022.jpg",
+              "image": "images/fabric/suede/pistachio.jpg",
               "preview_image": "images/laptop_case/eco_suede/022_front_strip.jpg",
               "previews": {
                 "front_strip": "images/laptop_case/eco_suede/022_front_strip.jpg",
