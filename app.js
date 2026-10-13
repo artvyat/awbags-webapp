@@ -697,6 +697,11 @@ function submit() {
 
 // ===== Навигация =====
 el.next.addEventListener('click', () => {
+  // Клавиатура открыта (поле в фокусе) — кнопка «ОК» просто закрывает её.
+  if (state.step === 2 && document.activeElement === el.text) {
+    el.text.blur();
+    return;
+  }
   if (state.step === 1) {
     showStep(2);
     return;
@@ -1099,10 +1104,18 @@ document.addEventListener('DOMContentLoaded', () => setTimeout(zlBind, 0));
 
   function onFocus() {
     cancelPending();
+    // Пока поле в фокусе (клавиатура открыта) — кнопка внизу = «ОК».
+    if (el.next) el.next.textContent = 'ОК';
     // iOS opens the keyboard asynchronously; recheck after animation.
     timers = [0, 180, 400, 750].map(
       delay => setTimeout(revealField, delay)
     );
+  }
+
+  function onBlur() {
+    cancelPending();
+    // Клавиатура закрыта — вернуть «Готово ✓»/«Далее →».
+    if (el.next) el.next.textContent = state.step === 2 ? 'Готово ✓' : 'Далее →';
   }
 
   function onResize() {
@@ -1112,7 +1125,7 @@ document.addEventListener('DOMContentLoaded', () => setTimeout(zlBind, 0));
   }
 
   field.addEventListener('focus', onFocus);
-  field.addEventListener('blur', cancelPending);
+  field.addEventListener('blur', onBlur);
   window.addEventListener('resize', onResize, { passive: true });
   if (viewport) {
     viewport.addEventListener('resize', onResize, { passive: true });
