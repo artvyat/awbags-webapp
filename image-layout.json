@@ -756,6 +756,84 @@
         "y": 3.7688442211055264,
         "rotation": 0
       }
+    },
+    {
+      "model": "vogue_bag",
+      "stage": "embroidery",
+      "size": "s",
+      "material": "eco_suede",
+      "zone": "inside",
+      "placement": {
+        "scale": 1.68,
+        "x": 0.8426966292134831,
+        "y": -4.651162790697675,
+        "rotation": 0
+      }
+    },
+    {
+      "model": "vogue_bag",
+      "stage": "embroidery",
+      "size": "s",
+      "material": "jeans",
+      "zone": "inside",
+      "placement": {
+        "scale": 1.9,
+        "x": 0,
+        "y": -3.10077519379845,
+        "rotation": 0
+      }
+    },
+    {
+      "model": "vogue_bag",
+      "stage": "embroidery",
+      "size": "m",
+      "material": "eco_suede",
+      "zone": "inside",
+      "placement": {
+        "scale": 1.68,
+        "x": 0,
+        "y": -8.527131782945736,
+        "rotation": 0
+      }
+    },
+    {
+      "model": "vogue_bag",
+      "stage": "embroidery",
+      "size": "m",
+      "material": "jeans",
+      "zone": "inside",
+      "placement": {
+        "scale": 1.71,
+        "x": -0.2808988764044944,
+        "y": -6.2015503875969,
+        "rotation": 0
+      }
+    },
+    {
+      "model": "vogue_bag",
+      "stage": "embroidery",
+      "size": "l",
+      "material": "eco_suede",
+      "zone": "inside",
+      "placement": {
+        "scale": 1.74,
+        "x": 0,
+        "y": 0,
+        "rotation": 0
+      }
+    },
+    {
+      "model": "vogue_bag",
+      "stage": "embroidery",
+      "size": "l",
+      "material": "jeans",
+      "zone": "inside",
+      "placement": {
+        "scale": 1.81,
+        "x": -0.2808988764044944,
+        "y": -5.038759689922481,
+        "rotation": 0
+      }
     }
   ]
 }
