@@ -5290,6 +5290,1951 @@
         }
       ],
       "image": "images/laptop_case/jeans/001_front_strip.jpg"
+    },
+    {
+      "id": "vogue_bag",
+      "categories": [
+        "everyday",
+        "mini",
+        "travel"
+      ],
+      "title": "Vogue Bag",
+      "subtitle": "",
+      "price": "от 11 400 ₽",
+      "image": "images/vogue/l_jeans/cappuccino.jpg",
+      "sizes": [
+        {
+          "id": "s",
+          "name": "S",
+          "default": true,
+          "materials": [
+            {
+              "id": "eco_suede",
+              "name": "Эко-замша",
+              "bag_id": "vogue_bag_s_suede",
+              "variant_prefix": "eco_suede",
+              "zone_suffix": {
+                "outside_s": "outside_s",
+                "outside_m": "outside_m",
+                "outside_l": "outside_l",
+                "inside": "inside"
+              },
+              "zones": [
+                {
+                  "id": "outside_s",
+                  "name": "Снаружи на кусочке ткани",
+                  "order": 1,
+                  "enabled": true,
+                  "available": true,
+                  "default": true,
+                  "perspective": false,
+                  "limits": {
+                    "normal": {
+                      "max_chars_per_line": 13,
+                      "max_lines": 3
+                    },
+                    "caps": {
+                      "max_chars_per_line": 9,
+                      "max_lines": 3
+                    }
+                  },
+                  "frames": [
+                    {
+                      "id": "outside_s",
+                      "max_lines": 1
+                    },
+                    {
+                      "id": "outside_m",
+                      "max_lines": 2
+                    },
+                    {
+                      "id": "outside_l"
+                    }
+                  ],
+                  "_note": "рамка подбирается автоматически по числу строк: 1 строка -> outside_s (маленькая нашивка), 2 -> outside_m, 3 и более -> outside_l; клиент видит одну зону"
+                },
+                {
+                  "id": "outside_m",
+                  "name": "Снаружи на кусочке ткани 02",
+                  "order": 1,
+                  "enabled": false,
+                  "available": false,
+                  "default": false,
+                  "perspective": false,
+                  "limits": {
+                    "normal": {
+                      "max_chars_per_line": 13,
+                      "max_lines": 3
+                    },
+                    "caps": {
+                      "max_chars_per_line": 9,
+                      "max_lines": 3
+                    }
+                  }
+                },
+                {
+                  "id": "outside_l",
+                  "name": "Снаружи на кусочке ткани 03",
+                  "order": 1,
+                  "enabled": false,
+                  "available": false,
+                  "default": false,
+                  "perspective": false,
+                  "limits": {
+                    "normal": {
+                      "max_chars_per_line": 13,
+                      "max_lines": 3
+                    },
+                    "caps": {
+                      "max_chars_per_line": 9,
+                      "max_lines": 3
+                    }
+                  }
+                },
+                {
+                  "id": "inside",
+                  "name": "Внутри на обтачке",
+                  "order": 2,
+                  "enabled": true,
+                  "available": true,
+                  "default": false,
+                  "perspective": false,
+                  "limits": {
+                    "normal": {
+                      "max_chars_per_line": 22,
+                      "max_lines": 5
+                    },
+                    "caps": {
+                      "max_chars_per_line": 15,
+                      "max_lines": 4
+                    }
+                  }
+                }
+              ],
+              "colors": [
+                {
+                  "id": "pistachio",
+                  "name": "Фисташковая",
+                  "available": true,
+                  "image": "images/fabric/suede/pistachio.jpg",
+                  "preview_image": "images/vogue/s_suede/pistachio.jpg",
+                  "previews": {
+                    "outside_s": "images/vogue/s_suede/pistachio.jpg",
+                    "outside_m": "images/vogue/s_suede/pistachio.jpg",
+                    "outside_l": "images/vogue/s_suede/pistachio.jpg",
+                    "inside": "images/vogue/s_suede/pistachio_inside.jpg"
+                  }
+                },
+                {
+                  "id": "beige",
+                  "name": "Бежевая",
+                  "available": true,
+                  "image": "images/fabric/suede/beige.jpg",
+                  "preview_image": "images/vogue/s_suede/beige.jpg",
+                  "previews": {
+                    "outside_s": "images/vogue/s_suede/beige.jpg",
+                    "outside_m": "images/vogue/s_suede/beige.jpg",
+                    "outside_l": "images/vogue/s_suede/beige.jpg",
+                    "inside": "images/vogue/s_suede/beige_inside.jpg"
+                  }
+                },
+                {
+                  "id": "light_blue",
+                  "name": "Голубая",
+                  "available": false,
+                  "image": "images/fabric/suede/light_blue.jpg",
+                  "preview_image": "images/vogue/s_suede/light_blue.jpg",
+                  "previews": {
+                    "outside_s": "images/vogue/s_suede/light_blue.jpg",
+                    "outside_m": "images/vogue/s_suede/light_blue.jpg",
+                    "outside_l": "images/vogue/s_suede/light_blue.jpg",
+                    "inside": "images/vogue/s_suede/light_blue_inside.jpg"
+                  }
+                },
+                {
+                  "id": "graphite",
+                  "name": "Графит",
+                  "available": true,
+                  "image": "images/fabric/suede/graphite.jpg",
+                  "preview_image": "images/vogue/s_suede/graphite.jpg",
+                  "previews": {
+                    "outside_s": "images/vogue/s_suede/graphite.jpg",
+                    "outside_m": "images/vogue/s_suede/graphite.jpg",
+                    "outside_l": "images/vogue/s_suede/graphite.jpg",
+                    "inside": "images/vogue/s_suede/graphite_inside.jpg"
+                  }
+                },
+                {
+                  "id": "cappuccino",
+                  "name": "Капучино",
+                  "available": true,
+                  "image": "images/fabric/suede/cappuccino.jpg",
+                  "preview_image": "images/vogue/s_suede/cappuccino.jpg",
+                  "previews": {
+                    "outside_s": "images/vogue/s_suede/cappuccino.jpg",
+                    "outside_m": "images/vogue/s_suede/cappuccino.jpg",
+                    "outside_l": "images/vogue/s_suede/cappuccino.jpg",
+                    "inside": "images/vogue/s_suede/cappuccino_inside.jpg"
+                  }
+                },
+                {
+                  "id": "brown",
+                  "name": "Коричневая",
+                  "available": true,
+                  "image": "images/fabric/suede/brown.jpg",
+                  "preview_image": "images/vogue/s_suede/brown.jpg",
+                  "previews": {
+                    "outside_s": "images/vogue/s_suede/brown.jpg",
+                    "outside_m": "images/vogue/s_suede/brown.jpg",
+                    "outside_l": "images/vogue/s_suede/brown.jpg",
+                    "inside": "images/vogue/s_suede/brown_inside.jpg"
+                  }
+                },
+                {
+                  "id": "lavender",
+                  "name": "Лавандовая",
+                  "available": true,
+                  "image": "images/fabric/suede/lavender.jpg",
+                  "preview_image": "images/vogue/s_suede/lavender.jpg",
+                  "previews": {
+                    "outside_s": "images/vogue/s_suede/lavender.jpg",
+                    "outside_m": "images/vogue/s_suede/lavender.jpg",
+                    "outside_l": "images/vogue/s_suede/lavender.jpg",
+                    "inside": "images/vogue/s_suede/lavender_inside.jpg"
+                  }
+                },
+                {
+                  "id": "lemon",
+                  "name": "Лимонная",
+                  "available": true,
+                  "image": "images/fabric/suede/lemon.jpg",
+                  "preview_image": "images/vogue/s_suede/lemon.jpg",
+                  "previews": {
+                    "outside_s": "images/vogue/s_suede/lemon.jpg",
+                    "outside_m": "images/vogue/s_suede/lemon.jpg",
+                    "outside_l": "images/vogue/s_suede/lemon.jpg",
+                    "inside": "images/vogue/s_suede/lemon_inside.jpg"
+                  }
+                },
+                {
+                  "id": "raspberry",
+                  "name": "Малиновая",
+                  "available": true,
+                  "image": "images/fabric/suede/raspberry.jpg",
+                  "preview_image": "images/vogue/s_suede/raspberry.jpg",
+                  "previews": {
+                    "outside_s": "images/vogue/s_suede/raspberry.jpg",
+                    "outside_m": "images/vogue/s_suede/raspberry.jpg",
+                    "outside_l": "images/vogue/s_suede/raspberry.jpg",
+                    "inside": "images/vogue/s_suede/raspberry_inside.jpg"
+                  }
+                },
+                {
+                  "id": "milk",
+                  "name": "Молочный",
+                  "available": false,
+                  "image": "images/fabric/suede/milk.jpg",
+                  "preview_image": "images/vogue/s_suede/milk.jpg",
+                  "previews": {
+                    "outside_s": "images/vogue/s_suede/milk.jpg",
+                    "outside_m": "images/vogue/s_suede/milk.jpg",
+                    "outside_l": "images/vogue/s_suede/milk.jpg",
+                    "inside": "images/vogue/s_suede/milk_inside.jpg"
+                  }
+                },
+                {
+                  "id": "sand",
+                  "name": "Песочная",
+                  "available": true,
+                  "image": "images/fabric/suede/sand.jpg",
+                  "preview_image": "images/vogue/s_suede/sand.jpg",
+                  "previews": {
+                    "outside_s": "images/vogue/s_suede/sand.jpg",
+                    "outside_m": "images/vogue/s_suede/sand.jpg",
+                    "outside_l": "images/vogue/s_suede/sand.jpg",
+                    "inside": "images/vogue/s_suede/sand_inside.jpg"
+                  }
+                },
+                {
+                  "id": "powder",
+                  "name": "Пудровая",
+                  "available": true,
+                  "image": "images/fabric/suede/powder.jpg",
+                  "preview_image": "images/vogue/s_suede/powder.jpg",
+                  "previews": {
+                    "outside_s": "images/vogue/s_suede/powder.jpg",
+                    "outside_m": "images/vogue/s_suede/powder.jpg",
+                    "outside_l": "images/vogue/s_suede/powder.jpg",
+                    "inside": "images/vogue/s_suede/powder_inside.jpg"
+                  }
+                },
+                {
+                  "id": "pink",
+                  "name": "Розовая",
+                  "available": true,
+                  "image": "images/fabric/suede/pink.jpg",
+                  "preview_image": "images/vogue/s_suede/pink.jpg",
+                  "previews": {
+                    "outside_s": "images/vogue/s_suede/pink.jpg",
+                    "outside_m": "images/vogue/s_suede/pink.jpg",
+                    "outside_l": "images/vogue/s_suede/pink.jpg",
+                    "inside": "images/vogue/s_suede/pink_inside.jpg"
+                  }
+                },
+                {
+                  "id": "snow_leopard",
+                  "name": "Снежный барс",
+                  "available": true,
+                  "image": "images/fabric/suede/snow_leopard.jpg",
+                  "preview_image": "images/vogue/s_suede/snow_leopard.jpg",
+                  "previews": {
+                    "outside_s": "images/vogue/s_suede/snow_leopard.jpg",
+                    "outside_m": "images/vogue/s_suede/snow_leopard.jpg",
+                    "outside_l": "images/vogue/s_suede/snow_leopard.jpg",
+                    "inside": "images/vogue/s_suede/snow_leopard_inside.jpg"
+                  }
+                },
+                {
+                  "id": "gray",
+                  "name": "Серая",
+                  "available": true,
+                  "image": "images/fabric/suede/gray.jpg",
+                  "preview_image": "images/vogue/s_suede/gray.jpg",
+                  "previews": {
+                    "outside_s": "images/vogue/s_suede/gray.jpg",
+                    "outside_m": "images/vogue/s_suede/gray.jpg",
+                    "outside_l": "images/vogue/s_suede/gray.jpg",
+                    "inside": "images/vogue/s_suede/gray_inside.jpg"
+                  }
+                },
+                {
+                  "id": "blue",
+                  "name": "Синяя",
+                  "available": true,
+                  "image": "images/fabric/suede/blue.jpg",
+                  "preview_image": "images/vogue/s_suede/blue.jpg",
+                  "previews": {
+                    "outside_s": "images/vogue/s_suede/blue.jpg",
+                    "outside_m": "images/vogue/s_suede/blue.jpg",
+                    "outside_l": "images/vogue/s_suede/blue.jpg",
+                    "inside": "images/vogue/s_suede/blue_inside.jpg"
+                  }
+                },
+                {
+                  "id": "khaki",
+                  "name": "Хаки",
+                  "available": true,
+                  "image": "images/fabric/suede/khaki.jpg",
+                  "preview_image": "images/vogue/s_suede/khaki.jpg",
+                  "previews": {
+                    "outside_s": "images/vogue/s_suede/khaki.jpg",
+                    "outside_m": "images/vogue/s_suede/khaki.jpg",
+                    "outside_l": "images/vogue/s_suede/khaki.jpg",
+                    "inside": "images/vogue/s_suede/khaki_inside.jpg"
+                  }
+                },
+                {
+                  "id": "black",
+                  "name": "Черная",
+                  "available": true,
+                  "image": "images/fabric/suede/black.jpg",
+                  "preview_image": "images/vogue/s_suede/black.jpg",
+                  "previews": {
+                    "outside_s": "images/vogue/s_suede/black.jpg",
+                    "outside_m": "images/vogue/s_suede/black.jpg",
+                    "outside_l": "images/vogue/s_suede/black.jpg",
+                    "inside": "images/vogue/s_suede/black_inside.jpg"
+                  }
+                }
+              ]
+            },
+            {
+              "id": "jeans",
+              "name": "Джинса",
+              "bag_id": "vogue_bag_s_jeans",
+              "variant_prefix": "jeans",
+              "zone_suffix": {
+                "outside_s": "outside_s",
+                "outside_m": "outside_m",
+                "outside_l": "outside_l",
+                "inside": "inside"
+              },
+              "zones": [
+                {
+                  "id": "outside_s",
+                  "name": "Снаружи на кусочке ткани",
+                  "order": 1,
+                  "enabled": true,
+                  "available": true,
+                  "default": true,
+                  "perspective": false,
+                  "limits": {
+                    "normal": {
+                      "max_chars_per_line": 13,
+                      "max_lines": 3
+                    },
+                    "caps": {
+                      "max_chars_per_line": 9,
+                      "max_lines": 3
+                    }
+                  },
+                  "frames": [
+                    {
+                      "id": "outside_s",
+                      "max_lines": 1
+                    },
+                    {
+                      "id": "outside_m",
+                      "max_lines": 2
+                    },
+                    {
+                      "id": "outside_l"
+                    }
+                  ],
+                  "_note": "рамка подбирается автоматически по числу строк: 1 строка -> outside_s (маленькая нашивка), 2 -> outside_m, 3 и более -> outside_l; клиент видит одну зону"
+                },
+                {
+                  "id": "outside_m",
+                  "name": "Снаружи на кусочке ткани 02",
+                  "order": 1,
+                  "enabled": false,
+                  "available": false,
+                  "default": false,
+                  "perspective": false,
+                  "limits": {
+                    "normal": {
+                      "max_chars_per_line": 13,
+                      "max_lines": 3
+                    },
+                    "caps": {
+                      "max_chars_per_line": 9,
+                      "max_lines": 3
+                    }
+                  }
+                },
+                {
+                  "id": "outside_l",
+                  "name": "Снаружи на кусочке ткани 03",
+                  "order": 1,
+                  "enabled": false,
+                  "available": false,
+                  "default": false,
+                  "perspective": false,
+                  "limits": {
+                    "normal": {
+                      "max_chars_per_line": 13,
+                      "max_lines": 3
+                    },
+                    "caps": {
+                      "max_chars_per_line": 9,
+                      "max_lines": 3
+                    }
+                  }
+                },
+                {
+                  "id": "inside",
+                  "name": "Внутри на обтачке",
+                  "order": 2,
+                  "enabled": true,
+                  "available": true,
+                  "default": false,
+                  "perspective": false,
+                  "limits": {
+                    "normal": {
+                      "max_chars_per_line": 22,
+                      "max_lines": 5
+                    },
+                    "caps": {
+                      "max_chars_per_line": 15,
+                      "max_lines": 4
+                    }
+                  }
+                }
+              ],
+              "colors": [
+                {
+                  "id": "cream",
+                  "name": "Кремовый",
+                  "available": true,
+                  "image": "images/fabric/jeans/cream.jpg",
+                  "preview_image": "images/vogue/s_jeans/cream.jpg",
+                  "previews": {
+                    "outside_s": "images/vogue/s_jeans/cream.jpg",
+                    "outside_m": "images/vogue/s_jeans/cream.jpg",
+                    "outside_l": "images/vogue/s_jeans/cream.jpg",
+                    "inside": "images/vogue/s_jeans/cream_inside.jpg"
+                  }
+                },
+                {
+                  "id": "beige",
+                  "name": "Бежевый",
+                  "available": true,
+                  "image": "images/fabric/jeans/beige.jpg",
+                  "preview_image": "images/vogue/s_jeans/beige.jpg",
+                  "previews": {
+                    "outside_s": "images/vogue/s_jeans/beige.jpg",
+                    "outside_m": "images/vogue/s_jeans/beige.jpg",
+                    "outside_l": "images/vogue/s_jeans/beige.jpg",
+                    "inside": "images/vogue/s_jeans/beige_inside.jpg"
+                  }
+                },
+                {
+                  "id": "light_blue",
+                  "name": "Голубой",
+                  "available": false,
+                  "image": "images/fabric/jeans/light_blue.jpg",
+                  "preview_image": "images/vogue/s_jeans/light_blue.jpg",
+                  "previews": {
+                    "outside_s": "images/vogue/s_jeans/light_blue.jpg",
+                    "outside_m": "images/vogue/s_jeans/light_blue.jpg",
+                    "outside_l": "images/vogue/s_jeans/light_blue.jpg",
+                    "inside": "images/vogue/s_jeans/light_blue_inside.jpg"
+                  }
+                },
+                {
+                  "id": "graphite",
+                  "name": "Графит",
+                  "available": false,
+                  "image": "images/fabric/jeans/graphite.jpg",
+                  "preview_image": "images/vogue/s_jeans/graphite.jpg",
+                  "previews": {
+                    "outside_s": "images/vogue/s_jeans/graphite.jpg",
+                    "outside_m": "images/vogue/s_jeans/graphite.jpg",
+                    "outside_l": "images/vogue/s_jeans/graphite.jpg",
+                    "inside": "images/vogue/s_jeans/graphite_inside.jpg"
+                  }
+                },
+                {
+                  "id": "cappuccino",
+                  "name": "Капучино",
+                  "available": false,
+                  "image": "images/fabric/jeans/cappuccino.jpg",
+                  "preview_image": "images/vogue/s_jeans/cappuccino.jpg",
+                  "previews": {
+                    "outside_s": "images/vogue/s_jeans/cappuccino.jpg",
+                    "outside_m": "images/vogue/s_jeans/cappuccino.jpg",
+                    "outside_l": "images/vogue/s_jeans/cappuccino.jpg",
+                    "inside": "images/vogue/s_jeans/cappuccino_inside.jpg"
+                  }
+                },
+                {
+                  "id": "lavender",
+                  "name": "Лавандовый",
+                  "available": false,
+                  "image": "images/fabric/jeans/lavender.jpg",
+                  "preview_image": "images/vogue/s_jeans/lavender.jpg",
+                  "previews": {
+                    "outside_s": "images/vogue/s_jeans/lavender.jpg",
+                    "outside_m": "images/vogue/s_jeans/lavender.jpg",
+                    "outside_l": "images/vogue/s_jeans/lavender.jpg",
+                    "inside": "images/vogue/s_jeans/lavender_inside.jpg"
+                  }
+                },
+                {
+                  "id": "peach",
+                  "name": "Персиковый",
+                  "available": true,
+                  "image": "images/fabric/jeans/peach.jpg",
+                  "preview_image": "images/vogue/s_jeans/peach.jpg",
+                  "previews": {
+                    "outside_s": "images/vogue/s_jeans/peach.jpg",
+                    "outside_m": "images/vogue/s_jeans/peach.jpg",
+                    "outside_l": "images/vogue/s_jeans/peach.jpg",
+                    "inside": "images/vogue/s_jeans/peach_inside.jpg"
+                  }
+                },
+                {
+                  "id": "sand",
+                  "name": "Песочный",
+                  "available": true,
+                  "image": "images/fabric/jeans/sand.jpg",
+                  "preview_image": "images/vogue/s_jeans/sand.jpg",
+                  "previews": {
+                    "outside_s": "images/vogue/s_jeans/sand.jpg",
+                    "outside_m": "images/vogue/s_jeans/sand.jpg",
+                    "outside_l": "images/vogue/s_jeans/sand.jpg",
+                    "inside": "images/vogue/s_jeans/sand_inside.jpg"
+                  }
+                },
+                {
+                  "id": "powder",
+                  "name": "Пудровый",
+                  "available": true,
+                  "image": "images/fabric/jeans/powder.jpg",
+                  "preview_image": "images/vogue/s_jeans/powder.jpg",
+                  "previews": {
+                    "outside_s": "images/vogue/s_jeans/powder.jpg",
+                    "outside_m": "images/vogue/s_jeans/powder.jpg",
+                    "outside_l": "images/vogue/s_jeans/powder.jpg",
+                    "inside": "images/vogue/s_jeans/powder_inside.jpg"
+                  }
+                },
+                {
+                  "id": "pink",
+                  "name": "Розовый",
+                  "available": true,
+                  "image": "images/fabric/jeans/pink.jpg",
+                  "preview_image": "images/vogue/s_jeans/pink.jpg",
+                  "previews": {
+                    "outside_s": "images/vogue/s_jeans/pink.jpg",
+                    "outside_m": "images/vogue/s_jeans/pink.jpg",
+                    "outside_l": "images/vogue/s_jeans/pink.jpg",
+                    "inside": "images/vogue/s_jeans/pink_inside.jpg"
+                  }
+                },
+                {
+                  "id": "gray",
+                  "name": "Серый",
+                  "available": false,
+                  "image": "images/fabric/jeans/gray.jpg",
+                  "preview_image": "images/vogue/s_jeans/gray.jpg",
+                  "previews": {
+                    "outside_s": "images/vogue/s_jeans/gray.jpg",
+                    "outside_m": "images/vogue/s_jeans/gray.jpg",
+                    "outside_l": "images/vogue/s_jeans/gray.jpg",
+                    "inside": "images/vogue/s_jeans/gray_inside.jpg"
+                  }
+                },
+                {
+                  "id": "blue",
+                  "name": "Синий",
+                  "available": true,
+                  "image": "images/fabric/jeans/blue.jpg",
+                  "preview_image": "images/vogue/s_jeans/blue.jpg",
+                  "previews": {
+                    "outside_s": "images/vogue/s_jeans/blue.jpg",
+                    "outside_m": "images/vogue/s_jeans/blue.jpg",
+                    "outside_l": "images/vogue/s_jeans/blue.jpg",
+                    "inside": "images/vogue/s_jeans/blue_inside.jpg"
+                  }
+                },
+                {
+                  "id": "khaki",
+                  "name": "Хаки",
+                  "available": true,
+                  "image": "images/fabric/jeans/khaki.jpg",
+                  "preview_image": "images/vogue/s_jeans/khaki.jpg",
+                  "previews": {
+                    "outside_s": "images/vogue/s_jeans/khaki.jpg",
+                    "outside_m": "images/vogue/s_jeans/khaki.jpg",
+                    "outside_l": "images/vogue/s_jeans/khaki.jpg",
+                    "inside": "images/vogue/s_jeans/khaki_inside.jpg"
+                  }
+                },
+                {
+                  "id": "black",
+                  "name": "Чёрный",
+                  "available": true,
+                  "image": "images/fabric/jeans/black.jpg",
+                  "preview_image": "images/vogue/s_jeans/black.jpg",
+                  "previews": {
+                    "outside_s": "images/vogue/s_jeans/black.jpg",
+                    "outside_m": "images/vogue/s_jeans/black.jpg",
+                    "outside_l": "images/vogue/s_jeans/black.jpg",
+                    "inside": "images/vogue/s_jeans/black_inside.jpg"
+                  }
+                },
+                {
+                  "id": "chocolate",
+                  "name": "Шоколадный",
+                  "available": true,
+                  "image": "images/fabric/jeans/chocolate.jpg",
+                  "preview_image": "images/vogue/s_jeans/chocolate.jpg",
+                  "previews": {
+                    "outside_s": "images/vogue/s_jeans/chocolate.jpg",
+                    "outside_m": "images/vogue/s_jeans/chocolate.jpg",
+                    "outside_l": "images/vogue/s_jeans/chocolate.jpg",
+                    "inside": "images/vogue/s_jeans/chocolate_inside.jpg"
+                  }
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "id": "m",
+          "name": "M",
+          "default": false,
+          "materials": [
+            {
+              "id": "eco_suede",
+              "name": "Эко-замша",
+              "bag_id": "vogue_bag_m_suede",
+              "variant_prefix": "eco_suede",
+              "zone_suffix": {
+                "outside_s": "outside_s",
+                "outside_m": "outside_m",
+                "outside_l": "outside_l",
+                "inside": "inside"
+              },
+              "zones": [
+                {
+                  "id": "outside_s",
+                  "name": "Снаружи на кусочке ткани",
+                  "order": 1,
+                  "enabled": true,
+                  "available": true,
+                  "default": true,
+                  "perspective": false,
+                  "limits": {
+                    "normal": {
+                      "max_chars_per_line": 13,
+                      "max_lines": 3
+                    },
+                    "caps": {
+                      "max_chars_per_line": 9,
+                      "max_lines": 3
+                    }
+                  },
+                  "frames": [
+                    {
+                      "id": "outside_s",
+                      "max_lines": 1
+                    },
+                    {
+                      "id": "outside_m",
+                      "max_lines": 2
+                    },
+                    {
+                      "id": "outside_l"
+                    }
+                  ],
+                  "_note": "рамка подбирается автоматически по числу строк: 1 строка -> outside_s (маленькая нашивка), 2 -> outside_m, 3 и более -> outside_l; клиент видит одну зону"
+                },
+                {
+                  "id": "outside_m",
+                  "name": "Снаружи на кусочке ткани 02",
+                  "order": 1,
+                  "enabled": false,
+                  "available": false,
+                  "default": false,
+                  "perspective": false,
+                  "limits": {
+                    "normal": {
+                      "max_chars_per_line": 13,
+                      "max_lines": 3
+                    },
+                    "caps": {
+                      "max_chars_per_line": 9,
+                      "max_lines": 3
+                    }
+                  }
+                },
+                {
+                  "id": "outside_l",
+                  "name": "Снаружи на кусочке ткани 03",
+                  "order": 1,
+                  "enabled": false,
+                  "available": false,
+                  "default": false,
+                  "perspective": false,
+                  "limits": {
+                    "normal": {
+                      "max_chars_per_line": 13,
+                      "max_lines": 3
+                    },
+                    "caps": {
+                      "max_chars_per_line": 9,
+                      "max_lines": 3
+                    }
+                  }
+                },
+                {
+                  "id": "inside",
+                  "name": "Внутри на обтачке",
+                  "order": 2,
+                  "enabled": true,
+                  "available": true,
+                  "default": false,
+                  "perspective": false,
+                  "limits": {
+                    "normal": {
+                      "max_chars_per_line": 22,
+                      "max_lines": 5
+                    },
+                    "caps": {
+                      "max_chars_per_line": 15,
+                      "max_lines": 4
+                    }
+                  }
+                }
+              ],
+              "colors": [
+                {
+                  "id": "pistachio",
+                  "name": "Фисташковая",
+                  "available": true,
+                  "image": "images/fabric/suede/pistachio.jpg",
+                  "preview_image": "images/vogue/m_suede/pistachio.jpg",
+                  "previews": {
+                    "outside_s": "images/vogue/m_suede/pistachio.jpg",
+                    "outside_m": "images/vogue/m_suede/pistachio.jpg",
+                    "outside_l": "images/vogue/m_suede/pistachio.jpg",
+                    "inside": "images/vogue/m_suede/pistachio_inside.jpg"
+                  }
+                },
+                {
+                  "id": "beige",
+                  "name": "Бежевая",
+                  "available": true,
+                  "image": "images/fabric/suede/beige.jpg",
+                  "preview_image": "images/vogue/m_suede/beige.jpg",
+                  "previews": {
+                    "outside_s": "images/vogue/m_suede/beige.jpg",
+                    "outside_m": "images/vogue/m_suede/beige.jpg",
+                    "outside_l": "images/vogue/m_suede/beige.jpg",
+                    "inside": "images/vogue/m_suede/beige_inside.jpg"
+                  }
+                },
+                {
+                  "id": "light_blue",
+                  "name": "Голубая",
+                  "available": false,
+                  "image": "images/fabric/suede/light_blue.jpg",
+                  "preview_image": "images/vogue/m_suede/light_blue.jpg",
+                  "previews": {
+                    "outside_s": "images/vogue/m_suede/light_blue.jpg",
+                    "outside_m": "images/vogue/m_suede/light_blue.jpg",
+                    "outside_l": "images/vogue/m_suede/light_blue.jpg",
+                    "inside": "images/vogue/m_suede/light_blue_inside.jpg"
+                  }
+                },
+                {
+                  "id": "graphite",
+                  "name": "Графит",
+                  "available": true,
+                  "image": "images/fabric/suede/graphite.jpg",
+                  "preview_image": "images/vogue/m_suede/graphite.jpg",
+                  "previews": {
+                    "outside_s": "images/vogue/m_suede/graphite.jpg",
+                    "outside_m": "images/vogue/m_suede/graphite.jpg",
+                    "outside_l": "images/vogue/m_suede/graphite.jpg",
+                    "inside": "images/vogue/m_suede/graphite_inside.jpg"
+                  }
+                },
+                {
+                  "id": "cappuccino",
+                  "name": "Капучино",
+                  "available": true,
+                  "image": "images/fabric/suede/cappuccino.jpg",
+                  "preview_image": "images/vogue/m_suede/cappuccino.jpg",
+                  "previews": {
+                    "outside_s": "images/vogue/m_suede/cappuccino.jpg",
+                    "outside_m": "images/vogue/m_suede/cappuccino.jpg",
+                    "outside_l": "images/vogue/m_suede/cappuccino.jpg",
+                    "inside": "images/vogue/m_suede/cappuccino_inside.jpg"
+                  }
+                },
+                {
+                  "id": "brown",
+                  "name": "Коричневая",
+                  "available": true,
+                  "image": "images/fabric/suede/brown.jpg",
+                  "preview_image": "images/vogue/m_suede/brown.jpg",
+                  "previews": {
+                    "outside_s": "images/vogue/m_suede/brown.jpg",
+                    "outside_m": "images/vogue/m_suede/brown.jpg",
+                    "outside_l": "images/vogue/m_suede/brown.jpg",
+                    "inside": "images/vogue/m_suede/brown_inside.jpg"
+                  }
+                },
+                {
+                  "id": "lavender",
+                  "name": "Лавандовая",
+                  "available": true,
+                  "image": "images/fabric/suede/lavender.jpg",
+                  "preview_image": "images/vogue/m_suede/lavender.jpg",
+                  "previews": {
+                    "outside_s": "images/vogue/m_suede/lavender.jpg",
+                    "outside_m": "images/vogue/m_suede/lavender.jpg",
+                    "outside_l": "images/vogue/m_suede/lavender.jpg",
+                    "inside": "images/vogue/m_suede/lavender_inside.jpg"
+                  }
+                },
+                {
+                  "id": "lemon",
+                  "name": "Лимонная",
+                  "available": true,
+                  "image": "images/fabric/suede/lemon.jpg",
+                  "preview_image": "images/vogue/m_suede/lemon.jpg",
+                  "previews": {
+                    "outside_s": "images/vogue/m_suede/lemon.jpg",
+                    "outside_m": "images/vogue/m_suede/lemon.jpg",
+                    "outside_l": "images/vogue/m_suede/lemon.jpg",
+                    "inside": "images/vogue/m_suede/lemon_inside.jpg"
+                  }
+                },
+                {
+                  "id": "raspberry",
+                  "name": "Малиновая",
+                  "available": true,
+                  "image": "images/fabric/suede/raspberry.jpg",
+                  "preview_image": "images/vogue/m_suede/raspberry.jpg",
+                  "previews": {
+                    "outside_s": "images/vogue/m_suede/raspberry.jpg",
+                    "outside_m": "images/vogue/m_suede/raspberry.jpg",
+                    "outside_l": "images/vogue/m_suede/raspberry.jpg",
+                    "inside": "images/vogue/m_suede/raspberry_inside.jpg"
+                  }
+                },
+                {
+                  "id": "milk",
+                  "name": "Молочный",
+                  "available": false,
+                  "image": "images/fabric/suede/milk.jpg",
+                  "preview_image": "images/vogue/m_suede/milk.jpg",
+                  "previews": {
+                    "outside_s": "images/vogue/m_suede/milk.jpg",
+                    "outside_m": "images/vogue/m_suede/milk.jpg",
+                    "outside_l": "images/vogue/m_suede/milk.jpg",
+                    "inside": "images/vogue/m_suede/milk_inside.jpg"
+                  }
+                },
+                {
+                  "id": "sand",
+                  "name": "Песочная",
+                  "available": true,
+                  "image": "images/fabric/suede/sand.jpg",
+                  "preview_image": "images/vogue/m_suede/sand.jpg",
+                  "previews": {
+                    "outside_s": "images/vogue/m_suede/sand.jpg",
+                    "outside_m": "images/vogue/m_suede/sand.jpg",
+                    "outside_l": "images/vogue/m_suede/sand.jpg",
+                    "inside": "images/vogue/m_suede/sand_inside.jpg"
+                  }
+                },
+                {
+                  "id": "powder",
+                  "name": "Пудровая",
+                  "available": true,
+                  "image": "images/fabric/suede/powder.jpg",
+                  "preview_image": "images/vogue/m_suede/powder.jpg",
+                  "previews": {
+                    "outside_s": "images/vogue/m_suede/powder.jpg",
+                    "outside_m": "images/vogue/m_suede/powder.jpg",
+                    "outside_l": "images/vogue/m_suede/powder.jpg",
+                    "inside": "images/vogue/m_suede/powder_inside.jpg"
+                  }
+                },
+                {
+                  "id": "pink",
+                  "name": "Розовая",
+                  "available": true,
+                  "image": "images/fabric/suede/pink.jpg",
+                  "preview_image": "images/vogue/m_suede/pink.jpg",
+                  "previews": {
+                    "outside_s": "images/vogue/m_suede/pink.jpg",
+                    "outside_m": "images/vogue/m_suede/pink.jpg",
+                    "outside_l": "images/vogue/m_suede/pink.jpg",
+                    "inside": "images/vogue/m_suede/pink_inside.jpg"
+                  }
+                },
+                {
+                  "id": "snow_leopard",
+                  "name": "Снежный барс",
+                  "available": true,
+                  "image": "images/fabric/suede/snow_leopard.jpg",
+                  "preview_image": "images/vogue/m_suede/snow_leopard.jpg",
+                  "previews": {
+                    "outside_s": "images/vogue/m_suede/snow_leopard.jpg",
+                    "outside_m": "images/vogue/m_suede/snow_leopard.jpg",
+                    "outside_l": "images/vogue/m_suede/snow_leopard.jpg",
+                    "inside": "images/vogue/m_suede/snow_leopard_inside.jpg"
+                  }
+                },
+                {
+                  "id": "gray",
+                  "name": "Серая",
+                  "available": true,
+                  "image": "images/fabric/suede/gray.jpg",
+                  "preview_image": "images/vogue/m_suede/gray.jpg",
+                  "previews": {
+                    "outside_s": "images/vogue/m_suede/gray.jpg",
+                    "outside_m": "images/vogue/m_suede/gray.jpg",
+                    "outside_l": "images/vogue/m_suede/gray.jpg",
+                    "inside": "images/vogue/m_suede/gray_inside.jpg"
+                  }
+                },
+                {
+                  "id": "blue",
+                  "name": "Синяя",
+                  "available": true,
+                  "image": "images/fabric/suede/blue.jpg",
+                  "preview_image": "images/vogue/m_suede/blue.jpg",
+                  "previews": {
+                    "outside_s": "images/vogue/m_suede/blue.jpg",
+                    "outside_m": "images/vogue/m_suede/blue.jpg",
+                    "outside_l": "images/vogue/m_suede/blue.jpg",
+                    "inside": "images/vogue/m_suede/blue_inside.jpg"
+                  }
+                },
+                {
+                  "id": "khaki",
+                  "name": "Хаки",
+                  "available": true,
+                  "image": "images/fabric/suede/khaki.jpg",
+                  "preview_image": "images/vogue/m_suede/khaki.jpg",
+                  "previews": {
+                    "outside_s": "images/vogue/m_suede/khaki.jpg",
+                    "outside_m": "images/vogue/m_suede/khaki.jpg",
+                    "outside_l": "images/vogue/m_suede/khaki.jpg",
+                    "inside": "images/vogue/m_suede/khaki_inside.jpg"
+                  }
+                },
+                {
+                  "id": "black",
+                  "name": "Черная",
+                  "available": true,
+                  "image": "images/fabric/suede/black.jpg",
+                  "preview_image": "images/vogue/m_suede/black.jpg",
+                  "previews": {
+                    "outside_s": "images/vogue/m_suede/black.jpg",
+                    "outside_m": "images/vogue/m_suede/black.jpg",
+                    "outside_l": "images/vogue/m_suede/black.jpg",
+                    "inside": "images/vogue/m_suede/black_inside.jpg"
+                  }
+                }
+              ]
+            },
+            {
+              "id": "jeans",
+              "name": "Джинса",
+              "bag_id": "vogue_bag_m_jeans",
+              "variant_prefix": "jeans",
+              "zone_suffix": {
+                "outside_s": "outside_s",
+                "outside_m": "outside_m",
+                "outside_l": "outside_l",
+                "inside": "inside"
+              },
+              "zones": [
+                {
+                  "id": "outside_s",
+                  "name": "Снаружи на кусочке ткани",
+                  "order": 1,
+                  "enabled": true,
+                  "available": true,
+                  "default": true,
+                  "perspective": false,
+                  "limits": {
+                    "normal": {
+                      "max_chars_per_line": 13,
+                      "max_lines": 3
+                    },
+                    "caps": {
+                      "max_chars_per_line": 9,
+                      "max_lines": 3
+                    }
+                  },
+                  "frames": [
+                    {
+                      "id": "outside_s",
+                      "max_lines": 1
+                    },
+                    {
+                      "id": "outside_m",
+                      "max_lines": 2
+                    },
+                    {
+                      "id": "outside_l"
+                    }
+                  ],
+                  "_note": "рамка подбирается автоматически по числу строк: 1 строка -> outside_s (маленькая нашивка), 2 -> outside_m, 3 и более -> outside_l; клиент видит одну зону"
+                },
+                {
+                  "id": "outside_m",
+                  "name": "Снаружи на кусочке ткани 02",
+                  "order": 1,
+                  "enabled": false,
+                  "available": false,
+                  "default": false,
+                  "perspective": false,
+                  "limits": {
+                    "normal": {
+                      "max_chars_per_line": 13,
+                      "max_lines": 3
+                    },
+                    "caps": {
+                      "max_chars_per_line": 9,
+                      "max_lines": 3
+                    }
+                  }
+                },
+                {
+                  "id": "outside_l",
+                  "name": "Снаружи на кусочке ткани 03",
+                  "order": 1,
+                  "enabled": false,
+                  "available": false,
+                  "default": false,
+                  "perspective": false,
+                  "limits": {
+                    "normal": {
+                      "max_chars_per_line": 13,
+                      "max_lines": 3
+                    },
+                    "caps": {
+                      "max_chars_per_line": 9,
+                      "max_lines": 3
+                    }
+                  }
+                },
+                {
+                  "id": "inside",
+                  "name": "Внутри на обтачке",
+                  "order": 2,
+                  "enabled": true,
+                  "available": true,
+                  "default": false,
+                  "perspective": false,
+                  "limits": {
+                    "normal": {
+                      "max_chars_per_line": 22,
+                      "max_lines": 5
+                    },
+                    "caps": {
+                      "max_chars_per_line": 15,
+                      "max_lines": 4
+                    }
+                  }
+                }
+              ],
+              "colors": [
+                {
+                  "id": "cream",
+                  "name": "Кремовый",
+                  "available": true,
+                  "image": "images/fabric/jeans/cream.jpg",
+                  "preview_image": "images/vogue/m_jeans/cream.jpg",
+                  "previews": {
+                    "outside_s": "images/vogue/m_jeans/cream.jpg",
+                    "outside_m": "images/vogue/m_jeans/cream.jpg",
+                    "outside_l": "images/vogue/m_jeans/cream.jpg",
+                    "inside": "images/vogue/m_jeans/cream_inside.jpg"
+                  }
+                },
+                {
+                  "id": "beige",
+                  "name": "Бежевый",
+                  "available": true,
+                  "image": "images/fabric/jeans/beige.jpg",
+                  "preview_image": "images/vogue/m_jeans/beige.jpg",
+                  "previews": {
+                    "outside_s": "images/vogue/m_jeans/beige.jpg",
+                    "outside_m": "images/vogue/m_jeans/beige.jpg",
+                    "outside_l": "images/vogue/m_jeans/beige.jpg",
+                    "inside": "images/vogue/m_jeans/beige_inside.jpg"
+                  }
+                },
+                {
+                  "id": "light_blue",
+                  "name": "Голубой",
+                  "available": false,
+                  "image": "images/fabric/jeans/light_blue.jpg",
+                  "preview_image": "images/vogue/m_jeans/light_blue.jpg",
+                  "previews": {
+                    "outside_s": "images/vogue/m_jeans/light_blue.jpg",
+                    "outside_m": "images/vogue/m_jeans/light_blue.jpg",
+                    "outside_l": "images/vogue/m_jeans/light_blue.jpg",
+                    "inside": "images/vogue/m_jeans/light_blue_inside.jpg"
+                  }
+                },
+                {
+                  "id": "graphite",
+                  "name": "Графит",
+                  "available": false,
+                  "image": "images/fabric/jeans/graphite.jpg",
+                  "preview_image": "images/vogue/m_jeans/graphite.jpg",
+                  "previews": {
+                    "outside_s": "images/vogue/m_jeans/graphite.jpg",
+                    "outside_m": "images/vogue/m_jeans/graphite.jpg",
+                    "outside_l": "images/vogue/m_jeans/graphite.jpg",
+                    "inside": "images/vogue/m_jeans/graphite_inside.jpg"
+                  }
+                },
+                {
+                  "id": "cappuccino",
+                  "name": "Капучино",
+                  "available": false,
+                  "image": "images/fabric/jeans/cappuccino.jpg",
+                  "preview_image": "images/vogue/m_jeans/cappuccino.jpg",
+                  "previews": {
+                    "outside_s": "images/vogue/m_jeans/cappuccino.jpg",
+                    "outside_m": "images/vogue/m_jeans/cappuccino.jpg",
+                    "outside_l": "images/vogue/m_jeans/cappuccino.jpg",
+                    "inside": "images/vogue/m_jeans/cappuccino_inside.jpg"
+                  }
+                },
+                {
+                  "id": "lavender",
+                  "name": "Лавандовый",
+                  "available": false,
+                  "image": "images/fabric/jeans/lavender.jpg",
+                  "preview_image": "images/vogue/m_jeans/lavender.jpg",
+                  "previews": {
+                    "outside_s": "images/vogue/m_jeans/lavender.jpg",
+                    "outside_m": "images/vogue/m_jeans/lavender.jpg",
+                    "outside_l": "images/vogue/m_jeans/lavender.jpg",
+                    "inside": "images/vogue/m_jeans/lavender_inside.jpg"
+                  }
+                },
+                {
+                  "id": "peach",
+                  "name": "Персиковый",
+                  "available": true,
+                  "image": "images/fabric/jeans/peach.jpg",
+                  "preview_image": "images/vogue/m_jeans/peach.jpg",
+                  "previews": {
+                    "outside_s": "images/vogue/m_jeans/peach.jpg",
+                    "outside_m": "images/vogue/m_jeans/peach.jpg",
+                    "outside_l": "images/vogue/m_jeans/peach.jpg",
+                    "inside": "images/vogue/m_jeans/peach_inside.jpg"
+                  }
+                },
+                {
+                  "id": "sand",
+                  "name": "Песочный",
+                  "available": true,
+                  "image": "images/fabric/jeans/sand.jpg",
+                  "preview_image": "images/vogue/m_jeans/sand.jpg",
+                  "previews": {
+                    "outside_s": "images/vogue/m_jeans/sand.jpg",
+                    "outside_m": "images/vogue/m_jeans/sand.jpg",
+                    "outside_l": "images/vogue/m_jeans/sand.jpg",
+                    "inside": "images/vogue/m_jeans/sand_inside.jpg"
+                  }
+                },
+                {
+                  "id": "powder",
+                  "name": "Пудровый",
+                  "available": true,
+                  "image": "images/fabric/jeans/powder.jpg",
+                  "preview_image": "images/vogue/m_jeans/powder.jpg",
+                  "previews": {
+                    "outside_s": "images/vogue/m_jeans/powder.jpg",
+                    "outside_m": "images/vogue/m_jeans/powder.jpg",
+                    "outside_l": "images/vogue/m_jeans/powder.jpg",
+                    "inside": "images/vogue/m_jeans/powder_inside.jpg"
+                  }
+                },
+                {
+                  "id": "pink",
+                  "name": "Розовый",
+                  "available": true,
+                  "image": "images/fabric/jeans/pink.jpg",
+                  "preview_image": "images/vogue/m_jeans/pink.jpg",
+                  "previews": {
+                    "outside_s": "images/vogue/m_jeans/pink.jpg",
+                    "outside_m": "images/vogue/m_jeans/pink.jpg",
+                    "outside_l": "images/vogue/m_jeans/pink.jpg",
+                    "inside": "images/vogue/m_jeans/pink_inside.jpg"
+                  }
+                },
+                {
+                  "id": "gray",
+                  "name": "Серый",
+                  "available": false,
+                  "image": "images/fabric/jeans/gray.jpg",
+                  "preview_image": "images/vogue/m_jeans/gray.jpg",
+                  "previews": {
+                    "outside_s": "images/vogue/m_jeans/gray.jpg",
+                    "outside_m": "images/vogue/m_jeans/gray.jpg",
+                    "outside_l": "images/vogue/m_jeans/gray.jpg",
+                    "inside": "images/vogue/m_jeans/gray_inside.jpg"
+                  }
+                },
+                {
+                  "id": "blue",
+                  "name": "Синий",
+                  "available": true,
+                  "image": "images/fabric/jeans/blue.jpg",
+                  "preview_image": "images/vogue/m_jeans/blue.jpg",
+                  "previews": {
+                    "outside_s": "images/vogue/m_jeans/blue.jpg",
+                    "outside_m": "images/vogue/m_jeans/blue.jpg",
+                    "outside_l": "images/vogue/m_jeans/blue.jpg",
+                    "inside": "images/vogue/m_jeans/blue_inside.jpg"
+                  }
+                },
+                {
+                  "id": "khaki",
+                  "name": "Хаки",
+                  "available": true,
+                  "image": "images/fabric/jeans/khaki.jpg",
+                  "preview_image": "images/vogue/m_jeans/khaki.jpg",
+                  "previews": {
+                    "outside_s": "images/vogue/m_jeans/khaki.jpg",
+                    "outside_m": "images/vogue/m_jeans/khaki.jpg",
+                    "outside_l": "images/vogue/m_jeans/khaki.jpg",
+                    "inside": "images/vogue/m_jeans/khaki_inside.jpg"
+                  }
+                },
+                {
+                  "id": "black",
+                  "name": "Чёрный",
+                  "available": true,
+                  "image": "images/fabric/jeans/black.jpg",
+                  "preview_image": "images/vogue/m_jeans/black.jpg",
+                  "previews": {
+                    "outside_s": "images/vogue/m_jeans/black.jpg",
+                    "outside_m": "images/vogue/m_jeans/black.jpg",
+                    "outside_l": "images/vogue/m_jeans/black.jpg",
+                    "inside": "images/vogue/m_jeans/black_inside.jpg"
+                  }
+                },
+                {
+                  "id": "chocolate",
+                  "name": "Шоколадный",
+                  "available": true,
+                  "image": "images/fabric/jeans/chocolate.jpg",
+                  "preview_image": "images/vogue/m_jeans/chocolate.jpg",
+                  "previews": {
+                    "outside_s": "images/vogue/m_jeans/chocolate.jpg",
+                    "outside_m": "images/vogue/m_jeans/chocolate.jpg",
+                    "outside_l": "images/vogue/m_jeans/chocolate.jpg",
+                    "inside": "images/vogue/m_jeans/chocolate_inside.jpg"
+                  }
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "id": "l",
+          "name": "L",
+          "default": false,
+          "materials": [
+            {
+              "id": "eco_suede",
+              "name": "Эко-замша",
+              "bag_id": "vogue_bag_l_suede",
+              "variant_prefix": "eco_suede",
+              "zone_suffix": {
+                "outside_s": "outside_s",
+                "outside_m": "outside_m",
+                "outside_l": "outside_l",
+                "inside": "inside"
+              },
+              "zones": [
+                {
+                  "id": "outside_s",
+                  "name": "Снаружи на кусочке ткани",
+                  "order": 1,
+                  "enabled": true,
+                  "available": true,
+                  "default": true,
+                  "perspective": false,
+                  "limits": {
+                    "normal": {
+                      "max_chars_per_line": 13,
+                      "max_lines": 3
+                    },
+                    "caps": {
+                      "max_chars_per_line": 9,
+                      "max_lines": 3
+                    }
+                  },
+                  "frames": [
+                    {
+                      "id": "outside_s",
+                      "max_lines": 1
+                    },
+                    {
+                      "id": "outside_m",
+                      "max_lines": 2
+                    },
+                    {
+                      "id": "outside_l"
+                    }
+                  ],
+                  "_note": "рамка подбирается автоматически по числу строк: 1 строка -> outside_s (маленькая нашивка), 2 -> outside_m, 3 и более -> outside_l; клиент видит одну зону"
+                },
+                {
+                  "id": "outside_m",
+                  "name": "Снаружи на кусочке ткани 02",
+                  "order": 1,
+                  "enabled": false,
+                  "available": false,
+                  "default": false,
+                  "perspective": false,
+                  "limits": {
+                    "normal": {
+                      "max_chars_per_line": 13,
+                      "max_lines": 3
+                    },
+                    "caps": {
+                      "max_chars_per_line": 9,
+                      "max_lines": 3
+                    }
+                  }
+                },
+                {
+                  "id": "outside_l",
+                  "name": "Снаружи на кусочке ткани 03",
+                  "order": 1,
+                  "enabled": false,
+                  "available": false,
+                  "default": false,
+                  "perspective": false,
+                  "limits": {
+                    "normal": {
+                      "max_chars_per_line": 13,
+                      "max_lines": 3
+                    },
+                    "caps": {
+                      "max_chars_per_line": 9,
+                      "max_lines": 3
+                    }
+                  }
+                },
+                {
+                  "id": "inside",
+                  "name": "Внутри на обтачке",
+                  "order": 2,
+                  "enabled": true,
+                  "available": true,
+                  "default": false,
+                  "perspective": false,
+                  "limits": {
+                    "normal": {
+                      "max_chars_per_line": 22,
+                      "max_lines": 5
+                    },
+                    "caps": {
+                      "max_chars_per_line": 15,
+                      "max_lines": 4
+                    }
+                  }
+                }
+              ],
+              "colors": [
+                {
+                  "id": "beige",
+                  "name": "Бежевая",
+                  "available": true,
+                  "image": "images/fabric/suede/beige.jpg",
+                  "preview_image": "images/vogue/l_suede/beige.jpg",
+                  "previews": {
+                    "outside_s": "images/vogue/l_suede/beige.jpg",
+                    "outside_m": "images/vogue/l_suede/beige.jpg",
+                    "outside_l": "images/vogue/l_suede/beige.jpg",
+                    "inside": "images/vogue/l_suede/beige_inside.jpg"
+                  }
+                },
+                {
+                  "id": "light_blue",
+                  "name": "Голубая",
+                  "available": false,
+                  "image": "images/fabric/suede/light_blue.jpg",
+                  "preview_image": "images/vogue/l_suede/light_blue.jpg",
+                  "previews": {
+                    "outside_s": "images/vogue/l_suede/light_blue.jpg",
+                    "outside_m": "images/vogue/l_suede/light_blue.jpg",
+                    "outside_l": "images/vogue/l_suede/light_blue.jpg",
+                    "inside": "images/vogue/l_suede/light_blue_inside.jpg"
+                  }
+                },
+                {
+                  "id": "graphite",
+                  "name": "Графит",
+                  "available": true,
+                  "image": "images/fabric/suede/graphite.jpg",
+                  "preview_image": "images/vogue/l_suede/graphite.jpg",
+                  "previews": {
+                    "outside_s": "images/vogue/l_suede/graphite.jpg",
+                    "outside_m": "images/vogue/l_suede/graphite.jpg",
+                    "outside_l": "images/vogue/l_suede/graphite.jpg",
+                    "inside": "images/vogue/l_suede/graphite_inside.jpg"
+                  }
+                },
+                {
+                  "id": "cappuccino",
+                  "name": "Капучино",
+                  "available": true,
+                  "image": "images/fabric/suede/cappuccino.jpg",
+                  "preview_image": "images/vogue/l_suede/cappuccino.jpg",
+                  "previews": {
+                    "outside_s": "images/vogue/l_suede/cappuccino.jpg",
+                    "outside_m": "images/vogue/l_suede/cappuccino.jpg",
+                    "outside_l": "images/vogue/l_suede/cappuccino.jpg",
+                    "inside": "images/vogue/l_suede/cappuccino_inside.jpg"
+                  }
+                },
+                {
+                  "id": "brown",
+                  "name": "Коричневая",
+                  "available": true,
+                  "image": "images/fabric/suede/brown.jpg",
+                  "preview_image": "images/vogue/l_suede/brown.jpg",
+                  "previews": {
+                    "outside_s": "images/vogue/l_suede/brown.jpg",
+                    "outside_m": "images/vogue/l_suede/brown.jpg",
+                    "outside_l": "images/vogue/l_suede/brown.jpg",
+                    "inside": "images/vogue/l_suede/brown_inside.jpg"
+                  }
+                },
+                {
+                  "id": "lavender",
+                  "name": "Лавандовая",
+                  "available": true,
+                  "image": "images/fabric/suede/lavender.jpg",
+                  "preview_image": "images/vogue/l_suede/lavender.jpg",
+                  "previews": {
+                    "outside_s": "images/vogue/l_suede/lavender.jpg",
+                    "outside_m": "images/vogue/l_suede/lavender.jpg",
+                    "outside_l": "images/vogue/l_suede/lavender.jpg",
+                    "inside": "images/vogue/l_suede/lavender_inside.jpg"
+                  }
+                },
+                {
+                  "id": "lemon",
+                  "name": "Лимонная",
+                  "available": true,
+                  "image": "images/fabric/suede/lemon.jpg",
+                  "preview_image": "images/vogue/l_suede/lemon.jpg",
+                  "previews": {
+                    "outside_s": "images/vogue/l_suede/lemon.jpg",
+                    "outside_m": "images/vogue/l_suede/lemon.jpg",
+                    "outside_l": "images/vogue/l_suede/lemon.jpg",
+                    "inside": "images/vogue/l_suede/lemon_inside.jpg"
+                  }
+                },
+                {
+                  "id": "raspberry",
+                  "name": "Малиновая",
+                  "available": true,
+                  "image": "images/fabric/suede/raspberry.jpg",
+                  "preview_image": "images/vogue/l_suede/raspberry.jpg",
+                  "previews": {
+                    "outside_s": "images/vogue/l_suede/raspberry.jpg",
+                    "outside_m": "images/vogue/l_suede/raspberry.jpg",
+                    "outside_l": "images/vogue/l_suede/raspberry.jpg",
+                    "inside": "images/vogue/l_suede/raspberry_inside.jpg"
+                  }
+                },
+                {
+                  "id": "milk",
+                  "name": "Молочный",
+                  "available": false,
+                  "image": "images/fabric/suede/milk.jpg",
+                  "preview_image": "images/vogue/l_suede/milk.jpg",
+                  "previews": {
+                    "outside_s": "images/vogue/l_suede/milk.jpg",
+                    "outside_m": "images/vogue/l_suede/milk.jpg",
+                    "outside_l": "images/vogue/l_suede/milk.jpg",
+                    "inside": "images/vogue/l_suede/milk_inside.jpg"
+                  }
+                },
+                {
+                  "id": "sand",
+                  "name": "Песочная",
+                  "available": true,
+                  "image": "images/fabric/suede/sand.jpg",
+                  "preview_image": "images/vogue/l_suede/sand.jpg",
+                  "previews": {
+                    "outside_s": "images/vogue/l_suede/sand.jpg",
+                    "outside_m": "images/vogue/l_suede/sand.jpg",
+                    "outside_l": "images/vogue/l_suede/sand.jpg",
+                    "inside": "images/vogue/l_suede/sand_inside.jpg"
+                  }
+                },
+                {
+                  "id": "powder",
+                  "name": "Пудровая",
+                  "available": true,
+                  "image": "images/fabric/suede/powder.jpg",
+                  "preview_image": "images/vogue/l_suede/powder.jpg",
+                  "previews": {
+                    "outside_s": "images/vogue/l_suede/powder.jpg",
+                    "outside_m": "images/vogue/l_suede/powder.jpg",
+                    "outside_l": "images/vogue/l_suede/powder.jpg",
+                    "inside": "images/vogue/l_suede/powder_inside.jpg"
+                  }
+                },
+                {
+                  "id": "pink",
+                  "name": "Розовая",
+                  "available": true,
+                  "image": "images/fabric/suede/pink.jpg",
+                  "preview_image": "images/vogue/l_suede/pink.jpg",
+                  "previews": {
+                    "outside_s": "images/vogue/l_suede/pink.jpg",
+                    "outside_m": "images/vogue/l_suede/pink.jpg",
+                    "outside_l": "images/vogue/l_suede/pink.jpg",
+                    "inside": "images/vogue/l_suede/pink_inside.jpg"
+                  }
+                },
+                {
+                  "id": "snow_leopard",
+                  "name": "Снежный барс",
+                  "available": true,
+                  "image": "images/fabric/suede/snow_leopard.jpg",
+                  "preview_image": "images/vogue/l_suede/snow_leopard.jpg",
+                  "previews": {
+                    "outside_s": "images/vogue/l_suede/snow_leopard.jpg",
+                    "outside_m": "images/vogue/l_suede/snow_leopard.jpg",
+                    "outside_l": "images/vogue/l_suede/snow_leopard.jpg",
+                    "inside": "images/vogue/l_suede/snow_leopard_inside.jpg"
+                  }
+                },
+                {
+                  "id": "gray",
+                  "name": "Серая",
+                  "available": true,
+                  "image": "images/fabric/suede/gray.jpg",
+                  "preview_image": "images/vogue/l_suede/gray.jpg",
+                  "previews": {
+                    "outside_s": "images/vogue/l_suede/gray.jpg",
+                    "outside_m": "images/vogue/l_suede/gray.jpg",
+                    "outside_l": "images/vogue/l_suede/gray.jpg",
+                    "inside": "images/vogue/l_suede/gray_inside.jpg"
+                  }
+                },
+                {
+                  "id": "blue",
+                  "name": "Синяя",
+                  "available": true,
+                  "image": "images/fabric/suede/blue.jpg",
+                  "preview_image": "images/vogue/l_suede/blue.jpg",
+                  "previews": {
+                    "outside_s": "images/vogue/l_suede/blue.jpg",
+                    "outside_m": "images/vogue/l_suede/blue.jpg",
+                    "outside_l": "images/vogue/l_suede/blue.jpg",
+                    "inside": "images/vogue/l_suede/blue_inside.jpg"
+                  }
+                },
+                {
+                  "id": "khaki",
+                  "name": "Хаки",
+                  "available": true,
+                  "image": "images/fabric/suede/khaki.jpg",
+                  "preview_image": "images/vogue/l_suede/khaki.jpg",
+                  "previews": {
+                    "outside_s": "images/vogue/l_suede/khaki.jpg",
+                    "outside_m": "images/vogue/l_suede/khaki.jpg",
+                    "outside_l": "images/vogue/l_suede/khaki.jpg",
+                    "inside": "images/vogue/l_suede/khaki_inside.jpg"
+                  }
+                },
+                {
+                  "id": "black",
+                  "name": "Черная",
+                  "available": true,
+                  "image": "images/fabric/suede/black.jpg",
+                  "preview_image": "images/vogue/l_suede/black.jpg",
+                  "previews": {
+                    "outside_s": "images/vogue/l_suede/black.jpg",
+                    "outside_m": "images/vogue/l_suede/black.jpg",
+                    "outside_l": "images/vogue/l_suede/black.jpg",
+                    "inside": "images/vogue/l_suede/black_inside.jpg"
+                  }
+                }
+              ]
+            },
+            {
+              "id": "jeans",
+              "name": "Джинса",
+              "bag_id": "vogue_bag_l_jeans",
+              "variant_prefix": "jeans",
+              "zone_suffix": {
+                "outside_s": "outside_s",
+                "outside_m": "outside_m",
+                "outside_l": "outside_l",
+                "inside": "inside"
+              },
+              "zones": [
+                {
+                  "id": "outside_s",
+                  "name": "Снаружи на кусочке ткани",
+                  "order": 1,
+                  "enabled": true,
+                  "available": true,
+                  "default": true,
+                  "perspective": false,
+                  "limits": {
+                    "normal": {
+                      "max_chars_per_line": 13,
+                      "max_lines": 3
+                    },
+                    "caps": {
+                      "max_chars_per_line": 9,
+                      "max_lines": 3
+                    }
+                  },
+                  "frames": [
+                    {
+                      "id": "outside_s",
+                      "max_lines": 1
+                    },
+                    {
+                      "id": "outside_m",
+                      "max_lines": 2
+                    },
+                    {
+                      "id": "outside_l"
+                    }
+                  ],
+                  "_note": "рамка подбирается автоматически по числу строк: 1 строка -> outside_s (маленькая нашивка), 2 -> outside_m, 3 и более -> outside_l; клиент видит одну зону"
+                },
+                {
+                  "id": "outside_m",
+                  "name": "Снаружи на кусочке ткани 02",
+                  "order": 1,
+                  "enabled": false,
+                  "available": false,
+                  "default": false,
+                  "perspective": false,
+                  "limits": {
+                    "normal": {
+                      "max_chars_per_line": 13,
+                      "max_lines": 3
+                    },
+                    "caps": {
+                      "max_chars_per_line": 9,
+                      "max_lines": 3
+                    }
+                  }
+                },
+                {
+                  "id": "outside_l",
+                  "name": "Снаружи на кусочке ткани 03",
+                  "order": 1,
+                  "enabled": false,
+                  "available": false,
+                  "default": false,
+                  "perspective": false,
+                  "limits": {
+                    "normal": {
+                      "max_chars_per_line": 13,
+                      "max_lines": 3
+                    },
+                    "caps": {
+                      "max_chars_per_line": 9,
+                      "max_lines": 3
+                    }
+                  }
+                },
+                {
+                  "id": "inside",
+                  "name": "Внутри на обтачке",
+                  "order": 2,
+                  "enabled": true,
+                  "available": true,
+                  "default": false,
+                  "perspective": false,
+                  "limits": {
+                    "normal": {
+                      "max_chars_per_line": 22,
+                      "max_lines": 5
+                    },
+                    "caps": {
+                      "max_chars_per_line": 15,
+                      "max_lines": 4
+                    }
+                  }
+                }
+              ],
+              "colors": [
+                {
+                  "id": "cream",
+                  "name": "Кремовый",
+                  "available": true,
+                  "image": "images/fabric/jeans/cream.jpg",
+                  "preview_image": "images/vogue/l_jeans/cream.jpg",
+                  "previews": {
+                    "outside_s": "images/vogue/l_jeans/cream.jpg",
+                    "outside_m": "images/vogue/l_jeans/cream.jpg",
+                    "outside_l": "images/vogue/l_jeans/cream.jpg",
+                    "inside": "images/vogue/l_jeans/cream_inside.jpg"
+                  }
+                },
+                {
+                  "id": "beige",
+                  "name": "Бежевый",
+                  "available": true,
+                  "image": "images/fabric/jeans/beige.jpg",
+                  "preview_image": "images/vogue/l_jeans/beige.jpg",
+                  "previews": {
+                    "outside_s": "images/vogue/l_jeans/beige.jpg",
+                    "outside_m": "images/vogue/l_jeans/beige.jpg",
+                    "outside_l": "images/vogue/l_jeans/beige.jpg",
+                    "inside": "images/vogue/l_jeans/beige_inside.jpg"
+                  }
+                },
+                {
+                  "id": "light_blue",
+                  "name": "Голубой",
+                  "available": false,
+                  "image": "images/fabric/jeans/light_blue.jpg",
+                  "preview_image": "images/vogue/l_jeans/light_blue.jpg",
+                  "previews": {
+                    "outside_s": "images/vogue/l_jeans/light_blue.jpg",
+                    "outside_m": "images/vogue/l_jeans/light_blue.jpg",
+                    "outside_l": "images/vogue/l_jeans/light_blue.jpg",
+                    "inside": "images/vogue/l_jeans/light_blue_inside.jpg"
+                  }
+                },
+                {
+                  "id": "graphite",
+                  "name": "Графит",
+                  "available": false,
+                  "image": "images/fabric/jeans/graphite.jpg",
+                  "preview_image": "images/vogue/l_jeans/graphite.jpg",
+                  "previews": {
+                    "outside_s": "images/vogue/l_jeans/graphite.jpg",
+                    "outside_m": "images/vogue/l_jeans/graphite.jpg",
+                    "outside_l": "images/vogue/l_jeans/graphite.jpg",
+                    "inside": "images/vogue/l_jeans/graphite_inside.jpg"
+                  }
+                },
+                {
+                  "id": "cappuccino",
+                  "name": "Капучино",
+                  "available": false,
+                  "image": "images/fabric/jeans/cappuccino.jpg",
+                  "preview_image": "images/vogue/l_jeans/cappuccino.jpg",
+                  "previews": {
+                    "outside_s": "images/vogue/l_jeans/cappuccino.jpg",
+                    "outside_m": "images/vogue/l_jeans/cappuccino.jpg",
+                    "outside_l": "images/vogue/l_jeans/cappuccino.jpg",
+                    "inside": "images/vogue/l_jeans/cappuccino_inside.jpg"
+                  }
+                },
+                {
+                  "id": "lavender",
+                  "name": "Лавандовый",
+                  "available": false,
+                  "image": "images/fabric/jeans/lavender.jpg",
+                  "preview_image": "images/vogue/l_jeans/lavender.jpg",
+                  "previews": {
+                    "outside_s": "images/vogue/l_jeans/lavender.jpg",
+                    "outside_m": "images/vogue/l_jeans/lavender.jpg",
+                    "outside_l": "images/vogue/l_jeans/lavender.jpg",
+                    "inside": "images/vogue/l_jeans/lavender_inside.jpg"
+                  }
+                },
+                {
+                  "id": "peach",
+                  "name": "Персиковый",
+                  "available": true,
+                  "image": "images/fabric/jeans/peach.jpg",
+                  "preview_image": "images/vogue/l_jeans/peach.jpg",
+                  "previews": {
+                    "outside_s": "images/vogue/l_jeans/peach.jpg",
+                    "outside_m": "images/vogue/l_jeans/peach.jpg",
+                    "outside_l": "images/vogue/l_jeans/peach.jpg",
+                    "inside": "images/vogue/l_jeans/peach_inside.jpg"
+                  }
+                },
+                {
+                  "id": "sand",
+                  "name": "Песочный",
+                  "available": true,
+                  "image": "images/fabric/jeans/sand.jpg",
+                  "preview_image": "images/vogue/l_jeans/sand.jpg",
+                  "previews": {
+                    "outside_s": "images/vogue/l_jeans/sand.jpg",
+                    "outside_m": "images/vogue/l_jeans/sand.jpg",
+                    "outside_l": "images/vogue/l_jeans/sand.jpg",
+                    "inside": "images/vogue/l_jeans/sand_inside.jpg"
+                  }
+                },
+                {
+                  "id": "powder",
+                  "name": "Пудровый",
+                  "available": true,
+                  "image": "images/fabric/jeans/powder.jpg",
+                  "preview_image": "images/vogue/l_jeans/powder.jpg",
+                  "previews": {
+                    "outside_s": "images/vogue/l_jeans/powder.jpg",
+                    "outside_m": "images/vogue/l_jeans/powder.jpg",
+                    "outside_l": "images/vogue/l_jeans/powder.jpg",
+                    "inside": "images/vogue/l_jeans/powder_inside.jpg"
+                  }
+                },
+                {
+                  "id": "pink",
+                  "name": "Розовый",
+                  "available": true,
+                  "image": "images/fabric/jeans/pink.jpg",
+                  "preview_image": "images/vogue/l_jeans/pink.jpg",
+                  "previews": {
+                    "outside_s": "images/vogue/l_jeans/pink.jpg",
+                    "outside_m": "images/vogue/l_jeans/pink.jpg",
+                    "outside_l": "images/vogue/l_jeans/pink.jpg",
+                    "inside": "images/vogue/l_jeans/pink_inside.jpg"
+                  }
+                },
+                {
+                  "id": "gray",
+                  "name": "Серый",
+                  "available": false,
+                  "image": "images/fabric/jeans/gray.jpg",
+                  "preview_image": "images/vogue/l_jeans/gray.jpg",
+                  "previews": {
+                    "outside_s": "images/vogue/l_jeans/gray.jpg",
+                    "outside_m": "images/vogue/l_jeans/gray.jpg",
+                    "outside_l": "images/vogue/l_jeans/gray.jpg",
+                    "inside": "images/vogue/l_jeans/gray_inside.jpg"
+                  }
+                },
+                {
+                  "id": "blue",
+                  "name": "Синий",
+                  "available": true,
+                  "image": "images/fabric/jeans/blue.jpg",
+                  "preview_image": "images/vogue/l_jeans/blue.jpg",
+                  "previews": {
+                    "outside_s": "images/vogue/l_jeans/blue.jpg",
+                    "outside_m": "images/vogue/l_jeans/blue.jpg",
+                    "outside_l": "images/vogue/l_jeans/blue.jpg",
+                    "inside": "images/vogue/l_jeans/blue_inside.jpg"
+                  }
+                },
+                {
+                  "id": "khaki",
+                  "name": "Хаки",
+                  "available": true,
+                  "image": "images/fabric/jeans/khaki.jpg",
+                  "preview_image": "images/vogue/l_jeans/khaki.jpg",
+                  "previews": {
+                    "outside_s": "images/vogue/l_jeans/khaki.jpg",
+                    "outside_m": "images/vogue/l_jeans/khaki.jpg",
+                    "outside_l": "images/vogue/l_jeans/khaki.jpg",
+                    "inside": "images/vogue/l_jeans/khaki_inside.jpg"
+                  }
+                },
+                {
+                  "id": "black",
+                  "name": "Чёрный",
+                  "available": true,
+                  "image": "images/fabric/jeans/black.jpg",
+                  "preview_image": "images/vogue/l_jeans/black.jpg",
+                  "previews": {
+                    "outside_s": "images/vogue/l_jeans/black.jpg",
+                    "outside_m": "images/vogue/l_jeans/black.jpg",
+                    "outside_l": "images/vogue/l_jeans/black.jpg",
+                    "inside": "images/vogue/l_jeans/black_inside.jpg"
+                  }
+                },
+                {
+                  "id": "chocolate",
+                  "name": "Шоколадный",
+                  "available": true,
+                  "image": "images/fabric/jeans/chocolate.jpg",
+                  "preview_image": "images/vogue/l_jeans/chocolate.jpg",
+                  "previews": {
+                    "outside_s": "images/vogue/l_jeans/chocolate.jpg",
+                    "outside_m": "images/vogue/l_jeans/chocolate.jpg",
+                    "outside_l": "images/vogue/l_jeans/chocolate.jpg",
+                    "inside": "images/vogue/l_jeans/chocolate_inside.jpg"
+                  }
+                }
+              ]
+            }
+          ]
+        }
+      ]
     }
   ]
 }

@@ -659,12 +659,38 @@ function computeVariantId() {
   const color = currentColor();
   if (!mat || !color) return null;
 
-  const suffix = mat.zone_suffix && state.zone ? mat.zone_suffix[state.zone] : null;
+  // AWBAGS-FRAMES-V1: у зоны бывает несколько рамок (нашивка разного размера).
+  // Клиент видит одну зону, конкретная рамка выбирается по числу строк текста.
+  const zoneId = frameZoneId() || state.zone;
+  const suffix = mat.zone_suffix && zoneId ? mat.zone_suffix[zoneId] : null;
   if (mat.variant_prefix && suffix) {
     return `${mat.variant_prefix}_${color.id}_${suffix}`;
   }
   // фолбэк — старый формат (variant_id прописан у цвета)
   return color.variant_id || null;
+}
+
+/* ═══════════════════════════════════════════════════════════════
+   AWBAGS-FRAMES-V1 — автоподбор рамки зоны по числу строк текста
+   Пороги задаются в catalog.json у зоны: zones[].frames[]
+   [{ id, max_lines }]. Берётся первая рамка, у которой число
+   НЕПУСТЫХ строк не превышает max_lines; последняя запись — без порога.
+   1 строка → маленькая нашивка, 2 → средняя, 3 и более → большая.
+   Если frames[] нет — поведение прежнее (одна рамка = zone_suffix[zone]).
+   ═══════════════════════════════════════════════════════════════ */
+function frameZoneId() {
+  const z = (typeof currentZone === 'function') ? currentZone() : null;
+  const frames = (z && Array.isArray(z.frames)) ? z.frames : null;
+  if (!frames || !frames.length) return null;
+
+  const text = String(state.text || '');
+  const lines = text.split('\n').filter(line => line.trim() !== '').length || 1;
+
+  let pick = frames[frames.length - 1];
+  for (const f of frames) {
+    if (f && f.max_lines != null && lines <= f.max_lines) { pick = f; break; }
+  }
+  return (pick && pick.id) ? pick.id : null;
 }
 
 
