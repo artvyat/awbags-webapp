@@ -7311,7 +7311,7 @@
             {
               "id": "graphite",
               "name": "Графит",
-              "available": true,
+              "available": false,
               "image": "images/fabric/jeans/graphite.jpg",
               "preview_image": "images/vogue_long_xs/graphite.jpg",
               "previews": {
@@ -7322,7 +7322,7 @@
             {
               "id": "cappuccino",
               "name": "Капучино",
-              "available": true,
+              "available": false,
               "image": "images/fabric/jeans/cappuccino.jpg",
               "preview_image": "images/vogue_long_xs/cappuccino.jpg",
               "previews": {
@@ -7333,7 +7333,7 @@
             {
               "id": "lavender",
               "name": "Лавандовый",
-              "available": true,
+              "available": false,
               "image": "images/fabric/jeans/lavender.jpg",
               "preview_image": "images/vogue_long_xs/lavender.jpg",
               "previews": {
@@ -7388,7 +7388,7 @@
             {
               "id": "gray",
               "name": "Серый",
-              "available": true,
+              "available": false,
               "image": "images/fabric/jeans/gray.jpg",
               "preview_image": "images/vogue_long_xs/gray.jpg",
               "previews": {
