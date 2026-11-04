@@ -7235,6 +7235,214 @@
           ]
         }
       ]
+    },
+    {
+      "id": "vogue_bag_long_xs",
+      "title": "Vogue Bag Long XS",
+      "subtitle": "",
+      "price": "от 6 700 ₽",
+      "categories": [
+        "everyday",
+        "mini"
+      ],
+      "image": "images/vogue_long_xs/cappuccino.jpg",
+      "materials": [
+        {
+          "id": "jeans",
+          "name": "Джинса",
+          "bag_id": "vogue_bag_long_xs",
+          "variant_prefix": "jeans",
+          "zone_suffix": {
+            "outside_center": "outside_center",
+            "outside_corner": "outside_corner"
+          },
+          "zones": [
+            {
+              "id": "outside_center",
+              "name": "Снаружи по центру",
+              "order": 1,
+              "enabled": true,
+              "available": true,
+              "default": true,
+              "perspective": false,
+              "limits": {
+                "normal": {
+                  "max_chars_per_line": 6,
+                  "max_lines": 4
+                },
+                "caps": {
+                  "max_chars_per_line": 4,
+                  "max_lines": 4
+                }
+              }
+            },
+            {
+              "id": "outside_corner",
+              "name": "Снаружи в углу",
+              "order": 2,
+              "enabled": true,
+              "available": true,
+              "default": false,
+              "perspective": false,
+              "limits": {
+                "normal": {
+                  "max_chars_per_line": 4,
+                  "max_lines": 3
+                },
+                "caps": {
+                  "max_chars_per_line": 3,
+                  "max_lines": 3
+                }
+              }
+            }
+          ],
+          "colors": [
+            {
+              "id": "beige",
+              "name": "Бежевый",
+              "available": true,
+              "image": "images/fabric/jeans/beige.jpg",
+              "preview_image": "images/vogue_long_xs/beige.jpg",
+              "previews": {
+                "outside_center": "images/vogue_long_xs/beige.jpg",
+                "outside_corner": "images/vogue_long_xs/beige.jpg"
+              }
+            },
+            {
+              "id": "graphite",
+              "name": "Графит",
+              "available": true,
+              "image": "images/fabric/jeans/graphite.jpg",
+              "preview_image": "images/vogue_long_xs/graphite.jpg",
+              "previews": {
+                "outside_center": "images/vogue_long_xs/graphite.jpg",
+                "outside_corner": "images/vogue_long_xs/graphite.jpg"
+              }
+            },
+            {
+              "id": "cappuccino",
+              "name": "Капучино",
+              "available": true,
+              "image": "images/fabric/jeans/cappuccino.jpg",
+              "preview_image": "images/vogue_long_xs/cappuccino.jpg",
+              "previews": {
+                "outside_center": "images/vogue_long_xs/cappuccino.jpg",
+                "outside_corner": "images/vogue_long_xs/cappuccino.jpg"
+              }
+            },
+            {
+              "id": "lavender",
+              "name": "Лавандовый",
+              "available": true,
+              "image": "images/fabric/jeans/lavender.jpg",
+              "preview_image": "images/vogue_long_xs/lavender.jpg",
+              "previews": {
+                "outside_center": "images/vogue_long_xs/lavender.jpg",
+                "outside_corner": "images/vogue_long_xs/lavender.jpg"
+              }
+            },
+            {
+              "id": "peach",
+              "name": "Персиковый",
+              "available": true,
+              "image": "images/fabric/jeans/peach.jpg",
+              "preview_image": "images/vogue_long_xs/peach.jpg",
+              "previews": {
+                "outside_center": "images/vogue_long_xs/peach.jpg",
+                "outside_corner": "images/vogue_long_xs/peach.jpg"
+              }
+            },
+            {
+              "id": "sand",
+              "name": "Песочный",
+              "available": true,
+              "image": "images/fabric/jeans/sand.jpg",
+              "preview_image": "images/vogue_long_xs/sand.jpg",
+              "previews": {
+                "outside_center": "images/vogue_long_xs/sand.jpg",
+                "outside_corner": "images/vogue_long_xs/sand.jpg"
+              }
+            },
+            {
+              "id": "powder",
+              "name": "Пудровый",
+              "available": true,
+              "image": "images/fabric/jeans/powder.jpg",
+              "preview_image": "images/vogue_long_xs/powder.jpg",
+              "previews": {
+                "outside_center": "images/vogue_long_xs/powder.jpg",
+                "outside_corner": "images/vogue_long_xs/powder.jpg"
+              }
+            },
+            {
+              "id": "pink",
+              "name": "Розовый",
+              "available": true,
+              "image": "images/fabric/jeans/pink.jpg",
+              "preview_image": "images/vogue_long_xs/pink.jpg",
+              "previews": {
+                "outside_center": "images/vogue_long_xs/pink.jpg",
+                "outside_corner": "images/vogue_long_xs/pink.jpg"
+              }
+            },
+            {
+              "id": "gray",
+              "name": "Серый",
+              "available": true,
+              "image": "images/fabric/jeans/gray.jpg",
+              "preview_image": "images/vogue_long_xs/gray.jpg",
+              "previews": {
+                "outside_center": "images/vogue_long_xs/gray.jpg",
+                "outside_corner": "images/vogue_long_xs/gray.jpg"
+              }
+            },
+            {
+              "id": "blue",
+              "name": "Синий",
+              "available": true,
+              "image": "images/fabric/jeans/blue.jpg",
+              "preview_image": "images/vogue_long_xs/blue.jpg",
+              "previews": {
+                "outside_center": "images/vogue_long_xs/blue.jpg",
+                "outside_corner": "images/vogue_long_xs/blue.jpg"
+              }
+            },
+            {
+              "id": "khaki",
+              "name": "Хаки",
+              "available": true,
+              "image": "images/fabric/jeans/khaki.jpg",
+              "preview_image": "images/vogue_long_xs/khaki.jpg",
+              "previews": {
+                "outside_center": "images/vogue_long_xs/khaki.jpg",
+                "outside_corner": "images/vogue_long_xs/khaki.jpg"
+              }
+            },
+            {
+              "id": "black",
+              "name": "Чёрный",
+              "available": true,
+              "image": "images/fabric/jeans/black.jpg",
+              "preview_image": "images/vogue_long_xs/black.jpg",
+              "previews": {
+                "outside_center": "images/vogue_long_xs/black.jpg",
+                "outside_corner": "images/vogue_long_xs/black.jpg"
+              }
+            },
+            {
+              "id": "chocolate",
+              "name": "Шоколадный",
+              "available": true,
+              "image": "images/fabric/jeans/chocolate.jpg",
+              "preview_image": "images/vogue_long_xs/chocolate.jpg",
+              "previews": {
+                "outside_center": "images/vogue_long_xs/chocolate.jpg",
+                "outside_corner": "images/vogue_long_xs/chocolate.jpg"
+              }
+            }
+          ]
+        }
+      ]
     }
   ]
 }
