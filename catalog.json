@@ -7441,6 +7441,256 @@
               }
             }
           ]
+        },
+        {
+          "id": "eco_suede",
+          "name": "Эко-замша",
+          "bag_id": "vogue_bag_long_xs",
+          "variant_prefix": "eco_suede",
+          "zone_suffix": {
+            "outside_center": "outside_center",
+            "outside_corner": "outside_corner"
+          },
+          "zones": [
+            {
+              "id": "outside_center",
+              "name": "Снаружи по центру",
+              "order": 1,
+              "enabled": true,
+              "available": true,
+              "default": true,
+              "perspective": false,
+              "limits": {
+                "normal": {
+                  "max_chars_per_line": 6,
+                  "max_lines": 4
+                },
+                "caps": {
+                  "max_chars_per_line": 4,
+                  "max_lines": 4
+                }
+              }
+            },
+            {
+              "id": "outside_corner",
+              "name": "Снаружи в углу",
+              "order": 2,
+              "enabled": true,
+              "available": true,
+              "default": false,
+              "perspective": false,
+              "limits": {
+                "normal": {
+                  "max_chars_per_line": 4,
+                  "max_lines": 3
+                },
+                "caps": {
+                  "max_chars_per_line": 3,
+                  "max_lines": 3
+                }
+              }
+            }
+          ],
+          "colors": [
+            {
+              "id": "pistachio",
+              "name": "Фисташковая",
+              "available": true,
+              "image": "images/fabric/suede/pistachio.jpg",
+              "preview_image": "images/vogue_long_xs/suede_pistachio.jpg",
+              "previews": {
+                "outside_center": "images/vogue_long_xs/suede_pistachio.jpg",
+                "outside_corner": "images/vogue_long_xs/suede_pistachio.jpg"
+              }
+            },
+            {
+              "id": "beige",
+              "name": "Бежевая",
+              "available": true,
+              "image": "images/fabric/suede/beige.jpg",
+              "preview_image": "images/vogue_long_xs/suede_beige.jpg",
+              "previews": {
+                "outside_center": "images/vogue_long_xs/suede_beige.jpg",
+                "outside_corner": "images/vogue_long_xs/suede_beige.jpg"
+              }
+            },
+            {
+              "id": "light_blue",
+              "name": "Голубой",
+              "available": false,
+              "image": "images/fabric/suede/light_blue.jpg",
+              "preview_image": "images/vogue_long_xs/suede_light_blue.jpg",
+              "previews": {
+                "outside_center": "images/vogue_long_xs/suede_light_blue.jpg",
+                "outside_corner": "images/vogue_long_xs/suede_light_blue.jpg"
+              }
+            },
+            {
+              "id": "graphite",
+              "name": "Графит",
+              "available": true,
+              "image": "images/fabric/suede/graphite.jpg",
+              "preview_image": "images/vogue_long_xs/suede_graphite.jpg",
+              "previews": {
+                "outside_center": "images/vogue_long_xs/suede_graphite.jpg",
+                "outside_corner": "images/vogue_long_xs/suede_graphite.jpg"
+              }
+            },
+            {
+              "id": "cappuccino",
+              "name": "Капучино",
+              "available": true,
+              "image": "images/fabric/suede/cappuccino.jpg",
+              "preview_image": "images/vogue_long_xs/suede_cappuccino.jpg",
+              "previews": {
+                "outside_center": "images/vogue_long_xs/suede_cappuccino.jpg",
+                "outside_corner": "images/vogue_long_xs/suede_cappuccino.jpg"
+              }
+            },
+            {
+              "id": "brown",
+              "name": "Коричневая",
+              "available": true,
+              "image": "images/fabric/suede/brown.jpg",
+              "preview_image": "images/vogue_long_xs/suede_brown.jpg",
+              "previews": {
+                "outside_center": "images/vogue_long_xs/suede_brown.jpg",
+                "outside_corner": "images/vogue_long_xs/suede_brown.jpg"
+              }
+            },
+            {
+              "id": "lavender",
+              "name": "Лавандовая",
+              "available": true,
+              "image": "images/fabric/suede/lavender.jpg",
+              "preview_image": "images/vogue_long_xs/suede_lavender.jpg",
+              "previews": {
+                "outside_center": "images/vogue_long_xs/suede_lavender.jpg",
+                "outside_corner": "images/vogue_long_xs/suede_lavender.jpg"
+              }
+            },
+            {
+              "id": "lemon",
+              "name": "Лимонная",
+              "available": true,
+              "image": "images/fabric/suede/lemon.jpg",
+              "preview_image": "images/vogue_long_xs/suede_lemon.jpg",
+              "previews": {
+                "outside_center": "images/vogue_long_xs/suede_lemon.jpg",
+                "outside_corner": "images/vogue_long_xs/suede_lemon.jpg"
+              }
+            },
+            {
+              "id": "raspberry",
+              "name": "Малиновая",
+              "available": true,
+              "image": "images/fabric/suede/raspberry.jpg",
+              "preview_image": "images/vogue_long_xs/suede_raspberry.jpg",
+              "previews": {
+                "outside_center": "images/vogue_long_xs/suede_raspberry.jpg",
+                "outside_corner": "images/vogue_long_xs/suede_raspberry.jpg"
+              }
+            },
+            {
+              "id": "milk",
+              "name": "Молочный",
+              "available": false,
+              "image": "images/fabric/suede/milk.jpg",
+              "preview_image": "images/vogue_long_xs/suede_milk.jpg",
+              "previews": {
+                "outside_center": "images/vogue_long_xs/suede_milk.jpg",
+                "outside_corner": "images/vogue_long_xs/suede_milk.jpg"
+              }
+            },
+            {
+              "id": "sand",
+              "name": "Песочная",
+              "available": true,
+              "image": "images/fabric/suede/sand.jpg",
+              "preview_image": "images/vogue_long_xs/suede_sand.jpg",
+              "previews": {
+                "outside_center": "images/vogue_long_xs/suede_sand.jpg",
+                "outside_corner": "images/vogue_long_xs/suede_sand.jpg"
+              }
+            },
+            {
+              "id": "powder",
+              "name": "Пудровая",
+              "available": true,
+              "image": "images/fabric/suede/powder.jpg",
+              "preview_image": "images/vogue_long_xs/suede_powder.jpg",
+              "previews": {
+                "outside_center": "images/vogue_long_xs/suede_powder.jpg",
+                "outside_corner": "images/vogue_long_xs/suede_powder.jpg"
+              }
+            },
+            {
+              "id": "snow_leopard",
+              "name": "snow_leopard",
+              "available": true,
+              "image": "images/fabric/suede/snow_leopard.jpg",
+              "preview_image": "images/vogue_long_xs/suede_snow_leopard.jpg",
+              "previews": {
+                "outside_center": "images/vogue_long_xs/suede_snow_leopard.jpg",
+                "outside_corner": "images/vogue_long_xs/suede_snow_leopard.jpg"
+              }
+            },
+            {
+              "id": "gray",
+              "name": "Серая",
+              "available": true,
+              "image": "images/fabric/suede/gray.jpg",
+              "preview_image": "images/vogue_long_xs/suede_gray.jpg",
+              "previews": {
+                "outside_center": "images/vogue_long_xs/suede_gray.jpg",
+                "outside_corner": "images/vogue_long_xs/suede_gray.jpg"
+              }
+            },
+            {
+              "id": "blue",
+              "name": "Синяя",
+              "available": true,
+              "image": "images/fabric/suede/blue.jpg",
+              "preview_image": "images/vogue_long_xs/suede_blue.jpg",
+              "previews": {
+                "outside_center": "images/vogue_long_xs/suede_blue.jpg",
+                "outside_corner": "images/vogue_long_xs/suede_blue.jpg"
+              }
+            },
+            {
+              "id": "khaki",
+              "name": "Хаки",
+              "available": true,
+              "image": "images/fabric/suede/khaki.jpg",
+              "preview_image": "images/vogue_long_xs/suede_khaki.jpg",
+              "previews": {
+                "outside_center": "images/vogue_long_xs/suede_khaki.jpg",
+                "outside_corner": "images/vogue_long_xs/suede_khaki.jpg"
+              }
+            },
+            {
+              "id": "black",
+              "name": "Черная",
+              "available": true,
+              "image": "images/fabric/suede/black.jpg",
+              "preview_image": "images/vogue_long_xs/suede_black.jpg",
+              "previews": {
+                "outside_center": "images/vogue_long_xs/suede_black.jpg",
+                "outside_corner": "images/vogue_long_xs/suede_black.jpg"
+              }
+            },
+            {
+              "id": "mint",
+              "name": "Мятный",
+              "available": false,
+              "image": "images/fabric/suede/mint.jpg",
+              "preview_image": "images/vogue_long_xs/suede_mint.jpg",
+              "previews": {
+                "outside_center": "images/vogue_long_xs/suede_mint.jpg",
+                "outside_corner": "images/vogue_long_xs/suede_mint.jpg"
+              }
+            }
+          ]
         }
       ]
     }
