@@ -7775,7 +7775,7 @@
               "id": "chernyj",
               "name": "Чёрный",
               "available": true,
-              "image": "images/fabric/jeans/chernyj.jpg",
+              "image": "images/fabric/jeans/black.jpg",
               "preview_image": "images/shopper_jeans/jeans/chernyj_overview.jpg",
               "previews": {
                 "flap": "images/shopper_jeans/jeans/chernyj_flap.jpg",
@@ -7788,7 +7788,7 @@
               "id": "pesochnyj",
               "name": "Песочный",
               "available": true,
-              "image": "images/fabric/jeans/pesochnyj.jpg",
+              "image": "images/fabric/jeans/sand.jpg",
               "preview_image": "images/shopper_jeans/jeans/pesochnyj_overview.jpg",
               "previews": {
                 "flap": "images/shopper_jeans/jeans/pesochnyj_flap.jpg",
@@ -7801,7 +7801,7 @@
               "id": "siren",
               "name": "Сиреневый",
               "available": true,
-              "image": "images/fabric/jeans/siren.jpg",
+              "image": "images/fabric/jeans/lavender.jpg",
               "preview_image": "images/shopper_jeans/jeans/siren_overview.jpg",
               "previews": {
                 "flap": "images/shopper_jeans/jeans/siren_flap.jpg",
@@ -7814,7 +7814,7 @@
               "id": "shokolad",
               "name": "Шоколад",
               "available": true,
-              "image": "images/fabric/jeans/shokolad.jpg",
+              "image": "images/fabric/jeans/chocolate.jpg",
               "preview_image": "images/shopper_jeans/jeans/shokolad_overview.jpg",
               "previews": {
                 "flap": "images/shopper_jeans/jeans/shokolad_flap.jpg",
@@ -7827,7 +7827,7 @@
               "id": "dzhins",
               "name": "Джинс",
               "available": true,
-              "image": "images/fabric/jeans/dzhins.jpg",
+              "image": "images/fabric/jeans/blue.jpg",
               "preview_image": "images/shopper_jeans/jeans/dzhins_overview.jpg",
               "previews": {
                 "flap": "images/shopper_jeans/jeans/dzhins_flap.jpg",
@@ -7840,7 +7840,7 @@
               "id": "goluboj",
               "name": "Голубой",
               "available": true,
-              "image": "images/fabric/jeans/goluboj.jpg",
+              "image": "images/fabric/jeans/light_blue.jpg",
               "preview_image": "images/shopper_jeans/jeans/goluboj_overview.jpg",
               "previews": {
                 "flap": "images/shopper_jeans/jeans/goluboj_flap.jpg",
@@ -7853,7 +7853,7 @@
               "id": "oliva",
               "name": "Олива",
               "available": true,
-              "image": "images/fabric/jeans/oliva.jpg",
+              "image": "images/fabric/jeans/khaki.jpg",
               "preview_image": "images/shopper_jeans/jeans/oliva_overview.jpg",
               "previews": {
                 "flap": "images/shopper_jeans/jeans/oliva_flap.jpg",
@@ -7879,7 +7879,7 @@
               "id": "roza",
               "name": "Роза",
               "available": true,
-              "image": "images/fabric/jeans/roza.jpg",
+              "image": "images/fabric/jeans/pink.jpg",
               "preview_image": "images/shopper_jeans/jeans/roza_overview.jpg",
               "previews": {
                 "flap": "images/shopper_jeans/jeans/roza_flap.jpg",
