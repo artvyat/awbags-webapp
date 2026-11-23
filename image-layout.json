@@ -876,6 +876,70 @@
         "y": 0,
         "rotation": 0
       }
+    },
+    {
+      "model": "shopper_jeans",
+      "stage": "catalog",
+      "placement": {
+        "scale": 1.5,
+        "x": 0,
+        "y": 0,
+        "rotation": 0
+      }
+    },
+    {
+      "model": "shopper_jeans",
+      "stage": "bag",
+      "placement": {
+        "scale": 1.4,
+        "x": 0,
+        "y": 0,
+        "rotation": 0
+      }
+    },
+    {
+      "model": "shopper_jeans",
+      "stage": "embroidery",
+      "zone": "flap",
+      "placement": {
+        "scale": 2.0,
+        "x": 0,
+        "y": 0,
+        "rotation": 0
+      }
+    },
+    {
+      "model": "shopper_jeans",
+      "stage": "embroidery",
+      "zone": "pocket",
+      "placement": {
+        "scale": 2.0,
+        "x": 0,
+        "y": 0,
+        "rotation": 0
+      }
+    },
+    {
+      "model": "shopper_jeans",
+      "stage": "embroidery",
+      "zone": "binding",
+      "placement": {
+        "scale": 1.5,
+        "x": 0,
+        "y": 0,
+        "rotation": 0
+      }
+    },
+    {
+      "model": "shopper_jeans",
+      "stage": "embroidery",
+      "zone": "back",
+      "placement": {
+        "scale": 1.5,
+        "x": 0,
+        "y": 0,
+        "rotation": 0
+      }
     }
   ]
 }

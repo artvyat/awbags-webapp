@@ -5331,11 +5331,11 @@
                   "limits": {
                     "normal": {
                       "max_chars_per_line": 13,
-                      "max_lines": 3
+                      "max_lines": 1
                     },
                     "caps": {
                       "max_chars_per_line": 9,
-                      "max_lines": 3
+                      "max_lines": 1
                     }
                   },
                   "frames": [
@@ -5364,11 +5364,11 @@
                   "limits": {
                     "normal": {
                       "max_chars_per_line": 13,
-                      "max_lines": 3
+                      "max_lines": 2
                     },
                     "caps": {
                       "max_chars_per_line": 9,
-                      "max_lines": 3
+                      "max_lines": 2
                     }
                   }
                 },
@@ -5671,11 +5671,11 @@
                   "limits": {
                     "normal": {
                       "max_chars_per_line": 13,
-                      "max_lines": 3
+                      "max_lines": 1
                     },
                     "caps": {
                       "max_chars_per_line": 9,
-                      "max_lines": 3
+                      "max_lines": 1
                     }
                   },
                   "frames": [
@@ -5704,11 +5704,11 @@
                   "limits": {
                     "normal": {
                       "max_chars_per_line": 13,
-                      "max_lines": 3
+                      "max_lines": 2
                     },
                     "caps": {
                       "max_chars_per_line": 9,
-                      "max_lines": 3
+                      "max_lines": 2
                     }
                   }
                 },
@@ -5979,11 +5979,11 @@
                   "limits": {
                     "normal": {
                       "max_chars_per_line": 13,
-                      "max_lines": 3
+                      "max_lines": 1
                     },
                     "caps": {
                       "max_chars_per_line": 9,
-                      "max_lines": 3
+                      "max_lines": 1
                     }
                   },
                   "frames": [
@@ -6012,11 +6012,11 @@
                   "limits": {
                     "normal": {
                       "max_chars_per_line": 13,
-                      "max_lines": 3
+                      "max_lines": 2
                     },
                     "caps": {
                       "max_chars_per_line": 9,
-                      "max_lines": 3
+                      "max_lines": 2
                     }
                   }
                 },
@@ -6319,11 +6319,11 @@
                   "limits": {
                     "normal": {
                       "max_chars_per_line": 13,
-                      "max_lines": 3
+                      "max_lines": 1
                     },
                     "caps": {
                       "max_chars_per_line": 9,
-                      "max_lines": 3
+                      "max_lines": 1
                     }
                   },
                   "frames": [
@@ -6352,11 +6352,11 @@
                   "limits": {
                     "normal": {
                       "max_chars_per_line": 13,
-                      "max_lines": 3
+                      "max_lines": 2
                     },
                     "caps": {
                       "max_chars_per_line": 9,
-                      "max_lines": 3
+                      "max_lines": 2
                     }
                   }
                 },
@@ -6627,11 +6627,11 @@
                   "limits": {
                     "normal": {
                       "max_chars_per_line": 13,
-                      "max_lines": 3
+                      "max_lines": 1
                     },
                     "caps": {
                       "max_chars_per_line": 9,
-                      "max_lines": 3
+                      "max_lines": 1
                     }
                   },
                   "frames": [
@@ -6660,11 +6660,11 @@
                   "limits": {
                     "normal": {
                       "max_chars_per_line": 13,
-                      "max_lines": 3
+                      "max_lines": 2
                     },
                     "caps": {
                       "max_chars_per_line": 9,
-                      "max_lines": 3
+                      "max_lines": 2
                     }
                   }
                 },
@@ -6954,11 +6954,11 @@
                   "limits": {
                     "normal": {
                       "max_chars_per_line": 13,
-                      "max_lines": 3
+                      "max_lines": 1
                     },
                     "caps": {
                       "max_chars_per_line": 9,
-                      "max_lines": 3
+                      "max_lines": 1
                     }
                   },
                   "frames": [
@@ -6987,11 +6987,11 @@
                   "limits": {
                     "normal": {
                       "max_chars_per_line": 13,
-                      "max_lines": 3
+                      "max_lines": 2
                     },
                     "caps": {
                       "max_chars_per_line": 9,
-                      "max_lines": 3
+                      "max_lines": 2
                     }
                   }
                 },
@@ -7688,6 +7688,230 @@
               "previews": {
                 "outside_center": "images/vogue_long_xs/suede_mint.jpg",
                 "outside_corner": "images/vogue_long_xs/suede_mint.jpg"
+              }
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "shopper_jeans",
+      "title": "Шоппер",
+      "subtitle": "",
+      "price": "от 6 900 ₽",
+      "categories": [
+        "everyday",
+        "travel"
+      ],
+      "image": "images/shopper_jeans/jeans/chernyj_overview.jpg",
+      "materials": [
+        {
+          "id": "jeans",
+          "name": "Джинса",
+          "bag_id": "shopper_jeans",
+          "variant_prefix": "jeans",
+          "zone_suffix": {
+            "flap": "flap",
+            "pocket": "pocket",
+            "binding": "binding",
+            "back": "back"
+          },
+          "zones": [
+            {
+              "id": "flap",
+              "name": "Снаружи на клапане",
+              "order": 1,
+              "enabled": true,
+              "available": true,
+              "default": true,
+              "perspective": false,
+              "limits": {
+                "normal": { "max_chars_per_line": 8, "max_lines": 1 },
+                "caps": { "max_chars_per_line": 5, "max_lines": 1 }
+              }
+            },
+            {
+              "id": "pocket",
+              "name": "На кармане",
+              "order": 2,
+              "enabled": true,
+              "available": true,
+              "default": false,
+              "perspective": false,
+              "limits": {
+                "normal": { "max_chars_per_line": 8, "max_lines": 2 },
+                "caps": { "max_chars_per_line": 5, "max_lines": 2 }
+              }
+            },
+            {
+              "id": "binding",
+              "name": "На обтачке",
+              "order": 3,
+              "enabled": true,
+              "available": true,
+              "default": false,
+              "perspective": false,
+              "limits": {
+                "normal": { "max_chars_per_line": 14, "max_lines": 2 },
+                "caps": { "max_chars_per_line": 10, "max_lines": 2 }
+              }
+            },
+            {
+              "id": "back",
+              "name": "Сзади",
+              "order": 4,
+              "enabled": true,
+              "available": true,
+              "default": false,
+              "perspective": false,
+              "limits": {
+                "normal": { "max_chars_per_line": 12, "max_lines": 4 },
+                "caps": { "max_chars_per_line": 8, "max_lines": 5 }
+              }
+            }
+          ],
+          "colors": [
+            {
+              "id": "chernyj",
+              "name": "Чёрный",
+              "available": true,
+              "image": "images/fabric/jeans/chernyj.jpg",
+              "preview_image": "images/shopper_jeans/jeans/chernyj_overview.jpg",
+              "previews": {
+                "flap": "images/shopper_jeans/jeans/chernyj_flap.jpg",
+                "pocket": "images/shopper_jeans/jeans/chernyj_pocket.jpg",
+                "binding": "images/shopper_jeans/jeans/chernyj_binding.jpg",
+                "back": "images/shopper_jeans/jeans/chernyj_back.jpg"
+              }
+            },
+            {
+              "id": "pesochnyj",
+              "name": "Песочный",
+              "available": true,
+              "image": "images/fabric/jeans/pesochnyj.jpg",
+              "preview_image": "images/shopper_jeans/jeans/pesochnyj_overview.jpg",
+              "previews": {
+                "flap": "images/shopper_jeans/jeans/pesochnyj_flap.jpg",
+                "pocket": "images/shopper_jeans/jeans/pesochnyj_pocket.jpg",
+                "binding": "images/shopper_jeans/jeans/pesochnyj_binding.jpg",
+                "back": "images/shopper_jeans/jeans/pesochnyj_back.jpg"
+              }
+            },
+            {
+              "id": "siren",
+              "name": "Сиреневый",
+              "available": true,
+              "image": "images/fabric/jeans/siren.jpg",
+              "preview_image": "images/shopper_jeans/jeans/siren_overview.jpg",
+              "previews": {
+                "flap": "images/shopper_jeans/jeans/siren_flap.jpg",
+                "pocket": "images/shopper_jeans/jeans/siren_pocket.jpg",
+                "binding": "images/shopper_jeans/jeans/siren_binding.jpg",
+                "back": "images/shopper_jeans/jeans/siren_back.jpg"
+              }
+            },
+            {
+              "id": "shokolad",
+              "name": "Шоколад",
+              "available": true,
+              "image": "images/fabric/jeans/shokolad.jpg",
+              "preview_image": "images/shopper_jeans/jeans/shokolad_overview.jpg",
+              "previews": {
+                "flap": "images/shopper_jeans/jeans/shokolad_flap.jpg",
+                "pocket": "images/shopper_jeans/jeans/shokolad_pocket.jpg",
+                "binding": "images/shopper_jeans/jeans/shokolad_binding.jpg",
+                "back": "images/shopper_jeans/jeans/shokolad_back.jpg"
+              }
+            },
+            {
+              "id": "dzhins",
+              "name": "Джинс",
+              "available": true,
+              "image": "images/fabric/jeans/dzhins.jpg",
+              "preview_image": "images/shopper_jeans/jeans/dzhins_overview.jpg",
+              "previews": {
+                "flap": "images/shopper_jeans/jeans/dzhins_flap.jpg",
+                "pocket": "images/shopper_jeans/jeans/dzhins_pocket.jpg",
+                "binding": "images/shopper_jeans/jeans/dzhins_binding.jpg",
+                "back": "images/shopper_jeans/jeans/dzhins_back.jpg"
+              }
+            },
+            {
+              "id": "goluboj",
+              "name": "Голубой",
+              "available": true,
+              "image": "images/fabric/jeans/goluboj.jpg",
+              "preview_image": "images/shopper_jeans/jeans/goluboj_overview.jpg",
+              "previews": {
+                "flap": "images/shopper_jeans/jeans/goluboj_flap.jpg",
+                "pocket": "images/shopper_jeans/jeans/goluboj_pocket.jpg",
+                "binding": "images/shopper_jeans/jeans/goluboj_binding.jpg",
+                "back": "images/shopper_jeans/jeans/goluboj_back.jpg"
+              }
+            },
+            {
+              "id": "oliva",
+              "name": "Олива",
+              "available": true,
+              "image": "images/fabric/jeans/oliva.jpg",
+              "preview_image": "images/shopper_jeans/jeans/oliva_overview.jpg",
+              "previews": {
+                "flap": "images/shopper_jeans/jeans/oliva_flap.jpg",
+                "pocket": "images/shopper_jeans/jeans/oliva_pocket.jpg",
+                "binding": "images/shopper_jeans/jeans/oliva_binding.jpg",
+                "back": "images/shopper_jeans/jeans/oliva_back.jpg"
+              }
+            },
+            {
+              "id": "gorchica",
+              "name": "Горчица",
+              "available": true,
+              "image": "images/fabric/jeans/gorchica.jpg",
+              "preview_image": "images/shopper_jeans/jeans/gorchica_overview.jpg",
+              "previews": {
+                "flap": "images/shopper_jeans/jeans/gorchica_flap.jpg",
+                "pocket": "images/shopper_jeans/jeans/gorchica_pocket.jpg",
+                "binding": "images/shopper_jeans/jeans/gorchica_binding.jpg",
+                "back": "images/shopper_jeans/jeans/gorchica_back.jpg"
+              }
+            },
+            {
+              "id": "roza",
+              "name": "Роза",
+              "available": true,
+              "image": "images/fabric/jeans/roza.jpg",
+              "preview_image": "images/shopper_jeans/jeans/roza_overview.jpg",
+              "previews": {
+                "flap": "images/shopper_jeans/jeans/roza_flap.jpg",
+                "pocket": "images/shopper_jeans/jeans/roza_pocket.jpg",
+                "binding": "images/shopper_jeans/jeans/roza_binding.jpg",
+                "back": "images/shopper_jeans/jeans/roza_back.jpg"
+              }
+            },
+            {
+              "id": "terrakota",
+              "name": "Терракота",
+              "available": true,
+              "image": "images/fabric/jeans/terrakota.jpg",
+              "preview_image": "images/shopper_jeans/jeans/terrakota_overview.jpg",
+              "previews": {
+                "flap": "images/shopper_jeans/jeans/terrakota_flap.jpg",
+                "pocket": "images/shopper_jeans/jeans/terrakota_pocket.jpg",
+                "binding": "images/shopper_jeans/jeans/terrakota_binding.jpg",
+                "back": "images/shopper_jeans/jeans/terrakota_back.jpg"
+              }
+            },
+            {
+              "id": "taupe",
+              "name": "Тауп",
+              "available": true,
+              "image": "images/fabric/jeans/taupe.jpg",
+              "preview_image": "images/shopper_jeans/jeans/taupe_overview.jpg",
+              "previews": {
+                "flap": "images/shopper_jeans/jeans/taupe_flap.jpg",
+                "pocket": "images/shopper_jeans/jeans/taupe_pocket.jpg",
+                "binding": "images/shopper_jeans/jeans/taupe_binding.jpg",
+                "back": "images/shopper_jeans/jeans/taupe_back.jpg"
               }
             }
           ]
