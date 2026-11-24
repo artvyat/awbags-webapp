@@ -1585,12 +1585,12 @@
                   "default": true,
                   "limits": {
                     "normal": {
-                      "max_chars_per_line": 14,
+                      "max_chars_per_line": 22,
                       "max_lines": 5
                     },
                     "caps": {
-                      "max_chars_per_line": 10,
-                      "max_lines": 5
+                      "max_chars_per_line": 15,
+                      "max_lines": 4
                     }
                   }
                 },
@@ -1603,12 +1603,12 @@
                   "default": false,
                   "limits": {
                     "normal": {
-                      "max_chars_per_line": 14,
-                      "max_lines": 5
+                      "max_chars_per_line": 22,
+                      "max_lines": 4
                     },
                     "caps": {
-                      "max_chars_per_line": 10,
-                      "max_lines": 5
+                      "max_chars_per_line": 15,
+                      "max_lines": 3
                     }
                   }
                 }
@@ -7726,8 +7726,14 @@
               "default": true,
               "perspective": false,
               "limits": {
-                "normal": { "max_chars_per_line": 8, "max_lines": 1 },
-                "caps": { "max_chars_per_line": 5, "max_lines": 1 }
+                "normal": {
+                  "max_chars_per_line": 8,
+                  "max_lines": 1
+                },
+                "caps": {
+                  "max_chars_per_line": 5,
+                  "max_lines": 1
+                }
               }
             },
             {
@@ -7739,8 +7745,14 @@
               "default": false,
               "perspective": false,
               "limits": {
-                "normal": { "max_chars_per_line": 8, "max_lines": 2 },
-                "caps": { "max_chars_per_line": 5, "max_lines": 2 }
+                "normal": {
+                  "max_chars_per_line": 8,
+                  "max_lines": 2
+                },
+                "caps": {
+                  "max_chars_per_line": 5,
+                  "max_lines": 2
+                }
               }
             },
             {
@@ -7752,8 +7764,14 @@
               "default": false,
               "perspective": false,
               "limits": {
-                "normal": { "max_chars_per_line": 14, "max_lines": 2 },
-                "caps": { "max_chars_per_line": 10, "max_lines": 2 }
+                "normal": {
+                  "max_chars_per_line": 14,
+                  "max_lines": 2
+                },
+                "caps": {
+                  "max_chars_per_line": 10,
+                  "max_lines": 2
+                }
               }
             },
             {
@@ -7765,8 +7783,14 @@
               "default": false,
               "perspective": false,
               "limits": {
-                "normal": { "max_chars_per_line": 12, "max_lines": 4 },
-                "caps": { "max_chars_per_line": 8, "max_lines": 5 }
+                "normal": {
+                  "max_chars_per_line": 12,
+                  "max_lines": 4
+                },
+                "caps": {
+                  "max_chars_per_line": 8,
+                  "max_lines": 5
+                }
               }
             }
           ],
